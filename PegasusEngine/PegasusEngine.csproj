@@ -3,17 +3,75 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>net9.0</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="AssimpNet" Version="5.0.0-beta1" />
       <PackageReference Include="ImGui.NET" Version="1.91.6.1" />
       <PackageReference Include="OpenTK" Version="4.9.3" />
+      <PackageReference Include="StbImageSharp" Version="2.30.15" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Engine\" />
+      <None Remove="Resources\Models\cube.mtl" />
+      <Content Include="Resources\Models\cube.mtl">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Models\cube.obj" />
+      <Content Include="Resources\Models\cube.obj">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\DefaultShader.frag" />
+      <Content Include="Resources\Shaders\DefaultShader.frag">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\DefaultShader.vert" />
+      <Content Include="Resources\Shaders\DefaultShader.vert">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\DepthShader.frag" />
+      <Content Include="Resources\Shaders\DepthShader.frag">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\DepthShader.vert" />
+      <Content Include="Resources\Shaders\DepthShader.vert">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\SkyboxShader.frag" />
+      <Content Include="Resources\Shaders\SkyboxShader.frag">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Shaders\SkyboxShader.vert" />
+      <Content Include="Resources\Shaders\SkyboxShader.vert">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\back.jpg" />
+      <Content Include="Resources\Skybox\back.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\bottom.jpg" />
+      <Content Include="Resources\Skybox\bottom.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\front.jpg" />
+      <Content Include="Resources\Skybox\front.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\left.jpg" />
+      <Content Include="Resources\Skybox\left.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\right.jpg" />
+      <Content Include="Resources\Skybox\right.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Resources\Skybox\top.jpg" />
+      <Content Include="Resources\Skybox\top.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
