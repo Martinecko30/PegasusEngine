@@ -1,5 +1,7 @@
 # Pegasus Engine
 
+![Pegasus Engine Logo](PegasusEngine/Pegasus/res/PegasusLogo.svg)
+
 Pegasus Engine is a modular 3D game engine built with **C# 13** and **.NET 9.0**, utilizing **OpenGL** via **OpenTK**. It is designed with a layer-based architecture, efficient asset management, and integrated profiling tools.
 
 Inspired by [Spartan Engine](https://github.com/PanosK92/SpartanEngine) and [Laura](https://github.com/jakubg05/Laura).
