@@ -1,7 +1,12 @@
-﻿using OpenTK.Mathematics;
+﻿#region
+
+using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
-using PegasusEngine.Engine;
+using PegasusEngine.Editor;
+using PegasusEngine.Pegasus.Core;
+
+#endregion
 
 namespace PegasusEngine;
 
@@ -16,7 +21,10 @@ class Program
             Title = "PegasusEngine"
         };
         
-        var engine = new EngineWindow(GameWindowSettings.Default, nativeWindowSettings, args.ToList());
-        engine.Run();
+        // var engine = new EditorWindow(GameWindowSettings.Default, nativeWindowSettings, args.ToList());
+        // engine.Run();
+        
+        Log.Init();
+        Log.EngineInfo("C# version: {0}", System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription);
     }
 }

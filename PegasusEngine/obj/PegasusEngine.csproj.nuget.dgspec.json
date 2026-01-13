@@ -60,9 +60,21 @@
               "target": "Package",
               "version": "[4.9.3, )"
             },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
             "StbImageSharp": {
               "target": "Package",
               "version": "[2.30.15, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[16.3.0, )"
             }
           },
           "imports": [

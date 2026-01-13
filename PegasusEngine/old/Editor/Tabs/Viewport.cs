@@ -1,0 +1,114 @@
+// #region
+//
+// using ImGuiNET;
+// using OpenTK.Graphics.OpenGL;
+// using OpenTK.Mathematics;
+// using PegasusEngine.Modules.Camera;
+// using Vector2 = System.Numerics.Vector2;
+//
+// #endregion
+//
+// namespace PegasusEngine.Editor.Tabs;
+//
+// public class Viewport : TabPanel
+// {
+//     public static bool IS_VIEWPORT_FOCUSED;
+//     public static Vector2i WindowSize = Vector2i.One;
+//     
+//     public static int FBO;
+//     private int textureID;
+//     private int RBO;
+//     
+//     private Camera editorCamera;
+//     
+//     public override void Start()
+//     {
+//         Title = "Viewport";
+//         // TODO: Fix from Editor
+//         engine.Closing += OnClosing;
+//         CreateFramebuffer(engine.ClientSize.X, engine.ClientSize.Y);
+//         
+//         // if (!EditorWindow.ENABLED_EDITOR)
+//             IS_VIEWPORT_FOCUSED = true;
+//         
+//         editorCamera = new Camera(
+//             new Vector3(0, 0, 0),
+//             0f
+//             );
+//     }
+//
+//     public override void Render()
+//     {
+//         ImGui.Begin(Title);
+//
+//         IS_VIEWPORT_FOCUSED = ImGui.IsWindowFocused();
+//         
+//         // Render viewport
+//         var windowSize = ImGui.GetContentRegionAvail();
+//         var windowWidth = (int) Math.Round(windowSize.X);
+//         var windowHeight = (int) Math.Round(windowSize.Y);
+//         WindowSize = new Vector2i(windowWidth, windowHeight);
+//         
+//         editorCamera.AspectRatio = windowWidth / Math.Max(1, windowHeight);
+//         
+//         RescaleFrambuffer(windowWidth, windowHeight);
+//         
+//         ImGui.Image(
+//             textureID,
+//             windowSize,
+//             new Vector2((float)Math.Pow(windowWidth, -1), 1),
+//             new Vector2(1, (float)Math.Pow(windowWidth, -1))
+//         );
+//         
+//         ImGui.End();
+//     }
+//
+//     public override void Update()
+//     {
+//
+//     }
+//
+//     private void CreateFramebuffer(int width, int height)
+//     {
+//         FBO = GL.GenFramebuffer();
+//         GL.BindFramebuffer(FramebufferTarget.Framebuffer, FBO);
+//
+//         textureID = GL.GenTexture();
+//         GL.BindTexture(TextureTarget.Texture2D, textureID);
+//         GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgb, width, height, 0, PixelFormat.Rgb, PixelType.UnsignedByte, IntPtr.Zero);
+//         GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMagFilter.Linear); // TODO: If doesn't work, check this
+//         GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
+//         GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0, TextureTarget.Texture2D, textureID, 0);
+//         
+//         RBO = GL.GenRenderbuffer();
+//         GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, RBO);
+//         GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.Depth24Stencil8, width, height);
+//         GL.FramebufferRenderbuffer(FramebufferTarget.Framebuffer, FramebufferAttachment.DepthStencilAttachment, RenderbufferTarget.Renderbuffer, RBO);
+//
+//         if (GL.CheckFramebufferStatus(FramebufferTarget.Framebuffer) != FramebufferErrorCode.FramebufferComplete)
+//         {
+//             Console.WriteLine("Error creating framebuffer!");
+//         }
+//         
+//         GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
+//         GL.BindTexture(TextureTarget.Texture2D, 0);
+//         GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, 0);
+//     }
+//     
+//     private void RescaleFrambuffer(int width, int height)
+//     {
+//         GL.BindTexture(TextureTarget.Texture2D, textureID);
+//         GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgb, width, height, 0, PixelFormat.Rgb, PixelType.UnsignedByte, IntPtr.Zero);
+//
+//         GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, RBO);
+//         GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.Depth24Stencil8, width, height);
+//     }
+//
+//
+//     private void OnClosing(EventArgs args)
+//     {
+//         GL.DeleteFramebuffer(FBO);
+//         GL.DeleteTexture(textureID);
+//         GL.DeleteRenderbuffer(RBO);
+//     }
+// }

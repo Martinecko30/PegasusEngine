@@ -56,3 +56,10 @@ F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resour
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Skybox\left.jpg
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Skybox\right.jpg
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Skybox\top.jpg
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Models\tree_forest.obj
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Models\tree_forest.mtl
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Images\FolderIcon.png
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Images\BehaviourScriptIcon.png
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Resources\Images\FileIcon.png
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Serilog.dll
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Debug\net9.0\Serilog.Sinks.Console.dll
