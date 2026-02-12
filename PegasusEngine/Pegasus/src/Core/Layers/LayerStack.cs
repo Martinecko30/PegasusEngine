@@ -22,9 +22,10 @@ public class LayerStack : IEventDispatcher
         if (_layers.Remove(layer)) layer.OnDetach();
     }
 
-    public void OnUpdate()
+    public void OnUpdate(float deltaTime)
     {
-        foreach (var layer in _layers) layer.OnUpdate();
+        foreach (var layer in _layers)
+            layer.OnUpdate(deltaTime);
     }
 
     public void OnDetach()

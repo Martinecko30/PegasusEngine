@@ -20,7 +20,7 @@ public class GUID : IEquatable<GUID>
     
     public GUID(ulong value) => _value = value;
 
-    public bool Equals(GUID other) => _value == other._value;
+    public bool Equals(GUID? other) => _value == other!._value;
     public override bool Equals(object? obj) => obj is GUID other && Equals(other);
     public override int GetHashCode() => _value.GetHashCode();
     

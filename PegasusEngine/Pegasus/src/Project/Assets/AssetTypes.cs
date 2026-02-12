@@ -24,9 +24,9 @@ public class MeshMetadata : Metadata
 public class TextureMetadata : Metadata
 {
     public uint TexStartIdx { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set; }
-    public int Channels { get; set; }
+    public uint Width { get; set; }
+    public uint Height { get; set; }
+    public uint Channels { get; set; }
 }
 
 // Extensions with additional metadata of assets

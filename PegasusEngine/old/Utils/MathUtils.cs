@@ -4,7 +4,7 @@ using OpenTK.Mathematics;
 
 #endregion
 
-namespace PegasusEngine.Utils;
+namespace PegasusEngine.old.Utils;
 
 public class MathUtils
 {
