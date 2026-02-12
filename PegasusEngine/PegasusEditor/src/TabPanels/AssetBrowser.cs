@@ -8,6 +8,7 @@ using PegasusEngine.Pegasus.Core.Events;
 using PegasusEngine.Pegasus.Project;
 using PegasusEngine.Pegasus.Project.Assets;
 using PegasusEngine.PegasusEditor.Dialogs;
+using PegasusEngine.PegasusEditor.ImGuiContext;
 
 namespace PegasusEngine.PegasusEditor.TabPanels;
 
@@ -65,6 +66,7 @@ public class AssetBrowser : TabPanel
         var assetPool = assetManager?.AssetPool;
         
         theme.PushColor(ImGuiCol.Button, EditorCol.Secondary2);
+        
         if (ImGui.Button("Add"))
         {
             ImGui.OpenPopup("Add Menu");
@@ -87,7 +89,7 @@ public class AssetBrowser : TabPanel
             if (ImGui.MenuItem(FontAwesomeIcons.CircleNodes + " Scene"))
                 _projectManager.SceneManager?.CreateScene();
 
-            if (ImGui.MenuItem(FontAwesomeIcons.Cube + "Asset..."))
+            if (ImGui.MenuItem(FontAwesomeIcons.Cube + " Asset"))
             {
                 var assetPath = WindowsDialogs.OpenFile("*.*", "Select Asset:");
                 if (!string.IsNullOrEmpty(assetPath))
@@ -221,9 +223,9 @@ public class AssetBrowser : TabPanel
         }
         theme.PopColor();
 
-        if (ImGui.BeginDragDropSource(ImGuiDragDropFlags.None))
+        if (ImGui.BeginDragDropSource(ImGuiDragDropFlags.SourceAllowNullID))
         {
-            _dndPayload.Guid = guid;
+            _dndPayload.GuidValue = (ulong)guid;
             _dndPayload.Title = title;
 
             unsafe
@@ -439,7 +441,7 @@ public class AssetBrowser : TabPanel
             theme.PopColor();
             ImGui.AlignTextToFramePadding();
             ImGui.SameLine();
-            const string deleteLabel = "ICON_FA_TRASH";
+            const string deleteLabel = FontAwesomeIcons.Trash;
             var textSize = ImGui.CalcTextSize(deleteLabel);
             var buttonSize = new Vector2(
                 textSize.X + ImGui.GetStyle().FramePadding.X * 2.0f,

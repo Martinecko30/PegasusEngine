@@ -69,10 +69,10 @@ public class EditorLayer : ILayer
         
         // _windowTitleBar.OnImGuiRender(yOffset);
         
-        var viewport = ImGuiNET.ImGui.GetMainViewport();
-        ImGuiNET.ImGui.SetNextWindowPos(viewport.Pos with { Y = viewport.Pos.Y + yOffset }); // TODO: Titlebar offset
-        ImGuiNET.ImGui.SetNextWindowSize(viewport.Size with { Y = viewport.Size.Y - yOffset }); // TODO: minus titlebar height
-        ImGuiNET.ImGui.SetNextWindowViewport(viewport.ID);
+        var viewport = ImGui.GetMainViewport();
+        ImGui.SetNextWindowPos(viewport.Pos with { Y = viewport.Pos.Y + yOffset }); // TODO: Titlebar offset
+        ImGui.SetNextWindowSize(viewport.Size with { Y = viewport.Size.Y - yOffset }); // TODO: minus titlebar height
+        ImGui.SetNextWindowViewport(viewport.ID);
         ImGuiWindowFlags hostFlags = ImGuiWindowFlags.NoDocking |
                                      ImGuiWindowFlags.NoTitleBar |
                                      ImGuiWindowFlags.NoCollapse |
@@ -97,7 +97,6 @@ public class EditorLayer : ILayer
 
             foreach (var panel in _editorPanels)
                 panel.Render();
-
 
             ImGui.End();
         }

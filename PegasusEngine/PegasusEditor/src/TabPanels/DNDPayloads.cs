@@ -15,12 +15,14 @@ public static class DNDPayloadTypes
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
 public struct DNDPayload
 {
-    public GUID Guid;
+    public ulong GuidValue;
 
     [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
     public string Title;
     
-    public override string ToString() => $"{Title} ({Guid})";
+    public readonly GUID Guid => new(GuidValue);
+    
+    public override string ToString() => $"{Title} ({GuidValue})";
 }
 
 public static class ImGuiDndWidgets

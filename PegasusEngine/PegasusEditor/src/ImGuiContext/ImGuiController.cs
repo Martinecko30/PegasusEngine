@@ -63,8 +63,10 @@ public class ImGuiController : IDisposable
         ImGui.SetCurrentContext(context);
         var io = ImGui.GetIO();
         var defaultFont = io.Fonts.AddFontDefault();
+        MergeIconFont(EditorCfg.ResourcesPath + "\\Fonts\\fa-solid-900.otf", 10.0f);
+        MergeIconFont(EditorCfg.ResourcesPath + "\\Fonts\\fa-regular-400.otf", 10.0f);
         ImGuiFonts.Register(Fonts.Default, defaultFont);
-
+        
 
         LoadTextFont(Fonts.NotoSans, EditorCfg.ResourcesPath + "\\Fonts\\NotoSans-variable.ttf", 18.0f);
         LoadTextFont(Fonts.WumpusMono, EditorCfg.ResourcesPath + "\\Fonts\\WumpusMonoDemo-Regular.ttf", 18.0f);
