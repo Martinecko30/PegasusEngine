@@ -121,7 +121,6 @@ public class AssetBrowser : TabPanel
 
                 float horizontalSpacing = 15.0f;
                 float verticalSpacing = 3.0f;
-                var style = ImGui.GetStyle();
                 float column_x1 = ImGui.GetCursorPos().X;
                 float column_x2 = column_x1 + ImGui.GetColumnWidth();
                 ImGui.Indent(horizontalSpacing);

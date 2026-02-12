@@ -1,5 +1,9 @@
 using System.Collections;
 using PegasusEngine.Pegasus.Core;
+using PegasusEngine.Pegasus.Project.Scenes.Components;
+using PegasusEngine.Pegasus.Project.Scenes.Serialization;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace PegasusEngine.Pegasus.Project.Scenes;
 
@@ -13,8 +17,22 @@ public class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
 
     private readonly Dictionary<GUID, Scene> _scenes = new();
     private readonly Dictionary<GUID, Scene> _runtimeSimulationScenes = new();
+    
+    private readonly ISerializer _serializer;
+    private readonly IDeserializer _deserializer;
+    
+    public SceneManager()
+    {
+        _serializer = new SerializerBuilder()
+            .WithNamingConvention(PascalCaseNamingConvention.Instance)
+            .Build();
+        
+        _deserializer = new DeserializerBuilder()
+            .WithNamingConvention(PascalCaseNamingConvention.Instance)
+            .Build();
+    }
 
-    // Replaces the C++ raw pointer swap logic
+    
     private Dictionary<GUID, Scene> ActiveScenes => _inRuntimeSimulation ? _runtimeSimulationScenes : _scenes;
 
     public GUID CreateScene(string name = "Empty Scene")
@@ -104,7 +122,7 @@ public class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
     {
         if (!Directory.Exists(folderPath)) return;
 
-        // 1. Delete orphaned .lrscene files
+        // 1. Delete orphaned .pgscene files
         var files = Directory.GetFiles(folderPath, "*" + SceneFileExtension);
         foreach (var scenePath in files)
         {
@@ -193,6 +211,168 @@ public class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
     }
 
     // Mock methods for external serialization - implement these based on your serializer
-    private bool SaveSceneFile(string path, Scene scene) => throw new NotImplementedException();
-    private Scene? LoadSceneFile(string path) => throw new NotImplementedException();
+    private bool SaveSceneFile(string path, Scene scene)
+    {
+        if (!(Path.HasExtension(path) && Path.GetExtension(path).ToLower() == SceneFileExtension))
+        {
+            Log.EngineWarn("SaveSceneFile: invalid file extension '{}'.", path);
+            return false;
+        }
+
+        var parentDir = Path.GetDirectoryName(path);
+        if (string.IsNullOrWhiteSpace(parentDir) || !Directory.Exists(parentDir))
+        {
+            Log.EngineWarn("SaveSceneFile: parent directory '{}' does not exist.", parentDir ?? "<null>");
+            return false;
+        }
+        
+        try
+        {
+            var componentRegistry = new ComponentYamlRegistry();
+            var yaml = SerializeScene(scene, _serializer, componentRegistry);
+            
+            File.WriteAllText(path, yaml);
+            Log.EngineInfo("SaveMetaFile: wrote metadata for GUID {0}.", scene.Guid);
+            return true;
+        } catch (Exception e)
+        {
+            Log.EngineError("SaveMetaFile: failed to write metadata for GUID {0}.", scene.Guid);
+            Log.EngineError(e.ToString());
+            return false;
+        }
+        
+        return false;
+    }
+
+    private Scene? LoadSceneFile(string path)
+    {
+        if (!(Path.HasExtension(path) && Path.GetExtension(path).ToLower() == SceneFileExtension))
+        {
+            Log.EngineWarn("LoadSceneFile: invalid file extension '{}'.", path);
+            return null;
+        }
+
+        var parentDir = Path.GetDirectoryName(path);
+        if (string.IsNullOrWhiteSpace(parentDir) || !Directory.Exists(parentDir))
+        {
+            Log.EngineWarn("LoadSceneFile: parent directory '{}' does not exist.", parentDir ?? "<null>");
+            return null;
+        }
+        
+        try
+        {
+            string yaml = File.ReadAllText(path);
+            var scene = DeserializeScene(yaml, _deserializer);
+            
+            File.WriteAllText(path, yaml);
+            Log.EngineInfo("LoadSceneFile: saved scene with GUID {0}.", scene.Guid);
+            return scene;
+        } catch (Exception e)
+        {
+            Log.EngineError("LoadSceneFile: failed to read data for scene with GUID {0}.", path);
+            Log.EngineError(e.ToString());
+            return null;
+        }
+        
+        
+        return null;
+    }
+
+    private static string SerializeScene(
+        Scene scene,
+        ISerializer serializer,
+        ComponentYamlRegistry registry
+        )
+    {
+        var dto = new SceneFileDto
+        {
+            SceneGuid = (ulong)scene.Guid,
+            SceneName = scene.Name,
+            SkyboxGuid = (ulong)scene.SkyboxGuid,
+            SkyboxName = scene.SkyboxName
+        };
+
+        foreach (var (guid, entity) in scene.Entities)
+        {
+            var e = new EntityDto
+            {
+                Guid = (ulong)guid,
+                Tag = entity.Tag,
+                Name = entity.Name
+            };
+
+            foreach (var component in entity.Components)
+            {
+                if (registry.TryWrite(component, out var c))
+                    e.Components.Add(c);
+                else
+                    Log.EditorWarn("SerializeScene: Unknow component type!");
+            }
+            
+            dto.Entities.Add(e);
+        }
+        
+        return serializer.Serialize(dto);
+    }
+
+    private static Scene? DeserializeScene(string yaml, IDeserializer deserializer)
+    {
+        if (string.IsNullOrWhiteSpace(yaml))
+            return null;
+
+        SceneFileDto dto;
+        try
+        {
+            dto = deserializer.Deserialize<SceneFileDto>(yaml);
+        }
+        catch
+        {
+            return null;
+        }
+
+        var scene = new Scene
+        {
+            Guid = new GUID(dto.SceneGuid),
+            Name = dto.SceneName,
+            SkyboxGuid = new GUID(dto.SkyboxGuid),
+            SkyboxName = dto.SkyboxName
+        };
+
+        var applier = new ReflectionYamlAutoDeserializer();
+
+        foreach (var e in dto.Entities)
+        {
+            var entity = new EntityHandle(new GUID(e.Guid), e.Name, e.Tag);
+
+            foreach (var c in e.Components)
+            {
+                var component = CreateComponentInstance(c.Type);
+                if (component is null)
+                    continue;
+
+                applier.ApplyObjectGraph(component, c.Data);
+                entity.AddComponent(component);
+            }
+
+            scene.Entities.Add(entity.Guid, entity);
+        }
+
+        return scene;
+    }
+    
+    private static Component? CreateComponentInstance(string typeId)
+    {
+        if (string.IsNullOrWhiteSpace(typeId))
+            return null;
+
+        // You wrote Type as AssemblyQualifiedName (recommended), so this should work:
+        var type = Type.GetType(typeId, throwOnError: false);
+        if (type is null) return null;
+
+        if (!typeof(Component).IsAssignableFrom(type)) return null;
+        if (type.IsAbstract) return null;
+
+        // Requires a parameterless constructor. If you have components without one, you'll need a factory.
+        return Activator.CreateInstance(type) as Component;
+    }
 }

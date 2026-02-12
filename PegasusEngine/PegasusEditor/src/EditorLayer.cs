@@ -7,6 +7,7 @@ using PegasusEngine.Pegasus.Core.Layers;
 using PegasusEngine.Pegasus.Project;
 using PegasusEngine.PegasusEditor.ImGuiContext;
 using PegasusEngine.PegasusEditor.TabPanels;
+using Keys = OpenTK.Windowing.GraphicsLibraryFramework.Keys;
 
 namespace PegasusEngine.PegasusEditor;
 
@@ -97,6 +98,12 @@ public class EditorLayer : ILayer
 
             foreach (var panel in _editorPanels)
                 panel.Render();
+
+            var keys = _window.KeyboardState;
+            if (keys.IsKeyDown(Keys.LeftControl) && keys.IsKeyDown(Keys.S))
+            {
+                _projectManager.SaveProject();
+            }
 
             ImGui.End();
         }
