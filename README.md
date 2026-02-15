@@ -96,6 +96,7 @@ In projects current state, the only supported platform is Windows. There are pla
 |---------|-------------|-------|
 |         |             |       |
 |---------|-------------|-------|
+
 There are currently no projects :(
 
 **Using Pegasus Engine in any way, shape or form? Reach out to me, I'd love to showcase your project!
