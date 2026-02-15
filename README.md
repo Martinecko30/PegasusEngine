@@ -1,6 +1,6 @@
 # Pegasus Engine
 
-![Pegasus Engine Logo](PegasusEngine/Pegasus/res/PegasusLogo.svg)
+![Pegasus Engine Logo](PegasusEngine/res/PegasusLogo.svg)
 
 Pegasus Engine is a modular 3D game engine built with **C# 13** and **.NET 9.0**, utilizing **OpenGL** via **OpenTK**. It is designed with a layer-based architecture, efficient asset management, and integrated profiling tools.
 
@@ -47,6 +47,9 @@ PegasusEngine/
 └── old/                   # Legacy modules (Audio, Physics, Scripting) **IN REWORK**
 ```
 
+## Supported Platforms
+In projects current state, the only supported platform is Windows. There are plants to make it possible to work with Linux. MacOS might be supported in future but a this moment, there are no plants for it.
+
 ## Getting Started
 
 ### Prerequisites
@@ -55,6 +58,9 @@ PegasusEngine/
 - A GPU supporting OpenGL 4.0+.
 
 ### Building
+
+> [!TIP]
+> If you don't want to modify the code that any of the engine uses, download the official release on this github repo!
 
 1. Clone the repository:
    ```bash
@@ -73,13 +79,26 @@ PegasusEngine/
    ```
 
 ## Roadmap
+- [X] **Core Scripting**: C# Assembly loading and building.
+- [X] **Project Managment**: `.pgproj` serialization and asset tracking.
+- [ ] **Prefab System**: Entity serialization and instantiation.
+- [ ] **Particle System**: GPU-driven particle system.
+- [ ] **PBR Rendering**: Implementation of a physicall-based shading model.
+- [ ] **Audio Engine**: Implement a custom audio Engine
+- [ ] **Physics System**: Custom 3D phsics
+- [ ] **Linux Support**: Planned support for Linux platforms.
 
-The following modules are currently in the `old/` directory and are being refactored for the new architecture:
-- [ ] Physics System
-- [ ] Audio Engine
-- [ ] Scripting Backend
-- [ ] Advanced PBR Rendering
-- [ ] Editor Windows
+> [!TIP]
+> There are many more features that might be beneficial for this project. Feel free to implement them or create a new *Issue* requestion it, but don't forget to specify what it should contain.
+
+## Projects Using Pegasus
+| Project | Description | Autor |
+|---------|-------------|-------|
+|         |             |       |
+|---------|-------------|-------|
+There are currently no projects :(
+
+**Using Pegasus Engine in any way, shape or form? Reach out to me, I'd love to showcase your project!
 
 ## License
 
