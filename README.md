@@ -59,7 +59,7 @@ In projects current state, the only supported platform is Windows. There are pla
 
 ### Building
 
-> [!TIP]
+> [!WARNING]
 > If you don't want to modify the code that any of the engine uses, download the official release on this github repo!
 
 1. Clone the repository:
