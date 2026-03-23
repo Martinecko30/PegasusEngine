@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Concurrent;
-using PegasusEngine.Scripting;
+using System.Collections.Generic;
+using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Project.Scenes.Serialization;
 

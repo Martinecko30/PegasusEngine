@@ -1,0 +1,15 @@
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\bin\Debug\net9.0\PegasusExport.exe
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\bin\Debug\net9.0\PegasusExport.deps.json
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\bin\Debug\net9.0\PegasusExport.runtimeconfig.json
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\bin\Debug\net9.0\PegasusExport.dll
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\bin\Debug\net9.0\PegasusExport.pdb
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.AssemblyInfoInputs.cache
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.AssemblyInfo.cs
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.csproj.CoreCompileInputs.cache
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.sourcelink.json
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.dll
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\refint\PegasusExport.dll
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.pdb
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\PegasusExport.genruntimeconfig.cache
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusExport\obj\Debug\net9.0\ref\PegasusExport.dll

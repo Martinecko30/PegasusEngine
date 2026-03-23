@@ -1,5 +1,7 @@
 using System.Collections;
 using PegasusEngine.Core;
+using PegasusEngine.Objects;
+using PegasusEngine.Objects.Components;
 using PegasusEngine.Project.Scenes.Serialization;
 using PegasusEngine.Scripting;
 using YamlDotNet.Serialization;
@@ -343,7 +345,7 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
 
         foreach (var e in dto.Entities)
         {
-            var entity = new EntityHandle(new GUID(e.Guid), e.Name, e.Tag);
+            var entity = new GameObject(new GUID(e.Guid), e.Name, e.Tag);
 
             foreach (var c in e.Components)
             {

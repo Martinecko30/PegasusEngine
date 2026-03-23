@@ -1,5 +1,6 @@
 using PegasusEngine.Core;
 using PegasusEngine.Export;
+using PegasusEngine.Objects;
 using PegasusEngine.Project.Scenes;
 using PegasusEngine.Renderer;
 using YamlDotNet.Core;
@@ -92,7 +93,7 @@ public class EditorState
 
     public class TempState
     {
-        public EntityHandle? SelectedEntity { get; set; } = null;
+        public GameObject? SelectedEntity { get; set; } = null;
         public EditorTheme EditorTheme { get; set; } = new();
         public bool IsInRuntimeSimulation { get; set; } = false;
         

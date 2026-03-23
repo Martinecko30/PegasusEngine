@@ -3,8 +3,10 @@ using System.Reflection;
 using ImGuiNET;
 using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core.Events;
+using PegasusEngine.Objects;
+using PegasusEngine.Objects.Components;
+using PegasusEngine.Objects.Components.Colliders;
 using PegasusEngine.Project;
-using PegasusEngine.Project.Scenes;
 
 namespace PegasusEditor.TabPanels;
 
@@ -25,7 +27,9 @@ public class Inspector : TabPanel
             {typeof(bool), RenderBoolField},
             {typeof(string), RenderStringField},
             {typeof(Vector2), RenderVector2Field},
-            {typeof(Vector3), RenderVector3Field}
+            {typeof(Vector3), RenderVector3Field},
+            {typeof(int), RenderIntField},
+            {typeof(float), RenderFloatField},
         };
     }
     
@@ -70,7 +74,7 @@ public class Inspector : TabPanel
         ImGui.End();
     }
 
-    private void RenderEntity(EntityHandle entity)
+    private void RenderEntity(GameObject entity)
     {
         var theme = editorState.Temp.EditorTheme;
         
@@ -129,7 +133,9 @@ public class Inspector : TabPanel
 
         if (ImGui.BeginPopup("AddComponent"))
         {
-            // Add entity components
+            // TODO: Add entity components
+            GiveEntityComponentButton<BoxCollider>(entity, "Box Collider", FontAwesomeIcons.Box);
+            
             ImGui.BulletText($"Add Component to entity {entity.Tag}");
             ImGui.EndPopup();
         }
@@ -168,6 +174,23 @@ public class Inspector : TabPanel
     {
         
     }
+
+
+
+    private void GiveEntityComponentButton<T>(GameObject entity, string label, string icon) where T : Component, new()
+    {
+        if (entity.HasComponent<T>())
+            ImGui.BeginDisabled();
+        
+        if (ImGui.Selectable(icon + " " + label, false))
+        {
+            entity.GetOrAddComponent<T>();
+            return;
+        }
+        
+        if (entity.HasComponent<T>())
+            ImGui.EndDisabled();
+    }
     
     #region Type Handlers
     private void RenderBoolField(object instance, FieldInfo field, string name)
@@ -202,6 +225,24 @@ public class Inspector : TabPanel
     {
         Vector3 val = (Vector3)(field.GetValue(instance) ?? Vector2.Zero);
         if (ImGui.DragFloat3(name, ref val))
+        {
+            field.SetValue(instance, val);
+        }
+    }
+
+    private void RenderIntField(object instance, FieldInfo field, string name)
+    {
+        int val = (int)(field.GetValue(instance) ?? 0);
+        if (ImGui.InputInt(name, ref val))
+        {
+            field.SetValue(instance, val);
+        }
+    }
+
+    private void RenderFloatField(object instance, FieldInfo field, string name)
+    {
+        float val = (float)(field.GetValue(instance) ?? 0f);
+        if (ImGui.InputFloat(name, ref val))
         {
             field.SetValue(instance, val);
         }

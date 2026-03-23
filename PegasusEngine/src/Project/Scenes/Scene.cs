@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using PegasusEngine.Core;
-using PegasusEngine.Scripting;
+using PegasusEngine.Objects;
+using PegasusEngine.Objects.Components;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -13,21 +18,32 @@ public class Scene
     public GUID SkyboxGuid { get; set; } = GUID.INVALID;
     public string SkyboxName { get; set; } = string.Empty;
 
-    public Dictionary<GUID, EntityHandle> Entities { get; } = new();
+    public Dictionary<GUID, GameObject> Entities { get; } = new();
 
-    public EntityHandle CreateEntity(string name = "Empty Entity")
+    public void AddEntity(GameObject entity)
+    {
+        Entities[entity.Guid] = entity;
+    }
+
+    public void AddEntities(IEnumerable<GameObject> entities)
+    {
+        foreach (var entity in entities)
+            Entities[entity.Guid] = entity;
+    }
+
+    public GameObject CreateEntity(string name = "Empty Entity")
     {
         return CreateEntity(new GUID(), name);
     }
 
-    public EntityHandle CreateEntity(GUID guid, string name = "Empty Entity")
+    public GameObject CreateEntity(GUID guid, string name = "Empty Entity")
     {
-        var entity = new EntityHandle(guid, name);
+        var entity = new GameObject(guid, name);
         Entities[entity.Guid] = entity;
         return entity;
     }
     
-    public void RemoveEntity(EntityHandle entity)
+    public void RemoveEntity(GameObject entity)
     {
         RemoveEntity(entity.Guid);
     }
@@ -55,7 +71,7 @@ public class Scene
         // Deep copy entities
         foreach (var oldHandle in other.Entities.Values)
         {
-            var otherHandle = new EntityHandle(oldHandle);
+            var otherHandle = new GameObject(oldHandle);
             var newHandle = newScene.CreateEntity(otherHandle.Guid, otherHandle.Name);
 
             foreach (var component in oldHandle.Components)
@@ -103,21 +119,11 @@ public static class SceneSerializer
                 SceneName = scene.Name,
                 SkyboxGuid = (ulong)scene.SkyboxGuid,
                 SkyboxName = scene.SkyboxName,
-                Entities = new List<EntityDataLayout>()
+                GameObjects = new List<GameObject>()
             };
 
             foreach (var handle in scene.Entities.Values)
-            {
-                var entityData = new EntityDataLayout
-                {
-                    Name = handle.Name,
-                    Guid = handle.Guid,
-                    Tag = handle.Tag,
-                    Components = new List<object>(handle.Components)
-                };
-
-                data.Entities.Add(entityData);
-            }
+                data.GameObjects.Add(handle);
 
             string yaml = Serializer.Serialize(data);
             File.WriteAllText(path, yaml);
@@ -148,19 +154,21 @@ public static class SceneSerializer
                 SkyboxName = data.SkyboxName
             };
 
-            foreach (var eData in data.Entities)
-            {
-                GUID guid = new GUID(eData.Guid != GUID.INVALID ? eData.Guid : new GUID());
-                var name = eData.Name ?? "Unnamed Entity";
-                var entity = scene.CreateEntity(guid, name);
-                entity.Tag = eData.Tag ?? string.Empty;
-
-                foreach (var component in eData.Components)
-                {
-                    if (component is Component comp)
-                        entity.AddComponent(comp);
-                }
-            }
+            // TODO: Rework
+            scene.AddEntities(data.GameObjects);
+            // foreach (var eData in data.GameObjects)
+            // {
+            //     GUID guid = new GUID(eData.Guid != GUID.INVALID ? eData.Guid : new GUID());
+            //     var name = eData.Name ?? "Unnamed Entity";
+            //     var entity = scene.CreateEntity(guid, name);
+            //     entity.Tag = eData.Tag ?? string.Empty;
+            //
+            //     foreach (var component in eData.Components)
+            //     {
+            //         if (component is Component comp)
+            //             entity.AddComponent(comp);
+            //     }
+            // }
 
             return scene;
         }
@@ -178,14 +186,6 @@ public static class SceneSerializer
         public string SceneName { get; set; } = string.Empty;
         public ulong SkyboxGuid { get; set; }
         public string SkyboxName { get; set; } = string.Empty;
-        public List<EntityDataLayout> Entities { get; set; } = new();
-    }
-
-    private class EntityDataLayout
-    {
-        public string? Name { get; set; }
-        public string? Tag { get; set; }
-        public ulong Guid { get; set; }
-        public List<object> Components { get; set; } = new();
+        public List<GameObject> GameObjects { get; set; } = new();
     }
 }

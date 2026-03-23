@@ -1,10 +1,10 @@
+using System;
 using PegasusEngine.Core;
-
-namespace PegasusEngine.Project.Scenes.Serialization;
-
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
+
+namespace PegasusEngine.Project.Scenes.Serialization;
 
 public sealed class GUIDYamlConverter : IYamlTypeConverter
 {

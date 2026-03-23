@@ -1,3 +1,5 @@
+using System;
+
 namespace PegasusEngine.Project.Scenes.Serialization;
 
 [AttributeUsage(AttributeTargets.Field)]

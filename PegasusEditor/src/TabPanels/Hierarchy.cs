@@ -3,6 +3,7 @@ using PegasusEditor.Dialogs;
 using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core;
 using PegasusEngine.Core.Events;
+using PegasusEngine.Objects;
 using PegasusEngine.Project;
 using PegasusEngine.Project.Scenes;
 using PegasusEngine.Runtime.Objects;
@@ -83,7 +84,7 @@ public class Hierarchy : TabPanel
         ImGui.End();
     }
 
-    private void DrawObject(GUID guid, EntityHandle entity, Scene scene)
+    private void DrawObject(GUID guid, GameObject entity, Scene scene)
     {
         var theme = editorState.Temp.EditorTheme;
         var panelDims = ImGui.GetContentRegionAvail();
@@ -129,9 +130,8 @@ public class Hierarchy : TabPanel
 
         if (entityChildrenOpen)
         {
-            // Render children
-            // recursion????
-            ImGui.BulletText("This may be implemented in the future!");
+            foreach (var child in entity.Transform.Children)
+                DrawObject(child.Guid, child.GameObject, scene);
             ImGui.TreePop();
         }
     }

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PegasusEngine.Project.Scenes.Serialization;
 
 public sealed class SceneFileDto

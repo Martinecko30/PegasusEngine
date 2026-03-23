@@ -1,3 +1,5 @@
+using PegasusEngine.Objects.Components;
+
 namespace PegasusEngine.Scripting;
 
 public abstract class RegisterComponentAttribute : Attribute
