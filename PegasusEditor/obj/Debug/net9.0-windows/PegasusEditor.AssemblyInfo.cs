@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PegasusEditor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+945e8562dcf77bf20a774ec42565887079b2a311")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53704a620f4e58e721a4dc22a8d98fa5d51d11bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PegasusEditor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PegasusEditor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

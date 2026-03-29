@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Reflection;
+using PegasusEngine.Core;
+using PegasusEngine.Objects;
 
 namespace PegasusEngine.Project.Scenes.Serialization;
 
@@ -22,19 +22,22 @@ public sealed class ReflectionYamlAutoDeserializer
 
             try
             {
-                var converted = ConvertToFieldType(rawValue, field.FieldType);
+                var converted = ConvertToFieldType(rawValue, field.FieldType, target, field);
                 field.SetValue(target, converted);
             }
-            catch
+            catch (Exception ex)
             {
-                // If something doesn't convert cleanly, skip it (or log).
+                Log.EngineWarn($"AppplyObjectGraph: Failed to set {field.Name}. {ex.Message}");
             }
         }
     }
 
     private static IEnumerable<FieldInfo> GetSerializableFields(Type type)
     {
-        const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+        const BindingFlags flags = BindingFlags.Instance |
+                                   BindingFlags.Public |
+                                   BindingFlags.NonPublic |
+                                   BindingFlags.DeclaredOnly;
 
         for (var cur = type; cur != null; cur = cur.BaseType)
         {
@@ -55,7 +58,7 @@ public sealed class ReflectionYamlAutoDeserializer
         }
     }
 
-    private object? ConvertToFieldType(object? raw, Type fieldType)
+    private object? ConvertToFieldType(object? raw, Type fieldType, object? target = null, FieldInfo? fieldInfo = null)
     {
         if (raw is null)
             return null;
@@ -64,6 +67,14 @@ public sealed class ReflectionYamlAutoDeserializer
         if (fieldType.IsInstanceOfType(raw))
             return raw;
 
+        if (fieldType == typeof(GUID))
+        {
+            if (raw is string s && ulong.TryParse(s, out ulong ul)) return new GUID(ul);
+            if (raw is ulong u) return new GUID(u);
+            if (raw is int i) return new GUID((ulong)i);
+            return new GUID();
+        }
+        
         // Enums stored as string (from serializer) or numeric
         if (fieldType.IsEnum)
         {
@@ -107,17 +118,45 @@ public sealed class ReflectionYamlAutoDeserializer
             }
         }
 
-        // Nested [Serializable] object (Dictionary<string, object?> expected)
-        if (IsCustomSerializable(fieldType) && raw is Dictionary<string, object?> map)
+        if (IsCustomSerializable(fieldType) && raw is IDictionary map)
         {
             var nested = Activator.CreateInstance(fieldType);
-            if (nested is null) return null;
+            if (nested is null)
+                return null;
+            
+            var stringMap = new Dictionary<string, object?>();
+            foreach (DictionaryEntry entry in map)
+            {
+                if (entry.Key is string key)
+                    stringMap[key] = entry.Value;
+            }
 
-            ApplyObjectGraph(nested, map);
+            ApplyObjectGraph(nested, stringMap);
             return nested;
         }
 
-        // If you later support object references, handle them here.
+        if (typeof(EngineObject).IsAssignableFrom(fieldType))
+        {
+            GUID refGuid = GUID.INVALID;
+            if (raw is string refStr && ulong.TryParse(refStr, out ulong refUl))
+                refGuid = new GUID(refUl);
+            if (raw is ulong refU)
+                refGuid = new GUID(refU);
+
+            if (refGuid != GUID.INVALID)
+            {
+                if (target != null && fieldInfo != null)
+                {
+                    // NOTE: We can't return the actual object here!
+                    SceneReferenceResolver.QueueResolution(target, fieldInfo, refGuid);
+                }
+                else
+                {
+                    Log.EngineWarn(
+                        $"ConvertToFieldType: Failed to resolve reference for {fieldInfo?.Name} of type {fieldType.Name}");
+                }
+            }
+        }
         return null;
     }
 

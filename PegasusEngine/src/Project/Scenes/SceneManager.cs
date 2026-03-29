@@ -231,8 +231,7 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
         
         try
         {
-            var componentRegistry = new ComponentYamlRegistry();
-            var yaml = SerializeScene(scene, _serializer, componentRegistry);
+            var yaml = SerializeScene(scene, _serializer);
             
             File.WriteAllText(path, yaml);
             Log.EngineInfo("SaveMetaFile: wrote metadata for GUID {0}.", scene.Guid);
@@ -267,7 +266,6 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
             string yaml = File.ReadAllText(path);
             var scene = DeserializeScene(yaml, _deserializer);
             
-            File.WriteAllText(path, yaml);
             Log.EngineInfo("LoadSceneFile: saved scene with GUID {0}.", scene.Guid);
             return scene;
         } catch (Exception e)
@@ -281,41 +279,47 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
         return null;
     }
 
-    private static string SerializeScene(
-        Scene scene,
-        ISerializer serializer,
-        ComponentYamlRegistry registry
-        )
+    private static string SerializeScene(Scene scene, ISerializer serializer)
     {
-        var dto = new SceneFileDto
+        var autoSerializer = new ReflectionYamlAutoSerializer();
+
+        var rootMap = new Dictionary<string, object>
         {
-            SceneGuid = (ulong)scene.Guid,
-            SceneName = scene.Name,
-            SkyboxGuid = (ulong)scene.SkyboxGuid,
-            SkyboxName = scene.SkyboxName
+            ["SceneGuid"] = (ulong)scene.Guid,
+            ["SceneName"] = scene.Name,
+            ["SkyboxGuid"] = (ulong)scene.SkyboxGuid,
+            ["SkyboxName"] = scene.SkyboxName
         };
+
+        var entitiesList = new List<object>();
 
         foreach (var (guid, entity) in scene.Entities)
         {
-            var e = new EntityDto
+            var entityMap = new Dictionary<string, object>
             {
-                Guid = (ulong)guid,
-                Tag = entity.Tag,
-                Name = entity.Name
+                ["Guid"] = (ulong)guid,
+                ["Name"] = entity.Name,
+                ["Tag"] = entity.Tag
             };
-
+            
+            var componentsList = new List<object>();
             foreach (var component in entity.Components)
             {
-                if (registry.TryWrite(component, out var c))
-                    e.Components.Add(c);
-                else
-                    Log.EditorWarn("SerializeScene: Unknow component type!");
+                var compMap = new Dictionary<string, object>
+                {
+                    ["Type"] = component.GetType().AssemblyQualifiedName ?? component.GetType().FullName!,
+                    ["Data"] = autoSerializer.SerializeObjectGraph(component)
+                };
+                componentsList.Add(compMap);
             }
-            
-            dto.Entities.Add(e);
+
+            entityMap["Components"] = componentsList;
+            entitiesList.Add(entityMap);
         }
         
-        return serializer.Serialize(dto);
+        rootMap["Entities"] = entitiesList;
+        
+        return serializer.Serialize(rootMap);
     }
 
     private static Scene? DeserializeScene(string yaml, IDeserializer deserializer)
@@ -323,59 +327,90 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
         if (string.IsNullOrWhiteSpace(yaml))
             return null;
 
-        SceneFileDto dto;
-        try
-        {
-            dto = deserializer.Deserialize<SceneFileDto>(yaml);
-        }
-        catch
-        {
-            return null;
-        }
+        var root = deserializer.Deserialize<Dictionary<string, object>>(yaml);
+        if (root == null) return null;
 
         var scene = new Scene
         {
-            Guid = new GUID(dto.SceneGuid),
-            Name = dto.SceneName,
-            SkyboxGuid = new GUID(dto.SkyboxGuid),
-            SkyboxName = dto.SkyboxName
+            Guid = new GUID(Convert.ToUInt64(root["SceneGuid"])),
+            Name = root["SceneName"].ToString() ?? "Unnamed Scene",
+            SkyboxGuid = new GUID(Convert.ToUInt64(root["SkyboxGuid"])),
+            SkyboxName = root["SkyboxName"].ToString() ?? string.Empty
         };
 
-        var applier = new ReflectionYamlAutoDeserializer();
+        var autoDeserializer = new ReflectionYamlAutoDeserializer();
 
-        foreach (var e in dto.Entities)
+        if (root.TryGetValue("Entities", out var entitiesRaw) && entitiesRaw is IEnumerable entitiesList)
         {
-            var entity = new GameObject(new GUID(e.Guid), e.Name, e.Tag);
-
-            foreach (var c in e.Components)
+            foreach (var entityRaw in entitiesList)
             {
-                var component = CreateComponentInstance(c.Type);
-                if (component is null)
+                if (entityRaw is not IDictionary entityMap)
                     continue;
+                
+                var guid = new GUID(Convert.ToUInt64(entityMap["Guid"]));
+                var name = entityMap["Name"]?.ToString() ?? "Unnamed Object";
+                var tag = entityMap["Tag"]?.ToString() ?? string.Empty;
 
-                applier.ApplyObjectGraph(component, c.Data);
-                entity.AddComponent(component);
+                var entity = new GameObject(guid, name, tag);
+                if (entityMap.Contains("Components") && entityMap["Components"] is IEnumerable compList)
+                {
+                    foreach (var compObj in compList)
+                    {
+                        if (compObj is not IDictionary compMap) continue;
+
+                        string typeStr = compMap["Type"]?.ToString() ?? string.Empty;
+                        var type = Type.GetType(typeStr);
+                        if (type == null) 
+                        {
+                            Log.EngineWarn($"DeserializeScene: Could not find component type '{typeStr}'. Skipping.");
+                            continue;
+                        }
+
+                        var component = (Component)Activator.CreateInstance(type)!;
+                        bool isTransform = type == typeof(Transform);
+
+                        if (isTransform)
+                        {
+                            component = entity.Transform;
+                        }
+                        else
+                        {
+                            component = (Component)Activator.CreateInstance(type)!;
+                        }
+
+                        if (compMap.Contains("Data") && compMap["Data"] is IDictionary dataMap)
+                        {
+                            var stringMap = new Dictionary<string, object?>();
+                            foreach (DictionaryEntry kvp in dataMap)
+                            {
+                                stringMap[kvp.Key.ToString()!] = kvp.Value;
+                            }
+                            
+                            autoDeserializer.ApplyObjectGraph(component, stringMap);
+                        }
+
+                        if (!isTransform)
+                            entity.AddComponent(component);
+                    }
+                }
+                scene.Entities.Add(entity.Guid, entity);
             }
+        }
+        
+        SceneReferenceResolver.ResolverAll(scene);
 
-            scene.Entities.Add(entity.Guid, entity);
+        foreach (var entity in scene.Entities.Values)
+        {
+            var transform = entity.Transform;
+            if (transform.Parent != null)
+            {
+                var loadedParent = transform.Parent;
+                typeof(Transform).GetProperty("Parent")?.SetValue(transform, null);
+                
+                transform.SetParent(loadedParent);
+            }
         }
 
         return scene;
-    }
-    
-    private static Component? CreateComponentInstance(string typeId)
-    {
-        if (string.IsNullOrWhiteSpace(typeId))
-            return null;
-
-        // You wrote Type as AssemblyQualifiedName (recommended), so this should work:
-        var type = Type.GetType(typeId, throwOnError: false);
-        if (type is null) return null;
-
-        if (!typeof(Component).IsAssignableFrom(type)) return null;
-        if (type.IsAbstract) return null;
-
-        // Requires a parameterless constructor. If you have components without one, you'll need a factory.
-        return Activator.CreateInstance(type) as Component;
     }
 }

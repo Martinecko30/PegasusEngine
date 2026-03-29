@@ -7,12 +7,11 @@ using PegasusEngine.Objects.Components;
 namespace PegasusEngine.Objects;
 
 [RequireComponent(typeof(Transform))]
+[Serializable]
 public class GameObject : EngineObject
 {
     public string Tag = string.Empty;
     public string Name { get; set; } = "Unnamed Object";
-
-    
     
     public Transform Transform { get; private set; }
     
@@ -28,6 +27,7 @@ public class GameObject : EngineObject
         
         // TODO: Add Transform component automatically
         Transform = new Transform(this);
+        components.Add(Transform);
     }
     public GameObject(GUID guid, string name) : this(guid) => Name = name;
     public GameObject(GUID guid, string name, string tag) : this(guid, name) => Tag = tag;
@@ -37,6 +37,36 @@ public class GameObject : EngineObject
     
     public void AddComponent(Component component)
     {
+        if (component == null) throw new ArgumentNullException(nameof(component));
+        
+        if (component is Transform)
+            throw new ArgumentException("Cannot add a second Transform to a GameObject!");
+        
+        Type componentType = component.GetType();
+        
+        var attributes = componentType.GetCustomAttributes(typeof(RequireComponent), true);
+
+        foreach (RequireComponent attribute in attributes)
+        {
+            Type requiredType = attribute.RequiredComponentType;
+
+            if (GetComponent(requiredType) == null)
+            {
+                try
+                {
+                    var dependency = (Component)Activator.CreateInstance(requiredType)!;
+                    
+                    AddComponent(dependency); 
+                }
+                catch (Exception ex)
+                {
+                    Log.EngineError($"Failed to automatically add required component '{requiredType.Name}' for '{componentType.Name}'. Does it lack a parameterless constructor?");
+                    throw;
+                }
+            }
+        }
+        
+        component.GameObject = this;
         components.Add(component);
     }
 
@@ -49,24 +79,22 @@ public class GameObject : EngineObject
     /// <exception cref="ArgumentException">If the new component is Transform.</exception>
     public T AddComponent<T>() where T : Component, new()
     {
-        if (typeof(T) == typeof(Transform))
-            throw new ArgumentException("Transform cannot be added to GameObject!");
-
-        var component = new T
-        {
-            GameObject = this
-        };
+        var component = new T();
         AddComponent(component);
         return component;
     }
-    
+
     /// <summary>
     /// Gets the first component by type.
     /// If the component is not found, default is returned.
     /// </summary>
     /// <typeparam name="T">Type of component to find.</typeparam>
     /// <returns>The found component.</returns>
-    public T? GetComponentByType<T>() where T : Component => components.OfType<T>().FirstOrDefault();
+    public T? GetComponentByType<T>(T? componentType = null) where T : Component
+    {
+        TryGetComponent<T>(out var component);
+        return component;
+    }
     
     /// <summary>
     /// Tries to get the first component by type.
@@ -75,24 +103,35 @@ public class GameObject : EngineObject
     /// <param name="component">The required component.</param>
     /// <typeparam name="T">Type of component to get.</typeparam>
     /// <returns></returns>
-    public bool TryGetComponentByType<T>(out T? component) where T : Component
+    public T? GetComponent<T>() where T : Component
     {
-        component = null;
         foreach (var comp in components)
         {
-            if (comp is T compT)
-            {
-                component = compT;
-                return true;
-            }
+            if (comp is T match) return match;
         }
-
-        return false;
+        return null;
     }
     
-    public T GetOrAddComponent<T>() where T : Component, new() => GetComponentByType<T>() ?? AddComponent<T>();
+    public Component? GetComponent(Type type)
+    {
+        foreach (var comp in components)
+        {
+            if (type.IsInstanceOfType(comp)) return comp;
+        }
+        return null;
+    }
+
+    public bool TryGetComponent<T>(out T? component) where T : Component
+    {
+        component = GetComponent<T>();
+        return component != null;
+    }
     
-    public bool HasComponent<T>() where T : Component => TryGetComponentByType<T>(out _);
+    public T GetOrAddComponent<T>() where T : Component, new() 
+        => GetComponent<T>() ?? AddComponent<T>();
+    
+    public bool HasComponent<T>() where T : Component 
+        => GetComponent<T>() != null;
     
     /// <summary>
     /// Removes component from the GameObject.
@@ -102,9 +141,13 @@ public class GameObject : EngineObject
     /// <exception cref="NullReferenceException">If the component is not under this object, an exception is thrown.</exception>
     public void RemoveComponent(Component component) 
     {
-        if (!components.Contains(component))
-            throw new NullReferenceException("Component is not attached to this GameObject!");
-        components.Remove(component);
+        if (component is Transform)
+            throw new InvalidOperationException("Cannot remove the Transform from a GameObject!");
+
+        if (!components.Remove(component))
+            throw new ArgumentException("Component is not attached to this GameObject!");
+            
+        component.GameObject = null!;
     }
     
     /// <summary>
@@ -115,8 +158,14 @@ public class GameObject : EngineObject
     /// <typeparam name="T">Type of component to remove.</typeparam>
     public void RemoveComponentByType<T>() where T : Component
     {
-        if (TryGetComponentByType<T>(out var component))
-            components.Remove(component);
+        if (typeof(T) == typeof(Transform))
+            throw new InvalidOperationException("Cannot remove the Transform from a GameObject!");
+
+        if (TryGetComponent<T>(out var component))
+        {
+            components.Remove(component!);
+            component!.GameObject = null!;
+        }
     }
  
     public override string ToString()

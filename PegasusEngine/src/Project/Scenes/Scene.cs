@@ -154,8 +154,8 @@ public static class SceneSerializer
                 SkyboxName = data.SkyboxName
             };
 
-            // TODO: Rework
             scene.AddEntities(data.GameObjects);
+            // TODO: Rework, maybe done by this ^
             // foreach (var eData in data.GameObjects)
             // {
             //     GUID guid = new GUID(eData.Guid != GUID.INVALID ? eData.Guid : new GUID());
@@ -186,6 +186,6 @@ public static class SceneSerializer
         public string SceneName { get; set; } = string.Empty;
         public ulong SkyboxGuid { get; set; }
         public string SkyboxName { get; set; } = string.Empty;
-        public List<GameObject> GameObjects { get; set; } = new();
+        public List<GameObject> GameObjects { get; init; } = new();
     }
 }

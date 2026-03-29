@@ -3,9 +3,9 @@ namespace PegasusEngine.Core;
 
 /// <summary>
 /// Globally Unique Identifier.
-/// A wrapper for an ulong (u-int 64)
+/// A zero-allocation wrapper for an ulong (uint64)
 /// </summary>
-public class GUID : IEquatable<GUID>
+public readonly struct GUID : IEquatable<GUID>
 {
     public static readonly GUID INVALID = new(0);
 
@@ -13,14 +13,12 @@ public class GUID : IEquatable<GUID>
 
     public GUID()
     {
-        byte[] buffer = new byte[8];
-        Random.Shared.NextBytes(buffer);
-        _value = BitConverter.ToUInt64(buffer, 0);
+        _value = (ulong)Random.Shared.NextInt64();
     }
     
     public GUID(ulong value) => _value = value;
 
-    public bool Equals(GUID? other) => _value == other!._value;
+    public bool Equals(GUID other) => _value == other._value;
     public override bool Equals(object? obj) => obj is GUID other && Equals(other);
     public override int GetHashCode() => _value.GetHashCode();
     

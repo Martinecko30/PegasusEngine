@@ -1,9 +1,10 @@
 using System.Collections;
+using PegasusEngine.Core;
 using PegasusEngine.Modules.Scripting;
-using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Objects;
 
+[Serializable]
 public class Transform : Behaviour, IEnumerable
 {
     protected GameObject GameObject { get; private set; }
@@ -12,12 +13,50 @@ public class Transform : Behaviour, IEnumerable
     public IReadOnlyList<Transform> Children => children;
     public int ChildCount => children.Count;
     
-    public Transform? Parent { get; set; }
+    public Transform? Parent { get; private set; }
+    
+    public Transform() {}
 
     public Transform(GameObject gameObject, Transform? parent = null)
     {
         this.GameObject = gameObject;
         this.Parent = parent;
+    }
+    
+    /// <summary>
+    /// Safely changes the parent of this transform and automatically 
+    /// updates the child lists of both the old and new parents.
+    /// </summary>
+    public void SetParent(Transform? newParent)
+    {
+        if (Parent == newParent)
+            return;
+
+        if (newParent == this)
+        {
+            Log.EngineWarn("SetParent: Cannot set a Transform's parent to itself!");
+            return;
+        }
+
+        if (newParent != null && newParent.IsChildOf(this))
+        {
+            Log.EngineWarn($"SetParent: Cannot set '{newParent.GameObject.Name}' as a parent because it is already a child of '{this.GameObject.Name}'!");
+            return;
+        }
+
+        if (Parent != null)
+        {
+            Parent.children.Remove(this);
+        }
+
+        Parent = newParent;
+
+        if (Parent != null)
+        {
+            Parent.children.Add(this);
+        }
+        
+        // TODO (Future): Recalculate Local/World Matrices here!
     }
     
     public Transform GetChild(int index) => children[index];
