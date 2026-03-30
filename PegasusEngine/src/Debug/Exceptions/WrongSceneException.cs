@@ -1,4 +1,4 @@
-namespace PegasusEngine.Core.Exceptions;
+namespace PegasusEngine.Debug.Exceptions;
 
 public class WrongSceneException : Exception
 {

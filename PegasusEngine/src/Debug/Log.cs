@@ -1,6 +1,8 @@
 using Serilog;
+using Serilog.Core;
+using Serilog.Events;
 
-namespace PegasusEngine.Core;
+namespace PegasusEngine.Debug;
 
 public static class Log
 {
@@ -10,20 +12,26 @@ public static class Log
     public static ILogger EngineLogger => _engineLogger ?? throw new InvalidOperationException("Logger not initialized. Call Log.Init() first.");
     public static ILogger EditorLogger => _editorLogger ?? throw new InvalidOperationException("Logger not initialized. Call Log.Init() first.");
 
+    public static event Action<LogEventLevel, string> OnLogEmitted;
+    
     public static void Init()
     {
-        // Equivalent to spdlog pattern: "%^[%T] %n: %v%$"
+        // Pattern: "%^[%T] %n: %v%$"
         const string outputTemplate = "[{Timestamp:HH:mm:ss}] {SourceContext}: {Message:lj}{NewLine}{Exception}";
 
+        var eventSink = new PegasusEventSink();
+        
         _engineLogger = new LoggerConfiguration()
             .MinimumLevel.Verbose()
             .WriteTo.Console(outputTemplate: outputTemplate)
+            .WriteTo.Sink(eventSink)
             .CreateLogger()
             .ForContext("SourceContext", "Core");
 
         _editorLogger = new LoggerConfiguration()
             .MinimumLevel.Verbose()
             .WriteTo.Console(outputTemplate: outputTemplate)
+            .WriteTo.Sink(eventSink)
             .CreateLogger()
             .ForContext("SourceContext", "App");
     }
@@ -41,4 +49,23 @@ public static class Log
     public static void EditorWarn(string message, params object[] args) => EditorLogger.Warning(message, args);
     public static void EditorError(string message, params object[] args) => EditorLogger.Error(message, args);
     public static void EditorCritical(string message, params object[] args) => EditorLogger.Fatal(message, args);
+    
+    /// <summary>
+    /// A custom Serilog Sink that intercepts formatted log messages and fires our C# event.
+    /// Nested inside Log so it can access the OnLogEmitted event safely.
+    /// </summary>
+    private class PegasusEventSink : ILogEventSink
+    {
+        public void Emit(LogEvent logEvent)
+        {
+            string renderedMessage = logEvent.RenderMessage();
+
+            if (logEvent.Exception != null)
+            {
+                renderedMessage += $"\n{logEvent.Exception.Message}";
+            }
+
+            OnLogEmitted?.Invoke(logEvent.Level, renderedMessage);
+        }
+    }
 }

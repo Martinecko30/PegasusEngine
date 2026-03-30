@@ -1,4 +1,4 @@
-using PegasusEngine.Modules.Scripting;
+using PegasusEngine.Scripting;
 
 namespace PegasusEngine.Objects.Components.Colliders;
 

@@ -8,6 +8,7 @@ using PegasusEditor.Dialogs;
 using PegasusEngine.Project;
 using PegasusEngine.Project.Assets;
 using PegasusEditor.ImGuiContext;
+using PegasusEngine.Common;
 
 namespace PegasusEditor.TabPanels;
 
@@ -166,6 +167,11 @@ public class AssetBrowser : TabPanel
     }
 
     public override void OnEvent(IEvent e)
+    {
+        
+    }
+
+    public override void Dispose()
     {
         
     }

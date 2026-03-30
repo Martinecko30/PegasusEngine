@@ -2,12 +2,12 @@
 
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
-using PegasusEngine.Modules.Rendering.Shaders;
-using PegasusEngine.Utils;
+using PegasusEngine.old.Modules.Rendering.Shaders;
+using PegasusEngine.old.Utils;
 
 #endregion
 
-namespace PegasusEngine.Runtime.Objects;
+namespace PegasusEngine.old.Runtime.Objects;
 
 public class Skybox
 {

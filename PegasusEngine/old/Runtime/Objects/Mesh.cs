@@ -1,10 +1,10 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using OpenTK.Graphics.OpenGL;
-using PegasusEngine.Modules.Rendering.Shaders;
-using PegasusEngine.Modules.Rendering.Textures;
+using PegasusEngine.old.Modules.Rendering.Shaders;
+using PegasusEngine.old.Modules.Rendering.Textures;
 
-namespace PegasusEngine.Runtime.Objects;
+namespace PegasusEngine.old.Runtime.Objects;
 
 public class Mesh
 {

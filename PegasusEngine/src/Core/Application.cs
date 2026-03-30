@@ -3,6 +3,7 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using PegasusEngine.Core.Layers;
+using PegasusEngine.Debug;
 using PegasusEngine.Platform.OpenGL;
 using PegasusEngine.Project;
 using PegasusEngine.Renderer;

@@ -4,7 +4,7 @@ using OpenTK.Mathematics;
 
 #endregion
 
-namespace PegasusEngine.Modules.Lighting;
+namespace PegasusEngine.old.Modules.Lighting;
 
 public abstract class Light
 {

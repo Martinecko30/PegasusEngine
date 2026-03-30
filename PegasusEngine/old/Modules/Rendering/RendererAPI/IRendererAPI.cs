@@ -1,4 +1,4 @@
-namespace PegasusEngine.Modules.Rendering.RendererAPI;
+namespace PegasusEngine.old.Modules.Rendering.RendererAPI;
 
 public interface IRendererAPI
 {

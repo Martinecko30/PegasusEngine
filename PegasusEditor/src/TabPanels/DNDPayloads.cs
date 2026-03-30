@@ -1,6 +1,7 @@
 using System.Numerics;
 using System.Runtime.InteropServices;
 using ImGuiNET;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
 
 namespace PegasusEditor.TabPanels;

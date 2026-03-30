@@ -1,4 +1,4 @@
-namespace PegasusEngine.Modules.Rendering.RendererAPI.OpenGL;
+namespace PegasusEngine.old.Modules.Rendering.RendererAPI.OpenGL;
 
 public class OpenGLRendererAPI : IRendererAPI
 {

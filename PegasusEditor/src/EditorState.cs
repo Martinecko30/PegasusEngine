@@ -1,4 +1,5 @@
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Export;
 using PegasusEngine.Objects;
 using PegasusEngine.Project.Scenes;

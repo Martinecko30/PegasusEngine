@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using PegasusEngine.Objects;
+using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Project.Scenes.Serialization;
 
@@ -66,7 +67,12 @@ public sealed class ReflectionYamlAutoSerializer
         var runtimeType = value.GetType();
 
         if (value is EngineObject engineObject)
+        {
+            if (engineObject is Component comp && comp.GameObject != null)
+                return (ulong)comp.GameObject.Guid;
+            
             return (ulong)engineObject.Guid;
+        }
 
         // Primitives / simple scalars
         if (IsScalar(runtimeType))

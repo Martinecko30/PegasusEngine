@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Runtime.Loader;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 
 namespace PegasusEngine.Scripting;
 

@@ -27,9 +27,6 @@ public abstract class TabPanel : IDisposable
     /// </summary>
     /// <param name="e"></param>
     public abstract void OnEvent(IEvent e);
-    
-    public void Dispose()
-    {
-        // TODO: Disposing
-    }
+
+    public abstract void Dispose();
 }

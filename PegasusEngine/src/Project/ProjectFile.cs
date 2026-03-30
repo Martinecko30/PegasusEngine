@@ -1,4 +1,6 @@
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Project.Scenes.Serialization;
 using PegasusEngine.Renderer;
 using YamlDotNet.Serialization;

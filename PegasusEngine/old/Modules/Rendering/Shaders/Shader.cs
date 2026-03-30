@@ -5,7 +5,7 @@ using OpenTK.Mathematics;
 
 #endregion
 
-namespace PegasusEngine.Modules.Rendering.Shaders;
+namespace PegasusEngine.old.Modules.Rendering.Shaders;
 
 public class Shader : IDisposable
 {

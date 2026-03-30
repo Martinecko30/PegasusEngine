@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Objects;

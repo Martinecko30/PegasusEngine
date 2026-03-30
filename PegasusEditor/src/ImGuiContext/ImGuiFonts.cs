@@ -1,5 +1,6 @@
 using ImGuiNET;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 
 namespace PegasusEditor.ImGuiContext;
 

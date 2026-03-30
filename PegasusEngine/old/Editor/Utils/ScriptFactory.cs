@@ -1,4 +1,4 @@
-namespace PegasusEngine.Editor.Utils;
+namespace PegasusEngine.old.Editor.Utils;
 
 public class ScriptFactory
 {

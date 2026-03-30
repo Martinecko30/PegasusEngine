@@ -1,3 +1,4 @@
+using PegasusEngine.Debug;
 using PegasusEngine.Project;
 
 namespace PegasusEngine.Core.Layers;

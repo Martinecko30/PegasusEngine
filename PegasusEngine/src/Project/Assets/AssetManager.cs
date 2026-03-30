@@ -1,7 +1,9 @@
 using System.Diagnostics;
 using System.Numerics;
 using Assimp;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using StbImageSharp;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;

@@ -4,7 +4,7 @@ using OpenTK.Mathematics;
 
 #endregion
 
-namespace PegasusEngine.Modules.Camera;
+namespace PegasusEngine.old.Modules.Camera;
 
 public class Camera
 {

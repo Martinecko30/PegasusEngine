@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Reflection;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Objects;
 
 namespace PegasusEngine.Project.Scenes.Serialization;

@@ -1,12 +1,13 @@
-using System.Numerics;
 using System.Reflection;
 using ImGuiNET;
+using OpenTK.Mathematics;
 using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core.Events;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Colliders;
 using PegasusEngine.Project;
+using PegasusEngine.Project.Scenes.Serialization;
 
 namespace PegasusEditor.TabPanels;
 
@@ -30,6 +31,7 @@ public class Inspector : TabPanel
             {typeof(Vector3), RenderVector3Field},
             {typeof(int), RenderIntField},
             {typeof(float), RenderFloatField},
+            {typeof(Quaternion), RenderQuaternionField}
         };
     }
     
@@ -145,23 +147,27 @@ public class Inspector : TabPanel
         theme.PopColor();
     }
 
-    private void RenderComponent(object target)
+    private void RenderComponent(Component component)
     {
-        var type = target.GetType();
-        var fields = type.GetFields(
-            BindingFlags.Instance |
-            BindingFlags.Public
-            );
-        
-        ImGui.TextDisabled($"{type.Name} Properties");
-        ImGui.Separator();
+        var type = component.GetType();
 
-        foreach (var field in fields)
+        if (ImGui.CollapsingHeader(type.Name, ImGuiTreeNodeFlags.DefaultOpen))
         {
-            if (typeHandlers.TryGetValue(field.FieldType, out var handler))
-                handler(target, field, field.Name);
-            else
-                ImGui.TextColored(new Vector4(1, 1, 0, 1), $"Unknown Type: {field.FieldType.Name} ({field.Name})");
+            ImGui.PushID(component.GetHashCode());
+
+            var fields = GetInspectorFields(type);
+
+            foreach (var field in fields)
+            {
+                if (typeHandlers.TryGetValue(field.FieldType, out var handler))
+                    handler(component, field, field.Name);
+                else if (field.FieldType.IsEnum)
+                    RenderEnumField(component, field, field.Name);
+                else
+                    ImGui.TextColored(new System.Numerics.Vector4(1, 1, 0, 1), $"Unsupported Type: {field.FieldType.Name} ({field.Name})");
+            }
+            
+            ImGui.PopID();
         }
     }
 
@@ -173,6 +179,28 @@ public class Inspector : TabPanel
     public override void OnEvent(IEvent e)
     {
         
+    }
+
+    public override void Dispose()
+    {
+        throw new NotImplementedException();
+    }
+
+    private IEnumerable<FieldInfo> GetInspectorFields(Type type)
+    {
+        const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly;
+        for (var cur = type; cur != null; cur = cur.BaseType)
+        {
+            foreach (var f in cur.GetFields(flags))
+            {
+                if (f.IsStatic || f.IsLiteral || f.IsInitOnly) continue;
+                if (Attribute.IsDefined(f, typeof(NonSerializedAttribute))) continue;
+
+                if (!f.IsPublic && !Attribute.IsDefined(f, typeof(SerializeFieldAttribute))) continue;
+
+                yield return f;
+            }
+        }
     }
 
 
@@ -204,36 +232,40 @@ public class Inspector : TabPanel
     
     private void RenderStringField(object instance, FieldInfo field, string name)
     {
-        string val = (string)(field.GetValue(instance) ?? false);
+        string val = (string)(field.GetValue(instance) ?? string.Empty);
         if (ImGui.InputText(name, ref val, 256))
-        {
             field.SetValue(instance, val);
-        }
     }
 
     // TODO: Possible mismatch between System.Numerics.Vector2 and OpenTK.Mathematics.Vector2
     private void RenderVector2Field(object instance, FieldInfo field, string name)
     {
-        Vector2 val = (Vector2)(field.GetValue(instance) ?? Vector2.Zero);
-        if (ImGui.DragFloat2(name, ref val))
-        {
-            field.SetValue(instance, val);
-        }
+        var val = (Vector2)(field.GetValue(instance) ?? Vector2.Zero);
+        var sysVec = new System.Numerics.Vector2(val.X, val.Y);
+        if (ImGui.DragFloat2(name, ref sysVec))
+            field.SetValue(instance, new Vector2(sysVec.X, sysVec.Y));
     }
     
     private void RenderVector3Field(object instance, FieldInfo field, string name)
     {
-        Vector3 val = (Vector3)(field.GetValue(instance) ?? Vector2.Zero);
-        if (ImGui.DragFloat3(name, ref val))
-        {
-            field.SetValue(instance, val);
-        }
+        var val = (Vector3)(field.GetValue(instance) ?? Vector3.Zero);
+        var sysVec = new System.Numerics.Vector3(val.X, val.Y, val.Z);
+        if (ImGui.DragFloat3(name, ref sysVec))
+            field.SetValue(instance, new Vector3(sysVec.X, sysVec.Y, sysVec.Z));
+    }
+
+    private void RenderQuaternionField(object instance, FieldInfo field, string name)
+    {
+        var val = (Quaternion)(field.GetValue(instance) ?? Quaternion.Identity);
+        var sysQuat = new System.Numerics.Vector4(val.X, val.Y, val.Z, val.W);
+        if (ImGui.DragFloat4(name, ref sysQuat))
+            field.SetValue(instance, new Quaternion(sysQuat.X, sysQuat.Y, sysQuat.Z, sysQuat.W));
     }
 
     private void RenderIntField(object instance, FieldInfo field, string name)
     {
         int val = (int)(field.GetValue(instance) ?? 0);
-        if (ImGui.InputInt(name, ref val))
+        if (ImGui.DragInt(name, ref val))
         {
             field.SetValue(instance, val);
         }
@@ -242,9 +274,23 @@ public class Inspector : TabPanel
     private void RenderFloatField(object instance, FieldInfo field, string name)
     {
         float val = (float)(field.GetValue(instance) ?? 0f);
-        if (ImGui.InputFloat(name, ref val))
+        if (ImGui.DragFloat(name, ref val))
         {
             field.SetValue(instance, val);
+        }
+    }
+    
+    private void RenderEnumField(object instance, FieldInfo field, string name)
+    {
+        var enumValues = Enum.GetValues(field.FieldType);
+        var enumNames = Enum.GetNames(field.FieldType);
+        
+        object? currentValue = field.GetValue(instance);
+        int currentIndex = currentValue != null ? Array.IndexOf(enumNames, currentValue.ToString()) : 0;
+        
+        if (ImGui.Combo(name, ref currentIndex, enumNames, enumNames.Length))
+        {
+            field.SetValue(instance, enumValues.GetValue(currentIndex));
         }
     }
     #endregion

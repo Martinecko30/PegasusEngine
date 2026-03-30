@@ -1,26 +1,34 @@
 using System.Collections;
+using OpenTK.Mathematics;
 using PegasusEngine.Core;
-using PegasusEngine.Modules.Scripting;
+using PegasusEngine.Debug;
+using PegasusEngine.Project.Scenes.Serialization;
+using PegasusEngine.Scripting;
 
 namespace PegasusEngine.Objects;
 
 [Serializable]
 public class Transform : Behaviour, IEnumerable
 {
-    protected GameObject GameObject { get; private set; }
-
     private List<Transform> children = new();
     public IReadOnlyList<Transform> Children => children;
     public int ChildCount => children.Count;
+
+    [SerializeField]
+    private Transform? parent;
+    public Transform? Parent => parent;
+
+    public Vector3 Position = new Vector3(0, 0, 0);
+    public Quaternion Rotation = new Quaternion();
+    public Vector3 Scale = new Vector3(1, 1, 1);
     
-    public Transform? Parent { get; private set; }
     
     public Transform() {}
 
     public Transform(GameObject gameObject, Transform? parent = null)
     {
         this.GameObject = gameObject;
-        this.Parent = parent;
+        SetParent(parent);
     }
     
     /// <summary>
@@ -29,7 +37,7 @@ public class Transform : Behaviour, IEnumerable
     /// </summary>
     public void SetParent(Transform? newParent)
     {
-        if (Parent == newParent)
+        if (parent == newParent)
             return;
 
         if (newParent == this)
@@ -44,16 +52,16 @@ public class Transform : Behaviour, IEnumerable
             return;
         }
 
-        if (Parent != null)
+        if (parent != null)
         {
-            Parent.children.Remove(this);
+            parent.children.Remove(this);
         }
 
-        Parent = newParent;
+        parent = newParent;
 
-        if (Parent != null)
+        if (parent != null)
         {
-            Parent.children.Add(this);
+            parent.children.Add(this);
         }
         
         // TODO (Future): Recalculate Local/World Matrices here!

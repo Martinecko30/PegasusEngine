@@ -1,6 +1,6 @@
 using PegasusEngine.Objects.Components;
 
-namespace PegasusEngine.Modules.Scripting;
+namespace PegasusEngine.Scripting;
 
 public abstract class Behaviour : Component
 {

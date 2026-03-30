@@ -1,9 +1,9 @@
 using Assimp;
 using OpenTK.Mathematics;
-using PegasusEngine.Modules.Rendering.Shaders;
-using PegasusEngine.Modules.Rendering.Textures;
+using PegasusEngine.old.Modules.Rendering.Shaders;
+using PegasusEngine.old.Modules.Rendering.Textures;
 
-namespace PegasusEngine.Runtime.Objects;
+namespace PegasusEngine.old.Runtime.Objects;
 
 public class Model
 {

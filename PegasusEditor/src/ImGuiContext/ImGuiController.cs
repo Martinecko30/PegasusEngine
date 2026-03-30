@@ -6,6 +6,7 @@ using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System.Diagnostics;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using ErrorCode = OpenTK.Graphics.OpenGL.ErrorCode;
 
 namespace PegasusEditor.ImGuiContext;

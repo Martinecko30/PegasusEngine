@@ -1,4 +1,4 @@
-using Log = PegasusEngine.Core.Log;
+using Log = PegasusEngine.Debug.Log;
 
 namespace PegasusEngine.Project;
 

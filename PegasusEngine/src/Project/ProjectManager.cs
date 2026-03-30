@@ -1,5 +1,7 @@
 using System.Diagnostics;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Project.Assets;
 using PegasusEngine.Project.Scenes;
 using PegasusEngine.Renderer;

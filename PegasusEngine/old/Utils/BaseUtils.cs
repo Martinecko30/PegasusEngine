@@ -6,7 +6,7 @@ using StbImageSharp;
 
 #endregion
 
-namespace PegasusEngine.Utils;
+namespace PegasusEngine.old.Utils;
 
 public class BaseUtils
 {

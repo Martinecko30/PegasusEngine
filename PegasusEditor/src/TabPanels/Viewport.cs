@@ -1,8 +1,8 @@
 using ImGuiNET;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
+using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core.Events;
-using PegasusEngine.Modules.Camera;
 using Vector2 = System.Numerics.Vector2;
 
 namespace PegasusEditor.TabPanels;
@@ -18,7 +18,7 @@ public class Viewport : TabPanel
     
     public override void Start()
     {
-        Title = "Viewport";
+        Title = FontAwesomeIcons.StreetView + " Viewport";
         // TODO: Fix from Editor
         // engine.Closing += OnClosing;
         // CreateFramebuffer(engine.ClientSize.X, engine.ClientSize.Y);
@@ -64,6 +64,11 @@ public class Viewport : TabPanel
     }
 
     public override void OnEvent(IEvent e)
+    {
+        
+    }
+
+    public override void Dispose()
     {
         
     }

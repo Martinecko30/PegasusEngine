@@ -1,4 +1,5 @@
 using ImGuiNET;
+using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core.Events;
 
 namespace PegasusEditor.TabPanels;
@@ -7,7 +8,7 @@ public class Game : TabPanel
 {
     public override void Start()
     {
-        Title = "Game";
+        Title = FontAwesomeIcons.Gamepad + " Game";
     }
 
     public override void Render()
@@ -24,6 +25,11 @@ public class Game : TabPanel
 
     public override void OnEvent(IEvent e)
     {
-        throw new NotImplementedException();
+        
+    }
+
+    public override void Dispose()
+    {
+        
     }
 }

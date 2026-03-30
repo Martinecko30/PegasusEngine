@@ -6,6 +6,7 @@ using PegasusEditor.TabPanels;
 using PegasusEngine.Core;
 using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
+using PegasusEngine.Debug;
 using PegasusEngine.Project;
 using PegasusEngine.Scripting;
 using Keys = OpenTK.Windowing.GraphicsLibraryFramework.Keys;
@@ -46,6 +47,7 @@ public class EditorLayer : ILayer
         editorPanels.Add(new Hierarchy(editorState, projectManager));
         editorPanels.Add(new Inspector(editorState, projectManager));
         editorPanels.Add(new Viewport());
+        editorPanels.Add(new ConsolePanel());
     }
     
     public void OnAttach()
@@ -86,7 +88,9 @@ public class EditorLayer : ILayer
                                      ImGuiWindowFlags.NoNavFocus;
 
         if (!projectManager.ProjectIsOpen)
+        {
             launcher.OnImGuiRender(hostFlags);
+        }
         else
         {
             ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, new Vector2(0f, 0f));
@@ -100,7 +104,10 @@ public class EditorLayer : ILayer
             style.WindowMinSize.X = minWinSizeX;
 
             foreach (var panel in editorPanels)
+            {
+                panel.Update();
                 panel.Render();
+            }
 
             // TODO: Move to editor managing
             var keyboard = window.KeyboardState;

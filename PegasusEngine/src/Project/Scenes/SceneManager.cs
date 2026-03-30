@@ -1,5 +1,7 @@
 using System.Collections;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Project.Scenes.Serialization;
@@ -103,11 +105,8 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
         _inRuntimeSimulation = true;
         _runtimeSimulationScenes.Clear();
 
-        foreach (var pair in _scenes)
-        {
-            // Assumes a Scene.Copy(Scene) method exists
-            _runtimeSimulationScenes.Add(pair.Key, Scene.Copy(pair.Value));
-        }
+        foreach (var (guid, scene) in _scenes)
+            _runtimeSimulationScenes.Add(guid, Copy(scene));
 
         _openSceneGuidCache = _openSceneGuid;
     }
@@ -405,12 +404,26 @@ public sealed class SceneManager : IEnumerable<KeyValuePair<GUID, Scene>>
             if (transform.Parent != null)
             {
                 var loadedParent = transform.Parent;
-                typeof(Transform).GetProperty("Parent")?.SetValue(transform, null);
+                
+                typeof(Transform).GetField("parent",
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance
+                    )?.SetValue(transform, null);
                 
                 transform.SetParent(loadedParent);
             }
         }
 
         return scene;
+    }
+    
+    public static Scene Copy(Scene other)
+    {
+        string yaml = SerializeScene(other, new Serializer());
+
+        Scene newScene = DeserializeScene(yaml, new Deserializer());
+
+        newScene.Guid = new GUID(); 
+        
+        return newScene;
     }
 }

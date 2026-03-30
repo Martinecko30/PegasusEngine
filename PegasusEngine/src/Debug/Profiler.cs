@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace PegasusEngine.Core;
+namespace PegasusEngine.Debug;
 
 public class ScrollingBuffer
 {
@@ -118,7 +118,7 @@ public class Profiler
 
     public ScopeTimer CreateTimer(string label)
     {
-        Debug.Assert(label != _globalLabel, "Use CreateGlobalTimer for the global scope!");
+        System.Diagnostics.Debug.Assert(label != _globalLabel, "Use CreateGlobalTimer for the global scope!");
         return new ScopeTimer(this, label);
     }
 
@@ -138,7 +138,7 @@ public class Profiler
 
     public ScrollingBuffer GetGlobalBuffer()
     {
-        Debug.Assert(GlobalTimerSet, "Global timer must be set before accessing the global buffer!");
+        System.Diagnostics.Debug.Assert(GlobalTimerSet, "Global timer must be set before accessing the global buffer!");
         return _data[_globalLabel];
     }
 

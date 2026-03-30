@@ -1,5 +1,6 @@
 using OpenTK.Windowing.Desktop;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 
 namespace PegasusEditor;
 

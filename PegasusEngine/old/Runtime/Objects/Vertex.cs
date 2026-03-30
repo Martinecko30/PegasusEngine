@@ -4,7 +4,7 @@ using OpenTK.Mathematics;
 
 #endregion
 
-namespace PegasusEngine.Runtime.Objects;
+namespace PegasusEngine.old.Runtime.Objects;
 
 public struct Vertex
 {

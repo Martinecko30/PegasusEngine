@@ -1,6 +1,7 @@
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using PegasusEngine.Core;
+using PegasusEngine.Debug;
 using PegasusEngine.Renderer;
 
 namespace PegasusEngine.Platform.OpenGL;

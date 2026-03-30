@@ -1,4 +1,4 @@
-namespace PegasusEngine.Core;
+namespace PegasusEngine.Common;
 
 
 /// <summary>

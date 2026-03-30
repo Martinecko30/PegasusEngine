@@ -7,7 +7,7 @@ using TextureWrapMode = OpenTK.Graphics.OpenGL.TextureWrapMode;
 
 #endregion
 
-namespace PegasusEngine.Modules.Rendering.Textures;
+namespace PegasusEngine.old.Modules.Rendering.Textures;
 
 public class Texture
 {
