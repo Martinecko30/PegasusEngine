@@ -13,3 +13,5 @@ F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\obj\Release\net9.0-wind
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\obj\Release\net9.0-windows\ref\PegasusEngine.dll
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Release\net9.0-windows\res\PegasusLogo.png
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Release\net9.0-windows\res\PegasusLogo.svg
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Release\net9.0-windows\res\Shaders\DefaultShader.frag
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEngine\bin\Release\net9.0-windows\res\Shaders\DefaultShader.vert

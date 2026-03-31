@@ -43,7 +43,6 @@
 
     <ItemGroup>
       <Folder Include="old\" />
-      <Folder Include="PegasusRuntime\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -65,6 +64,14 @@
       </Content>
       <None Remove="res\PegasusLogo.svg" />
       <Content Include="res\PegasusLogo.svg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="res\Shaders\DefaultShader.frag" />
+      <Content Include="res\Shaders\DefaultShader.frag">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="res\Shaders\DefaultShader.vert" />
+      <Content Include="res\Shaders\DefaultShader.vert">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

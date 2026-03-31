@@ -5,7 +5,7 @@ namespace PegasusEngine.Project.Assets;
 
 public abstract class Metadata;
 
-[StructLayout(LayoutKind.Sequential)]
+[StructLayout(LayoutKind.Sequential, Pack = 16)] // Pack=16 ensures std140/std430 alignment
 public struct Triangle
 {
     public Vector4 V0;

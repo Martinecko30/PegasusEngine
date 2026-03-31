@@ -492,7 +492,7 @@ public class AssetBrowser : TabPanel
             else if (metadata is TextureMetadata tex)
             {
                 theme.PushColor(ImGuiCol.Text, EditorCol.Accent1);
-                ImGui.TextUnformatted("Texture Metadata");
+                ImGui.TextUnformatted("Texture2D Metadata");
                 theme.PopColor();
 
                 DrawLabelValue("Width:", tex.Width.ToString());

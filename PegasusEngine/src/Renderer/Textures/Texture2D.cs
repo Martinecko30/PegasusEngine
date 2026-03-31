@@ -7,16 +7,23 @@ using TextureWrapMode = OpenTK.Graphics.OpenGL.TextureWrapMode;
 
 #endregion
 
-namespace PegasusEngine.old.Modules.Rendering.Textures;
+namespace PegasusEngine.Renderer.Textures;
 
-public class Texture
+public class Texture2D
 {
     public int textureID;
 
     public string type;
     public string path;
     
-    public Texture(string filePath, string type)
+    public Texture2D(int textureId, string type)
+    {
+        this.textureID = textureId;
+        this.type = type;
+        this.path = "FBO_Attachment";
+    }
+    
+    public Texture2D(string filePath, string type)
     {
         this.type = type;
         path = filePath;
@@ -53,7 +60,7 @@ public class Texture
         GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
     }
 
-    public Texture(string type, Color4D color)
+    public Texture2D(string type, Color4D color)
     {
         this.type = type;
         path = "";

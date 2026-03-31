@@ -202,8 +202,4 @@ $@"<Project Sdk=""Microsoft.NET.Sdk"">
         
         Log.EngineInfo("CloseProject: Project closed successfully.");
     }
-
-    
-    
-
 }

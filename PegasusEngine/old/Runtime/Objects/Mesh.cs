@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using OpenTK.Graphics.OpenGL;
 using PegasusEngine.old.Modules.Rendering.Shaders;
-using PegasusEngine.old.Modules.Rendering.Textures;
+using PegasusEngine.Renderer.Textures;
 
 namespace PegasusEngine.old.Runtime.Objects;
 
@@ -11,11 +11,11 @@ public class Mesh
     //public List<Vertex> Vertices { private set; get; }
     public Vertex[] Vertices { get; }
     public List<uint> Indices { get; }
-    public List<Texture> Textures { get; }
+    public List<Texture2D> Textures { get; }
 
     private int VAO, VBO, EBO;
     
-    public Mesh(Vertex[] vertices, List<uint> indices, List<Texture> textures)
+    public Mesh(Vertex[] vertices, List<uint> indices, List<Texture2D> textures)
     {
         Vertices = vertices;
         Indices = indices;

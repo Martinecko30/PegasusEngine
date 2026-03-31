@@ -8,6 +8,7 @@ using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
 using PegasusEngine.Debug;
 using PegasusEngine.Project;
+using PegasusEngine.Renderer;
 using PegasusEngine.Scripting;
 using Keys = OpenTK.Windowing.GraphicsLibraryFramework.Keys;
 
@@ -46,7 +47,7 @@ public class EditorLayer : ILayer
         editorPanels.Add(new Game());
         editorPanels.Add(new Hierarchy(editorState, projectManager));
         editorPanels.Add(new Inspector(editorState, projectManager));
-        editorPanels.Add(new Viewport());
+        editorPanels.Add(new Viewport(editorState));
         editorPanels.Add(new ConsolePanel());
     }
     

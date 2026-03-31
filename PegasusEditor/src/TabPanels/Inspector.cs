@@ -6,6 +6,7 @@ using PegasusEngine.Core.Events;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Colliders;
+using PegasusEngine.Objects.Components.Meshes;
 using PegasusEngine.Project;
 using PegasusEngine.Project.Scenes.Serialization;
 
@@ -37,7 +38,7 @@ public class Inspector : TabPanel
     
     public override void Start()
     {
-        Title = "Inspector";
+        Title = FontAwesomeIcons.Sliders + " Inspector";
     }
 
     public override void Render()
@@ -45,7 +46,7 @@ public class Inspector : TabPanel
         var theme = editorState.Temp.EditorTheme;
         
         ImGui.SetNextWindowSizeConstraints(new(350, 50), new(float.MaxValue, float.MaxValue));
-        ImGui.Begin(FontAwesomeIcons.Sliders + Title);
+        ImGui.Begin(Title);
 
         if (editorState.Temp.IsInRuntimeSimulation)
             ImGui.BeginDisabled();
@@ -137,6 +138,9 @@ public class Inspector : TabPanel
         {
             // TODO: Add entity components
             GiveEntityComponentButton<BoxCollider>(entity, "Box Collider", FontAwesomeIcons.Box);
+            GiveEntityComponentButton<Camera>(entity, "Camera", FontAwesomeIcons.Camera);
+            GiveEntityComponentButton<MeshFilter>(entity, "Mesh Filter", FontAwesomeIcons.Filter);
+            GiveEntityComponentButton<MeshRenderer>(entity, "Mesh Renderer", FontAwesomeIcons.Bucket);
             
             ImGui.BulletText($"Add Component to entity {entity.Tag}");
             ImGui.EndPopup();

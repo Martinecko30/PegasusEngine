@@ -106,13 +106,17 @@ public class Shader : IDisposable
         GL.Uniform1(UniformLocationsLookUp(name), data);
     }
     
-        
+    public void SetUInt(string name, uint data)
+    {
+        GL.UseProgram(Handle);
+        GL.Uniform1(UniformLocationsLookUp(name), data);
+    }
+    
     public void SetFloat(string name, float data)
     {
         GL.UseProgram(Handle);
         GL.Uniform1(UniformLocationsLookUp(name), data);
     }
-
         
     public void SetMatrix4(string name, Matrix4 data)
     {

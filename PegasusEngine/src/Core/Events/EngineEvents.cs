@@ -1,4 +1,6 @@
-using System.Numerics;
+using OpenTK.Mathematics;
+using PegasusEngine.Renderer.Textures;
+
 // For Vector2
 
 namespace PegasusEngine.Core.Events;
@@ -6,9 +8,9 @@ namespace PegasusEngine.Core.Events;
 // Note: You'll need to define IImage2D and RenderSettings in C# as well
 public class NewFrameRenderedEvent : EventBase
 {
-    public object Frame { get; } // Replace 'object' with your IImage2D interface
+    public Texture2D Frame { get; }
 
-    public NewFrameRenderedEvent(object frame)
+    public NewFrameRenderedEvent(Texture2D frame)
     {
         Frame = frame;
     }
@@ -30,11 +32,14 @@ public class UpdateRenderSettingsEvent : EventBase
 
 public class WindowResizeEvent : EventBase
 {
-    public Vector2 WindowSize { get; }
+    public Vector2i WindowSize { get; }
+    
+    public int Width => WindowSize.X;
+    public int Height => WindowSize.Y;
 
     public WindowResizeEvent(int width, int height)
     {
-        WindowSize = new Vector2(width, height);
+        WindowSize = new Vector2i(width, height);
     }
 
     public override EventType GetEventType() => EventType.WindowResize;

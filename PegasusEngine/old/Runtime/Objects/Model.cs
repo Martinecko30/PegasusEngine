@@ -1,7 +1,7 @@
 using Assimp;
 using OpenTK.Mathematics;
 using PegasusEngine.old.Modules.Rendering.Shaders;
-using PegasusEngine.old.Modules.Rendering.Textures;
+using PegasusEngine.Renderer.Textures;
 
 namespace PegasusEngine.old.Runtime.Objects;
 
@@ -11,7 +11,7 @@ public class Model
     private string directory;
 
     private readonly Vector3 size = Vector3.One;
-    private readonly List<Texture> loadedTextures = new();
+    private readonly List<Texture2D> loadedTextures = new();
     
     private Box3 boundingBox;
     
@@ -95,7 +95,7 @@ public class Model
     {
         Vertex[] vertices = new Vertex[mesh.VertexCount];
         List<uint> indices = new List<uint>();
-        List<Texture> textures = new List<Texture>();
+        List<Texture2D> textures = new List<Texture2D>();
 
         
         // Process vertices, normals, texture coordinates
@@ -132,28 +132,28 @@ public class Model
         if (mesh.MaterialIndex >= 0)
         {
             Material material = scene.Materials[mesh.MaterialIndex];
-            List<Texture> diffuseMaps = LoadMaterialTextures(
+            List<Texture2D> diffuseMaps = LoadMaterialTextures(
                 material, 
                 TextureType.Diffuse, 
                 "diffuseTexture"
                 );
             textures.AddRange(diffuseMaps);
             
-            List<Texture> specularMaps = LoadMaterialTextures(
+            List<Texture2D> specularMaps = LoadMaterialTextures(
                 material, 
                 TextureType.Specular, 
                 "specularTexture"
             );
             textures.AddRange(specularMaps);
 
-            List<Texture> normalMaps = LoadMaterialTextures(
+            List<Texture2D> normalMaps = LoadMaterialTextures(
                 material,
                 TextureType.Height,
                 "normalTexture"
             );
             textures.AddRange(normalMaps);
             
-            List<Texture> heightMaps = LoadMaterialTextures(
+            List<Texture2D> heightMaps = LoadMaterialTextures(
                 material,
                 TextureType.Ambient,
                 "heightTexture"
@@ -164,26 +164,26 @@ public class Model
         return new Mesh(vertices, indices, textures);
     }
 
-    private List<Texture> LoadMaterialTextures(Material mat, TextureType type, string typeName)
+    private List<Texture2D> LoadMaterialTextures(Material mat, TextureType type, string typeName)
     {
-        List<Texture> textures = new List<Texture>();
+        List<Texture2D> textures = new List<Texture2D>();
         
         //Console.WriteLine(mat.GetMaterialTextureCount(type) + " " + type + " " + mat.Name + " " + directory);
         
 
         if (type == TextureType.Diffuse && mat.GetMaterialTextureCount(type) <= 0 && mat.HasColorDiffuse)
         {
-            Texture texture = new Texture(typeName, mat.ColorDiffuse);
-            textures.Add(texture);
-            loadedTextures.Add(texture);
+            Texture2D texture2D = new Texture2D(typeName, mat.ColorDiffuse);
+            textures.Add(texture2D);
+            loadedTextures.Add(texture2D);
             return textures;
         }
         
         if (type == TextureType.Specular && mat.HasColorSpecular && mat.GetMaterialTextureCount(type) <= 0)
         {
-            Texture texture = new Texture(typeName, mat.ColorSpecular);
-            textures.Add(texture);
-            loadedTextures.Add(texture);
+            Texture2D texture2D = new Texture2D(typeName, mat.ColorSpecular);
+            textures.Add(texture2D);
+            loadedTextures.Add(texture2D);
             return textures;
         }
         
@@ -205,9 +205,9 @@ public class Model
 
             if (!skip)
             {
-                Texture texture = new Texture(Path.Combine(directory, textureSlot.FilePath), typeName);
-                textures.Add(texture);
-                loadedTextures.Add(texture);
+                Texture2D texture2D = new Texture2D(Path.Combine(directory, textureSlot.FilePath), typeName);
+                textures.Add(texture2D);
+                loadedTextures.Add(texture2D);
             }
         }
 

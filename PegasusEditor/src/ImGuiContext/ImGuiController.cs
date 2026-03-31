@@ -21,7 +21,7 @@ public class ImGuiController : IDisposable
     private int _indexBuffer;
     private int _indexBufferSize;
 
-    //private Texture _fontTexture;
+    //private Texture2D _fontTexture;
 
     private int _fontTexture;
 
@@ -477,7 +477,7 @@ outputColor = color * texture(in_fontTexture, texCoord);
                 {
                     GL.ActiveTexture(TextureUnit.Texture0);
                     GL.BindTexture(TextureTarget.Texture2D, (int)pcmd.TextureId);
-                    CheckGLError("Texture");
+                    CheckGLError("Texture2D");
 
                     // We do _windowHeight - (int)clip.W instead of (int)clip.Y because gl has flipped Y when it comes to these coordinates
                     var clip = pcmd.ClipRect;

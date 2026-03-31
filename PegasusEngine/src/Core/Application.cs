@@ -2,6 +2,7 @@ using System.Diagnostics;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
+using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
 using PegasusEngine.Debug;
 using PegasusEngine.Platform.OpenGL;
@@ -16,15 +17,15 @@ public class Application
 {
     protected GameWindow Window;
     protected LayerStack LayerStack;
-    protected IRendererAPI RendererApi;
     protected Profiler Profiler;
     
     protected ProjectManager ProjectManager;
     protected ScriptManager ScriptManager;
     
     protected RenderLayer RenderLayer;
-
     protected ScriptLayer ScriptLayer;
+    
+    protected IRenderer Renderer;
     
     private bool _shouldClose = false;
     
@@ -44,12 +45,10 @@ public class Application
         ScriptManager = new ScriptManager();
         
         LayerStack = new LayerStack();
-        
-        RendererApi = new OpenGLRendererAPI();
-        RendererApi.Init();
 
+        Renderer = new Renderer.Renderer(ProjectManager.AssetManager);
 
-        RenderLayer = new RenderLayer(LayerStack, Profiler, ProjectManager);
+        RenderLayer = new RenderLayer(LayerStack, Profiler, ProjectManager, Renderer);
         LayerStack.PushLayer(RenderLayer);
         
         
@@ -58,7 +57,7 @@ public class Application
         
         // Setup callbacks
         Window.Closing += _ => _shouldClose = true;
-        Window.Resize += e => RendererApi.SetViewportSize(e.Width, e.Height);
+        Window.Resize += e => LayerStack.DispatchEvent(new WindowResizeEvent(e.Width, e.Height));
     }
 
     public void Shutdown()
@@ -85,8 +84,6 @@ public class Application
             {
                 using (var t = Profiler.CreateTimer("Window.OnUpdate()"))
                     NativeWindow.ProcessWindowEvents(false);
-                
-                RendererApi.Clear(new Color4(1.0f, 0.0f, 1.0f, 1.0f)); // magenta
                 
                 using (var t = Profiler.CreateTimer("LayerStack.OnUpdate()"))
                 {

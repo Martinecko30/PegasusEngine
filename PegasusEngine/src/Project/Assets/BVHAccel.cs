@@ -5,15 +5,13 @@ namespace PegasusEngine.Project.Assets;
 
 public class BVHAccel
 {
-    [StructLayout(LayoutKind.Sequential)]
+    [StructLayout(LayoutKind.Sequential, Pack = 16)]
     public struct Node
     {
         public Vector3 Min;
         public uint LeftChildOrFirstTri;
         public Vector3 Max;
         public uint TriCount;
-        /* if TriCount == 0: LeftChildOrFirstTri == leftChildIdx
-           else LeftChildOrFirstTri == firstTriIdx */
     }
     
     public struct Aabb
