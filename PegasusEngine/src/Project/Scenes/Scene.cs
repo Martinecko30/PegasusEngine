@@ -20,6 +20,10 @@ public class Scene
     public string SkyboxName { get; set; } = string.Empty;
 
     public Dictionary<GUID, GameObject> Entities { get; } = new();
+    
+    public Camera? MainCamera { get; set; }
+    
+    
 
     public void AddEntity(GameObject entity)
     {
@@ -93,6 +97,7 @@ public class Scene
         return null;
     }
 
+    
 
     public virtual void OnStart() { }
     public virtual void OnUpdate() { }

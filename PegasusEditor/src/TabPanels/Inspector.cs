@@ -1,8 +1,11 @@
 using System.Reflection;
+using System.Runtime.InteropServices;
 using ImGuiNET;
 using OpenTK.Mathematics;
 using PegasusEditor.ImGuiContext;
+using PegasusEngine.Common;
 using PegasusEngine.Core.Events;
+using PegasusEngine.Debug;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Colliders;
@@ -18,6 +21,8 @@ public class Inspector : TabPanel
     private readonly ProjectManager projectManager;
     
     private readonly Dictionary<Type, Action<object, FieldInfo, string>> typeHandlers;
+
+    private List<Type> availableComponentTypes;
     
     public Inspector(EditorState editorState, ProjectManager projectManager)
     {
@@ -30,9 +35,11 @@ public class Inspector : TabPanel
             {typeof(string), RenderStringField},
             {typeof(Vector2), RenderVector2Field},
             {typeof(Vector3), RenderVector3Field},
+            {typeof(Vector4), RenderVector4Field},
             {typeof(int), RenderIntField},
             {typeof(float), RenderFloatField},
-            {typeof(Quaternion), RenderQuaternionField}
+            {typeof(Quaternion), RenderQuaternionField},
+            {typeof(GUID), RenderGUIDField}
         };
     }
     
@@ -182,7 +189,10 @@ public class Inspector : TabPanel
 
     public override void OnEvent(IEvent e)
     {
-        
+        if (e is ReloadScriptAssembliesEvent reloadEvent)
+        {
+            availableComponentTypes.AddRange(reloadEvent.newScriptTypes);
+        }
     }
 
     public override void Dispose()
@@ -257,6 +267,14 @@ public class Inspector : TabPanel
         if (ImGui.DragFloat3(name, ref sysVec))
             field.SetValue(instance, new Vector3(sysVec.X, sysVec.Y, sysVec.Z));
     }
+    
+    private void RenderVector4Field(object instance, FieldInfo field, string name)
+    {
+        var val = (Vector4)(field.GetValue(instance) ?? Vector4.Zero);
+        var sysVec = new System.Numerics.Vector4(val.X, val.Y, val.Z, val.W);
+        if (ImGui.DragFloat4(name, ref sysVec))
+            field.SetValue(instance, new Vector4(sysVec.X, sysVec.Y, sysVec.Z, sysVec.W));
+    }
 
     private void RenderQuaternionField(object instance, FieldInfo field, string name)
     {
@@ -295,6 +313,41 @@ public class Inspector : TabPanel
         if (ImGui.Combo(name, ref currentIndex, enumNames, enumNames.Length))
         {
             field.SetValue(instance, enumValues.GetValue(currentIndex));
+        }
+    }
+
+    private unsafe void RenderGUIDField(object instance, FieldInfo field, string name)
+    {
+        GUID currentGuid = (GUID)(field.GetValue(instance)!);
+    
+        string displayValue = currentGuid == GUID.INVALID ? "None" : currentGuid.ToString();
+
+        ImGui.InputText(name, ref displayValue, 256, ImGuiInputTextFlags.ReadOnly);
+
+        if (ImGui.BeginDragDropTarget())
+        {
+            ImGuiPayloadPtr payload = default;
+
+            if (payload.NativePtr == null) payload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Mesh);
+            if (payload.NativePtr == null) payload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Texture);
+            if (payload.NativePtr == null) payload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Scene);
+
+            if (payload.NativePtr != null)
+            {
+                int expectedSize = Marshal.SizeOf<DNDPayload>();
+                if (payload.DataSize == expectedSize)
+                {
+                    // 5. Extract the struct and assign the GUID!
+                    DNDPayload droppedData = Marshal.PtrToStructure<DNDPayload>(payload.Data);
+                    field.SetValue(instance, droppedData.Guid);
+                }
+                else
+                {
+                    Log.EngineError($"Drag/Drop Payload size mismatch! Expected {expectedSize}, got {payload.DataSize}");
+                }
+            }
+    
+            ImGui.EndDragDropTarget();
         }
     }
     #endregion

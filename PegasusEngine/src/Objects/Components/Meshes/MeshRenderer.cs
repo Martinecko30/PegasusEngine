@@ -5,6 +5,7 @@ namespace PegasusEngine.Objects.Components.Meshes;
 
 [Serializable]
 [RequireComponent(typeof(MeshFilter))]
+[DisallowMultipleComponents]
 public class MeshRenderer : Component
 {
     // The GUID pointing to the Material/Texture in the AssetPool

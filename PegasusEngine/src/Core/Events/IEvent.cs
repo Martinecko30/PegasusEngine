@@ -17,6 +17,7 @@ public enum EventType
     UpdateRenderSettings,
     
     WindowResize,
+    ReloadedScriptAssemblies,
     
     EventCount
 }

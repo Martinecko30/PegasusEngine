@@ -217,7 +217,7 @@ public class AssetManager
         var timerStart = Stopwatch.GetTimestamp();
         
         using AssimpContext importer = new AssimpContext();
-        var scene = importer.ImportFile(Path.GetFullPath(assetPath));
+        var scene = importer.ImportFile(Path.GetFullPath(assetPath), PostProcessSteps.Triangulate | PostProcessSteps.JoinIdenticalVertices);
         if (scene == null || (scene.SceneFlags & SceneFlags.Incomplete) != 0 || scene.RootNode == null)
         {
             Log.EngineCritical("LoadMesh: failed to load assimp scene from {0} (GUID {1})", assetPath, guid);
@@ -269,7 +269,7 @@ public class AssetManager
         
         BVHAccel bvh = new(meshBuffer, metadata.FirstTriIdx, metadata.TriCount);
         bvh.Build(AssetPool.NodeBuffer, AssetPool.IndexBuffer, out uint firstNodeIdx, out uint nodeCount);
-        metadata.FirstTriIdx = firstNodeIdx;
+        metadata.FirstNodeIdx = firstNodeIdx;
         metadata.NodeCount = nodeCount;
         
         AssetPool.MarkUpdated(AssetPool.AssetType.NodeBuffer);

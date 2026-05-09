@@ -2,12 +2,14 @@ using System.Collections;
 using OpenTK.Mathematics;
 using PegasusEngine.Core;
 using PegasusEngine.Debug;
+using PegasusEngine.Objects.Components;
 using PegasusEngine.Project.Scenes.Serialization;
 using PegasusEngine.Scripting;
 
 namespace PegasusEngine.Objects;
 
 [Serializable]
+[DisallowMultipleComponents]
 public class Transform : Behaviour, IEnumerable
 {
     private List<Transform> children = new();

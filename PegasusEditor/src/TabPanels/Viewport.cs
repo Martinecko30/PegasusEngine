@@ -1,10 +1,9 @@
 using ImGuiNET;
-using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using PegasusEditor.ImGuiContext;
 using PegasusEngine.Core.Events;
-using PegasusEngine.Renderer;
 using PegasusEngine.Renderer.Textures;
+using Log = PegasusEngine.Debug.Log;
 using Vector2 = System.Numerics.Vector2;
 
 namespace PegasusEditor.TabPanels;
@@ -57,14 +56,14 @@ public class Viewport : TabPanel
                 // TODO: Resize the framebuffer
             }
         }
-
+        
         if (lastRenderedFrame != null)
         {
             ImGui.Image(
-                lastRenderedFrame.textureID,
+                lastRenderedFrame.textureID, 
                 windowSize,
-                new Vector2((float)Math.Pow(windowWidth, -1), 1),
-                new Vector2(1, (float)Math.Pow(windowWidth, -1))
+                new Vector2(0, 1),
+                new Vector2(1, 0)
             );
         }
         else

@@ -1,5 +1,6 @@
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
+using PegasusEngine.Common;
 using PegasusEngine.Debug;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Meshes;
@@ -98,7 +99,7 @@ public class Renderer : IRenderer
             
             GL.BindVertexArray(dummyVao);
             
-            RenderScene(scene);
+            RenderScene(scene, activeCamera);
             
             GL.BindVertexArray(0);
         }
@@ -109,17 +110,23 @@ public class Renderer : IRenderer
         return _finalFrameTexture!;
     }
 
-    public void RenderScene(Scene scene)
+    public void RenderScene(Scene scene, Camera mainCamera)
     {
+        Matrix4 viewMatrix = mainCamera.GetViewMatrix();
+        Matrix4 projectionMatrix = mainCamera.GetProjectionMatrix();
+
         var renderables = scene.Entities.Values
             .Where(e => e.HasComponent<MeshFilter>() && e.HasComponent<MeshRenderer>());
-
         foreach (var entity in renderables)
         {
             var filter = entity.GetComponent<MeshFilter>();
+            if (filter!.MeshGuid == GUID.INVALID)
+                continue;
+            
             var metadata = assetManager.AssetPool.FindMetadata<MeshMetadata>(filter.MeshGuid);
-        
-            if (metadata == null) continue;
+
+            if (metadata == null)
+                continue;
 
             var transform = entity.Transform;
             Matrix4 modelMatrix = Matrix4.CreateScale(transform.Scale) *

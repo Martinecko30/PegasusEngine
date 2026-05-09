@@ -1,5 +1,3 @@
-using System;
-
 namespace PegasusEngine.Objects.Components;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]

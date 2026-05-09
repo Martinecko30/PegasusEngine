@@ -44,3 +44,14 @@ public class WindowResizeEvent : EventBase
 
     public override EventType GetEventType() => EventType.WindowResize;
 }
+
+public class ReloadScriptAssembliesEvent : EventBase
+{
+    public readonly List<Type> newScriptTypes;
+    public ReloadScriptAssembliesEvent(List<Type> newScriptTypes)
+    {
+        this.newScriptTypes = newScriptTypes;
+    }
+
+    public override EventType GetEventType() => EventType.ReloadedScriptAssemblies;
+}

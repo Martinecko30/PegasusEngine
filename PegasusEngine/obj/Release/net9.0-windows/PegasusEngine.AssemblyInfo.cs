@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PegasusEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1914bfaee333379d0c06666b4d88f471f22e9f0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2eff5a9e342e7ebcbbda0aa5a0dabcfc45ce7f44")]
 [assembly: System.Reflection.AssemblyProductAttribute("PegasusEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PegasusEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,3 +1,4 @@
+using PegasusEngine.Core.Events;
 using PegasusEngine.Project;
 using PegasusEngine.Scripting;
 
@@ -7,11 +8,13 @@ public sealed class ScriptLayer : Layer
 {
     private ProjectManager ProjectManager { get; }
     private ScriptManager ScriptManager { get; }
+    private IEventDispatcher eventDispatcher { get; }
     
-    public ScriptLayer(ScriptManager scriptManager, ProjectManager projectManager)
+    public ScriptLayer(ScriptManager scriptManager, ProjectManager projectManager, IEventDispatcher eventDispatcher)
     {
         this.ProjectManager = projectManager;
         this.ScriptManager = scriptManager;
+        this.eventDispatcher = eventDispatcher;
     }
     
     public override void OnAttach()
@@ -19,12 +22,13 @@ public sealed class ScriptLayer : Layer
         if (!string.IsNullOrEmpty(ProjectManager.AbsoluteCSProjectPath))
         {
             ScriptManager.LoadScripts(ProjectManager.AbsoluteCSProjectPath, true);
+            
+            eventDispatcher.DispatchEvent(new ReloadScriptAssembliesEvent(ScriptManager.ScriptTypes.Values.ToList()));
         }        
     }
 
     public override void OnUpdate(float deltaTime)
     {
-        // TODO: delta time?
-        ScriptManager.UpdateScripts();
+        ScriptManager.UpdateScripts(deltaTime);
     }
 }

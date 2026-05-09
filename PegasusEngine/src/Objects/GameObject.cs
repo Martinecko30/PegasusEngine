@@ -14,8 +14,8 @@ public class GameObject : EngineObject
 {
     public string Tag = string.Empty;
     public string Name { get; set; } = "Unnamed Object";
-    
-    public Transform Transform { get; private set; }
+
+    public Transform Transform => GetComponent<Transform>()!;
     
     public bool IsActive { get; private set; } = true;
     public void SetActive(bool active) => IsActive = active;
@@ -26,10 +26,8 @@ public class GameObject : EngineObject
     public GameObject(GUID guid)
     {
         Guid = guid;
-        
-        // TODO: Add Transform component automatically
-        Transform = new Transform(this);
-        components.Add(Transform);
+
+        AddComponent<Transform>();
     }
     public GameObject(GUID guid, string name) : this(guid) => Name = name;
     public GameObject(GUID guid, string name, string tag) : this(guid, name) => Tag = tag;
@@ -41,17 +39,25 @@ public class GameObject : EngineObject
     {
         if (component == null) throw new ArgumentNullException(nameof(component));
         
-        if (component is Transform)
-            throw new ArgumentException("Cannot add a second Transform to a GameObject!");
-        
         Type componentType = component.GetType();
+        bool disallowMultiple = componentType.GetCustomAttributes(typeof(DisallowMultipleComponents), true).Length > 0;
+    
+        if (disallowMultiple && GetComponent(componentType) != null)
+        {
+            Log.EngineError($"Cannot add multiple instances of '{componentType.Name}' to GameObject '{Name}'. " +
+                            "It is restricted by [DisallowMultipleComponent].");
+            return;
+        }
+        
+        component.GameObject = this;
+        components.Add(component);
         
         var attributes = componentType.GetCustomAttributes(typeof(RequireComponent), true);
 
         foreach (RequireComponent attribute in attributes)
         {
             Type requiredType = attribute.RequiredComponentType;
-
+            
             if (GetComponent(requiredType) == null)
             {
                 try
@@ -62,14 +68,14 @@ public class GameObject : EngineObject
                 }
                 catch (Exception ex)
                 {
+                    components.Remove(component);
+                    component.GameObject = null!;
+                    
                     Log.EngineError($"Failed to automatically add required component '{requiredType.Name}' for '{componentType.Name}'. Does it lack a parameterless constructor?");
                     throw;
                 }
             }
         }
-        
-        component.GameObject = this;
-        components.Add(component);
     }
 
     /// <summary>

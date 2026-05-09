@@ -94,4 +94,9 @@ public class Texture2D
         GL.ActiveTexture(unit);
         GL.BindTexture(TextureTarget.Texture2D, textureID);
     }
+
+    public override string ToString()
+    {
+        return $"Texture2D: Path: {path}, Type: {type}, ID: {textureID}";
+    }
 }

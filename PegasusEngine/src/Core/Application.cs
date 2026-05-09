@@ -52,7 +52,7 @@ public class Application
         LayerStack.PushLayer(RenderLayer);
         
         
-        ScriptLayer = new ScriptLayer(ScriptManager, ProjectManager);
+        ScriptLayer = new ScriptLayer(ScriptManager, ProjectManager, LayerStack);
         LayerStack.PushLayer(ScriptLayer);
         
         // Setup callbacks

@@ -1,39 +1,60 @@
 using System.Diagnostics;
+using System.Reflection;
 using System.Runtime.Loader;
 using PegasusEngine.Core;
 using PegasusEngine.Debug;
+using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Scripting;
 
 public sealed class ScriptManager
 {
-    public Dictionary<string, Type> Scripts { get; private set; } = new();
+    private ScriptAssemblyLoadContext? scriptContext;
+    public Dictionary<string, Type> ScriptTypes { get; private set; } = new();
+    public List<object> ActiveScripts { get; private set; } = new();
     
     public void LoadScripts(string absoluteCSProjectPath, bool build = false)
     {
-        if (build)
-            BuildScripts(absoluteCSProjectPath);
+        if (build && !BuildScripts(absoluteCSProjectPath))
+            return;
         
         // TODO: Build scripts
         try
         {
+            if (scriptContext != null)
+            {
+                scriptContext.Unload();
+                scriptContext = null;
+                ScriptTypes.Clear();
+                ActiveScripts.Clear();
+                
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+            
+            scriptContext = new ScriptAssemblyLoadContext();
             string dllPath = GetBinaryPath(absoluteCSProjectPath);
             
-            byte[] assemblyData = File.ReadAllBytes(dllPath);
-            using var stream = new MemoryStream(assemblyData);
-            
-            var assembly = AssemblyLoadContext.Default.LoadFromStream(stream);
-            
-            Scripts.Clear();
+            using var stream = new FileStream(dllPath, FileMode.Open, FileAccess.Read);
+            var assembly = scriptContext.LoadFromStream(stream);
             
             var allTypes = assembly.GetTypes();
             foreach (var type in allTypes)
             {
-                Log.EngineInfo($"Type: {type.Name}");
-                Scripts.Add(type.Name, type);
-                var script = Activator.CreateInstance(type);
-                var start = type.GetMethod("Start");
-                start?.Invoke(script, null);
+                if (type.IsClass && !type.IsAbstract && type.IsSubclassOf(typeof(Component)))
+                {
+                    ScriptTypes.Add(type.Name, type);
+                    Log.EngineInfo($"Loaded User Script: {type.Name}");
+                    
+                    var scriptInstance = Activator.CreateInstance(type);
+                    if (scriptInstance != null)
+                    {
+                        ActiveScripts.Add(scriptInstance);
+                        
+                        var startMethod = type.GetMethod("Start", BindingFlags.Public | BindingFlags.Instance);
+                        startMethod?.Invoke(scriptInstance, null);
+                    }
+                }
             }
             
             Log.EngineInfo($"LoadScripts: Loaded scripts!");
@@ -94,6 +115,12 @@ public sealed class ScriptManager
 
     public void UpdateScripts(float? deltaTime = null)
     {
-        // TODO: Update scripts
+        foreach (var script in ActiveScripts)
+        {
+            Type type = script.GetType();
+            var updateMethod = type.GetMethod("Update", BindingFlags.Instance);
+            
+            updateMethod?.Invoke(script, new object[] { deltaTime });
+        }
     }
 }
