@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Utils
+  commentId: N:PegasusEngine.old.Utils
+  id: PegasusEngine.old.Utils
+  children:
+  - PegasusEngine.old.Utils.BaseUtils
+  - PegasusEngine.old.Utils.MathUtils
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.old.Utils
+  nameWithType: PegasusEngine.old.Utils
+  fullName: PegasusEngine.old.Utils
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.old.Utils.BaseUtils
+  commentId: T:PegasusEngine.old.Utils.BaseUtils
+  href: PegasusEngine.old.Utils.BaseUtils.html
+  name: BaseUtils
+  nameWithType: BaseUtils
+  fullName: PegasusEngine.old.Utils.BaseUtils
+- uid: PegasusEngine.old.Utils.MathUtils
+  commentId: T:PegasusEngine.old.Utils.MathUtils
+  href: PegasusEngine.old.Utils.MathUtils.html
+  name: MathUtils
+  nameWithType: MathUtils
+  fullName: PegasusEngine.old.Utils.MathUtils
+memberLayout: SeparatePages

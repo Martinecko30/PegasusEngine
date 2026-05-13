@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Modules.Lighting
+  commentId: N:PegasusEngine.old.Modules.Lighting
+  id: PegasusEngine.old.Modules.Lighting
+  children:
+  - PegasusEngine.old.Modules.Lighting.DirectLight
+  - PegasusEngine.old.Modules.Lighting.Light
+  - PegasusEngine.old.Modules.Lighting.SpotLight
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.old.Modules.Lighting
+  nameWithType: PegasusEngine.old.Modules.Lighting
+  fullName: PegasusEngine.old.Modules.Lighting
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.old.Modules.Lighting.DirectLight
+  commentId: T:PegasusEngine.old.Modules.Lighting.DirectLight
+  href: PegasusEngine.old.Modules.Lighting.DirectLight.html
+  name: DirectLight
+  nameWithType: DirectLight
+  fullName: PegasusEngine.old.Modules.Lighting.DirectLight
+- uid: PegasusEngine.old.Modules.Lighting.Light
+  commentId: T:PegasusEngine.old.Modules.Lighting.Light
+  parent: PegasusEngine.old.Modules.Lighting
+  href: PegasusEngine.old.Modules.Lighting.Light.html
+  name: Light
+  nameWithType: Light
+  fullName: PegasusEngine.old.Modules.Lighting.Light
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight
+  commentId: T:PegasusEngine.old.Modules.Lighting.SpotLight
+  href: PegasusEngine.old.Modules.Lighting.SpotLight.html
+  name: SpotLight
+  nameWithType: SpotLight
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight
+- uid: PegasusEngine.old.Modules.Lighting
+  commentId: N:PegasusEngine.old.Modules.Lighting
+  href: PegasusEngine.html
+  name: PegasusEngine.old.Modules.Lighting
+  nameWithType: PegasusEngine.old.Modules.Lighting
+  fullName: PegasusEngine.old.Modules.Lighting
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Lighting
+    name: Lighting
+    href: PegasusEngine.old.Modules.Lighting.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Lighting
+    name: Lighting
+    href: PegasusEngine.old.Modules.Lighting.html
+memberLayout: SeparatePages

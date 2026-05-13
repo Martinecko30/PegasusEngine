@@ -1,0 +1,551 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  commentId: T:PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  id: MouseButtonReleaseEvent
+  parent: PegasusEngine.Core.Events
+  children:
+  - PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor(PegasusEngine.Core.Events.MouseCode)
+  - PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+  - PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType
+  - PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+  langs:
+  - csharp
+  - vb
+  name: MouseButtonReleaseEvent
+  nameWithType: MouseButtonReleaseEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/InputEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: MouseButtonReleaseEvent
+    path: ../PegasusEngine/src/Core/Events/InputEvents.cs
+    startLine: 70
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: 'public class MouseButtonReleaseEvent : EventBase, IEvent'
+    content.vb: Public Class MouseButtonReleaseEvent Inherits EventBase Implements IEvent
+  inheritance:
+  - System.Object
+  - PegasusEngine.Core.Events.EventBase
+  implements:
+  - PegasusEngine.Core.Events.IEvent
+  inheritedMembers:
+  - PegasusEngine.Core.Events.EventBase.IsConsumed
+  - PegasusEngine.Core.Events.EventBase.Consume
+  - PegasusEngine.Core.Events.EventBase.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+  commentId: P:PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+  id: Button
+  parent: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  langs:
+  - csharp
+  - vb
+  name: Button
+  nameWithType: MouseButtonReleaseEvent.Button
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/InputEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Button
+    path: ../PegasusEngine/src/Core/Events/InputEvents.cs
+    startLine: 72
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: public MouseCode Button { get; }
+    parameters: []
+    return:
+      type: PegasusEngine.Core.Events.MouseCode
+    content.vb: Public ReadOnly Property Button As MouseCode
+  overload: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button*
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+  commentId: P:PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+  id: IsInputEvent
+  parent: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  langs:
+  - csharp
+  - vb
+  name: IsInputEvent
+  nameWithType: MouseButtonReleaseEvent.IsInputEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/InputEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: IsInputEvent
+    path: ../PegasusEngine/src/Core/Events/InputEvents.cs
+    startLine: 73
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  example: []
+  syntax:
+    content: public override bool IsInputEvent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property IsInputEvent As Boolean
+  overridden: PegasusEngine.Core.Events.EventBase.IsInputEvent
+  overload: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent*
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor(PegasusEngine.Core.Events.MouseCode)
+  commentId: M:PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor(PegasusEngine.Core.Events.MouseCode)
+  id: '#ctor(PegasusEngine.Core.Events.MouseCode)'
+  parent: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  langs:
+  - csharp
+  - vb
+  name: MouseButtonReleaseEvent(MouseCode)
+  nameWithType: MouseButtonReleaseEvent.MouseButtonReleaseEvent(MouseCode)
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.MouseButtonReleaseEvent(PegasusEngine.Core.Events.MouseCode)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/InputEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Core/Events/InputEvents.cs
+    startLine: 75
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: public MouseButtonReleaseEvent(MouseCode button)
+    parameters:
+    - id: button
+      type: PegasusEngine.Core.Events.MouseCode
+    content.vb: Public Sub New(button As MouseCode)
+  overload: PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor*
+  nameWithType.vb: MouseButtonReleaseEvent.New(MouseCode)
+  fullName.vb: PegasusEngine.Core.Events.MouseButtonReleaseEvent.New(PegasusEngine.Core.Events.MouseCode)
+  name.vb: New(MouseCode)
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType
+  commentId: M:PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType
+  id: GetEventType
+  parent: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  langs:
+  - csharp
+  - vb
+  name: GetEventType()
+  nameWithType: MouseButtonReleaseEvent.GetEventType()
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/InputEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetEventType
+    path: ../PegasusEngine/src/Core/Events/InputEvents.cs
+    startLine: 77
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  example: []
+  syntax:
+    content: public override EventType GetEventType()
+    return:
+      type: PegasusEngine.Core.Events.EventType
+    content.vb: Public Overrides Function GetEventType() As EventType
+  overridden: PegasusEngine.Core.Events.EventBase.GetEventType
+  overload: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType*
+references:
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Core.Events.EventBase
+  commentId: T:PegasusEngine.Core.Events.EventBase
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventBase.html
+  name: EventBase
+  nameWithType: EventBase
+  fullName: PegasusEngine.Core.Events.EventBase
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events.EventBase.IsConsumed
+  commentId: P:PegasusEngine.Core.Events.EventBase.IsConsumed
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.IsConsumed.html#PegasusEngine_Core_Events_EventBase_IsConsumed
+  name: IsConsumed
+  nameWithType: EventBase.IsConsumed
+  fullName: PegasusEngine.Core.Events.EventBase.IsConsumed
+- uid: PegasusEngine.Core.Events.EventBase.Consume
+  commentId: M:PegasusEngine.Core.Events.EventBase.Consume
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  name: Consume()
+  nameWithType: EventBase.Consume()
+  fullName: PegasusEngine.Core.Events.EventBase.Consume()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.Consume
+    name: Consume
+    href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.Consume
+    name: Consume
+    href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Events.EventBase.ToString
+  commentId: M:PegasusEngine.Core.Events.EventBase.ToString
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  name: ToString()
+  nameWithType: EventBase.ToString()
+  fullName: PegasusEngine.Core.Events.EventBase.ToString()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.ToString
+    name: ToString
+    href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.ToString
+    name: ToString
+    href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button*
+  commentId: Overload:PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+  href: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button.html#PegasusEngine_Core_Events_MouseButtonReleaseEvent_Button
+  name: Button
+  nameWithType: MouseButtonReleaseEvent.Button
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.Button
+- uid: PegasusEngine.Core.Events.MouseCode
+  commentId: T:PegasusEngine.Core.Events.MouseCode
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.MouseCode.html
+  name: MouseCode
+  nameWithType: MouseCode
+  fullName: PegasusEngine.Core.Events.MouseCode
+- uid: PegasusEngine.Core.Events.EventBase.IsInputEvent
+  commentId: P:PegasusEngine.Core.Events.EventBase.IsInputEvent
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.IsInputEvent.html#PegasusEngine_Core_Events_EventBase_IsInputEvent
+  name: IsInputEvent
+  nameWithType: EventBase.IsInputEvent
+  fullName: PegasusEngine.Core.Events.EventBase.IsInputEvent
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent*
+  commentId: Overload:PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+  href: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent.html#PegasusEngine_Core_Events_MouseButtonReleaseEvent_IsInputEvent
+  name: IsInputEvent
+  nameWithType: MouseButtonReleaseEvent.IsInputEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.IsInputEvent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor*
+  commentId: Overload:PegasusEngine.Core.Events.MouseButtonReleaseEvent.#ctor
+  href: PegasusEngine.Core.Events.MouseButtonReleaseEvent.-ctor.html#PegasusEngine_Core_Events_MouseButtonReleaseEvent__ctor_PegasusEngine_Core_Events_MouseCode_
+  name: MouseButtonReleaseEvent
+  nameWithType: MouseButtonReleaseEvent.MouseButtonReleaseEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.MouseButtonReleaseEvent
+  nameWithType.vb: MouseButtonReleaseEvent.New
+  fullName.vb: PegasusEngine.Core.Events.MouseButtonReleaseEvent.New
+  name.vb: New
+- uid: PegasusEngine.Core.Events.EventBase.GetEventType
+  commentId: M:PegasusEngine.Core.Events.EventBase.GetEventType
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  name: GetEventType()
+  nameWithType: EventBase.GetEventType()
+  fullName: PegasusEngine.Core.Events.EventBase.GetEventType()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.GetEventType
+    name: GetEventType
+    href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.GetEventType
+    name: GetEventType
+    href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType*
+  commentId: Overload:PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType
+  href: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType.html#PegasusEngine_Core_Events_MouseButtonReleaseEvent_GetEventType
+  name: GetEventType
+  nameWithType: MouseButtonReleaseEvent.GetEventType
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent.GetEventType
+- uid: PegasusEngine.Core.Events.EventType
+  commentId: T:PegasusEngine.Core.Events.EventType
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventType.html
+  name: EventType
+  nameWithType: EventType
+  fullName: PegasusEngine.Core.Events.EventType
+memberLayout: SeparatePages

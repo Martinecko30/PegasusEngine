@@ -1,0 +1,963 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Assets.AssetPool
+  commentId: T:PegasusEngine.Project.Assets.AssetPool
+  id: AssetPool
+  parent: PegasusEngine.Project.Assets
+  children:
+  - PegasusEngine.Project.Assets.AssetPool.FindMetadata``1(PegasusEngine.Common.GUID)
+  - PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  - PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+  - PegasusEngine.Project.Assets.AssetPool.MarkUpdated(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  - PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+  - PegasusEngine.Project.Assets.AssetPool.Metadata
+  - PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+  - PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+  langs:
+  - csharp
+  - vb
+  name: AssetPool
+  nameWithType: AssetPool
+  fullName: PegasusEngine.Project.Assets.AssetPool
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: AssetPool
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 7
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public class AssetPool
+    content.vb: Public Class AssetPool
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.Project.Assets.AssetPool.Metadata
+  commentId: P:PegasusEngine.Project.Assets.AssetPool.Metadata
+  id: Metadata
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: AssetPool.Metadata
+  fullName: PegasusEngine.Project.Assets.AssetPool.Metadata
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Metadata
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 19
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public Dictionary<GUID, MetadataPair> Metadata { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{PegasusEngine.Common.GUID,PegasusEngine.Project.Assets.MetadataPair}
+    content.vb: Public ReadOnly Property Metadata As Dictionary(Of GUID, MetadataPair)
+  overload: PegasusEngine.Project.Assets.AssetPool.Metadata*
+- uid: PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+  commentId: P:PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+  id: MeshBuffer
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: MeshBuffer
+  nameWithType: AssetPool.MeshBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: MeshBuffer
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 20
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public List<Triangle> MeshBuffer { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PegasusEngine.Project.Assets.Triangle}
+    content.vb: Public ReadOnly Property MeshBuffer As List(Of Triangle)
+  overload: PegasusEngine.Project.Assets.AssetPool.MeshBuffer*
+- uid: PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+  commentId: P:PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+  id: IndexBuffer
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: IndexBuffer
+  nameWithType: AssetPool.IndexBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: IndexBuffer
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public List<uint> IndexBuffer { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.UInt32}
+    content.vb: Public ReadOnly Property IndexBuffer As List(Of UInteger)
+  overload: PegasusEngine.Project.Assets.AssetPool.IndexBuffer*
+- uid: PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+  commentId: P:PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+  id: NodeBuffer
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: NodeBuffer
+  nameWithType: AssetPool.NodeBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: NodeBuffer
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 22
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public List<BVHAccel.Node> NodeBuffer { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PegasusEngine.Project.Assets.BVHAccel.Node}
+    content.vb: Public ReadOnly Property NodeBuffer As List(Of BVHAccel.Node)
+  overload: PegasusEngine.Project.Assets.AssetPool.NodeBuffer*
+- uid: PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+  commentId: P:PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+  id: TextureBuffer
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: TextureBuffer
+  nameWithType: AssetPool.TextureBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: TextureBuffer
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 23
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public List<byte> TextureBuffer { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Byte}
+    content.vb: Public ReadOnly Property TextureBuffer As List(Of Byte)
+  overload: PegasusEngine.Project.Assets.AssetPool.TextureBuffer*
+- uid: PegasusEngine.Project.Assets.AssetPool.FindMetadata``1(PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Project.Assets.AssetPool.FindMetadata``1(PegasusEngine.Common.GUID)
+  id: FindMetadata``1(PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: FindMetadata<T>(GUID)
+  nameWithType: AssetPool.FindMetadata<T>(GUID)
+  fullName: PegasusEngine.Project.Assets.AssetPool.FindMetadata<T>(PegasusEngine.Common.GUID)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: FindMetadata
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 27
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: 'public T? FindMetadata<T>(GUID guid) where T : Metadata'
+    parameters:
+    - id: guid
+      type: PegasusEngine.Common.GUID
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function FindMetadata(Of T As Metadata)(guid As GUID) As T
+  overload: PegasusEngine.Project.Assets.AssetPool.FindMetadata*
+  nameWithType.vb: AssetPool.FindMetadata(Of T)(GUID)
+  fullName.vb: PegasusEngine.Project.Assets.AssetPool.FindMetadata(Of T)(PegasusEngine.Common.GUID)
+  name.vb: FindMetadata(Of T)(GUID)
+- uid: PegasusEngine.Project.Assets.AssetPool.MarkUpdated(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  commentId: M:PegasusEngine.Project.Assets.AssetPool.MarkUpdated(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  id: MarkUpdated(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: MarkUpdated(AssetType)
+  nameWithType: AssetPool.MarkUpdated(AssetPool.AssetType)
+  fullName: PegasusEngine.Project.Assets.AssetPool.MarkUpdated(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: MarkUpdated
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 34
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public void MarkUpdated(AssetPool.AssetType type)
+    parameters:
+    - id: type
+      type: PegasusEngine.Project.Assets.AssetPool.AssetType
+    content.vb: Public Sub MarkUpdated(type As AssetPool.AssetType)
+  overload: PegasusEngine.Project.Assets.AssetPool.MarkUpdated*
+- uid: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  commentId: M:PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  id: GetUpdateVersion(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  parent: PegasusEngine.Project.Assets.AssetPool
+  langs:
+  - csharp
+  - vb
+  name: GetUpdateVersion(AssetType)
+  nameWithType: AssetPool.GetUpdateVersion(AssetPool.AssetType)
+  fullName: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion(PegasusEngine.Project.Assets.AssetPool.AssetType)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetPool.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetUpdateVersion
+    path: ../PegasusEngine/src/Project/Assets/AssetPool.cs
+    startLine: 36
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public uint GetUpdateVersion(AssetPool.AssetType type)
+    parameters:
+    - id: type
+      type: PegasusEngine.Project.Assets.AssetPool.AssetType
+    return:
+      type: System.UInt32
+    content.vb: Public Function GetUpdateVersion(type As AssetPool.AssetType) As UInteger
+  overload: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion*
+references:
+- uid: PegasusEngine.Project.Assets
+  commentId: N:PegasusEngine.Project.Assets
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Assets
+  nameWithType: PegasusEngine.Project.Assets
+  fullName: PegasusEngine.Project.Assets
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Project.Assets.AssetPool.Metadata*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.Metadata
+  href: PegasusEngine.Project.Assets.AssetPool.Metadata.html#PegasusEngine_Project_Assets_AssetPool_Metadata
+  name: Metadata
+  nameWithType: AssetPool.Metadata
+  fullName: PegasusEngine.Project.Assets.AssetPool.Metadata
+- uid: System.Collections.Generic.Dictionary{PegasusEngine.Common.GUID,PegasusEngine.Project.Assets.MetadataPair}
+  commentId: T:System.Collections.Generic.Dictionary{PegasusEngine.Common.GUID,PegasusEngine.Project.Assets.MetadataPair}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<GUID, MetadataPair>
+  nameWithType: Dictionary<GUID, MetadataPair>
+  fullName: System.Collections.Generic.Dictionary<PegasusEngine.Common.GUID, PegasusEngine.Project.Assets.MetadataPair>
+  nameWithType.vb: Dictionary(Of GUID, MetadataPair)
+  fullName.vb: System.Collections.Generic.Dictionary(Of PegasusEngine.Common.GUID, PegasusEngine.Project.Assets.MetadataPair)
+  name.vb: Dictionary(Of GUID, MetadataPair)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: ','
+  - name: " "
+  - uid: PegasusEngine.Project.Assets.MetadataPair
+    name: MetadataPair
+    href: PegasusEngine.Project.Assets.MetadataPair.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: ','
+  - name: " "
+  - uid: PegasusEngine.Project.Assets.MetadataPair
+    name: MetadataPair
+    href: PegasusEngine.Project.Assets.MetadataPair.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: PegasusEngine.Project.Assets.AssetPool.MeshBuffer*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+  href: PegasusEngine.Project.Assets.AssetPool.MeshBuffer.html#PegasusEngine_Project_Assets_AssetPool_MeshBuffer
+  name: MeshBuffer
+  nameWithType: AssetPool.MeshBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.MeshBuffer
+- uid: System.Collections.Generic.List{PegasusEngine.Project.Assets.Triangle}
+  commentId: T:System.Collections.Generic.List{PegasusEngine.Project.Assets.Triangle}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Triangle>
+  nameWithType: List<Triangle>
+  fullName: System.Collections.Generic.List<PegasusEngine.Project.Assets.Triangle>
+  nameWithType.vb: List(Of Triangle)
+  fullName.vb: System.Collections.Generic.List(Of PegasusEngine.Project.Assets.Triangle)
+  name.vb: List(Of Triangle)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: PegasusEngine.Project.Assets.Triangle
+    name: Triangle
+    href: PegasusEngine.Project.Assets.Triangle.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Project.Assets.Triangle
+    name: Triangle
+    href: PegasusEngine.Project.Assets.Triangle.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: PegasusEngine.Project.Assets.AssetPool.IndexBuffer*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+  href: PegasusEngine.Project.Assets.AssetPool.IndexBuffer.html#PegasusEngine_Project_Assets_AssetPool_IndexBuffer
+  name: IndexBuffer
+  nameWithType: AssetPool.IndexBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.IndexBuffer
+- uid: System.Collections.Generic.List{System.UInt32}
+  commentId: T:System.Collections.Generic.List{System.UInt32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<uint>
+  nameWithType: List<uint>
+  fullName: System.Collections.Generic.List<uint>
+  nameWithType.vb: List(Of UInteger)
+  fullName.vb: System.Collections.Generic.List(Of UInteger)
+  name.vb: List(Of UInteger)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: PegasusEngine.Project.Assets.AssetPool.NodeBuffer*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+  href: PegasusEngine.Project.Assets.AssetPool.NodeBuffer.html#PegasusEngine_Project_Assets_AssetPool_NodeBuffer
+  name: NodeBuffer
+  nameWithType: AssetPool.NodeBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.NodeBuffer
+- uid: System.Collections.Generic.List{PegasusEngine.Project.Assets.BVHAccel.Node}
+  commentId: T:System.Collections.Generic.List{PegasusEngine.Project.Assets.BVHAccel.Node}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<BVHAccel.Node>
+  nameWithType: List<BVHAccel.Node>
+  fullName: System.Collections.Generic.List<PegasusEngine.Project.Assets.BVHAccel.Node>
+  nameWithType.vb: List(Of BVHAccel.Node)
+  fullName.vb: System.Collections.Generic.List(Of PegasusEngine.Project.Assets.BVHAccel.Node)
+  name.vb: List(Of BVHAccel.Node)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Node
+    name: Node
+    href: PegasusEngine.Project.Assets.BVHAccel.Node.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Node
+    name: Node
+    href: PegasusEngine.Project.Assets.BVHAccel.Node.html
+  - name: )
+- uid: PegasusEngine.Project.Assets.AssetPool.TextureBuffer*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+  href: PegasusEngine.Project.Assets.AssetPool.TextureBuffer.html#PegasusEngine_Project_Assets_AssetPool_TextureBuffer
+  name: TextureBuffer
+  nameWithType: AssetPool.TextureBuffer
+  fullName: PegasusEngine.Project.Assets.AssetPool.TextureBuffer
+- uid: System.Collections.Generic.List{System.Byte}
+  commentId: T:System.Collections.Generic.List{System.Byte}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<byte>
+  nameWithType: List<byte>
+  fullName: System.Collections.Generic.List<byte>
+  nameWithType.vb: List(Of Byte)
+  fullName.vb: System.Collections.Generic.List(Of Byte)
+  name.vb: List(Of Byte)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: PegasusEngine.Project.Assets.AssetPool.FindMetadata*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.FindMetadata
+  href: PegasusEngine.Project.Assets.AssetPool.FindMetadata.html#PegasusEngine_Project_Assets_AssetPool_FindMetadata__1_PegasusEngine_Common_GUID_
+  name: FindMetadata
+  nameWithType: AssetPool.FindMetadata
+  fullName: PegasusEngine.Project.Assets.AssetPool.FindMetadata
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PegasusEngine.Project.Assets.AssetPool.MarkUpdated*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.MarkUpdated
+  href: PegasusEngine.Project.Assets.AssetPool.MarkUpdated.html#PegasusEngine_Project_Assets_AssetPool_MarkUpdated_PegasusEngine_Project_Assets_AssetPool_AssetType_
+  name: MarkUpdated
+  nameWithType: AssetPool.MarkUpdated
+  fullName: PegasusEngine.Project.Assets.AssetPool.MarkUpdated
+- uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+  commentId: T:PegasusEngine.Project.Assets.AssetPool.AssetType
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetPool.html
+  name: AssetPool.AssetType
+  nameWithType: AssetPool.AssetType
+  fullName: PegasusEngine.Project.Assets.AssetPool.AssetType
+  spec.csharp:
+  - uid: PegasusEngine.Project.Assets.AssetPool
+    name: AssetPool
+    href: PegasusEngine.Project.Assets.AssetPool.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+    name: AssetType
+    href: PegasusEngine.Project.Assets.AssetPool.AssetType.html
+  spec.vb:
+  - uid: PegasusEngine.Project.Assets.AssetPool
+    name: AssetPool
+    href: PegasusEngine.Project.Assets.AssetPool.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+    name: AssetType
+    href: PegasusEngine.Project.Assets.AssetPool.AssetType.html
+- uid: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion
+  href: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion.html#PegasusEngine_Project_Assets_AssetPool_GetUpdateVersion_PegasusEngine_Project_Assets_AssetPool_AssetType_
+  name: GetUpdateVersion
+  nameWithType: AssetPool.GetUpdateVersion
+  fullName: PegasusEngine.Project.Assets.AssetPool.GetUpdateVersion
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+memberLayout: SeparatePages

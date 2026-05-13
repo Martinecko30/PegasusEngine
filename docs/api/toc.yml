@@ -1,0 +1,518 @@
+### YamlMime:TableOfContent
+items:
+- uid: PegasusEditor
+  name: PegasusEditor
+  type: Namespace
+  items:
+  - uid: PegasusEditor.EditorApplication
+    name: EditorApplication
+    type: Class
+  - uid: PegasusEditor.EditorCfg
+    name: EditorCfg
+    type: Class
+  - uid: PegasusEditor.EditorCol
+    name: EditorCol
+    type: Enum
+  - uid: PegasusEditor.EditorLayer
+    name: EditorLayer
+    type: Class
+  - uid: PegasusEditor.EditorState
+    name: EditorState
+    type: Class
+  - uid: PegasusEditor.EditorState.PersistentState
+    name: EditorState.PersistentState
+    type: Class
+  - uid: PegasusEditor.EditorState.TempState
+    name: EditorState.TempState
+    type: Class
+  - uid: PegasusEditor.EditorTheme
+    name: EditorTheme
+    type: Class
+  - uid: PegasusEditor.Launcher
+    name: Launcher
+    type: Class
+  - uid: PegasusEditor.Program
+    name: Program
+    type: Class
+- uid: PegasusEditor.Dialogs
+  name: PegasusEditor.Dialogs
+  type: Namespace
+  items:
+  - uid: PegasusEditor.Dialogs.ConfirmationDialog
+    name: ConfirmationDialog
+    type: Class
+  - uid: PegasusEditor.Dialogs.DialogSystem
+    name: DialogSystem
+    type: Class
+  - uid: PegasusEditor.Dialogs.WindowsDialogs
+    name: WindowsDialogs
+    type: Class
+- uid: PegasusEditor.ImGuiContext
+  name: PegasusEditor.ImGuiContext
+  type: Namespace
+  items:
+  - uid: PegasusEditor.ImGuiContext.FontAwesomeIcons
+    name: FontAwesomeIcons
+    type: Class
+  - uid: PegasusEditor.ImGuiContext.Fonts
+    name: Fonts
+    type: Enum
+  - uid: PegasusEditor.ImGuiContext.ImGuiController
+    name: ImGuiController
+    type: Class
+  - uid: PegasusEditor.ImGuiContext.ImGuiFonts
+    name: ImGuiFonts
+    type: Class
+  - uid: PegasusEditor.ImGuiContext.ImGuiFonts.FontScope
+    name: ImGuiFonts.FontScope
+    type: Struct
+  - uid: PegasusEditor.ImGuiContext.ImguiImplOpenTK4
+    name: ImguiImplOpenTK4
+    type: Class
+- uid: PegasusEditor.Renderer
+  name: PegasusEditor.Renderer
+  type: Namespace
+  items:
+  - uid: PegasusEditor.Renderer.EditorCamera
+    name: EditorCamera
+    type: Class
+  - uid: PegasusEditor.Renderer.EditorRenderer
+    name: EditorRenderer
+    type: Class
+- uid: PegasusEditor.TabPanels
+  name: PegasusEditor.TabPanels
+  type: Namespace
+  items:
+  - uid: PegasusEditor.TabPanels.AssetBrowser
+    name: AssetBrowser
+    type: Class
+  - uid: PegasusEditor.TabPanels.ConsolePanel
+    name: ConsolePanel
+    type: Class
+  - uid: PegasusEditor.TabPanels.DNDPayload
+    name: DNDPayload
+    type: Struct
+  - uid: PegasusEditor.TabPanels.DNDPayloadTypes
+    name: DNDPayloadTypes
+    type: Class
+  - uid: PegasusEditor.TabPanels.Game
+    name: Game
+    type: Class
+  - uid: PegasusEditor.TabPanels.Hierarchy
+    name: Hierarchy
+    type: Class
+  - uid: PegasusEditor.TabPanels.ImGuiDndWidgets
+    name: ImGuiDndWidgets
+    type: Class
+  - uid: PegasusEditor.TabPanels.Inspector
+    name: Inspector
+    type: Class
+  - uid: PegasusEditor.TabPanels.LogMessage
+    name: LogMessage
+    type: Struct
+  - uid: PegasusEditor.TabPanels.TabPanel
+    name: TabPanel
+    type: Class
+  - uid: PegasusEditor.TabPanels.Viewport
+    name: Viewport
+    type: Class
+- uid: PegasusEngine
+  name: PegasusEngine
+  type: Namespace
+  items:
+  - uid: PegasusEngine.EngineCfg
+    name: EngineCfg
+    type: Class
+- uid: PegasusEngine.Common
+  name: PegasusEngine.Common
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    type: Struct
+  - uid: PegasusEngine.Common.Time
+    name: Time
+    type: Class
+- uid: PegasusEngine.Core
+  name: PegasusEngine.Core
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Core.Application
+    name: Application
+    type: Class
+- uid: PegasusEngine.Core.Events
+  name: PegasusEngine.Core.Events
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Core.Events.EventBase
+    name: EventBase
+    type: Class
+  - uid: PegasusEngine.Core.Events.EventType
+    name: EventType
+    type: Enum
+  - uid: PegasusEngine.Core.Events.IEvent
+    name: IEvent
+    type: Interface
+  - uid: PegasusEngine.Core.Events.KeyCode
+    name: KeyCode
+    type: Enum
+  - uid: PegasusEngine.Core.Events.KeyEvent
+    name: KeyEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.KeyPressEvent
+    name: KeyPressEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.KeyReleaseEvent
+    name: KeyReleaseEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.KeyRepeatEvent
+    name: KeyRepeatEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.MouseButtonPressEvent
+    name: MouseButtonPressEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+    name: MouseButtonReleaseEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.MouseCode
+    name: MouseCode
+    type: Enum
+  - uid: PegasusEngine.Core.Events.MouseMoveEvent
+    name: MouseMoveEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.MouseScrollEvent
+    name: MouseScrollEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.NewFrameRenderedEvent
+    name: NewFrameRenderedEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.ReloadScriptAssembliesEvent
+    name: ReloadScriptAssembliesEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.RenderCameraChangedEvent
+    name: RenderCameraChangedEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+    name: UpdateRenderSettingsEvent
+    type: Class
+  - uid: PegasusEngine.Core.Events.WindowResizeEvent
+    name: WindowResizeEvent
+    type: Class
+- uid: PegasusEngine.Core.Layers
+  name: PegasusEngine.Core.Layers
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Core.Layers.IEventDispatcher
+    name: IEventDispatcher
+    type: Interface
+  - uid: PegasusEngine.Core.Layers.ILayer
+    name: ILayer
+    type: Interface
+  - uid: PegasusEngine.Core.Layers.Layer
+    name: Layer
+    type: Class
+  - uid: PegasusEngine.Core.Layers.LayerStack
+    name: LayerStack
+    type: Class
+  - uid: PegasusEngine.Core.Layers.RenderLayer
+    name: RenderLayer
+    type: Class
+  - uid: PegasusEngine.Core.Layers.ScriptLayer
+    name: ScriptLayer
+    type: Class
+- uid: PegasusEngine.Debug
+  name: PegasusEngine.Debug
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Debug.Log
+    name: Log
+    type: Class
+  - uid: PegasusEngine.Debug.Profiler
+    name: Profiler
+    type: Class
+  - uid: PegasusEngine.Debug.Profiler.ScopeTimer
+    name: Profiler.ScopeTimer
+    type: Class
+  - uid: PegasusEngine.Debug.ScrollingBuffer
+    name: ScrollingBuffer
+    type: Class
+- uid: PegasusEngine.Debug.Exceptions
+  name: PegasusEngine.Debug.Exceptions
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Debug.Exceptions.WrongSceneException
+    name: WrongSceneException
+    type: Class
+- uid: PegasusEngine.Export
+  name: PegasusEngine.Export
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Export.ExportSettings
+    name: ExportSettings
+    type: Class
+  - uid: PegasusEngine.Export.ScreenFitMode
+    name: ScreenFitMode
+    type: Enum
+- uid: PegasusEngine.Objects
+  name: PegasusEngine.Objects
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Objects.EngineObject
+    name: EngineObject
+    type: Class
+  - uid: PegasusEngine.Objects.GameObject
+    name: GameObject
+    type: Class
+  - uid: PegasusEngine.Objects.Transform
+    name: Transform
+    type: Class
+- uid: PegasusEngine.Objects.Components
+  name: PegasusEngine.Objects.Components
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Objects.Components.Camera
+    name: Camera
+    type: Class
+  - uid: PegasusEngine.Objects.Components.Component
+    name: Component
+    type: Class
+  - uid: PegasusEngine.Objects.Components.DisallowMultipleComponents
+    name: DisallowMultipleComponents
+    type: Class
+  - uid: PegasusEngine.Objects.Components.RequireComponent
+    name: RequireComponent
+    type: Class
+- uid: PegasusEngine.Objects.Components.Colliders
+  name: PegasusEngine.Objects.Components.Colliders
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Objects.Components.Colliders.BoxCollider
+    name: BoxCollider
+    type: Class
+- uid: PegasusEngine.Objects.Components.Meshes
+  name: PegasusEngine.Objects.Components.Meshes
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Objects.Components.Meshes.MeshFilter
+    name: MeshFilter
+    type: Class
+  - uid: PegasusEngine.Objects.Components.Meshes.MeshRenderer
+    name: MeshRenderer
+    type: Class
+- uid: PegasusEngine.Platform.OpenGL
+  name: PegasusEngine.Platform.OpenGL
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Platform.OpenGL.OpenGLContext
+    name: OpenGLContext
+    type: Class
+  - uid: PegasusEngine.Platform.OpenGL.OpenGLRendererAPI
+    name: OpenGLRendererAPI
+    type: Class
+- uid: PegasusEngine.Project
+  name: PegasusEngine.Project
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Project.ProjectFile
+    name: ProjectFile
+    type: Struct
+  - uid: PegasusEngine.Project.ProjectManager
+    name: ProjectManager
+    type: Class
+  - uid: PegasusEngine.Project.ProjectUtilities
+    name: ProjectUtilities
+    type: Class
+- uid: PegasusEngine.Project.Assets
+  name: PegasusEngine.Project.Assets
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Project.Assets.AssetManager
+    name: AssetManager
+    type: Class
+  - uid: PegasusEngine.Project.Assets.AssetMetaFile
+    name: AssetMetaFile
+    type: Class
+  - uid: PegasusEngine.Project.Assets.AssetPool
+    name: AssetPool
+    type: Class
+  - uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+    name: AssetPool.AssetType
+    type: Enum
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    type: Class
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Aabb
+    name: BVHAccel.Aabb
+    type: Struct
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Node
+    name: BVHAccel.Node
+    type: Struct
+  - uid: PegasusEngine.Project.Assets.MeshMetadata
+    name: MeshMetadata
+    type: Class
+  - uid: PegasusEngine.Project.Assets.MeshMetadataExtension
+    name: MeshMetadataExtension
+    type: Class
+  - uid: PegasusEngine.Project.Assets.Metadata
+    name: Metadata
+    type: Class
+  - uid: PegasusEngine.Project.Assets.MetadataExtension
+    name: MetadataExtension
+    type: Class
+  - uid: PegasusEngine.Project.Assets.MetadataPair
+    name: MetadataPair
+    type: Class
+  - uid: PegasusEngine.Project.Assets.TextureMetadata
+    name: TextureMetadata
+    type: Class
+  - uid: PegasusEngine.Project.Assets.TextureMetadataExtension
+    name: TextureMetadataExtension
+    type: Class
+  - uid: PegasusEngine.Project.Assets.Triangle
+    name: Triangle
+    type: Struct
+- uid: PegasusEngine.Project.Scenes
+  name: PegasusEngine.Project.Scenes
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Project.Scenes.Scene
+    name: Scene
+    type: Class
+  - uid: PegasusEngine.Project.Scenes.SceneManager
+    name: SceneManager
+    type: Class
+- uid: PegasusEngine.Project.Scenes.Serialization
+  name: PegasusEngine.Project.Scenes.Serialization
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter
+    name: GUIDYamlConverter
+    type: Class
+  - uid: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer
+    name: ReflectionYamlAutoDeserializer
+    type: Class
+  - uid: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer
+    name: ReflectionYamlAutoSerializer
+    type: Class
+  - uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+    name: SceneReferenceResolver
+    type: Class
+  - uid: PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute
+    name: SerializeFieldAttribute
+    type: Class
+- uid: PegasusEngine.Renderer
+  name: PegasusEngine.Renderer
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Renderer.GraphicsResourceManager
+    name: GraphicsResourceManager
+    type: Class
+  - uid: PegasusEngine.Renderer.IRenderer
+    name: IRenderer
+    type: Interface
+  - uid: PegasusEngine.Renderer.IRendererAPI
+    name: IRendererAPI
+    type: Interface
+  - uid: PegasusEngine.Renderer.IRenderingContext
+    name: IRenderingContext
+    type: Interface
+  - uid: PegasusEngine.Renderer.RenderSettings
+    name: RenderSettings
+    type: Struct
+  - uid: PegasusEngine.Renderer.Renderer
+    name: Renderer
+    type: Class
+- uid: PegasusEngine.Renderer.Shaders
+  name: PegasusEngine.Renderer.Shaders
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Renderer.Shaders.Shader
+    name: Shader
+    type: Class
+- uid: PegasusEngine.Renderer.Textures
+  name: PegasusEngine.Renderer.Textures
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Renderer.Textures.Texture2D
+    name: Texture2D
+    type: Class
+- uid: PegasusEngine.Scripting
+  name: PegasusEngine.Scripting
+  type: Namespace
+  items:
+  - uid: PegasusEngine.Scripting.Behaviour
+    name: Behaviour
+    type: Class
+  - uid: PegasusEngine.Scripting.RegisterComponentAttribute
+    name: RegisterComponentAttribute
+    type: Class
+  - uid: PegasusEngine.Scripting.RegisterComponentAttribute`1
+    name: RegisterComponentAttribute<T>
+    type: Class
+  - uid: PegasusEngine.Scripting.ScriptAssemblyLoadContext
+    name: ScriptAssemblyLoadContext
+    type: Class
+  - uid: PegasusEngine.Scripting.ScriptManager
+    name: ScriptManager
+    type: Class
+- uid: PegasusEngine.old.Editor.Utils
+  name: PegasusEngine.old.Editor.Utils
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Editor.Utils.ScriptFactory
+    name: ScriptFactory
+    type: Class
+- uid: PegasusEngine.old.Modules.Lighting
+  name: PegasusEngine.old.Modules.Lighting
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Modules.Lighting.DirectLight
+    name: DirectLight
+    type: Class
+  - uid: PegasusEngine.old.Modules.Lighting.Light
+    name: Light
+    type: Class
+  - uid: PegasusEngine.old.Modules.Lighting.SpotLight
+    name: SpotLight
+    type: Class
+- uid: PegasusEngine.old.Modules.Rendering.RendererAPI
+  name: PegasusEngine.old.Modules.Rendering.RendererAPI
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI
+    name: IRendererAPI
+    type: Interface
+- uid: PegasusEngine.old.Modules.Rendering.RendererAPI.OpenGL
+  name: PegasusEngine.old.Modules.Rendering.RendererAPI.OpenGL
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Modules.Rendering.RendererAPI.OpenGL.OpenGLRendererAPI
+    name: OpenGLRendererAPI
+    type: Class
+- uid: PegasusEngine.old.Runtime.Objects
+  name: PegasusEngine.old.Runtime.Objects
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Runtime.Objects.Mesh
+    name: Mesh
+    type: Class
+  - uid: PegasusEngine.old.Runtime.Objects.Model
+    name: Model
+    type: Class
+  - uid: PegasusEngine.old.Runtime.Objects.Skybox
+    name: Skybox
+    type: Class
+  - uid: PegasusEngine.old.Runtime.Objects.Vertex
+    name: Vertex
+    type: Struct
+- uid: PegasusEngine.old.Utils
+  name: PegasusEngine.old.Utils
+  type: Namespace
+  items:
+  - uid: PegasusEngine.old.Utils.BaseUtils
+    name: BaseUtils
+    type: Class
+  - uid: PegasusEngine.old.Utils.MathUtils
+    name: MathUtils
+    type: Class
+memberLayout: SeparatePages

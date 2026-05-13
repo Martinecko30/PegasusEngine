@@ -1,0 +1,496 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  commentId: T:PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  id: UpdateRenderSettingsEvent
+  parent: PegasusEngine.Core.Events
+  children:
+  - PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor(System.Object)
+  - PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType
+  - PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+  langs:
+  - csharp
+  - vb
+  name: UpdateRenderSettingsEvent
+  nameWithType: UpdateRenderSettingsEvent
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/EngineEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: UpdateRenderSettingsEvent
+    path: ../PegasusEngine/src/Core/Events/EngineEvents.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: 'public class UpdateRenderSettingsEvent : EventBase, IEvent'
+    content.vb: Public Class UpdateRenderSettingsEvent Inherits EventBase Implements IEvent
+  inheritance:
+  - System.Object
+  - PegasusEngine.Core.Events.EventBase
+  implements:
+  - PegasusEngine.Core.Events.IEvent
+  inheritedMembers:
+  - PegasusEngine.Core.Events.EventBase.IsInputEvent
+  - PegasusEngine.Core.Events.EventBase.IsConsumed
+  - PegasusEngine.Core.Events.EventBase.Consume
+  - PegasusEngine.Core.Events.EventBase.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+  commentId: P:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+  id: RenderSettings
+  parent: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  langs:
+  - csharp
+  - vb
+  name: RenderSettings
+  nameWithType: UpdateRenderSettingsEvent.RenderSettings
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/EngineEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: RenderSettings
+    path: ../PegasusEngine/src/Core/Events/EngineEvents.cs
+    startLine: 23
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: public object RenderSettings { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property RenderSettings As Object
+  overload: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings*
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor(System.Object)
+  commentId: M:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor(System.Object)
+  id: '#ctor(System.Object)'
+  parent: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  langs:
+  - csharp
+  - vb
+  name: UpdateRenderSettingsEvent(object)
+  nameWithType: UpdateRenderSettingsEvent.UpdateRenderSettingsEvent(object)
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.UpdateRenderSettingsEvent(object)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/EngineEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Core/Events/EngineEvents.cs
+    startLine: 25
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  syntax:
+    content: public UpdateRenderSettingsEvent(object renderSettings)
+    parameters:
+    - id: renderSettings
+      type: System.Object
+    content.vb: Public Sub New(renderSettings As Object)
+  overload: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor*
+  nameWithType.vb: UpdateRenderSettingsEvent.New(Object)
+  fullName.vb: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.New(Object)
+  name.vb: New(Object)
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType
+  commentId: M:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType
+  id: GetEventType
+  parent: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  langs:
+  - csharp
+  - vb
+  name: GetEventType()
+  nameWithType: UpdateRenderSettingsEvent.GetEventType()
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Events/EngineEvents.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetEventType
+    path: ../PegasusEngine/src/Core/Events/EngineEvents.cs
+    startLine: 30
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Events
+  example: []
+  syntax:
+    content: public override EventType GetEventType()
+    return:
+      type: PegasusEngine.Core.Events.EventType
+    content.vb: Public Overrides Function GetEventType() As EventType
+  overridden: PegasusEngine.Core.Events.EventBase.GetEventType
+  overload: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType*
+references:
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Core.Events.EventBase
+  commentId: T:PegasusEngine.Core.Events.EventBase
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventBase.html
+  name: EventBase
+  nameWithType: EventBase
+  fullName: PegasusEngine.Core.Events.EventBase
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events.EventBase.IsInputEvent
+  commentId: P:PegasusEngine.Core.Events.EventBase.IsInputEvent
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.IsInputEvent.html#PegasusEngine_Core_Events_EventBase_IsInputEvent
+  name: IsInputEvent
+  nameWithType: EventBase.IsInputEvent
+  fullName: PegasusEngine.Core.Events.EventBase.IsInputEvent
+- uid: PegasusEngine.Core.Events.EventBase.IsConsumed
+  commentId: P:PegasusEngine.Core.Events.EventBase.IsConsumed
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.IsConsumed.html#PegasusEngine_Core_Events_EventBase_IsConsumed
+  name: IsConsumed
+  nameWithType: EventBase.IsConsumed
+  fullName: PegasusEngine.Core.Events.EventBase.IsConsumed
+- uid: PegasusEngine.Core.Events.EventBase.Consume
+  commentId: M:PegasusEngine.Core.Events.EventBase.Consume
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  name: Consume()
+  nameWithType: EventBase.Consume()
+  fullName: PegasusEngine.Core.Events.EventBase.Consume()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.Consume
+    name: Consume
+    href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.Consume
+    name: Consume
+    href: PegasusEngine.Core.Events.EventBase.Consume.html#PegasusEngine_Core_Events_EventBase_Consume
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Events.EventBase.ToString
+  commentId: M:PegasusEngine.Core.Events.EventBase.ToString
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  name: ToString()
+  nameWithType: EventBase.ToString()
+  fullName: PegasusEngine.Core.Events.EventBase.ToString()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.ToString
+    name: ToString
+    href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.ToString
+    name: ToString
+    href: PegasusEngine.Core.Events.EventBase.ToString.html#PegasusEngine_Core_Events_EventBase_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings*
+  commentId: Overload:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+  href: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings.html#PegasusEngine_Core_Events_UpdateRenderSettingsEvent_RenderSettings
+  name: RenderSettings
+  nameWithType: UpdateRenderSettingsEvent.RenderSettings
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.RenderSettings
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor*
+  commentId: Overload:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.#ctor
+  href: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.-ctor.html#PegasusEngine_Core_Events_UpdateRenderSettingsEvent__ctor_System_Object_
+  name: UpdateRenderSettingsEvent
+  nameWithType: UpdateRenderSettingsEvent.UpdateRenderSettingsEvent
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.UpdateRenderSettingsEvent
+  nameWithType.vb: UpdateRenderSettingsEvent.New
+  fullName.vb: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.New
+  name.vb: New
+- uid: PegasusEngine.Core.Events.EventBase.GetEventType
+  commentId: M:PegasusEngine.Core.Events.EventBase.GetEventType
+  parent: PegasusEngine.Core.Events.EventBase
+  href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  name: GetEventType()
+  nameWithType: EventBase.GetEventType()
+  fullName: PegasusEngine.Core.Events.EventBase.GetEventType()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Events.EventBase.GetEventType
+    name: GetEventType
+    href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Events.EventBase.GetEventType
+    name: GetEventType
+    href: PegasusEngine.Core.Events.EventBase.GetEventType.html#PegasusEngine_Core_Events_EventBase_GetEventType
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType*
+  commentId: Overload:PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType
+  href: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType.html#PegasusEngine_Core_Events_UpdateRenderSettingsEvent_GetEventType
+  name: GetEventType
+  nameWithType: UpdateRenderSettingsEvent.GetEventType
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.GetEventType
+- uid: PegasusEngine.Core.Events.EventType
+  commentId: T:PegasusEngine.Core.Events.EventType
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventType.html
+  name: EventType
+  nameWithType: EventType
+  fullName: PegasusEngine.Core.Events.EventType
+memberLayout: SeparatePages

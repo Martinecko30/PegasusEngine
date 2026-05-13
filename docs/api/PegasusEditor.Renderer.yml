@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.Renderer
+  commentId: N:PegasusEditor.Renderer
+  id: PegasusEditor.Renderer
+  children:
+  - PegasusEditor.Renderer.EditorCamera
+  - PegasusEditor.Renderer.EditorRenderer
+  langs:
+  - csharp
+  - vb
+  name: PegasusEditor.Renderer
+  nameWithType: PegasusEditor.Renderer
+  fullName: PegasusEditor.Renderer
+  type: Namespace
+  assemblies:
+  - PegasusEditor
+references:
+- uid: PegasusEditor.Renderer.EditorCamera
+  commentId: T:PegasusEditor.Renderer.EditorCamera
+  href: PegasusEditor.Renderer.EditorCamera.html
+  name: EditorCamera
+  nameWithType: EditorCamera
+  fullName: PegasusEditor.Renderer.EditorCamera
+- uid: PegasusEditor.Renderer.EditorRenderer
+  commentId: T:PegasusEditor.Renderer.EditorRenderer
+  href: PegasusEditor.Renderer.EditorRenderer.html
+  name: EditorRenderer
+  nameWithType: EditorRenderer
+  fullName: PegasusEditor.Renderer.EditorRenderer
+memberLayout: SeparatePages

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Renderer.IRenderingContext
+  commentId: T:PegasusEngine.Renderer.IRenderingContext
+  id: IRenderingContext
+  parent: PegasusEngine.Renderer
+  children:
+  - PegasusEngine.Renderer.IRenderingContext.Init
+  - PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  langs:
+  - csharp
+  - vb
+  name: IRenderingContext
+  nameWithType: IRenderingContext
+  fullName: PegasusEngine.Renderer.IRenderingContext
+  type: Interface
+  source:
+    remote:
+      path: PegasusEngine/src/Renderer/IRenderingContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: IRenderingContext
+    path: ../PegasusEngine/src/Renderer/IRenderingContext.cs
+    startLine: 2
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Renderer
+  syntax:
+    content: public interface IRenderingContext
+    content.vb: Public Interface IRenderingContext
+  derivedClasses:
+  - PegasusEngine.Platform.OpenGL.OpenGLContext
+- uid: PegasusEngine.Renderer.IRenderingContext.Init
+  commentId: M:PegasusEngine.Renderer.IRenderingContext.Init
+  id: Init
+  parent: PegasusEngine.Renderer.IRenderingContext
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: IRenderingContext.Init()
+  fullName: PegasusEngine.Renderer.IRenderingContext.Init()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Renderer/IRenderingContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Init
+    path: ../PegasusEngine/src/Renderer/IRenderingContext.cs
+    startLine: 4
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Renderer
+  syntax:
+    content: void Init()
+    content.vb: Sub Init()
+  overload: PegasusEngine.Renderer.IRenderingContext.Init*
+- uid: PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  commentId: M:PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  id: SwapBuffers
+  parent: PegasusEngine.Renderer.IRenderingContext
+  langs:
+  - csharp
+  - vb
+  name: SwapBuffers()
+  nameWithType: IRenderingContext.SwapBuffers()
+  fullName: PegasusEngine.Renderer.IRenderingContext.SwapBuffers()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Renderer/IRenderingContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SwapBuffers
+    path: ../PegasusEngine/src/Renderer/IRenderingContext.cs
+    startLine: 5
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Renderer
+  syntax:
+    content: void SwapBuffers()
+    content.vb: Sub SwapBuffers()
+  overload: PegasusEngine.Renderer.IRenderingContext.SwapBuffers*
+references:
+- uid: PegasusEngine.Renderer
+  commentId: N:PegasusEngine.Renderer
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer
+  nameWithType: PegasusEngine.Renderer
+  fullName: PegasusEngine.Renderer
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+- uid: PegasusEngine.Renderer.IRenderingContext.Init*
+  commentId: Overload:PegasusEngine.Renderer.IRenderingContext.Init
+  href: PegasusEngine.Renderer.IRenderingContext.Init.html#PegasusEngine_Renderer_IRenderingContext_Init
+  name: Init
+  nameWithType: IRenderingContext.Init
+  fullName: PegasusEngine.Renderer.IRenderingContext.Init
+- uid: PegasusEngine.Renderer.IRenderingContext.SwapBuffers*
+  commentId: Overload:PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  href: PegasusEngine.Renderer.IRenderingContext.SwapBuffers.html#PegasusEngine_Renderer_IRenderingContext_SwapBuffers
+  name: SwapBuffers
+  nameWithType: IRenderingContext.SwapBuffers
+  fullName: PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+memberLayout: SeparatePages

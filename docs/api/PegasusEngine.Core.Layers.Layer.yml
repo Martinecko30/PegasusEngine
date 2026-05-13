@@ -1,0 +1,585 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Layers.Layer
+  commentId: T:PegasusEngine.Core.Layers.Layer
+  id: Layer
+  parent: PegasusEngine.Core.Layers
+  children:
+  - PegasusEngine.Core.Layers.Layer.OnAttach
+  - PegasusEngine.Core.Layers.Layer.OnDetach
+  - PegasusEngine.Core.Layers.Layer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  - PegasusEngine.Core.Layers.Layer.OnUpdate
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: Layer
+  fullName: PegasusEngine.Core.Layers.Layer
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Layer
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: 'public abstract class Layer : ILayer'
+    content.vb: Public MustInherit Class Layer Implements ILayer
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PegasusEngine.Core.Layers.RenderLayer
+  - PegasusEngine.Core.Layers.ScriptLayer
+  implements:
+  - PegasusEngine.Core.Layers.ILayer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.Core.Layers.Layer.OnAttach
+  commentId: M:PegasusEngine.Core.Layers.Layer.OnAttach
+  id: OnAttach
+  parent: PegasusEngine.Core.Layers.Layer
+  langs:
+  - csharp
+  - vb
+  name: OnAttach()
+  nameWithType: Layer.OnAttach()
+  fullName: PegasusEngine.Core.Layers.Layer.OnAttach()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnAttach
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 14
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  example: []
+  syntax:
+    content: public virtual void OnAttach()
+    content.vb: Public Overridable Sub OnAttach()
+  overload: PegasusEngine.Core.Layers.Layer.OnAttach*
+  implements:
+  - PegasusEngine.Core.Layers.ILayer.OnAttach
+- uid: PegasusEngine.Core.Layers.Layer.OnDetach
+  commentId: M:PegasusEngine.Core.Layers.Layer.OnDetach
+  id: OnDetach
+  parent: PegasusEngine.Core.Layers.Layer
+  langs:
+  - csharp
+  - vb
+  name: OnDetach()
+  nameWithType: Layer.OnDetach()
+  fullName: PegasusEngine.Core.Layers.Layer.OnDetach()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnDetach
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 16
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  example: []
+  syntax:
+    content: public virtual void OnDetach()
+    content.vb: Public Overridable Sub OnDetach()
+  overload: PegasusEngine.Core.Layers.Layer.OnDetach*
+  implements:
+  - PegasusEngine.Core.Layers.ILayer.OnDetach
+- uid: PegasusEngine.Core.Layers.Layer.OnUpdate
+  commentId: M:PegasusEngine.Core.Layers.Layer.OnUpdate
+  id: OnUpdate
+  parent: PegasusEngine.Core.Layers.Layer
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: Layer.OnUpdate()
+  fullName: PegasusEngine.Core.Layers.Layer.OnUpdate()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnUpdate
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 18
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  example: []
+  syntax:
+    content: public virtual void OnUpdate()
+    content.vb: Public Overridable Sub OnUpdate()
+  overload: PegasusEngine.Core.Layers.Layer.OnUpdate*
+  implements:
+  - PegasusEngine.Core.Layers.ILayer.OnUpdate
+- uid: PegasusEngine.Core.Layers.Layer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEngine.Core.Layers.Layer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  id: OnEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEngine.Core.Layers.Layer
+  langs:
+  - csharp
+  - vb
+  name: OnEvent(IEvent)
+  nameWithType: Layer.OnEvent(IEvent)
+  fullName: PegasusEngine.Core.Layers.Layer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnEvent
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 20
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  example: []
+  syntax:
+    content: public virtual void OnEvent(IEvent e)
+    parameters:
+    - id: e
+      type: PegasusEngine.Core.Events.IEvent
+    content.vb: Public Overridable Sub OnEvent(e As IEvent)
+  overload: PegasusEngine.Core.Layers.Layer.OnEvent*
+  implements:
+  - PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+references:
+- uid: PegasusEngine.Core.Layers
+  commentId: N:PegasusEngine.Core.Layers
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Layers
+  nameWithType: PegasusEngine.Core.Layers
+  fullName: PegasusEngine.Core.Layers
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Core.Layers.ILayer
+  commentId: T:PegasusEngine.Core.Layers.ILayer
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.ILayer.html
+  name: ILayer
+  nameWithType: ILayer
+  fullName: PegasusEngine.Core.Layers.ILayer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Core.Layers.Layer.OnAttach*
+  commentId: Overload:PegasusEngine.Core.Layers.Layer.OnAttach
+  href: PegasusEngine.Core.Layers.Layer.OnAttach.html#PegasusEngine_Core_Layers_Layer_OnAttach
+  name: OnAttach
+  nameWithType: Layer.OnAttach
+  fullName: PegasusEngine.Core.Layers.Layer.OnAttach
+- uid: PegasusEngine.Core.Layers.ILayer.OnAttach
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnAttach
+  parent: PegasusEngine.Core.Layers.ILayer
+  href: PegasusEngine.Core.Layers.ILayer.OnAttach.html#PegasusEngine_Core_Layers_ILayer_OnAttach
+  name: OnAttach()
+  nameWithType: ILayer.OnAttach()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnAttach()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnAttach
+    name: OnAttach
+    href: PegasusEngine.Core.Layers.ILayer.OnAttach.html#PegasusEngine_Core_Layers_ILayer_OnAttach
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnAttach
+    name: OnAttach
+    href: PegasusEngine.Core.Layers.ILayer.OnAttach.html#PegasusEngine_Core_Layers_ILayer_OnAttach
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Layers.Layer.OnDetach*
+  commentId: Overload:PegasusEngine.Core.Layers.Layer.OnDetach
+  href: PegasusEngine.Core.Layers.Layer.OnDetach.html#PegasusEngine_Core_Layers_Layer_OnDetach
+  name: OnDetach
+  nameWithType: Layer.OnDetach
+  fullName: PegasusEngine.Core.Layers.Layer.OnDetach
+- uid: PegasusEngine.Core.Layers.ILayer.OnDetach
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnDetach
+  parent: PegasusEngine.Core.Layers.ILayer
+  href: PegasusEngine.Core.Layers.ILayer.OnDetach.html#PegasusEngine_Core_Layers_ILayer_OnDetach
+  name: OnDetach()
+  nameWithType: ILayer.OnDetach()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnDetach()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnDetach
+    name: OnDetach
+    href: PegasusEngine.Core.Layers.ILayer.OnDetach.html#PegasusEngine_Core_Layers_ILayer_OnDetach
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnDetach
+    name: OnDetach
+    href: PegasusEngine.Core.Layers.ILayer.OnDetach.html#PegasusEngine_Core_Layers_ILayer_OnDetach
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Layers.Layer.OnUpdate*
+  commentId: Overload:PegasusEngine.Core.Layers.Layer.OnUpdate
+  href: PegasusEngine.Core.Layers.Layer.OnUpdate.html#PegasusEngine_Core_Layers_Layer_OnUpdate
+  name: OnUpdate
+  nameWithType: Layer.OnUpdate
+  fullName: PegasusEngine.Core.Layers.Layer.OnUpdate
+- uid: PegasusEngine.Core.Layers.ILayer.OnUpdate
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnUpdate
+  parent: PegasusEngine.Core.Layers.ILayer
+  href: PegasusEngine.Core.Layers.ILayer.OnUpdate.html#PegasusEngine_Core_Layers_ILayer_OnUpdate
+  name: OnUpdate()
+  nameWithType: ILayer.OnUpdate()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnUpdate()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnUpdate
+    name: OnUpdate
+    href: PegasusEngine.Core.Layers.ILayer.OnUpdate.html#PegasusEngine_Core_Layers_ILayer_OnUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnUpdate
+    name: OnUpdate
+    href: PegasusEngine.Core.Layers.ILayer.OnUpdate.html#PegasusEngine_Core_Layers_ILayer_OnUpdate
+  - name: (
+  - name: )
+- uid: PegasusEngine.Core.Layers.Layer.OnEvent*
+  commentId: Overload:PegasusEngine.Core.Layers.Layer.OnEvent
+  href: PegasusEngine.Core.Layers.Layer.OnEvent.html#PegasusEngine_Core_Layers_Layer_OnEvent_PegasusEngine_Core_Events_IEvent_
+  name: OnEvent
+  nameWithType: Layer.OnEvent
+  fullName: PegasusEngine.Core.Layers.Layer.OnEvent
+- uid: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEngine.Core.Layers.ILayer
+  href: PegasusEngine.Core.Layers.ILayer.OnEvent.html#PegasusEngine_Core_Layers_ILayer_OnEvent_PegasusEngine_Core_Events_IEvent_
+  name: OnEvent(IEvent)
+  nameWithType: ILayer.OnEvent(IEvent)
+  fullName: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  spec.csharp:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+    name: OnEvent
+    href: PegasusEngine.Core.Layers.ILayer.OnEvent.html#PegasusEngine_Core_Layers_ILayer_OnEvent_PegasusEngine_Core_Events_IEvent_
+  - name: (
+  - uid: PegasusEngine.Core.Events.IEvent
+    name: IEvent
+    href: PegasusEngine.Core.Events.IEvent.html
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+    name: OnEvent
+    href: PegasusEngine.Core.Layers.ILayer.OnEvent.html#PegasusEngine_Core_Layers_ILayer_OnEvent_PegasusEngine_Core_Events_IEvent_
+  - name: (
+  - uid: PegasusEngine.Core.Events.IEvent
+    name: IEvent
+    href: PegasusEngine.Core.Events.IEvent.html
+  - name: )
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+memberLayout: SeparatePages

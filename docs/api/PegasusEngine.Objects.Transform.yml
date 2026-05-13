@@ -1,0 +1,1160 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Objects.Transform
+  commentId: T:PegasusEngine.Objects.Transform
+  id: Transform
+  parent: PegasusEngine.Objects
+  children:
+  - PegasusEngine.Objects.Transform.#ctor
+  - PegasusEngine.Objects.Transform.#ctor(PegasusEngine.Objects.GameObject,PegasusEngine.Objects.Transform)
+  - PegasusEngine.Objects.Transform.ChildCount
+  - PegasusEngine.Objects.Transform.Children
+  - PegasusEngine.Objects.Transform.Find(System.String)
+  - PegasusEngine.Objects.Transform.GetChild(System.Int32)
+  - PegasusEngine.Objects.Transform.GetEnumerator
+  - PegasusEngine.Objects.Transform.IsChildOf(PegasusEngine.Objects.Transform)
+  - PegasusEngine.Objects.Transform.Parent
+  - PegasusEngine.Objects.Transform.Position
+  - PegasusEngine.Objects.Transform.Rotation
+  - PegasusEngine.Objects.Transform.Scale
+  - PegasusEngine.Objects.Transform.SetParent(PegasusEngine.Objects.Transform)
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Transform
+  fullName: PegasusEngine.Objects.Transform
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Transform
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 10
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Transform : Behaviour, IEnumerable
+    content.vb: >-
+      <Serializable>
+
+      Public Class Transform Inherits Behaviour Implements IEnumerable
+  inheritance:
+  - System.Object
+  - PegasusEngine.Objects.EngineObject
+  - PegasusEngine.Objects.Components.Component
+  - PegasusEngine.Scripting.Behaviour
+  implements:
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - PegasusEngine.Scripting.Behaviour.Start
+  - PegasusEngine.Objects.Components.Component.GameObject
+  - PegasusEngine.Objects.Components.Component.Transform
+  - PegasusEngine.Objects.EngineObject.Guid
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: PegasusEngine.Objects.Transform.Children
+  commentId: P:PegasusEngine.Objects.Transform.Children
+  id: Children
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: Transform.Children
+  fullName: PegasusEngine.Objects.Transform.Children
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Children
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 15
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public IReadOnlyList<Transform> Children { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{PegasusEngine.Objects.Transform}
+    content.vb: Public ReadOnly Property Children As IReadOnlyList(Of Transform)
+  overload: PegasusEngine.Objects.Transform.Children*
+- uid: PegasusEngine.Objects.Transform.ChildCount
+  commentId: P:PegasusEngine.Objects.Transform.ChildCount
+  id: ChildCount
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: ChildCount
+  nameWithType: Transform.ChildCount
+  fullName: PegasusEngine.Objects.Transform.ChildCount
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ChildCount
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 16
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public int ChildCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ChildCount As Integer
+  overload: PegasusEngine.Objects.Transform.ChildCount*
+- uid: PegasusEngine.Objects.Transform.Parent
+  commentId: P:PegasusEngine.Objects.Transform.Parent
+  id: Parent
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: Transform.Parent
+  fullName: PegasusEngine.Objects.Transform.Parent
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Parent
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 20
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Transform? Parent { get; }
+    parameters: []
+    return:
+      type: PegasusEngine.Objects.Transform
+    content.vb: Public ReadOnly Property Parent As Transform
+  overload: PegasusEngine.Objects.Transform.Parent*
+- uid: PegasusEngine.Objects.Transform.Position
+  commentId: F:PegasusEngine.Objects.Transform.Position
+  id: Position
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Transform.Position
+  fullName: PegasusEngine.Objects.Transform.Position
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Position
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 22
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Vector3 Position
+    return:
+      type: OpenTK.Mathematics.Vector3
+    content.vb: Public Position As Vector3
+- uid: PegasusEngine.Objects.Transform.Rotation
+  commentId: F:PegasusEngine.Objects.Transform.Rotation
+  id: Rotation
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Transform.Rotation
+  fullName: PegasusEngine.Objects.Transform.Rotation
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Rotation
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 23
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Quaternion Rotation
+    return:
+      type: OpenTK.Mathematics.Quaternion
+    content.vb: Public Rotation As Quaternion
+- uid: PegasusEngine.Objects.Transform.Scale
+  commentId: F:PegasusEngine.Objects.Transform.Scale
+  id: Scale
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: Transform.Scale
+  fullName: PegasusEngine.Objects.Transform.Scale
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Scale
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 24
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Vector3 Scale
+    return:
+      type: OpenTK.Mathematics.Vector3
+    content.vb: Public Scale As Vector3
+- uid: PegasusEngine.Objects.Transform.#ctor
+  commentId: M:PegasusEngine.Objects.Transform.#ctor
+  id: '#ctor'
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Transform()
+  nameWithType: Transform.Transform()
+  fullName: PegasusEngine.Objects.Transform.Transform()
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 27
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Transform()
+    content.vb: Public Sub New()
+  overload: PegasusEngine.Objects.Transform.#ctor*
+  nameWithType.vb: Transform.New()
+  fullName.vb: PegasusEngine.Objects.Transform.New()
+  name.vb: New()
+- uid: PegasusEngine.Objects.Transform.#ctor(PegasusEngine.Objects.GameObject,PegasusEngine.Objects.Transform)
+  commentId: M:PegasusEngine.Objects.Transform.#ctor(PegasusEngine.Objects.GameObject,PegasusEngine.Objects.Transform)
+  id: '#ctor(PegasusEngine.Objects.GameObject,PegasusEngine.Objects.Transform)'
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Transform(GameObject, Transform?)
+  nameWithType: Transform.Transform(GameObject, Transform?)
+  fullName: PegasusEngine.Objects.Transform.Transform(PegasusEngine.Objects.GameObject, PegasusEngine.Objects.Transform?)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 29
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Transform(GameObject gameObject, Transform? parent = null)
+    parameters:
+    - id: gameObject
+      type: PegasusEngine.Objects.GameObject
+    - id: parent
+      type: PegasusEngine.Objects.Transform
+    content.vb: Public Sub New(gameObject As GameObject, parent As Transform = Nothing)
+  overload: PegasusEngine.Objects.Transform.#ctor*
+  nameWithType.vb: Transform.New(GameObject, Transform)
+  fullName.vb: PegasusEngine.Objects.Transform.New(PegasusEngine.Objects.GameObject, PegasusEngine.Objects.Transform)
+  name.vb: New(GameObject, Transform)
+- uid: PegasusEngine.Objects.Transform.SetParent(PegasusEngine.Objects.Transform)
+  commentId: M:PegasusEngine.Objects.Transform.SetParent(PegasusEngine.Objects.Transform)
+  id: SetParent(PegasusEngine.Objects.Transform)
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: SetParent(Transform?)
+  nameWithType: Transform.SetParent(Transform?)
+  fullName: PegasusEngine.Objects.Transform.SetParent(PegasusEngine.Objects.Transform?)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SetParent
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 39
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  summary: >-
+    Safely changes the parent of this transform and automatically 
+
+    updates the child lists of both the old and new parents.
+  example: []
+  syntax:
+    content: public void SetParent(Transform? newParent)
+    parameters:
+    - id: newParent
+      type: PegasusEngine.Objects.Transform
+    content.vb: Public Sub SetParent(newParent As Transform)
+  overload: PegasusEngine.Objects.Transform.SetParent*
+  nameWithType.vb: Transform.SetParent(Transform)
+  fullName.vb: PegasusEngine.Objects.Transform.SetParent(PegasusEngine.Objects.Transform)
+  name.vb: SetParent(Transform)
+- uid: PegasusEngine.Objects.Transform.GetChild(System.Int32)
+  commentId: M:PegasusEngine.Objects.Transform.GetChild(System.Int32)
+  id: GetChild(System.Int32)
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: GetChild(int)
+  nameWithType: Transform.GetChild(int)
+  fullName: PegasusEngine.Objects.Transform.GetChild(int)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetChild
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 71
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  syntax:
+    content: public Transform GetChild(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: PegasusEngine.Objects.Transform
+    content.vb: Public Function GetChild(index As Integer) As Transform
+  overload: PegasusEngine.Objects.Transform.GetChild*
+  nameWithType.vb: Transform.GetChild(Integer)
+  fullName.vb: PegasusEngine.Objects.Transform.GetChild(Integer)
+  name.vb: GetChild(Integer)
+- uid: PegasusEngine.Objects.Transform.Find(System.String)
+  commentId: M:PegasusEngine.Objects.Transform.Find(System.String)
+  id: Find(System.String)
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: Find(string)
+  nameWithType: Transform.Find(string)
+  fullName: PegasusEngine.Objects.Transform.Find(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Find
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 78
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  summary: Searches for a child transform with the given name.
+  example: []
+  syntax:
+    content: public Transform? Find(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the child.
+    return:
+      type: PegasusEngine.Objects.Transform
+      description: The child with the given name.
+    content.vb: Public Function Find(name As String) As Transform
+  overload: PegasusEngine.Objects.Transform.Find*
+  nameWithType.vb: Transform.Find(String)
+  fullName.vb: PegasusEngine.Objects.Transform.Find(String)
+  name.vb: Find(String)
+- uid: PegasusEngine.Objects.Transform.IsChildOf(PegasusEngine.Objects.Transform)
+  commentId: M:PegasusEngine.Objects.Transform.IsChildOf(PegasusEngine.Objects.Transform)
+  id: IsChildOf(PegasusEngine.Objects.Transform)
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: IsChildOf(Transform)
+  nameWithType: Transform.IsChildOf(Transform)
+  fullName: PegasusEngine.Objects.Transform.IsChildOf(PegasusEngine.Objects.Transform)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: IsChildOf
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 96
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  summary: Returns true if this transform is a child of the given parent.
+  example: []
+  syntax:
+    content: public bool IsChildOf(Transform parent)
+    parameters:
+    - id: parent
+      type: PegasusEngine.Objects.Transform
+      description: Suspected parent of this transform.
+    return:
+      type: System.Boolean
+      description: >-
+        true - if this is the child of the suspected parent
+
+        false - otherwise
+    content.vb: Public Function IsChildOf(parent As Transform) As Boolean
+  overload: PegasusEngine.Objects.Transform.IsChildOf*
+- uid: PegasusEngine.Objects.Transform.GetEnumerator
+  commentId: M:PegasusEngine.Objects.Transform.GetEnumerator
+  id: GetEnumerator
+  parent: PegasusEngine.Objects.Transform
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: Transform.GetEnumerator()
+  fullName: PegasusEngine.Objects.Transform.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Transform.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetEnumerator
+    path: ../PegasusEngine/src/Objects/Transform.cs
+    startLine: 104
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects
+  summary: Returns an enumerator that iterates through a collection.
+  example: []
+  syntax:
+    content: public IEnumerator GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+      description: An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection.
+    content.vb: Public Function GetEnumerator() As IEnumerator
+  overload: PegasusEngine.Objects.Transform.GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+references:
+- uid: PegasusEngine.Objects
+  commentId: N:PegasusEngine.Objects
+  href: PegasusEngine.html
+  name: PegasusEngine.Objects
+  nameWithType: PegasusEngine.Objects
+  fullName: PegasusEngine.Objects
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Objects.EngineObject
+  commentId: T:PegasusEngine.Objects.EngineObject
+  parent: PegasusEngine.Objects
+  href: PegasusEngine.Objects.EngineObject.html
+  name: EngineObject
+  nameWithType: EngineObject
+  fullName: PegasusEngine.Objects.EngineObject
+- uid: PegasusEngine.Objects.Components.Component
+  commentId: T:PegasusEngine.Objects.Components.Component
+  parent: PegasusEngine.Objects.Components
+  href: PegasusEngine.Objects.Components.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: PegasusEngine.Objects.Components.Component
+- uid: PegasusEngine.Scripting.Behaviour
+  commentId: T:PegasusEngine.Scripting.Behaviour
+  parent: PegasusEngine.Scripting
+  href: PegasusEngine.Scripting.Behaviour.html
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: PegasusEngine.Scripting.Behaviour
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: PegasusEngine.Scripting.Behaviour.Start
+  commentId: M:PegasusEngine.Scripting.Behaviour.Start
+  parent: PegasusEngine.Scripting.Behaviour
+  href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  name: Start()
+  nameWithType: Behaviour.Start()
+  fullName: PegasusEngine.Scripting.Behaviour.Start()
+  spec.csharp:
+  - uid: PegasusEngine.Scripting.Behaviour.Start
+    name: Start
+    href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Scripting.Behaviour.Start
+    name: Start
+    href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  - name: (
+  - name: )
+- uid: PegasusEngine.Objects.Components.Component.GameObject
+  commentId: P:PegasusEngine.Objects.Components.Component.GameObject
+  parent: PegasusEngine.Objects.Components.Component
+  href: PegasusEngine.Objects.Components.Component.GameObject.html#PegasusEngine_Objects_Components_Component_GameObject
+  name: GameObject
+  nameWithType: Component.GameObject
+  fullName: PegasusEngine.Objects.Components.Component.GameObject
+- uid: PegasusEngine.Objects.Components.Component.Transform
+  commentId: P:PegasusEngine.Objects.Components.Component.Transform
+  parent: PegasusEngine.Objects.Components.Component
+  href: PegasusEngine.Objects.Components.Component.Transform.html#PegasusEngine_Objects_Components_Component_Transform
+  name: Transform
+  nameWithType: Component.Transform
+  fullName: PegasusEngine.Objects.Components.Component.Transform
+- uid: PegasusEngine.Objects.EngineObject.Guid
+  commentId: P:PegasusEngine.Objects.EngineObject.Guid
+  parent: PegasusEngine.Objects.EngineObject
+  href: PegasusEngine.Objects.EngineObject.Guid.html#PegasusEngine_Objects_EngineObject_Guid
+  name: Guid
+  nameWithType: EngineObject.Guid
+  fullName: PegasusEngine.Objects.EngineObject.Guid
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Objects.Components
+  commentId: N:PegasusEngine.Objects.Components
+  href: PegasusEngine.html
+  name: PegasusEngine.Objects.Components
+  nameWithType: PegasusEngine.Objects.Components
+  fullName: PegasusEngine.Objects.Components
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+- uid: PegasusEngine.Scripting
+  commentId: N:PegasusEngine.Scripting
+  href: PegasusEngine.html
+  name: PegasusEngine.Scripting
+  nameWithType: PegasusEngine.Scripting
+  fullName: PegasusEngine.Scripting
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Scripting
+    name: Scripting
+    href: PegasusEngine.Scripting.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Scripting
+    name: Scripting
+    href: PegasusEngine.Scripting.html
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: PegasusEngine.Objects.Transform.Children*
+  commentId: Overload:PegasusEngine.Objects.Transform.Children
+  href: PegasusEngine.Objects.Transform.Children.html#PegasusEngine_Objects_Transform_Children
+  name: Children
+  nameWithType: Transform.Children
+  fullName: PegasusEngine.Objects.Transform.Children
+- uid: System.Collections.Generic.IReadOnlyList{PegasusEngine.Objects.Transform}
+  commentId: T:System.Collections.Generic.IReadOnlyList{PegasusEngine.Objects.Transform}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<Transform>
+  nameWithType: IReadOnlyList<Transform>
+  fullName: System.Collections.Generic.IReadOnlyList<PegasusEngine.Objects.Transform>
+  nameWithType.vb: IReadOnlyList(Of Transform)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of PegasusEngine.Objects.Transform)
+  name.vb: IReadOnlyList(Of Transform)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: PegasusEngine.Objects.Transform
+    name: Transform
+    href: PegasusEngine.Objects.Transform.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Objects.Transform
+    name: Transform
+    href: PegasusEngine.Objects.Transform.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: PegasusEngine.Objects.Transform.ChildCount*
+  commentId: Overload:PegasusEngine.Objects.Transform.ChildCount
+  href: PegasusEngine.Objects.Transform.ChildCount.html#PegasusEngine_Objects_Transform_ChildCount
+  name: ChildCount
+  nameWithType: Transform.ChildCount
+  fullName: PegasusEngine.Objects.Transform.ChildCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: PegasusEngine.Objects.Transform.Parent*
+  commentId: Overload:PegasusEngine.Objects.Transform.Parent
+  href: PegasusEngine.Objects.Transform.Parent.html#PegasusEngine_Objects_Transform_Parent
+  name: Parent
+  nameWithType: Transform.Parent
+  fullName: PegasusEngine.Objects.Transform.Parent
+- uid: PegasusEngine.Objects.Transform
+  commentId: T:PegasusEngine.Objects.Transform
+  parent: PegasusEngine.Objects
+  href: PegasusEngine.Objects.Transform.html
+  name: Transform
+  nameWithType: Transform
+  fullName: PegasusEngine.Objects.Transform
+- uid: OpenTK.Mathematics.Vector3
+  commentId: T:OpenTK.Mathematics.Vector3
+  parent: OpenTK.Mathematics
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Mathematics/Vector/Vector3.cs
+  name: Vector3
+  nameWithType: Vector3
+  fullName: OpenTK.Mathematics.Vector3
+- uid: OpenTK.Mathematics
+  commentId: N:OpenTK.Mathematics
+  isExternal: true
+  name: OpenTK.Mathematics
+  nameWithType: OpenTK.Mathematics
+  fullName: OpenTK.Mathematics
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+- uid: OpenTK.Mathematics.Quaternion
+  commentId: T:OpenTK.Mathematics.Quaternion
+  parent: OpenTK.Mathematics
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Mathematics/Data/Quaternion.cs
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: OpenTK.Mathematics.Quaternion
+- uid: PegasusEngine.Objects.Transform.#ctor*
+  commentId: Overload:PegasusEngine.Objects.Transform.#ctor
+  href: PegasusEngine.Objects.Transform.-ctor.html#PegasusEngine_Objects_Transform__ctor
+  name: Transform
+  nameWithType: Transform.Transform
+  fullName: PegasusEngine.Objects.Transform.Transform
+  nameWithType.vb: Transform.New
+  fullName.vb: PegasusEngine.Objects.Transform.New
+  name.vb: New
+- uid: PegasusEngine.Objects.GameObject
+  commentId: T:PegasusEngine.Objects.GameObject
+  parent: PegasusEngine.Objects
+  href: PegasusEngine.Objects.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: PegasusEngine.Objects.GameObject
+- uid: PegasusEngine.Objects.Transform.SetParent*
+  commentId: Overload:PegasusEngine.Objects.Transform.SetParent
+  href: PegasusEngine.Objects.Transform.SetParent.html#PegasusEngine_Objects_Transform_SetParent_PegasusEngine_Objects_Transform_
+  name: SetParent
+  nameWithType: Transform.SetParent
+  fullName: PegasusEngine.Objects.Transform.SetParent
+- uid: PegasusEngine.Objects.Transform.GetChild*
+  commentId: Overload:PegasusEngine.Objects.Transform.GetChild
+  href: PegasusEngine.Objects.Transform.GetChild.html#PegasusEngine_Objects_Transform_GetChild_System_Int32_
+  name: GetChild
+  nameWithType: Transform.GetChild
+  fullName: PegasusEngine.Objects.Transform.GetChild
+- uid: PegasusEngine.Objects.Transform.Find*
+  commentId: Overload:PegasusEngine.Objects.Transform.Find
+  href: PegasusEngine.Objects.Transform.Find.html#PegasusEngine_Objects_Transform_Find_System_String_
+  name: Find
+  nameWithType: Transform.Find
+  fullName: PegasusEngine.Objects.Transform.Find
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: PegasusEngine.Objects.Transform.IsChildOf*
+  commentId: Overload:PegasusEngine.Objects.Transform.IsChildOf
+  href: PegasusEngine.Objects.Transform.IsChildOf.html#PegasusEngine_Objects_Transform_IsChildOf_PegasusEngine_Objects_Transform_
+  name: IsChildOf
+  nameWithType: Transform.IsChildOf
+  fullName: PegasusEngine.Objects.Transform.IsChildOf
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: PegasusEngine.Objects.Transform.GetEnumerator*
+  commentId: Overload:PegasusEngine.Objects.Transform.GetEnumerator
+  href: PegasusEngine.Objects.Transform.GetEnumerator.html#PegasusEngine_Objects_Transform_GetEnumerator
+  name: GetEnumerator
+  nameWithType: Transform.GetEnumerator
+  fullName: PegasusEngine.Objects.Transform.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator
+  - name: (
+  - name: )
+memberLayout: SeparatePages

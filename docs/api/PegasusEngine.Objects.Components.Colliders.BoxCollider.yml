@@ -1,0 +1,457 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Objects.Components.Colliders.BoxCollider
+  commentId: T:PegasusEngine.Objects.Components.Colliders.BoxCollider
+  id: BoxCollider
+  parent: PegasusEngine.Objects.Components.Colliders
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: BoxCollider
+  nameWithType: BoxCollider
+  fullName: PegasusEngine.Objects.Components.Colliders.BoxCollider
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Objects/Components/Colliders/BoxCollider.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: BoxCollider
+    path: ../PegasusEngine/src/Objects/Components/Colliders/BoxCollider.cs
+    startLine: 4
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Objects.Components.Colliders
+  syntax:
+    content: 'public class BoxCollider : Behaviour'
+    content.vb: Public Class BoxCollider Inherits Behaviour
+  inheritance:
+  - System.Object
+  - PegasusEngine.Objects.EngineObject
+  - PegasusEngine.Objects.Components.Component
+  - PegasusEngine.Scripting.Behaviour
+  inheritedMembers:
+  - PegasusEngine.Scripting.Behaviour.Start
+  - PegasusEngine.Objects.Components.Component.GameObject
+  - PegasusEngine.Objects.Components.Component.Transform
+  - PegasusEngine.Objects.EngineObject.Guid
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+references:
+- uid: PegasusEngine.Objects.Components.Colliders
+  commentId: N:PegasusEngine.Objects.Components.Colliders
+  href: PegasusEngine.html
+  name: PegasusEngine.Objects.Components.Colliders
+  nameWithType: PegasusEngine.Objects.Components.Colliders
+  fullName: PegasusEngine.Objects.Components.Colliders
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components.Colliders
+    name: Colliders
+    href: PegasusEngine.Objects.Components.Colliders.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components.Colliders
+    name: Colliders
+    href: PegasusEngine.Objects.Components.Colliders.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Objects.EngineObject
+  commentId: T:PegasusEngine.Objects.EngineObject
+  parent: PegasusEngine.Objects
+  href: PegasusEngine.Objects.EngineObject.html
+  name: EngineObject
+  nameWithType: EngineObject
+  fullName: PegasusEngine.Objects.EngineObject
+- uid: PegasusEngine.Objects.Components.Component
+  commentId: T:PegasusEngine.Objects.Components.Component
+  parent: PegasusEngine.Objects.Components
+  href: PegasusEngine.Objects.Components.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: PegasusEngine.Objects.Components.Component
+- uid: PegasusEngine.Scripting.Behaviour
+  commentId: T:PegasusEngine.Scripting.Behaviour
+  parent: PegasusEngine.Scripting
+  href: PegasusEngine.Scripting.Behaviour.html
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: PegasusEngine.Scripting.Behaviour
+- uid: PegasusEngine.Scripting.Behaviour.Start
+  commentId: M:PegasusEngine.Scripting.Behaviour.Start
+  parent: PegasusEngine.Scripting.Behaviour
+  href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  name: Start()
+  nameWithType: Behaviour.Start()
+  fullName: PegasusEngine.Scripting.Behaviour.Start()
+  spec.csharp:
+  - uid: PegasusEngine.Scripting.Behaviour.Start
+    name: Start
+    href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Scripting.Behaviour.Start
+    name: Start
+    href: PegasusEngine.Scripting.Behaviour.Start.html#PegasusEngine_Scripting_Behaviour_Start
+  - name: (
+  - name: )
+- uid: PegasusEngine.Objects.Components.Component.GameObject
+  commentId: P:PegasusEngine.Objects.Components.Component.GameObject
+  parent: PegasusEngine.Objects.Components.Component
+  href: PegasusEngine.Objects.Components.Component.GameObject.html#PegasusEngine_Objects_Components_Component_GameObject
+  name: GameObject
+  nameWithType: Component.GameObject
+  fullName: PegasusEngine.Objects.Components.Component.GameObject
+- uid: PegasusEngine.Objects.Components.Component.Transform
+  commentId: P:PegasusEngine.Objects.Components.Component.Transform
+  parent: PegasusEngine.Objects.Components.Component
+  href: PegasusEngine.Objects.Components.Component.Transform.html#PegasusEngine_Objects_Components_Component_Transform
+  name: Transform
+  nameWithType: Component.Transform
+  fullName: PegasusEngine.Objects.Components.Component.Transform
+- uid: PegasusEngine.Objects.EngineObject.Guid
+  commentId: P:PegasusEngine.Objects.EngineObject.Guid
+  parent: PegasusEngine.Objects.EngineObject
+  href: PegasusEngine.Objects.EngineObject.Guid.html#PegasusEngine_Objects_EngineObject_Guid
+  name: Guid
+  nameWithType: EngineObject.Guid
+  fullName: PegasusEngine.Objects.EngineObject.Guid
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Objects
+  commentId: N:PegasusEngine.Objects
+  href: PegasusEngine.html
+  name: PegasusEngine.Objects
+  nameWithType: PegasusEngine.Objects
+  fullName: PegasusEngine.Objects
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+- uid: PegasusEngine.Objects.Components
+  commentId: N:PegasusEngine.Objects.Components
+  href: PegasusEngine.html
+  name: PegasusEngine.Objects.Components
+  nameWithType: PegasusEngine.Objects.Components
+  fullName: PegasusEngine.Objects.Components
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Objects
+    name: Objects
+    href: PegasusEngine.Objects.html
+  - name: .
+  - uid: PegasusEngine.Objects.Components
+    name: Components
+    href: PegasusEngine.Objects.Components.html
+- uid: PegasusEngine.Scripting
+  commentId: N:PegasusEngine.Scripting
+  href: PegasusEngine.html
+  name: PegasusEngine.Scripting
+  nameWithType: PegasusEngine.Scripting
+  fullName: PegasusEngine.Scripting
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Scripting
+    name: Scripting
+    href: PegasusEngine.Scripting.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Scripting
+    name: Scripting
+    href: PegasusEngine.Scripting.html
+memberLayout: SeparatePages

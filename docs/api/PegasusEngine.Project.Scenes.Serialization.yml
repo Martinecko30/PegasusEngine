@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Scenes.Serialization
+  commentId: N:PegasusEngine.Project.Scenes.Serialization
+  id: PegasusEngine.Project.Scenes.Serialization
+  children:
+  - PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter
+  - PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer
+  - PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer
+  - PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  - PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Project.Scenes.Serialization
+  nameWithType: PegasusEngine.Project.Scenes.Serialization
+  fullName: PegasusEngine.Project.Scenes.Serialization
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter
+  href: PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter.html
+  name: GUIDYamlConverter
+  nameWithType: GUIDYamlConverter
+  fullName: PegasusEngine.Project.Scenes.Serialization.GUIDYamlConverter
+- uid: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer
+  href: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer.html
+  name: ReflectionYamlAutoDeserializer
+  nameWithType: ReflectionYamlAutoDeserializer
+  fullName: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoDeserializer
+- uid: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer
+  href: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer.html
+  name: ReflectionYamlAutoSerializer
+  nameWithType: ReflectionYamlAutoSerializer
+  fullName: PegasusEngine.Project.Scenes.Serialization.ReflectionYamlAutoSerializer
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  href: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.html
+  name: SceneReferenceResolver
+  nameWithType: SceneReferenceResolver
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+- uid: PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute
+  href: PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute.html
+  name: SerializeFieldAttribute
+  nameWithType: SerializeFieldAttribute
+  fullName: PegasusEngine.Project.Scenes.Serialization.SerializeFieldAttribute
+memberLayout: SeparatePages

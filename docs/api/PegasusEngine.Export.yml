@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Export
+  commentId: N:PegasusEngine.Export
+  id: PegasusEngine.Export
+  children:
+  - PegasusEngine.Export.ExportSettings
+  - PegasusEngine.Export.ScreenFitMode
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Export
+  nameWithType: PegasusEngine.Export
+  fullName: PegasusEngine.Export
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Export.ScreenFitMode
+  commentId: T:PegasusEngine.Export.ScreenFitMode
+  parent: PegasusEngine.Export
+  href: PegasusEngine.Export.ScreenFitMode.html
+  name: ScreenFitMode
+  nameWithType: ScreenFitMode
+  fullName: PegasusEngine.Export.ScreenFitMode
+- uid: PegasusEngine.Export.ExportSettings
+  commentId: T:PegasusEngine.Export.ExportSettings
+  href: PegasusEngine.Export.ExportSettings.html
+  name: ExportSettings
+  nameWithType: ExportSettings
+  fullName: PegasusEngine.Export.ExportSettings
+- uid: PegasusEngine.Export
+  commentId: N:PegasusEngine.Export
+  href: PegasusEngine.html
+  name: PegasusEngine.Export
+  nameWithType: PegasusEngine.Export
+  fullName: PegasusEngine.Export
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+memberLayout: SeparatePages

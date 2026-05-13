@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.TabPanels.LogMessage
+  commentId: T:PegasusEditor.TabPanels.LogMessage
+  id: LogMessage
+  parent: PegasusEditor.TabPanels
+  children:
+  - PegasusEditor.TabPanels.LogMessage.#ctor(Serilog.Events.LogEventLevel,System.String)
+  - PegasusEditor.TabPanels.LogMessage.Level
+  - PegasusEditor.TabPanels.LogMessage.Message
+  - PegasusEditor.TabPanels.LogMessage.Time
+  langs:
+  - csharp
+  - vb
+  name: LogMessage
+  nameWithType: LogMessage
+  fullName: PegasusEditor.TabPanels.LogMessage
+  type: Struct
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LogMessage
+    path: ../PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+    startLine: 4
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public struct LogMessage
+    content.vb: Public Structure LogMessage
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEditor.TabPanels.LogMessage.Level
+  commentId: F:PegasusEditor.TabPanels.LogMessage.Level
+  id: Level
+  parent: PegasusEditor.TabPanels.LogMessage
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: LogMessage.Level
+  fullName: PegasusEditor.TabPanels.LogMessage.Level
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Level
+    path: ../PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+    startLine: 6
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public LogEventLevel Level
+    return:
+      type: Serilog.Events.LogEventLevel
+    content.vb: Public Level As LogEventLevel
+- uid: PegasusEditor.TabPanels.LogMessage.Message
+  commentId: F:PegasusEditor.TabPanels.LogMessage.Message
+  id: Message
+  parent: PegasusEditor.TabPanels.LogMessage
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: LogMessage.Message
+  fullName: PegasusEditor.TabPanels.LogMessage.Message
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Message
+    path: ../PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+    startLine: 7
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public string Message
+    return:
+      type: System.String
+    content.vb: Public Message As String
+- uid: PegasusEditor.TabPanels.LogMessage.Time
+  commentId: F:PegasusEditor.TabPanels.LogMessage.Time
+  id: Time
+  parent: PegasusEditor.TabPanels.LogMessage
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: LogMessage.Time
+  fullName: PegasusEditor.TabPanels.LogMessage.Time
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Time
+    path: ../PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+    startLine: 8
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public string Time
+    return:
+      type: System.String
+    content.vb: Public Time As String
+- uid: PegasusEditor.TabPanels.LogMessage.#ctor(Serilog.Events.LogEventLevel,System.String)
+  commentId: M:PegasusEditor.TabPanels.LogMessage.#ctor(Serilog.Events.LogEventLevel,System.String)
+  id: '#ctor(Serilog.Events.LogEventLevel,System.String)'
+  parent: PegasusEditor.TabPanels.LogMessage
+  langs:
+  - csharp
+  - vb
+  name: LogMessage(LogEventLevel, string)
+  nameWithType: LogMessage.LogMessage(LogEventLevel, string)
+  fullName: PegasusEditor.TabPanels.LogMessage.LogMessage(Serilog.Events.LogEventLevel, string)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEditor/src/TabPanels/ConsoleTab/LogMessage.cs
+    startLine: 10
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public LogMessage(LogEventLevel level, string message)
+    parameters:
+    - id: level
+      type: Serilog.Events.LogEventLevel
+    - id: message
+      type: System.String
+    content.vb: Public Sub New(level As LogEventLevel, message As String)
+  overload: PegasusEditor.TabPanels.LogMessage.#ctor*
+  nameWithType.vb: LogMessage.New(LogEventLevel, String)
+  fullName.vb: PegasusEditor.TabPanels.LogMessage.New(Serilog.Events.LogEventLevel, String)
+  name.vb: New(LogEventLevel, String)
+references:
+- uid: PegasusEditor.TabPanels
+  commentId: N:PegasusEditor.TabPanels
+  href: PegasusEditor.html
+  name: PegasusEditor.TabPanels
+  nameWithType: PegasusEditor.TabPanels
+  fullName: PegasusEditor.TabPanels
+  spec.csharp:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+  spec.vb:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Serilog.Events.LogEventLevel
+  commentId: T:Serilog.Events.LogEventLevel
+  parent: Serilog.Events
+  isExternal: true
+  name: LogEventLevel
+  nameWithType: LogEventLevel
+  fullName: Serilog.Events.LogEventLevel
+- uid: Serilog.Events
+  commentId: N:Serilog.Events
+  isExternal: true
+  name: Serilog.Events
+  nameWithType: Serilog.Events
+  fullName: Serilog.Events
+  spec.csharp:
+  - uid: Serilog
+    name: Serilog
+    isExternal: true
+  - name: .
+  - uid: Serilog.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: Serilog
+    name: Serilog
+    isExternal: true
+  - name: .
+  - uid: Serilog.Events
+    name: Events
+    isExternal: true
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: PegasusEditor.TabPanels.LogMessage.#ctor*
+  commentId: Overload:PegasusEditor.TabPanels.LogMessage.#ctor
+  href: PegasusEditor.TabPanels.LogMessage.-ctor.html#PegasusEditor_TabPanels_LogMessage__ctor_Serilog_Events_LogEventLevel_System_String_
+  name: LogMessage
+  nameWithType: LogMessage.LogMessage
+  fullName: PegasusEditor.TabPanels.LogMessage.LogMessage
+  nameWithType.vb: LogMessage.New
+  fullName.vb: PegasusEditor.TabPanels.LogMessage.New
+  name.vb: New
+memberLayout: SeparatePages

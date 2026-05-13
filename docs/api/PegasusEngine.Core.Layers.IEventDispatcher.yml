@@ -1,0 +1,135 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Layers.IEventDispatcher
+  commentId: T:PegasusEngine.Core.Layers.IEventDispatcher
+  id: IEventDispatcher
+  parent: PegasusEngine.Core.Layers
+  children:
+  - PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent(PegasusEngine.Core.Events.IEvent)
+  langs:
+  - csharp
+  - vb
+  name: IEventDispatcher
+  nameWithType: IEventDispatcher
+  fullName: PegasusEngine.Core.Layers.IEventDispatcher
+  type: Interface
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/LayerStack.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: IEventDispatcher
+    path: ../PegasusEngine/src/Core/Layers/LayerStack.cs
+    startLine: 4
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: public interface IEventDispatcher
+    content.vb: Public Interface IEventDispatcher
+  derivedClasses:
+  - PegasusEngine.Core.Layers.LayerStack
+- uid: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent(PegasusEngine.Core.Events.IEvent)
+  id: DispatchEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEngine.Core.Layers.IEventDispatcher
+  langs:
+  - csharp
+  - vb
+  name: DispatchEvent(IEvent)
+  nameWithType: IEventDispatcher.DispatchEvent(IEvent)
+  fullName: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent(PegasusEngine.Core.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/LayerStack.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: DispatchEvent
+    path: ../PegasusEngine/src/Core/Layers/LayerStack.cs
+    startLine: 6
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: void DispatchEvent(IEvent e)
+    parameters:
+    - id: e
+      type: PegasusEngine.Core.Events.IEvent
+    content.vb: Sub DispatchEvent(e As IEvent)
+  overload: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent*
+references:
+- uid: PegasusEngine.Core.Layers
+  commentId: N:PegasusEngine.Core.Layers
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Layers
+  nameWithType: PegasusEngine.Core.Layers
+  fullName: PegasusEngine.Core.Layers
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+- uid: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent*
+  commentId: Overload:PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent
+  href: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent.html#PegasusEngine_Core_Layers_IEventDispatcher_DispatchEvent_PegasusEngine_Core_Events_IEvent_
+  name: DispatchEvent
+  nameWithType: IEventDispatcher.DispatchEvent
+  fullName: PegasusEngine.Core.Layers.IEventDispatcher.DispatchEvent
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+memberLayout: SeparatePages

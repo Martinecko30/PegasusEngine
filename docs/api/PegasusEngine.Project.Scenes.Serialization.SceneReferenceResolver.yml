@@ -1,0 +1,500 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  commentId: T:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  id: SceneReferenceResolver
+  parent: PegasusEngine.Project.Scenes.Serialization
+  children:
+  - PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution(System.Object,System.Reflection.FieldInfo,PegasusEngine.Common.GUID)
+  - PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll(PegasusEngine.Project.Scenes.Scene)
+  langs:
+  - csharp
+  - vb
+  name: SceneReferenceResolver
+  nameWithType: SceneReferenceResolver
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SceneReferenceResolver
+    path: ../PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+    startLine: 13
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Scenes.Serialization
+  summary: >-
+    Handles the two-pass deserialization of scene references.
+
+    Queues GUIDs to be resolved later.
+  example: []
+  syntax:
+    content: public static class SceneReferenceResolver
+    content.vb: Public Module SceneReferenceResolver
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution(System.Object,System.Reflection.FieldInfo,PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution(System.Object,System.Reflection.FieldInfo,PegasusEngine.Common.GUID)
+  id: QueueResolution(System.Object,System.Reflection.FieldInfo,PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  langs:
+  - csharp
+  - vb
+  name: QueueResolution(object, FieldInfo, GUID)
+  nameWithType: SceneReferenceResolver.QueueResolution(object, FieldInfo, GUID)
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution(object, System.Reflection.FieldInfo, PegasusEngine.Common.GUID)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: QueueResolution
+    path: ../PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+    startLine: 17
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Scenes.Serialization
+  syntax:
+    content: public static void QueueResolution(object target, FieldInfo field, GUID wantedGuid)
+    parameters:
+    - id: target
+      type: System.Object
+    - id: field
+      type: System.Reflection.FieldInfo
+    - id: wantedGuid
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Shared Sub QueueResolution(target As Object, field As FieldInfo, wantedGuid As GUID)
+  overload: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution*
+  nameWithType.vb: SceneReferenceResolver.QueueResolution(Object, FieldInfo, GUID)
+  fullName.vb: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution(Object, System.Reflection.FieldInfo, PegasusEngine.Common.GUID)
+  name.vb: QueueResolution(Object, FieldInfo, GUID)
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll(PegasusEngine.Project.Scenes.Scene)
+  commentId: M:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll(PegasusEngine.Project.Scenes.Scene)
+  id: ResolverAll(PegasusEngine.Project.Scenes.Scene)
+  parent: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver
+  langs:
+  - csharp
+  - vb
+  name: ResolverAll(Scene)
+  nameWithType: SceneReferenceResolver.ResolverAll(Scene)
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll(PegasusEngine.Project.Scenes.Scene)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ResolverAll
+    path: ../PegasusEngine/src/Project/Scenes/Serialization/SceneReferenceResolver.cs
+    startLine: 19
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Scenes.Serialization
+  syntax:
+    content: public static void ResolverAll(Scene loadedScene)
+    parameters:
+    - id: loadedScene
+      type: PegasusEngine.Project.Scenes.Scene
+    content.vb: Public Shared Sub ResolverAll(loadedScene As Scene)
+  overload: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll*
+references:
+- uid: PegasusEngine.Project.Scenes.Serialization
+  commentId: N:PegasusEngine.Project.Scenes.Serialization
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Scenes.Serialization
+  nameWithType: PegasusEngine.Project.Scenes.Serialization
+  fullName: PegasusEngine.Project.Scenes.Serialization
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes.Serialization
+    name: Serialization
+    href: PegasusEngine.Project.Scenes.Serialization.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes.Serialization
+    name: Serialization
+    href: PegasusEngine.Project.Scenes.Serialization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution*
+  commentId: Overload:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution
+  href: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution.html#PegasusEngine_Project_Scenes_Serialization_SceneReferenceResolver_QueueResolution_System_Object_System_Reflection_FieldInfo_PegasusEngine_Common_GUID_
+  name: QueueResolution
+  nameWithType: SceneReferenceResolver.QueueResolution
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.QueueResolution
+- uid: System.Reflection.FieldInfo
+  commentId: T:System.Reflection.FieldInfo
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo
+  name: FieldInfo
+  nameWithType: FieldInfo
+  fullName: System.Reflection.FieldInfo
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+- uid: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll*
+  commentId: Overload:PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll
+  href: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll.html#PegasusEngine_Project_Scenes_Serialization_SceneReferenceResolver_ResolverAll_PegasusEngine_Project_Scenes_Scene_
+  name: ResolverAll
+  nameWithType: SceneReferenceResolver.ResolverAll
+  fullName: PegasusEngine.Project.Scenes.Serialization.SceneReferenceResolver.ResolverAll
+- uid: PegasusEngine.Project.Scenes.Scene
+  commentId: T:PegasusEngine.Project.Scenes.Scene
+  parent: PegasusEngine.Project.Scenes
+  href: PegasusEngine.Project.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: PegasusEngine.Project.Scenes.Scene
+- uid: PegasusEngine.Project.Scenes
+  commentId: N:PegasusEngine.Project.Scenes
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Scenes
+  nameWithType: PegasusEngine.Project.Scenes
+  fullName: PegasusEngine.Project.Scenes
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+memberLayout: SeparatePages

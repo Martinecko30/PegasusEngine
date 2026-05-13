@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project
+  commentId: N:PegasusEngine.Project
+  id: PegasusEngine.Project
+  children:
+  - PegasusEngine.Project.ProjectFile
+  - PegasusEngine.Project.ProjectManager
+  - PegasusEngine.Project.ProjectUtilities
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Project
+  nameWithType: PegasusEngine.Project
+  fullName: PegasusEngine.Project
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Project.ProjectFile
+  commentId: T:PegasusEngine.Project.ProjectFile
+  href: PegasusEngine.Project.ProjectFile.html
+  name: ProjectFile
+  nameWithType: ProjectFile
+  fullName: PegasusEngine.Project.ProjectFile
+- uid: PegasusEngine.Project.ProjectManager
+  commentId: T:PegasusEngine.Project.ProjectManager
+  parent: PegasusEngine.Project
+  href: PegasusEngine.Project.ProjectManager.html
+  name: ProjectManager
+  nameWithType: ProjectManager
+  fullName: PegasusEngine.Project.ProjectManager
+- uid: PegasusEngine.Project.ProjectUtilities
+  commentId: T:PegasusEngine.Project.ProjectUtilities
+  href: PegasusEngine.Project.ProjectUtilities.html
+  name: ProjectUtilities
+  nameWithType: ProjectUtilities
+  fullName: PegasusEngine.Project.ProjectUtilities
+- uid: PegasusEngine.Project
+  commentId: N:PegasusEngine.Project
+  href: PegasusEngine.html
+  name: PegasusEngine.Project
+  nameWithType: PegasusEngine.Project
+  fullName: PegasusEngine.Project
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+memberLayout: SeparatePages

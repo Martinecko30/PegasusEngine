@@ -1,0 +1,179 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  id: PegasusEngine.Core.Events
+  children:
+  - PegasusEngine.Core.Events.EventBase
+  - PegasusEngine.Core.Events.EventType
+  - PegasusEngine.Core.Events.IEvent
+  - PegasusEngine.Core.Events.KeyCode
+  - PegasusEngine.Core.Events.KeyEvent
+  - PegasusEngine.Core.Events.KeyPressEvent
+  - PegasusEngine.Core.Events.KeyReleaseEvent
+  - PegasusEngine.Core.Events.KeyRepeatEvent
+  - PegasusEngine.Core.Events.MouseButtonPressEvent
+  - PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  - PegasusEngine.Core.Events.MouseCode
+  - PegasusEngine.Core.Events.MouseMoveEvent
+  - PegasusEngine.Core.Events.MouseScrollEvent
+  - PegasusEngine.Core.Events.NewFrameRenderedEvent
+  - PegasusEngine.Core.Events.ReloadScriptAssembliesEvent
+  - PegasusEngine.Core.Events.RenderCameraChangedEvent
+  - PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  - PegasusEngine.Core.Events.WindowResizeEvent
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Core.Events.NewFrameRenderedEvent
+  commentId: T:PegasusEngine.Core.Events.NewFrameRenderedEvent
+  href: PegasusEngine.Core.Events.NewFrameRenderedEvent.html
+  name: NewFrameRenderedEvent
+  nameWithType: NewFrameRenderedEvent
+  fullName: PegasusEngine.Core.Events.NewFrameRenderedEvent
+- uid: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  commentId: T:PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+  href: PegasusEngine.Core.Events.UpdateRenderSettingsEvent.html
+  name: UpdateRenderSettingsEvent
+  nameWithType: UpdateRenderSettingsEvent
+  fullName: PegasusEngine.Core.Events.UpdateRenderSettingsEvent
+- uid: PegasusEngine.Core.Events.WindowResizeEvent
+  commentId: T:PegasusEngine.Core.Events.WindowResizeEvent
+  href: PegasusEngine.Core.Events.WindowResizeEvent.html
+  name: WindowResizeEvent
+  nameWithType: WindowResizeEvent
+  fullName: PegasusEngine.Core.Events.WindowResizeEvent
+- uid: PegasusEngine.Core.Events.ReloadScriptAssembliesEvent
+  commentId: T:PegasusEngine.Core.Events.ReloadScriptAssembliesEvent
+  href: PegasusEngine.Core.Events.ReloadScriptAssembliesEvent.html
+  name: ReloadScriptAssembliesEvent
+  nameWithType: ReloadScriptAssembliesEvent
+  fullName: PegasusEngine.Core.Events.ReloadScriptAssembliesEvent
+- uid: PegasusEngine.Core.Events.RenderCameraChangedEvent
+  commentId: T:PegasusEngine.Core.Events.RenderCameraChangedEvent
+  href: PegasusEngine.Core.Events.RenderCameraChangedEvent.html
+  name: RenderCameraChangedEvent
+  nameWithType: RenderCameraChangedEvent
+  fullName: PegasusEngine.Core.Events.RenderCameraChangedEvent
+- uid: PegasusEngine.Core.Events.EventType
+  commentId: T:PegasusEngine.Core.Events.EventType
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventType.html
+  name: EventType
+  nameWithType: EventType
+  fullName: PegasusEngine.Core.Events.EventType
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events.EventBase
+  commentId: T:PegasusEngine.Core.Events.EventBase
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.EventBase.html
+  name: EventBase
+  nameWithType: EventBase
+  fullName: PegasusEngine.Core.Events.EventBase
+- uid: PegasusEngine.Core.Events.KeyEvent
+  commentId: T:PegasusEngine.Core.Events.KeyEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.KeyEvent.html
+  name: KeyEvent
+  nameWithType: KeyEvent
+  fullName: PegasusEngine.Core.Events.KeyEvent
+- uid: PegasusEngine.Core.Events.KeyPressEvent
+  commentId: T:PegasusEngine.Core.Events.KeyPressEvent
+  href: PegasusEngine.Core.Events.KeyPressEvent.html
+  name: KeyPressEvent
+  nameWithType: KeyPressEvent
+  fullName: PegasusEngine.Core.Events.KeyPressEvent
+- uid: PegasusEngine.Core.Events.KeyReleaseEvent
+  commentId: T:PegasusEngine.Core.Events.KeyReleaseEvent
+  href: PegasusEngine.Core.Events.KeyReleaseEvent.html
+  name: KeyReleaseEvent
+  nameWithType: KeyReleaseEvent
+  fullName: PegasusEngine.Core.Events.KeyReleaseEvent
+- uid: PegasusEngine.Core.Events.KeyRepeatEvent
+  commentId: T:PegasusEngine.Core.Events.KeyRepeatEvent
+  href: PegasusEngine.Core.Events.KeyRepeatEvent.html
+  name: KeyRepeatEvent
+  nameWithType: KeyRepeatEvent
+  fullName: PegasusEngine.Core.Events.KeyRepeatEvent
+- uid: PegasusEngine.Core.Events.MouseMoveEvent
+  commentId: T:PegasusEngine.Core.Events.MouseMoveEvent
+  href: PegasusEngine.Core.Events.MouseMoveEvent.html
+  name: MouseMoveEvent
+  nameWithType: MouseMoveEvent
+  fullName: PegasusEngine.Core.Events.MouseMoveEvent
+- uid: PegasusEngine.Core.Events.MouseButtonPressEvent
+  commentId: T:PegasusEngine.Core.Events.MouseButtonPressEvent
+  href: PegasusEngine.Core.Events.MouseButtonPressEvent.html
+  name: MouseButtonPressEvent
+  nameWithType: MouseButtonPressEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonPressEvent
+- uid: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  commentId: T:PegasusEngine.Core.Events.MouseButtonReleaseEvent
+  href: PegasusEngine.Core.Events.MouseButtonReleaseEvent.html
+  name: MouseButtonReleaseEvent
+  nameWithType: MouseButtonReleaseEvent
+  fullName: PegasusEngine.Core.Events.MouseButtonReleaseEvent
+- uid: PegasusEngine.Core.Events.MouseScrollEvent
+  commentId: T:PegasusEngine.Core.Events.MouseScrollEvent
+  href: PegasusEngine.Core.Events.MouseScrollEvent.html
+  name: MouseScrollEvent
+  nameWithType: MouseScrollEvent
+  fullName: PegasusEngine.Core.Events.MouseScrollEvent
+- uid: PegasusEngine.Core.Events.KeyCode
+  commentId: T:PegasusEngine.Core.Events.KeyCode
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.KeyCode.html
+  name: KeyCode
+  nameWithType: KeyCode
+  fullName: PegasusEngine.Core.Events.KeyCode
+- uid: PegasusEngine.Core.Events.MouseCode
+  commentId: T:PegasusEngine.Core.Events.MouseCode
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.MouseCode.html
+  name: MouseCode
+  nameWithType: MouseCode
+  fullName: PegasusEngine.Core.Events.MouseCode
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+memberLayout: SeparatePages

@@ -1,0 +1,871 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Assets.AssetManager
+  commentId: T:PegasusEngine.Project.Assets.AssetManager
+  id: AssetManager
+  parent: PegasusEngine.Project.Assets
+  children:
+  - PegasusEngine.Project.Assets.AssetManager.#ctor
+  - PegasusEngine.Project.Assets.AssetManager.AssetPool
+  - PegasusEngine.Project.Assets.AssetManager.ImportAsset(System.String)
+  - PegasusEngine.Project.Assets.AssetManager.LoadAssetFile(System.String,PegasusEngine.Common.GUID)
+  - PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder(System.String)
+  - PegasusEngine.Project.Assets.AssetManager.LoadMesh(System.String,PegasusEngine.Common.GUID)
+  - PegasusEngine.Project.Assets.AssetManager.LoadMetaFile(System.String)
+  - PegasusEngine.Project.Assets.AssetManager.LoadTexture(System.String,PegasusEngine.Common.GUID,System.Int32)
+  - PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder(System.String)
+  - PegasusEngine.Project.Assets.AssetManager.SaveMetaFile(System.String,PegasusEngine.Project.Assets.AssetMetaFile)
+  - PegasusEngine.Project.Assets.AssetManager.SupportedMeshFileFormats
+  - PegasusEngine.Project.Assets.AssetManager.SupportedTextureFileFormats
+  langs:
+  - csharp
+  - vb
+  name: AssetManager
+  nameWithType: AssetManager
+  fullName: PegasusEngine.Project.Assets.AssetManager
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: AssetManager
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public class AssetManager
+    content.vb: Public Class AssetManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.Project.Assets.AssetManager.SupportedMeshFileFormats
+  commentId: F:PegasusEngine.Project.Assets.AssetManager.SupportedMeshFileFormats
+  id: SupportedMeshFileFormats
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: SupportedMeshFileFormats
+  nameWithType: AssetManager.SupportedMeshFileFormats
+  fullName: PegasusEngine.Project.Assets.AssetManager.SupportedMeshFileFormats
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SupportedMeshFileFormats
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 14
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public static readonly string[] SupportedMeshFileFormats
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly SupportedMeshFileFormats As String()
+- uid: PegasusEngine.Project.Assets.AssetManager.SupportedTextureFileFormats
+  commentId: F:PegasusEngine.Project.Assets.AssetManager.SupportedTextureFileFormats
+  id: SupportedTextureFileFormats
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: SupportedTextureFileFormats
+  nameWithType: AssetManager.SupportedTextureFileFormats
+  fullName: PegasusEngine.Project.Assets.AssetManager.SupportedTextureFileFormats
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SupportedTextureFileFormats
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 15
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public static readonly string[] SupportedTextureFileFormats
+    return:
+      type: System.String[]
+    content.vb: Public Shared ReadOnly SupportedTextureFileFormats As String()
+- uid: PegasusEngine.Project.Assets.AssetManager.AssetPool
+  commentId: P:PegasusEngine.Project.Assets.AssetManager.AssetPool
+  id: AssetPool
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: AssetPool
+  nameWithType: AssetManager.AssetPool
+  fullName: PegasusEngine.Project.Assets.AssetManager.AssetPool
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: AssetPool
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public AssetPool AssetPool { get; }
+    parameters: []
+    return:
+      type: PegasusEngine.Project.Assets.AssetPool
+    content.vb: Public ReadOnly Property AssetPool As AssetPool
+  overload: PegasusEngine.Project.Assets.AssetManager.AssetPool*
+- uid: PegasusEngine.Project.Assets.AssetManager.#ctor
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.#ctor
+  id: '#ctor'
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: AssetManager()
+  nameWithType: AssetManager.AssetManager()
+  fullName: PegasusEngine.Project.Assets.AssetManager.AssetManager()
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 23
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public AssetManager()
+    content.vb: Public Sub New()
+  overload: PegasusEngine.Project.Assets.AssetManager.#ctor*
+  nameWithType.vb: AssetManager.New()
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.New()
+  name.vb: New()
+- uid: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile(System.String,PegasusEngine.Project.Assets.AssetMetaFile)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.SaveMetaFile(System.String,PegasusEngine.Project.Assets.AssetMetaFile)
+  id: SaveMetaFile(System.String,PegasusEngine.Project.Assets.AssetMetaFile)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: SaveMetaFile(string, AssetMetaFile)
+  nameWithType: AssetManager.SaveMetaFile(string, AssetMetaFile)
+  fullName: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile(string, PegasusEngine.Project.Assets.AssetMetaFile)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SaveMetaFile
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 38
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public bool SaveMetaFile(string metaPath, AssetMetaFile metaFile)
+    parameters:
+    - id: metaPath
+      type: System.String
+    - id: metaFile
+      type: PegasusEngine.Project.Assets.AssetMetaFile
+    return:
+      type: System.Boolean
+    content.vb: Public Function SaveMetaFile(metaPath As String, metaFile As AssetMetaFile) As Boolean
+  overload: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile*
+  nameWithType.vb: AssetManager.SaveMetaFile(String, AssetMetaFile)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile(String, PegasusEngine.Project.Assets.AssetMetaFile)
+  name.vb: SaveMetaFile(String, AssetMetaFile)
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile(System.String)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.LoadMetaFile(System.String)
+  id: LoadMetaFile(System.String)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMetaFile(string)
+  nameWithType: AssetManager.LoadMetaFile(string)
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LoadMetaFile
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 61
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public AssetMetaFile? LoadMetaFile(string metaPath)
+    parameters:
+    - id: metaPath
+      type: System.String
+    return:
+      type: PegasusEngine.Project.Assets.AssetMetaFile
+    content.vb: Public Function LoadMetaFile(metaPath As String) As AssetMetaFile
+  overload: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile*
+  nameWithType.vb: AssetManager.LoadMetaFile(String)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile(String)
+  name.vb: LoadMetaFile(String)
+- uid: PegasusEngine.Project.Assets.AssetManager.ImportAsset(System.String)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.ImportAsset(System.String)
+  id: ImportAsset(System.String)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: ImportAsset(string)
+  nameWithType: AssetManager.ImportAsset(string)
+  fullName: PegasusEngine.Project.Assets.AssetManager.ImportAsset(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ImportAsset
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 87
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public GUID ImportAsset(string assetPath)
+    parameters:
+    - id: assetPath
+      type: System.String
+    return:
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Function ImportAsset(assetPath As String) As GUID
+  overload: PegasusEngine.Project.Assets.AssetManager.ImportAsset*
+  nameWithType.vb: AssetManager.ImportAsset(String)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.ImportAsset(String)
+  name.vb: ImportAsset(String)
+- uid: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder(System.String)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder(System.String)
+  id: SaveAssetPoolToFolder(System.String)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: SaveAssetPoolToFolder(string)
+  nameWithType: AssetManager.SaveAssetPoolToFolder(string)
+  fullName: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SaveAssetPoolToFolder
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 106
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public void SaveAssetPoolToFolder(string folderPath)
+    parameters:
+    - id: folderPath
+      type: System.String
+    content.vb: Public Sub SaveAssetPoolToFolder(folderPath As String)
+  overload: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder*
+  nameWithType.vb: AssetManager.SaveAssetPoolToFolder(String)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder(String)
+  name.vb: SaveAssetPoolToFolder(String)
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder(System.String)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder(System.String)
+  id: LoadAssetPoolFromFolder(System.String)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetPoolFromFolder(string)
+  nameWithType: AssetManager.LoadAssetPoolFromFolder(string)
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LoadAssetPoolFromFolder
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 162
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public void LoadAssetPoolFromFolder(string folderPath)
+    parameters:
+    - id: folderPath
+      type: System.String
+    content.vb: Public Sub LoadAssetPoolFromFolder(folderPath As String)
+  overload: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder*
+  nameWithType.vb: AssetManager.LoadAssetPoolFromFolder(String)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder(String)
+  name.vb: LoadAssetPoolFromFolder(String)
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile(System.String,PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.LoadAssetFile(System.String,PegasusEngine.Common.GUID)
+  id: LoadAssetFile(System.String,PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetFile(string, GUID)
+  nameWithType: AssetManager.LoadAssetFile(string, GUID)
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile(string, PegasusEngine.Common.GUID)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LoadAssetFile
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 190
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public bool LoadAssetFile(string assetPath, GUID guid)
+    parameters:
+    - id: assetPath
+      type: System.String
+    - id: guid
+      type: PegasusEngine.Common.GUID
+    return:
+      type: System.Boolean
+    content.vb: Public Function LoadAssetFile(assetPath As String, guid As GUID) As Boolean
+  overload: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile*
+  nameWithType.vb: AssetManager.LoadAssetFile(String, GUID)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile(String, PegasusEngine.Common.GUID)
+  name.vb: LoadAssetFile(String, GUID)
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadMesh(System.String,PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.LoadMesh(System.String,PegasusEngine.Common.GUID)
+  id: LoadMesh(System.String,PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadMesh(string, GUID)
+  nameWithType: AssetManager.LoadMesh(string, GUID)
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadMesh(string, PegasusEngine.Common.GUID)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LoadMesh
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 214
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public bool LoadMesh(string assetPath, GUID guid)
+    parameters:
+    - id: assetPath
+      type: System.String
+    - id: guid
+      type: PegasusEngine.Common.GUID
+    return:
+      type: System.Boolean
+    content.vb: Public Function LoadMesh(assetPath As String, guid As GUID) As Boolean
+  overload: PegasusEngine.Project.Assets.AssetManager.LoadMesh*
+  nameWithType.vb: AssetManager.LoadMesh(String, GUID)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.LoadMesh(String, PegasusEngine.Common.GUID)
+  name.vb: LoadMesh(String, GUID)
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadTexture(System.String,PegasusEngine.Common.GUID,System.Int32)
+  commentId: M:PegasusEngine.Project.Assets.AssetManager.LoadTexture(System.String,PegasusEngine.Common.GUID,System.Int32)
+  id: LoadTexture(System.String,PegasusEngine.Common.GUID,System.Int32)
+  parent: PegasusEngine.Project.Assets.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTexture(string, GUID, int)
+  nameWithType: AssetManager.LoadTexture(string, GUID, int)
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadTexture(string, PegasusEngine.Common.GUID, int)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/Assets/AssetManager.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LoadTexture
+    path: ../PegasusEngine/src/Project/Assets/AssetManager.cs
+    startLine: 288
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project.Assets
+  syntax:
+    content: public bool LoadTexture(string assetPath, GUID guid, int channels)
+    parameters:
+    - id: assetPath
+      type: System.String
+    - id: guid
+      type: PegasusEngine.Common.GUID
+    - id: channels
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function LoadTexture(assetPath As String, guid As GUID, channels As Integer) As Boolean
+  overload: PegasusEngine.Project.Assets.AssetManager.LoadTexture*
+  nameWithType.vb: AssetManager.LoadTexture(String, GUID, Integer)
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.LoadTexture(String, PegasusEngine.Common.GUID, Integer)
+  name.vb: LoadTexture(String, GUID, Integer)
+references:
+- uid: PegasusEngine.Project.Assets
+  commentId: N:PegasusEngine.Project.Assets
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Assets
+  nameWithType: PegasusEngine.Project.Assets
+  fullName: PegasusEngine.Project.Assets
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: PegasusEngine.Project.Assets.AssetManager.AssetPool*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.AssetPool
+  href: PegasusEngine.Project.Assets.AssetManager.AssetPool.html#PegasusEngine_Project_Assets_AssetManager_AssetPool
+  name: AssetPool
+  nameWithType: AssetManager.AssetPool
+  fullName: PegasusEngine.Project.Assets.AssetManager.AssetPool
+- uid: PegasusEngine.Project.Assets.AssetPool
+  commentId: T:PegasusEngine.Project.Assets.AssetPool
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetPool.html
+  name: AssetPool
+  nameWithType: AssetPool
+  fullName: PegasusEngine.Project.Assets.AssetPool
+- uid: PegasusEngine.Project.Assets.AssetManager.#ctor*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.#ctor
+  href: PegasusEngine.Project.Assets.AssetManager.-ctor.html#PegasusEngine_Project_Assets_AssetManager__ctor
+  name: AssetManager
+  nameWithType: AssetManager.AssetManager
+  fullName: PegasusEngine.Project.Assets.AssetManager.AssetManager
+  nameWithType.vb: AssetManager.New
+  fullName.vb: PegasusEngine.Project.Assets.AssetManager.New
+  name.vb: New
+- uid: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.SaveMetaFile
+  href: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile.html#PegasusEngine_Project_Assets_AssetManager_SaveMetaFile_System_String_PegasusEngine_Project_Assets_AssetMetaFile_
+  name: SaveMetaFile
+  nameWithType: AssetManager.SaveMetaFile
+  fullName: PegasusEngine.Project.Assets.AssetManager.SaveMetaFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: PegasusEngine.Project.Assets.AssetMetaFile
+  commentId: T:PegasusEngine.Project.Assets.AssetMetaFile
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetMetaFile.html
+  name: AssetMetaFile
+  nameWithType: AssetMetaFile
+  fullName: PegasusEngine.Project.Assets.AssetMetaFile
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.LoadMetaFile
+  href: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile.html#PegasusEngine_Project_Assets_AssetManager_LoadMetaFile_System_String_
+  name: LoadMetaFile
+  nameWithType: AssetManager.LoadMetaFile
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadMetaFile
+- uid: PegasusEngine.Project.Assets.AssetManager.ImportAsset*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.ImportAsset
+  href: PegasusEngine.Project.Assets.AssetManager.ImportAsset.html#PegasusEngine_Project_Assets_AssetManager_ImportAsset_System_String_
+  name: ImportAsset
+  nameWithType: AssetManager.ImportAsset
+  fullName: PegasusEngine.Project.Assets.AssetManager.ImportAsset
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+- uid: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder
+  href: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder.html#PegasusEngine_Project_Assets_AssetManager_SaveAssetPoolToFolder_System_String_
+  name: SaveAssetPoolToFolder
+  nameWithType: AssetManager.SaveAssetPoolToFolder
+  fullName: PegasusEngine.Project.Assets.AssetManager.SaveAssetPoolToFolder
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder
+  href: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder.html#PegasusEngine_Project_Assets_AssetManager_LoadAssetPoolFromFolder_System_String_
+  name: LoadAssetPoolFromFolder
+  nameWithType: AssetManager.LoadAssetPoolFromFolder
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadAssetPoolFromFolder
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.LoadAssetFile
+  href: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile.html#PegasusEngine_Project_Assets_AssetManager_LoadAssetFile_System_String_PegasusEngine_Common_GUID_
+  name: LoadAssetFile
+  nameWithType: AssetManager.LoadAssetFile
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadAssetFile
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadMesh*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.LoadMesh
+  href: PegasusEngine.Project.Assets.AssetManager.LoadMesh.html#PegasusEngine_Project_Assets_AssetManager_LoadMesh_System_String_PegasusEngine_Common_GUID_
+  name: LoadMesh
+  nameWithType: AssetManager.LoadMesh
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadMesh
+- uid: PegasusEngine.Project.Assets.AssetManager.LoadTexture*
+  commentId: Overload:PegasusEngine.Project.Assets.AssetManager.LoadTexture
+  href: PegasusEngine.Project.Assets.AssetManager.LoadTexture.html#PegasusEngine_Project_Assets_AssetManager_LoadTexture_System_String_PegasusEngine_Common_GUID_System_Int32_
+  name: LoadTexture
+  nameWithType: AssetManager.LoadTexture
+  fullName: PegasusEngine.Project.Assets.AssetManager.LoadTexture
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+memberLayout: SeparatePages

@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Scenes
+  commentId: N:PegasusEngine.Project.Scenes
+  id: PegasusEngine.Project.Scenes
+  children:
+  - PegasusEngine.Project.Scenes.Scene
+  - PegasusEngine.Project.Scenes.SceneManager
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Project.Scenes
+  nameWithType: PegasusEngine.Project.Scenes
+  fullName: PegasusEngine.Project.Scenes
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Project.Scenes.Scene
+  commentId: T:PegasusEngine.Project.Scenes.Scene
+  parent: PegasusEngine.Project.Scenes
+  href: PegasusEngine.Project.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: PegasusEngine.Project.Scenes.Scene
+- uid: PegasusEngine.Project.Scenes.SceneManager
+  commentId: T:PegasusEngine.Project.Scenes.SceneManager
+  parent: PegasusEngine.Project.Scenes
+  href: PegasusEngine.Project.Scenes.SceneManager.html
+  name: SceneManager
+  nameWithType: SceneManager
+  fullName: PegasusEngine.Project.Scenes.SceneManager
+- uid: PegasusEngine.Project.Scenes
+  commentId: N:PegasusEngine.Project.Scenes
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Scenes
+  nameWithType: PegasusEngine.Project.Scenes
+  fullName: PegasusEngine.Project.Scenes
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Scenes
+    name: Scenes
+    href: PegasusEngine.Project.Scenes.html
+memberLayout: SeparatePages

@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Platform.OpenGL
+  commentId: N:PegasusEngine.Platform.OpenGL
+  id: PegasusEngine.Platform.OpenGL
+  children:
+  - PegasusEngine.Platform.OpenGL.OpenGLContext
+  - PegasusEngine.Platform.OpenGL.OpenGLRendererAPI
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Platform.OpenGL
+  nameWithType: PegasusEngine.Platform.OpenGL
+  fullName: PegasusEngine.Platform.OpenGL
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext
+  commentId: T:PegasusEngine.Platform.OpenGL.OpenGLContext
+  href: PegasusEngine.Platform.OpenGL.OpenGLContext.html
+  name: OpenGLContext
+  nameWithType: OpenGLContext
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext
+- uid: PegasusEngine.Platform.OpenGL.OpenGLRendererAPI
+  commentId: T:PegasusEngine.Platform.OpenGL.OpenGLRendererAPI
+  href: PegasusEngine.Platform.OpenGL.OpenGLRendererAPI.html
+  name: OpenGLRendererAPI
+  nameWithType: OpenGLRendererAPI
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLRendererAPI
+memberLayout: SeparatePages

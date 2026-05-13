@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.ImGuiContext.Fonts
+  commentId: T:PegasusEditor.ImGuiContext.Fonts
+  id: Fonts
+  parent: PegasusEditor.ImGuiContext
+  children:
+  - PegasusEditor.ImGuiContext.Fonts.Default
+  - PegasusEditor.ImGuiContext.Fonts.NotoSans
+  - PegasusEditor.ImGuiContext.Fonts.WumpusMono
+  langs:
+  - csharp
+  - vb
+  name: Fonts
+  nameWithType: Fonts
+  fullName: PegasusEditor.ImGuiContext.Fonts
+  type: Enum
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Fonts
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+    startLine: 6
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public enum Fonts
+    content.vb: Public Enum Fonts
+- uid: PegasusEditor.ImGuiContext.Fonts.Default
+  commentId: F:PegasusEditor.ImGuiContext.Fonts.Default
+  id: Default
+  parent: PegasusEditor.ImGuiContext.Fonts
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: Fonts.Default
+  fullName: PegasusEditor.ImGuiContext.Fonts.Default
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Default
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+    startLine: 8
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: Default = 0
+    return:
+      type: PegasusEditor.ImGuiContext.Fonts
+- uid: PegasusEditor.ImGuiContext.Fonts.NotoSans
+  commentId: F:PegasusEditor.ImGuiContext.Fonts.NotoSans
+  id: NotoSans
+  parent: PegasusEditor.ImGuiContext.Fonts
+  langs:
+  - csharp
+  - vb
+  name: NotoSans
+  nameWithType: Fonts.NotoSans
+  fullName: PegasusEditor.ImGuiContext.Fonts.NotoSans
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: NotoSans
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+    startLine: 9
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: NotoSans = 1
+    return:
+      type: PegasusEditor.ImGuiContext.Fonts
+- uid: PegasusEditor.ImGuiContext.Fonts.WumpusMono
+  commentId: F:PegasusEditor.ImGuiContext.Fonts.WumpusMono
+  id: WumpusMono
+  parent: PegasusEditor.ImGuiContext.Fonts
+  langs:
+  - csharp
+  - vb
+  name: WumpusMono
+  nameWithType: Fonts.WumpusMono
+  fullName: PegasusEditor.ImGuiContext.Fonts.WumpusMono
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: WumpusMono
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiFonts.cs
+    startLine: 10
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: WumpusMono = 2
+    return:
+      type: PegasusEditor.ImGuiContext.Fonts
+references:
+- uid: PegasusEditor.ImGuiContext
+  commentId: N:PegasusEditor.ImGuiContext
+  href: PegasusEditor.html
+  name: PegasusEditor.ImGuiContext
+  nameWithType: PegasusEditor.ImGuiContext
+  fullName: PegasusEditor.ImGuiContext
+  spec.csharp:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.ImGuiContext
+    name: ImGuiContext
+    href: PegasusEditor.ImGuiContext.html
+  spec.vb:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.ImGuiContext
+    name: ImGuiContext
+    href: PegasusEditor.ImGuiContext.html
+- uid: PegasusEditor.ImGuiContext.Fonts
+  commentId: T:PegasusEditor.ImGuiContext.Fonts
+  parent: PegasusEditor.ImGuiContext
+  href: PegasusEditor.ImGuiContext.Fonts.html
+  name: Fonts
+  nameWithType: Fonts
+  fullName: PegasusEditor.ImGuiContext.Fonts
+memberLayout: SeparatePages

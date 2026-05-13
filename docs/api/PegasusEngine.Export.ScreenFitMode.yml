@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Export.ScreenFitMode
+  commentId: T:PegasusEngine.Export.ScreenFitMode
+  id: ScreenFitMode
+  parent: PegasusEngine.Export
+  children:
+  - PegasusEngine.Export.ScreenFitMode.MaxAspectFit
+  - PegasusEngine.Export.ScreenFitMode.OriginalCentered
+  - PegasusEngine.Export.ScreenFitMode.StretchFill
+  langs:
+  - csharp
+  - vb
+  name: ScreenFitMode
+  nameWithType: ScreenFitMode
+  fullName: PegasusEngine.Export.ScreenFitMode
+  type: Enum
+  source:
+    remote:
+      path: PegasusEngine/src/Export/ExportSettings.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ScreenFitMode
+    path: ../PegasusEngine/src/Export/ExportSettings.cs
+    startLine: 2
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Export
+  syntax:
+    content: public enum ScreenFitMode
+    content.vb: Public Enum ScreenFitMode
+- uid: PegasusEngine.Export.ScreenFitMode.OriginalCentered
+  commentId: F:PegasusEngine.Export.ScreenFitMode.OriginalCentered
+  id: OriginalCentered
+  parent: PegasusEngine.Export.ScreenFitMode
+  langs:
+  - csharp
+  - vb
+  name: OriginalCentered
+  nameWithType: ScreenFitMode.OriginalCentered
+  fullName: PegasusEngine.Export.ScreenFitMode.OriginalCentered
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Export/ExportSettings.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OriginalCentered
+    path: ../PegasusEngine/src/Export/ExportSettings.cs
+    startLine: 4
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Export
+  syntax:
+    content: OriginalCentered = 0
+    return:
+      type: PegasusEngine.Export.ScreenFitMode
+- uid: PegasusEngine.Export.ScreenFitMode.StretchFill
+  commentId: F:PegasusEngine.Export.ScreenFitMode.StretchFill
+  id: StretchFill
+  parent: PegasusEngine.Export.ScreenFitMode
+  langs:
+  - csharp
+  - vb
+  name: StretchFill
+  nameWithType: ScreenFitMode.StretchFill
+  fullName: PegasusEngine.Export.ScreenFitMode.StretchFill
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Export/ExportSettings.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: StretchFill
+    path: ../PegasusEngine/src/Export/ExportSettings.cs
+    startLine: 5
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Export
+  syntax:
+    content: StretchFill = 1
+    return:
+      type: PegasusEngine.Export.ScreenFitMode
+- uid: PegasusEngine.Export.ScreenFitMode.MaxAspectFit
+  commentId: F:PegasusEngine.Export.ScreenFitMode.MaxAspectFit
+  id: MaxAspectFit
+  parent: PegasusEngine.Export.ScreenFitMode
+  langs:
+  - csharp
+  - vb
+  name: MaxAspectFit
+  nameWithType: ScreenFitMode.MaxAspectFit
+  fullName: PegasusEngine.Export.ScreenFitMode.MaxAspectFit
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Export/ExportSettings.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: MaxAspectFit
+    path: ../PegasusEngine/src/Export/ExportSettings.cs
+    startLine: 6
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Export
+  syntax:
+    content: MaxAspectFit = 2
+    return:
+      type: PegasusEngine.Export.ScreenFitMode
+references:
+- uid: PegasusEngine.Export
+  commentId: N:PegasusEngine.Export
+  href: PegasusEngine.html
+  name: PegasusEngine.Export
+  nameWithType: PegasusEngine.Export
+  fullName: PegasusEngine.Export
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+- uid: PegasusEngine.Export.ScreenFitMode
+  commentId: T:PegasusEngine.Export.ScreenFitMode
+  parent: PegasusEngine.Export
+  href: PegasusEngine.Export.ScreenFitMode.html
+  name: ScreenFitMode
+  nameWithType: ScreenFitMode
+  fullName: PegasusEngine.Export.ScreenFitMode
+memberLayout: SeparatePages

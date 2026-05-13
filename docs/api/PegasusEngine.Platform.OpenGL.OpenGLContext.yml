@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext
+  commentId: T:PegasusEngine.Platform.OpenGL.OpenGLContext
+  id: OpenGLContext
+  parent: PegasusEngine.Platform.OpenGL
+  children:
+  - PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor(OpenTK.Windowing.GraphicsLibraryFramework.Window*)
+  - PegasusEngine.Platform.OpenGL.OpenGLContext.Init
+  - PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints
+  - PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers
+  langs:
+  - csharp
+  - vb
+  name: OpenGLContext
+  nameWithType: OpenGLContext
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OpenGLContext
+    path: ../PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+    startLine: 5
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Platform.OpenGL
+  syntax:
+    content: 'public class OpenGLContext : IRenderingContext'
+    content.vb: Public Class OpenGLContext Implements IRenderingContext
+  inheritance:
+  - System.Object
+  implements:
+  - PegasusEngine.Renderer.IRenderingContext
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints
+  commentId: M:PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints
+  id: SetWindowHints
+  parent: PegasusEngine.Platform.OpenGL.OpenGLContext
+  langs:
+  - csharp
+  - vb
+  name: SetWindowHints()
+  nameWithType: OpenGLContext.SetWindowHints()
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SetWindowHints
+    path: ../PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+    startLine: 9
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Platform.OpenGL
+  syntax:
+    content: public static void SetWindowHints()
+    content.vb: Public Shared Sub SetWindowHints()
+  overload: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints*
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor(OpenTK.Windowing.GraphicsLibraryFramework.Window*)
+  commentId: M:PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor(OpenTK.Windowing.GraphicsLibraryFramework.Window*)
+  id: '#ctor(OpenTK.Windowing.GraphicsLibraryFramework.Window*)'
+  parent: PegasusEngine.Platform.OpenGL.OpenGLContext
+  langs:
+  - csharp
+  - vb
+  name: OpenGLContext(Window*)
+  nameWithType: OpenGLContext.OpenGLContext(Window*)
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.OpenGLContext(OpenTK.Windowing.GraphicsLibraryFramework.Window*)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+    startLine: 16
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Platform.OpenGL
+  syntax:
+    content: public OpenGLContext(Window* nativeWindow)
+    parameters:
+    - id: nativeWindow
+      type: OpenTK.Windowing.GraphicsLibraryFramework.Window*
+    content.vb: Public Sub New(nativeWindow As Window*)
+  overload: PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor*
+  nameWithType.vb: OpenGLContext.New(Window*)
+  fullName.vb: PegasusEngine.Platform.OpenGL.OpenGLContext.New(OpenTK.Windowing.GraphicsLibraryFramework.Window*)
+  name.vb: New(Window*)
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.Init
+  commentId: M:PegasusEngine.Platform.OpenGL.OpenGLContext.Init
+  id: Init
+  parent: PegasusEngine.Platform.OpenGL.OpenGLContext
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: OpenGLContext.Init()
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.Init()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Init
+    path: ../PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Platform.OpenGL
+  example: []
+  syntax:
+    content: public void Init()
+    content.vb: Public Sub Init()
+  overload: PegasusEngine.Platform.OpenGL.OpenGLContext.Init*
+  implements:
+  - PegasusEngine.Renderer.IRenderingContext.Init
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers
+  commentId: M:PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers
+  id: SwapBuffers
+  parent: PegasusEngine.Platform.OpenGL.OpenGLContext
+  langs:
+  - csharp
+  - vb
+  name: SwapBuffers()
+  nameWithType: OpenGLContext.SwapBuffers()
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SwapBuffers
+    path: ../PegasusEngine/src/Platform/OpenGL/OpenGLContext.cs
+    startLine: 26
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Platform.OpenGL
+  example: []
+  syntax:
+    content: public void SwapBuffers()
+    content.vb: Public Sub SwapBuffers()
+  overload: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers*
+  implements:
+  - PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+references:
+- uid: PegasusEngine.Platform.OpenGL
+  commentId: N:PegasusEngine.Platform.OpenGL
+  href: PegasusEngine.html
+  name: PegasusEngine.Platform.OpenGL
+  nameWithType: PegasusEngine.Platform.OpenGL
+  fullName: PegasusEngine.Platform.OpenGL
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Platform
+    name: Platform
+    href: PegasusEngine.Platform.html
+  - name: .
+  - uid: PegasusEngine.Platform.OpenGL
+    name: OpenGL
+    href: PegasusEngine.Platform.OpenGL.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Platform
+    name: Platform
+    href: PegasusEngine.Platform.html
+  - name: .
+  - uid: PegasusEngine.Platform.OpenGL
+    name: OpenGL
+    href: PegasusEngine.Platform.OpenGL.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Renderer.IRenderingContext
+  commentId: T:PegasusEngine.Renderer.IRenderingContext
+  parent: PegasusEngine.Renderer
+  href: PegasusEngine.Renderer.IRenderingContext.html
+  name: IRenderingContext
+  nameWithType: IRenderingContext
+  fullName: PegasusEngine.Renderer.IRenderingContext
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Renderer
+  commentId: N:PegasusEngine.Renderer
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer
+  nameWithType: PegasusEngine.Renderer
+  fullName: PegasusEngine.Renderer
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints*
+  commentId: Overload:PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints
+  href: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints.html#PegasusEngine_Platform_OpenGL_OpenGLContext_SetWindowHints
+  name: SetWindowHints
+  nameWithType: OpenGLContext.SetWindowHints
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.SetWindowHints
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor*
+  commentId: Overload:PegasusEngine.Platform.OpenGL.OpenGLContext.#ctor
+  href: PegasusEngine.Platform.OpenGL.OpenGLContext.-ctor.html#PegasusEngine_Platform_OpenGL_OpenGLContext__ctor_OpenTK_Windowing_GraphicsLibraryFramework_Window__
+  name: OpenGLContext
+  nameWithType: OpenGLContext.OpenGLContext
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.OpenGLContext
+  nameWithType.vb: OpenGLContext.New
+  fullName.vb: PegasusEngine.Platform.OpenGL.OpenGLContext.New
+  name.vb: New
+- uid: OpenTK.Windowing.GraphicsLibraryFramework.Window*
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.GraphicsLibraryFramework/Window.cs
+  name: Window*
+  nameWithType: Window*
+  fullName: OpenTK.Windowing.GraphicsLibraryFramework.Window*
+  spec.csharp:
+  - uid: OpenTK.Windowing.GraphicsLibraryFramework.Window
+    name: Window
+    isExternal: true
+    href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.GraphicsLibraryFramework/Window.cs
+  - name: '*'
+  spec.vb:
+  - uid: OpenTK.Windowing.GraphicsLibraryFramework.Window
+    name: Window
+    isExternal: true
+    href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.GraphicsLibraryFramework/Window.cs
+  - name: '*'
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.Init*
+  commentId: Overload:PegasusEngine.Platform.OpenGL.OpenGLContext.Init
+  href: PegasusEngine.Platform.OpenGL.OpenGLContext.Init.html#PegasusEngine_Platform_OpenGL_OpenGLContext_Init
+  name: Init
+  nameWithType: OpenGLContext.Init
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.Init
+- uid: PegasusEngine.Renderer.IRenderingContext.Init
+  commentId: M:PegasusEngine.Renderer.IRenderingContext.Init
+  parent: PegasusEngine.Renderer.IRenderingContext
+  href: PegasusEngine.Renderer.IRenderingContext.Init.html#PegasusEngine_Renderer_IRenderingContext_Init
+  name: Init()
+  nameWithType: IRenderingContext.Init()
+  fullName: PegasusEngine.Renderer.IRenderingContext.Init()
+  spec.csharp:
+  - uid: PegasusEngine.Renderer.IRenderingContext.Init
+    name: Init
+    href: PegasusEngine.Renderer.IRenderingContext.Init.html#PegasusEngine_Renderer_IRenderingContext_Init
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Renderer.IRenderingContext.Init
+    name: Init
+    href: PegasusEngine.Renderer.IRenderingContext.Init.html#PegasusEngine_Renderer_IRenderingContext_Init
+  - name: (
+  - name: )
+- uid: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers*
+  commentId: Overload:PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers
+  href: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers.html#PegasusEngine_Platform_OpenGL_OpenGLContext_SwapBuffers
+  name: SwapBuffers
+  nameWithType: OpenGLContext.SwapBuffers
+  fullName: PegasusEngine.Platform.OpenGL.OpenGLContext.SwapBuffers
+- uid: PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  commentId: M:PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+  parent: PegasusEngine.Renderer.IRenderingContext
+  href: PegasusEngine.Renderer.IRenderingContext.SwapBuffers.html#PegasusEngine_Renderer_IRenderingContext_SwapBuffers
+  name: SwapBuffers()
+  nameWithType: IRenderingContext.SwapBuffers()
+  fullName: PegasusEngine.Renderer.IRenderingContext.SwapBuffers()
+  spec.csharp:
+  - uid: PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+    name: SwapBuffers
+    href: PegasusEngine.Renderer.IRenderingContext.SwapBuffers.html#PegasusEngine_Renderer_IRenderingContext_SwapBuffers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Renderer.IRenderingContext.SwapBuffers
+    name: SwapBuffers
+    href: PegasusEngine.Renderer.IRenderingContext.SwapBuffers.html#PegasusEngine_Renderer_IRenderingContext_SwapBuffers
+  - name: (
+  - name: )
+memberLayout: SeparatePages

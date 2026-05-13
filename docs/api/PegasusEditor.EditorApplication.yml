@@ -1,0 +1,605 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.EditorApplication
+  commentId: T:PegasusEditor.EditorApplication
+  id: EditorApplication
+  parent: PegasusEditor
+  children:
+  - PegasusEditor.EditorApplication.#ctor(OpenTK.Windowing.Desktop.GameWindowSettings,OpenTK.Windowing.Desktop.NativeWindowSettings)
+  - PegasusEditor.EditorApplication.CreateRenderer
+  - PegasusEditor.EditorApplication.Shutdown
+  langs:
+  - csharp
+  - vb
+  name: EditorApplication
+  nameWithType: EditorApplication
+  fullName: PegasusEditor.EditorApplication
+  type: Class
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorApplication.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: EditorApplication
+    path: ../PegasusEditor/src/Core/EditorApplication.cs
+    startLine: 11
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: 'public class EditorApplication : Application'
+    content.vb: Public Class EditorApplication Inherits Application
+  inheritance:
+  - System.Object
+  - PegasusEngine.Core.Application
+  inheritedMembers:
+  - PegasusEngine.Core.Application.Window
+  - PegasusEngine.Core.Application.LayerStack
+  - PegasusEngine.Core.Application.Profiler
+  - PegasusEngine.Core.Application.ProjectManager
+  - PegasusEngine.Core.Application.ScriptManager
+  - PegasusEngine.Core.Application.RenderLayer
+  - PegasusEngine.Core.Application.ScriptLayer
+  - PegasusEngine.Core.Application.Renderer
+  - PegasusEngine.Core.Application.Run
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEditor.EditorApplication.#ctor(OpenTK.Windowing.Desktop.GameWindowSettings,OpenTK.Windowing.Desktop.NativeWindowSettings)
+  commentId: M:PegasusEditor.EditorApplication.#ctor(OpenTK.Windowing.Desktop.GameWindowSettings,OpenTK.Windowing.Desktop.NativeWindowSettings)
+  id: '#ctor(OpenTK.Windowing.Desktop.GameWindowSettings,OpenTK.Windowing.Desktop.NativeWindowSettings)'
+  parent: PegasusEditor.EditorApplication
+  langs:
+  - csharp
+  - vb
+  name: EditorApplication(GameWindowSettings, NativeWindowSettings)
+  nameWithType: EditorApplication.EditorApplication(GameWindowSettings, NativeWindowSettings)
+  fullName: PegasusEditor.EditorApplication.EditorApplication(OpenTK.Windowing.Desktop.GameWindowSettings, OpenTK.Windowing.Desktop.NativeWindowSettings)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorApplication.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEditor/src/Core/EditorApplication.cs
+    startLine: 16
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public EditorApplication(GameWindowSettings gameWindowSettings, NativeWindowSettings nativeWindowSettings)
+    parameters:
+    - id: gameWindowSettings
+      type: OpenTK.Windowing.Desktop.GameWindowSettings
+    - id: nativeWindowSettings
+      type: OpenTK.Windowing.Desktop.NativeWindowSettings
+    content.vb: Public Sub New(gameWindowSettings As GameWindowSettings, nativeWindowSettings As NativeWindowSettings)
+  overload: PegasusEditor.EditorApplication.#ctor*
+  nameWithType.vb: EditorApplication.New(GameWindowSettings, NativeWindowSettings)
+  fullName.vb: PegasusEditor.EditorApplication.New(OpenTK.Windowing.Desktop.GameWindowSettings, OpenTK.Windowing.Desktop.NativeWindowSettings)
+  name.vb: New(GameWindowSettings, NativeWindowSettings)
+- uid: PegasusEditor.EditorApplication.CreateRenderer
+  commentId: M:PegasusEditor.EditorApplication.CreateRenderer
+  id: CreateRenderer
+  parent: PegasusEditor.EditorApplication
+  langs:
+  - csharp
+  - vb
+  name: CreateRenderer()
+  nameWithType: EditorApplication.CreateRenderer()
+  fullName: PegasusEditor.EditorApplication.CreateRenderer()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorApplication.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: CreateRenderer
+    path: ../PegasusEditor/src/Core/EditorApplication.cs
+    startLine: 38
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  example: []
+  syntax:
+    content: protected override IRenderer CreateRenderer()
+    return:
+      type: PegasusEngine.Renderer.IRenderer
+    content.vb: Protected Overrides Function CreateRenderer() As IRenderer
+  overridden: PegasusEngine.Core.Application.CreateRenderer
+  overload: PegasusEditor.EditorApplication.CreateRenderer*
+- uid: PegasusEditor.EditorApplication.Shutdown
+  commentId: M:PegasusEditor.EditorApplication.Shutdown
+  id: Shutdown
+  parent: PegasusEditor.EditorApplication
+  langs:
+  - csharp
+  - vb
+  name: Shutdown()
+  nameWithType: EditorApplication.Shutdown()
+  fullName: PegasusEditor.EditorApplication.Shutdown()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorApplication.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Shutdown
+    path: ../PegasusEditor/src/Core/EditorApplication.cs
+    startLine: 49
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public void Shutdown()
+    content.vb: Public Sub Shutdown()
+  overload: PegasusEditor.EditorApplication.Shutdown*
+references:
+- uid: PegasusEditor
+  commentId: N:PegasusEditor
+  href: PegasusEditor.html
+  name: PegasusEditor
+  nameWithType: PegasusEditor
+  fullName: PegasusEditor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Core.Application
+  commentId: T:PegasusEngine.Core.Application
+  parent: PegasusEngine.Core
+  href: PegasusEngine.Core.Application.html
+  name: Application
+  nameWithType: Application
+  fullName: PegasusEngine.Core.Application
+- uid: PegasusEngine.Core.Application.Window
+  commentId: F:PegasusEngine.Core.Application.Window
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.Window.html#PegasusEngine_Core_Application_Window
+  name: Window
+  nameWithType: Application.Window
+  fullName: PegasusEngine.Core.Application.Window
+- uid: PegasusEngine.Core.Application.LayerStack
+  commentId: F:PegasusEngine.Core.Application.LayerStack
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.LayerStack.html#PegasusEngine_Core_Application_LayerStack
+  name: LayerStack
+  nameWithType: Application.LayerStack
+  fullName: PegasusEngine.Core.Application.LayerStack
+- uid: PegasusEngine.Core.Application.Profiler
+  commentId: F:PegasusEngine.Core.Application.Profiler
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.Profiler.html#PegasusEngine_Core_Application_Profiler
+  name: Profiler
+  nameWithType: Application.Profiler
+  fullName: PegasusEngine.Core.Application.Profiler
+- uid: PegasusEngine.Core.Application.ProjectManager
+  commentId: F:PegasusEngine.Core.Application.ProjectManager
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.ProjectManager.html#PegasusEngine_Core_Application_ProjectManager
+  name: ProjectManager
+  nameWithType: Application.ProjectManager
+  fullName: PegasusEngine.Core.Application.ProjectManager
+- uid: PegasusEngine.Core.Application.ScriptManager
+  commentId: F:PegasusEngine.Core.Application.ScriptManager
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.ScriptManager.html#PegasusEngine_Core_Application_ScriptManager
+  name: ScriptManager
+  nameWithType: Application.ScriptManager
+  fullName: PegasusEngine.Core.Application.ScriptManager
+- uid: PegasusEngine.Core.Application.RenderLayer
+  commentId: F:PegasusEngine.Core.Application.RenderLayer
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.RenderLayer.html#PegasusEngine_Core_Application_RenderLayer
+  name: RenderLayer
+  nameWithType: Application.RenderLayer
+  fullName: PegasusEngine.Core.Application.RenderLayer
+- uid: PegasusEngine.Core.Application.ScriptLayer
+  commentId: F:PegasusEngine.Core.Application.ScriptLayer
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.ScriptLayer.html#PegasusEngine_Core_Application_ScriptLayer
+  name: ScriptLayer
+  nameWithType: Application.ScriptLayer
+  fullName: PegasusEngine.Core.Application.ScriptLayer
+- uid: PegasusEngine.Core.Application.Renderer
+  commentId: F:PegasusEngine.Core.Application.Renderer
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.Renderer.html#PegasusEngine_Core_Application_Renderer
+  name: Renderer
+  nameWithType: Application.Renderer
+  fullName: PegasusEngine.Core.Application.Renderer
+- uid: PegasusEngine.Core.Application.Run
+  commentId: M:PegasusEngine.Core.Application.Run
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.Run.html#PegasusEngine_Core_Application_Run
+  name: Run()
+  nameWithType: Application.Run()
+  fullName: PegasusEngine.Core.Application.Run()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Application.Run
+    name: Run
+    href: PegasusEngine.Core.Application.Run.html#PegasusEngine_Core_Application_Run
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Application.Run
+    name: Run
+    href: PegasusEngine.Core.Application.Run.html#PegasusEngine_Core_Application_Run
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.Core
+  commentId: N:PegasusEngine.Core
+  href: PegasusEngine.html
+  name: PegasusEngine.Core
+  nameWithType: PegasusEngine.Core
+  fullName: PegasusEngine.Core
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+- uid: PegasusEditor.EditorApplication.#ctor*
+  commentId: Overload:PegasusEditor.EditorApplication.#ctor
+  href: PegasusEditor.EditorApplication.-ctor.html#PegasusEditor_EditorApplication__ctor_OpenTK_Windowing_Desktop_GameWindowSettings_OpenTK_Windowing_Desktop_NativeWindowSettings_
+  name: EditorApplication
+  nameWithType: EditorApplication.EditorApplication
+  fullName: PegasusEditor.EditorApplication.EditorApplication
+  nameWithType.vb: EditorApplication.New
+  fullName.vb: PegasusEditor.EditorApplication.New
+  name.vb: New
+- uid: OpenTK.Windowing.Desktop.GameWindowSettings
+  commentId: T:OpenTK.Windowing.Desktop.GameWindowSettings
+  parent: OpenTK.Windowing.Desktop
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.Desktop/GameWindowSettings.cs
+  name: GameWindowSettings
+  nameWithType: GameWindowSettings
+  fullName: OpenTK.Windowing.Desktop.GameWindowSettings
+- uid: OpenTK.Windowing.Desktop.NativeWindowSettings
+  commentId: T:OpenTK.Windowing.Desktop.NativeWindowSettings
+  parent: OpenTK.Windowing.Desktop
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.Desktop/NativeWindowSettings.cs
+  name: NativeWindowSettings
+  nameWithType: NativeWindowSettings
+  fullName: OpenTK.Windowing.Desktop.NativeWindowSettings
+- uid: OpenTK.Windowing.Desktop
+  commentId: N:OpenTK.Windowing.Desktop
+  isExternal: true
+  name: OpenTK.Windowing.Desktop
+  nameWithType: OpenTK.Windowing.Desktop
+  fullName: OpenTK.Windowing.Desktop
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.Desktop
+    name: Desktop
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.Desktop
+    name: Desktop
+    isExternal: true
+- uid: PegasusEngine.Core.Application.CreateRenderer
+  commentId: M:PegasusEngine.Core.Application.CreateRenderer
+  parent: PegasusEngine.Core.Application
+  href: PegasusEngine.Core.Application.CreateRenderer.html#PegasusEngine_Core_Application_CreateRenderer
+  name: CreateRenderer()
+  nameWithType: Application.CreateRenderer()
+  fullName: PegasusEngine.Core.Application.CreateRenderer()
+  spec.csharp:
+  - uid: PegasusEngine.Core.Application.CreateRenderer
+    name: CreateRenderer
+    href: PegasusEngine.Core.Application.CreateRenderer.html#PegasusEngine_Core_Application_CreateRenderer
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEngine.Core.Application.CreateRenderer
+    name: CreateRenderer
+    href: PegasusEngine.Core.Application.CreateRenderer.html#PegasusEngine_Core_Application_CreateRenderer
+  - name: (
+  - name: )
+- uid: PegasusEditor.EditorApplication.CreateRenderer*
+  commentId: Overload:PegasusEditor.EditorApplication.CreateRenderer
+  href: PegasusEditor.EditorApplication.CreateRenderer.html#PegasusEditor_EditorApplication_CreateRenderer
+  name: CreateRenderer
+  nameWithType: EditorApplication.CreateRenderer
+  fullName: PegasusEditor.EditorApplication.CreateRenderer
+- uid: PegasusEngine.Renderer.IRenderer
+  commentId: T:PegasusEngine.Renderer.IRenderer
+  parent: PegasusEngine.Renderer
+  href: PegasusEngine.Renderer.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: PegasusEngine.Renderer.IRenderer
+- uid: PegasusEngine.Renderer
+  commentId: N:PegasusEngine.Renderer
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer
+  nameWithType: PegasusEngine.Renderer
+  fullName: PegasusEngine.Renderer
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+- uid: PegasusEditor.EditorApplication.Shutdown*
+  commentId: Overload:PegasusEditor.EditorApplication.Shutdown
+  href: PegasusEditor.EditorApplication.Shutdown.html#PegasusEditor_EditorApplication_Shutdown
+  name: Shutdown
+  nameWithType: EditorApplication.Shutdown
+  fullName: PegasusEditor.EditorApplication.Shutdown
+memberLayout: SeparatePages

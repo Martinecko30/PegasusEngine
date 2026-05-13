@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  id: PegasusEngine.Common
+  children:
+  - PegasusEngine.Common.GUID
+  - PegasusEngine.Common.Time
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: PegasusEngine.Common.Time
+  commentId: T:PegasusEngine.Common.Time
+  href: PegasusEngine.Common.Time.html
+  name: Time
+  nameWithType: Time
+  fullName: PegasusEngine.Common.Time
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+memberLayout: SeparatePages

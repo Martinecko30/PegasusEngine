@@ -1,0 +1,583 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.EditorCol
+  commentId: T:PegasusEditor.EditorCol
+  id: EditorCol
+  parent: PegasusEditor
+  children:
+  - PegasusEditor.EditorCol.Accent1
+  - PegasusEditor.EditorCol.Accent2
+  - PegasusEditor.EditorCol.Background1
+  - PegasusEditor.EditorCol.Background2
+  - PegasusEditor.EditorCol.Background3
+  - PegasusEditor.EditorCol.Background4
+  - PegasusEditor.EditorCol.Count
+  - PegasusEditor.EditorCol.Error
+  - PegasusEditor.EditorCol.Primary1
+  - PegasusEditor.EditorCol.Primary2
+  - PegasusEditor.EditorCol.Primary3
+  - PegasusEditor.EditorCol.Secondary1
+  - PegasusEditor.EditorCol.Secondary2
+  - PegasusEditor.EditorCol.Success
+  - PegasusEditor.EditorCol.Text1
+  - PegasusEditor.EditorCol.Text2
+  - PegasusEditor.EditorCol.Warning
+  - PegasusEditor.EditorCol.X
+  - PegasusEditor.EditorCol.Y
+  - PegasusEditor.EditorCol.Z
+  langs:
+  - csharp
+  - vb
+  name: EditorCol
+  nameWithType: EditorCol
+  fullName: PegasusEditor.EditorCol
+  type: Enum
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: EditorCol
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 7
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public enum EditorCol
+    content.vb: Public Enum EditorCol
+- uid: PegasusEditor.EditorCol.Primary1
+  commentId: F:PegasusEditor.EditorCol.Primary1
+  id: Primary1
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Primary1
+  nameWithType: EditorCol.Primary1
+  fullName: PegasusEditor.EditorCol.Primary1
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Primary1
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 9
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Primary1 = 0
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Primary2
+  commentId: F:PegasusEditor.EditorCol.Primary2
+  id: Primary2
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Primary2
+  nameWithType: EditorCol.Primary2
+  fullName: PegasusEditor.EditorCol.Primary2
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Primary2
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 9
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Primary2 = 1
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Primary3
+  commentId: F:PegasusEditor.EditorCol.Primary3
+  id: Primary3
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Primary3
+  nameWithType: EditorCol.Primary3
+  fullName: PegasusEditor.EditorCol.Primary3
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Primary3
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 9
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Primary3 = 2
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Secondary1
+  commentId: F:PegasusEditor.EditorCol.Secondary1
+  id: Secondary1
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Secondary1
+  nameWithType: EditorCol.Secondary1
+  fullName: PegasusEditor.EditorCol.Secondary1
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Secondary1
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 10
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Secondary1 = 3
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Secondary2
+  commentId: F:PegasusEditor.EditorCol.Secondary2
+  id: Secondary2
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Secondary2
+  nameWithType: EditorCol.Secondary2
+  fullName: PegasusEditor.EditorCol.Secondary2
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Secondary2
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 10
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Secondary2 = 4
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Accent1
+  commentId: F:PegasusEditor.EditorCol.Accent1
+  id: Accent1
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Accent1
+  nameWithType: EditorCol.Accent1
+  fullName: PegasusEditor.EditorCol.Accent1
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Accent1
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 11
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Accent1 = 5
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Accent2
+  commentId: F:PegasusEditor.EditorCol.Accent2
+  id: Accent2
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Accent2
+  nameWithType: EditorCol.Accent2
+  fullName: PegasusEditor.EditorCol.Accent2
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Accent2
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 11
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Accent2 = 6
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Text1
+  commentId: F:PegasusEditor.EditorCol.Text1
+  id: Text1
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Text1
+  nameWithType: EditorCol.Text1
+  fullName: PegasusEditor.EditorCol.Text1
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Text1
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 12
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Text1 = 7
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Text2
+  commentId: F:PegasusEditor.EditorCol.Text2
+  id: Text2
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Text2
+  nameWithType: EditorCol.Text2
+  fullName: PegasusEditor.EditorCol.Text2
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Text2
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 12
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Text2 = 8
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Background1
+  commentId: F:PegasusEditor.EditorCol.Background1
+  id: Background1
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Background1
+  nameWithType: EditorCol.Background1
+  fullName: PegasusEditor.EditorCol.Background1
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Background1
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 13
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Background1 = 9
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Background2
+  commentId: F:PegasusEditor.EditorCol.Background2
+  id: Background2
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Background2
+  nameWithType: EditorCol.Background2
+  fullName: PegasusEditor.EditorCol.Background2
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Background2
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 13
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Background2 = 10
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Background3
+  commentId: F:PegasusEditor.EditorCol.Background3
+  id: Background3
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Background3
+  nameWithType: EditorCol.Background3
+  fullName: PegasusEditor.EditorCol.Background3
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Background3
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 13
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Background3 = 11
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Background4
+  commentId: F:PegasusEditor.EditorCol.Background4
+  id: Background4
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Background4
+  nameWithType: EditorCol.Background4
+  fullName: PegasusEditor.EditorCol.Background4
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Background4
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 13
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Background4 = 12
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Error
+  commentId: F:PegasusEditor.EditorCol.Error
+  id: Error
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: EditorCol.Error
+  fullName: PegasusEditor.EditorCol.Error
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Error
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 14
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Error = 13
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Warning
+  commentId: F:PegasusEditor.EditorCol.Warning
+  id: Warning
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: EditorCol.Warning
+  fullName: PegasusEditor.EditorCol.Warning
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Warning
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 14
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Warning = 14
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Success
+  commentId: F:PegasusEditor.EditorCol.Success
+  id: Success
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: EditorCol.Success
+  fullName: PegasusEditor.EditorCol.Success
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Success
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 14
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Success = 15
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.X
+  commentId: F:PegasusEditor.EditorCol.X
+  id: X
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: EditorCol.X
+  fullName: PegasusEditor.EditorCol.X
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: X
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 15
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: X = 16
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Y
+  commentId: F:PegasusEditor.EditorCol.Y
+  id: Y
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: EditorCol.Y
+  fullName: PegasusEditor.EditorCol.Y
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Y
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 15
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Y = 17
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Z
+  commentId: F:PegasusEditor.EditorCol.Z
+  id: Z
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: EditorCol.Z
+  fullName: PegasusEditor.EditorCol.Z
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Z
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 15
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Z = 18
+    return:
+      type: PegasusEditor.EditorCol
+- uid: PegasusEditor.EditorCol.Count
+  commentId: F:PegasusEditor.EditorCol.Count
+  id: Count
+  parent: PegasusEditor.EditorCol
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: EditorCol.Count
+  fullName: PegasusEditor.EditorCol.Count
+  type: Field
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorTheme.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Count
+    path: ../PegasusEditor/src/Core/EditorTheme.cs
+    startLine: 16
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: Count = 19
+    return:
+      type: PegasusEditor.EditorCol
+references:
+- uid: PegasusEditor
+  commentId: N:PegasusEditor
+  href: PegasusEditor.html
+  name: PegasusEditor
+  nameWithType: PegasusEditor
+  fullName: PegasusEditor
+- uid: PegasusEditor.EditorCol
+  commentId: T:PegasusEditor.EditorCol
+  parent: PegasusEditor
+  href: PegasusEditor.EditorCol.html
+  name: EditorCol
+  nameWithType: EditorCol
+  fullName: PegasusEditor.EditorCol
+memberLayout: SeparatePages

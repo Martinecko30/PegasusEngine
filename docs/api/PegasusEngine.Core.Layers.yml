@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Layers
+  commentId: N:PegasusEngine.Core.Layers
+  id: PegasusEngine.Core.Layers
+  children:
+  - PegasusEngine.Core.Layers.IEventDispatcher
+  - PegasusEngine.Core.Layers.ILayer
+  - PegasusEngine.Core.Layers.Layer
+  - PegasusEngine.Core.Layers.LayerStack
+  - PegasusEngine.Core.Layers.RenderLayer
+  - PegasusEngine.Core.Layers.ScriptLayer
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Core.Layers
+  nameWithType: PegasusEngine.Core.Layers
+  fullName: PegasusEngine.Core.Layers
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Core.Layers.ILayer
+  commentId: T:PegasusEngine.Core.Layers.ILayer
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.ILayer.html
+  name: ILayer
+  nameWithType: ILayer
+  fullName: PegasusEngine.Core.Layers.ILayer
+- uid: PegasusEngine.Core.Layers.Layer
+  commentId: T:PegasusEngine.Core.Layers.Layer
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.Layer.html
+  name: Layer
+  nameWithType: Layer
+  fullName: PegasusEngine.Core.Layers.Layer
+- uid: PegasusEngine.Core.Layers.IEventDispatcher
+  commentId: T:PegasusEngine.Core.Layers.IEventDispatcher
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.IEventDispatcher.html
+  name: IEventDispatcher
+  nameWithType: IEventDispatcher
+  fullName: PegasusEngine.Core.Layers.IEventDispatcher
+- uid: PegasusEngine.Core.Layers.LayerStack
+  commentId: T:PegasusEngine.Core.Layers.LayerStack
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.LayerStack.html
+  name: LayerStack
+  nameWithType: LayerStack
+  fullName: PegasusEngine.Core.Layers.LayerStack
+- uid: PegasusEngine.Core.Layers.RenderLayer
+  commentId: T:PegasusEngine.Core.Layers.RenderLayer
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.RenderLayer.html
+  name: RenderLayer
+  nameWithType: RenderLayer
+  fullName: PegasusEngine.Core.Layers.RenderLayer
+- uid: PegasusEngine.Core.Layers.ScriptLayer
+  commentId: T:PegasusEngine.Core.Layers.ScriptLayer
+  parent: PegasusEngine.Core.Layers
+  href: PegasusEngine.Core.Layers.ScriptLayer.html
+  name: ScriptLayer
+  nameWithType: ScriptLayer
+  fullName: PegasusEngine.Core.Layers.ScriptLayer
+- uid: PegasusEngine.Core.Layers
+  commentId: N:PegasusEngine.Core.Layers
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Layers
+  nameWithType: PegasusEngine.Core.Layers
+  fullName: PegasusEngine.Core.Layers
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+memberLayout: SeparatePages

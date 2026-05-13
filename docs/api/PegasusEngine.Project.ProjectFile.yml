@@ -1,0 +1,704 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.ProjectFile
+  commentId: T:PegasusEngine.Project.ProjectFile
+  id: ProjectFile
+  parent: PegasusEngine.Project
+  children:
+  - PegasusEngine.Project.ProjectFile.#ctor
+  - PegasusEngine.Project.ProjectFile.#ctor(PegasusEngine.Common.GUID)
+  - PegasusEngine.Project.ProjectFile.BootSceneGuid
+  - PegasusEngine.Project.ProjectFile.ComposeFilePath(System.String)
+  - PegasusEngine.Project.ProjectFile.Extension
+  - PegasusEngine.Project.ProjectFile.Load(System.String)
+  - PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+  - PegasusEngine.Project.ProjectFile.Save(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ProjectFile
+  nameWithType: ProjectFile
+  fullName: PegasusEngine.Project.ProjectFile
+  type: Struct
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ProjectFile
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 10
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public struct ProjectFile
+    content.vb: Public Structure ProjectFile
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEngine.Project.ProjectFile.Extension
+  commentId: F:PegasusEngine.Project.ProjectFile.Extension
+  id: Extension
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: Extension
+  nameWithType: ProjectFile.Extension
+  fullName: PegasusEngine.Project.ProjectFile.Extension
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Extension
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public const string Extension = ".pgproj"
+    return:
+      type: System.String
+    content.vb: Public Const Extension As String = ".pgproj"
+- uid: PegasusEngine.Project.ProjectFile.BootSceneGuid
+  commentId: P:PegasusEngine.Project.ProjectFile.BootSceneGuid
+  id: BootSceneGuid
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: BootSceneGuid
+  nameWithType: ProjectFile.BootSceneGuid
+  fullName: PegasusEngine.Project.ProjectFile.BootSceneGuid
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: BootSceneGuid
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 14
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public GUID BootSceneGuid { readonly get; set; }
+    parameters: []
+    return:
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Property BootSceneGuid As GUID
+  overload: PegasusEngine.Project.ProjectFile.BootSceneGuid*
+- uid: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+  commentId: P:PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+  id: RuntimeRenderSettings
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: RuntimeRenderSettings
+  nameWithType: ProjectFile.RuntimeRenderSettings
+  fullName: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: RuntimeRenderSettings
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 15
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public RenderSettings RuntimeRenderSettings { readonly get; set; }
+    parameters: []
+    return:
+      type: PegasusEngine.Renderer.RenderSettings
+    content.vb: Public Property RuntimeRenderSettings As RenderSettings
+  overload: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings*
+- uid: PegasusEngine.Project.ProjectFile.#ctor
+  commentId: M:PegasusEngine.Project.ProjectFile.#ctor
+  id: '#ctor'
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: ProjectFile()
+  nameWithType: ProjectFile.ProjectFile()
+  fullName: PegasusEngine.Project.ProjectFile.ProjectFile()
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 17
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public ProjectFile()
+    content.vb: Public Sub New()
+  overload: PegasusEngine.Project.ProjectFile.#ctor*
+  nameWithType.vb: ProjectFile.New()
+  fullName.vb: PegasusEngine.Project.ProjectFile.New()
+  name.vb: New()
+- uid: PegasusEngine.Project.ProjectFile.#ctor(PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Project.ProjectFile.#ctor(PegasusEngine.Common.GUID)
+  id: '#ctor(PegasusEngine.Common.GUID)'
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: ProjectFile(GUID)
+  nameWithType: ProjectFile.ProjectFile(GUID)
+  fullName: PegasusEngine.Project.ProjectFile.ProjectFile(PegasusEngine.Common.GUID)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public ProjectFile(GUID bootSceneGuid)
+    parameters:
+    - id: bootSceneGuid
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Sub New(bootSceneGuid As GUID)
+  overload: PegasusEngine.Project.ProjectFile.#ctor*
+  nameWithType.vb: ProjectFile.New(GUID)
+  fullName.vb: PegasusEngine.Project.ProjectFile.New(PegasusEngine.Common.GUID)
+  name.vb: New(GUID)
+- uid: PegasusEngine.Project.ProjectFile.Save(System.String)
+  commentId: M:PegasusEngine.Project.ProjectFile.Save(System.String)
+  id: Save(System.String)
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: Save(string)
+  nameWithType: ProjectFile.Save(string)
+  fullName: PegasusEngine.Project.ProjectFile.Save(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Save
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 35
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  summary: Saves current Project file.
+  example: []
+  syntax:
+    content: public bool Save(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The file into which the save will be written
+    return:
+      type: System.Boolean
+      description: >-
+        true - if saving was successful
+
+        false - otherwise
+    content.vb: Public Function Save(filePath As String) As Boolean
+  overload: PegasusEngine.Project.ProjectFile.Save*
+  nameWithType.vb: ProjectFile.Save(String)
+  fullName.vb: PegasusEngine.Project.ProjectFile.Save(String)
+  name.vb: Save(String)
+- uid: PegasusEngine.Project.ProjectFile.Load(System.String)
+  commentId: M:PegasusEngine.Project.ProjectFile.Load(System.String)
+  id: Load(System.String)
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: Load(string)
+  nameWithType: ProjectFile.Load(string)
+  fullName: PegasusEngine.Project.ProjectFile.Load(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Load
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 62
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public static ProjectFile? Load(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: System.Nullable{PegasusEngine.Project.ProjectFile}
+    content.vb: Public Shared Function Load(filePath As String) As ProjectFile?
+  overload: PegasusEngine.Project.ProjectFile.Load*
+  nameWithType.vb: ProjectFile.Load(String)
+  fullName.vb: PegasusEngine.Project.ProjectFile.Load(String)
+  name.vb: Load(String)
+- uid: PegasusEngine.Project.ProjectFile.ComposeFilePath(System.String)
+  commentId: M:PegasusEngine.Project.ProjectFile.ComposeFilePath(System.String)
+  id: ComposeFilePath(System.String)
+  parent: PegasusEngine.Project.ProjectFile
+  langs:
+  - csharp
+  - vb
+  name: ComposeFilePath(string)
+  nameWithType: ProjectFile.ComposeFilePath(string)
+  fullName: PegasusEngine.Project.ProjectFile.ComposeFilePath(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Project/ProjectFile.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ComposeFilePath
+    path: ../PegasusEngine/src/Project/ProjectFile.cs
+    startLine: 86
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Project
+  syntax:
+    content: public static string ComposeFilePath(string folderPath)
+    parameters:
+    - id: folderPath
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ComposeFilePath(folderPath As String) As String
+  overload: PegasusEngine.Project.ProjectFile.ComposeFilePath*
+  nameWithType.vb: ProjectFile.ComposeFilePath(String)
+  fullName.vb: PegasusEngine.Project.ProjectFile.ComposeFilePath(String)
+  name.vb: ComposeFilePath(String)
+references:
+- uid: PegasusEngine.Project
+  commentId: N:PegasusEngine.Project
+  href: PegasusEngine.html
+  name: PegasusEngine.Project
+  nameWithType: PegasusEngine.Project
+  fullName: PegasusEngine.Project
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: PegasusEngine.Project.ProjectFile.BootSceneGuid*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.BootSceneGuid
+  href: PegasusEngine.Project.ProjectFile.BootSceneGuid.html#PegasusEngine_Project_ProjectFile_BootSceneGuid
+  name: BootSceneGuid
+  nameWithType: ProjectFile.BootSceneGuid
+  fullName: PegasusEngine.Project.ProjectFile.BootSceneGuid
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+- uid: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+  href: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings.html#PegasusEngine_Project_ProjectFile_RuntimeRenderSettings
+  name: RuntimeRenderSettings
+  nameWithType: ProjectFile.RuntimeRenderSettings
+  fullName: PegasusEngine.Project.ProjectFile.RuntimeRenderSettings
+- uid: PegasusEngine.Renderer.RenderSettings
+  commentId: T:PegasusEngine.Renderer.RenderSettings
+  parent: PegasusEngine.Renderer
+  href: PegasusEngine.Renderer.RenderSettings.html
+  name: RenderSettings
+  nameWithType: RenderSettings
+  fullName: PegasusEngine.Renderer.RenderSettings
+- uid: PegasusEngine.Renderer
+  commentId: N:PegasusEngine.Renderer
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer
+  nameWithType: PegasusEngine.Renderer
+  fullName: PegasusEngine.Renderer
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+- uid: PegasusEngine.Project.ProjectFile.#ctor*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.#ctor
+  href: PegasusEngine.Project.ProjectFile.-ctor.html#PegasusEngine_Project_ProjectFile__ctor
+  name: ProjectFile
+  nameWithType: ProjectFile.ProjectFile
+  fullName: PegasusEngine.Project.ProjectFile.ProjectFile
+  nameWithType.vb: ProjectFile.New
+  fullName.vb: PegasusEngine.Project.ProjectFile.New
+  name.vb: New
+- uid: PegasusEngine.Project.ProjectFile.Save*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.Save
+  href: PegasusEngine.Project.ProjectFile.Save.html#PegasusEngine_Project_ProjectFile_Save_System_String_
+  name: Save
+  nameWithType: ProjectFile.Save
+  fullName: PegasusEngine.Project.ProjectFile.Save
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: PegasusEngine.Project.ProjectFile.Load*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.Load
+  href: PegasusEngine.Project.ProjectFile.Load.html#PegasusEngine_Project_ProjectFile_Load_System_String_
+  name: Load
+  nameWithType: ProjectFile.Load
+  fullName: PegasusEngine.Project.ProjectFile.Load
+- uid: System.Nullable{PegasusEngine.Project.ProjectFile}
+  commentId: T:System.Nullable{PegasusEngine.Project.ProjectFile}
+  parent: System
+  definition: System.Nullable`1
+  href: PegasusEngine.Project.ProjectFile.html
+  name: ProjectFile?
+  nameWithType: ProjectFile?
+  fullName: PegasusEngine.Project.ProjectFile?
+  spec.csharp:
+  - uid: PegasusEngine.Project.ProjectFile
+    name: ProjectFile
+    href: PegasusEngine.Project.ProjectFile.html
+  - name: '?'
+  spec.vb:
+  - uid: PegasusEngine.Project.ProjectFile
+    name: ProjectFile
+    href: PegasusEngine.Project.ProjectFile.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: PegasusEngine.Project.ProjectFile.ComposeFilePath*
+  commentId: Overload:PegasusEngine.Project.ProjectFile.ComposeFilePath
+  href: PegasusEngine.Project.ProjectFile.ComposeFilePath.html#PegasusEngine_Project_ProjectFile_ComposeFilePath_System_String_
+  name: ComposeFilePath
+  nameWithType: ProjectFile.ComposeFilePath
+  fullName: PegasusEngine.Project.ProjectFile.ComposeFilePath
+memberLayout: SeparatePages

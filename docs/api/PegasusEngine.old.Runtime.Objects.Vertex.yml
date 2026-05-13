@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Runtime.Objects.Vertex
+  commentId: T:PegasusEngine.old.Runtime.Objects.Vertex
+  id: Vertex
+  parent: PegasusEngine.old.Runtime.Objects
+  children:
+  - PegasusEngine.old.Runtime.Objects.Vertex.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector2)
+  - PegasusEngine.old.Runtime.Objects.Vertex.Normal
+  - PegasusEngine.old.Runtime.Objects.Vertex.Position
+  - PegasusEngine.old.Runtime.Objects.Vertex.TexCoords
+  langs:
+  - csharp
+  - vb
+  name: Vertex
+  nameWithType: Vertex
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex
+  type: Struct
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Vertex.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Vertex
+    path: ../PegasusEngine/old/Runtime/Objects/Vertex.cs
+    startLine: 8
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public struct Vertex
+    content.vb: Public Structure Vertex
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEngine.old.Runtime.Objects.Vertex.Position
+  commentId: F:PegasusEngine.old.Runtime.Objects.Vertex.Position
+  id: Position
+  parent: PegasusEngine.old.Runtime.Objects.Vertex
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Vertex.Position
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex.Position
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Vertex.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Position
+    path: ../PegasusEngine/old/Runtime/Objects/Vertex.cs
+    startLine: 10
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Vector3 Position
+    return:
+      type: OpenTK.Mathematics.Vector3
+    content.vb: Public Position As Vector3
+- uid: PegasusEngine.old.Runtime.Objects.Vertex.Normal
+  commentId: F:PegasusEngine.old.Runtime.Objects.Vertex.Normal
+  id: Normal
+  parent: PegasusEngine.old.Runtime.Objects.Vertex
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: Vertex.Normal
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex.Normal
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Vertex.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Normal
+    path: ../PegasusEngine/old/Runtime/Objects/Vertex.cs
+    startLine: 11
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Vector3 Normal
+    return:
+      type: OpenTK.Mathematics.Vector3
+    content.vb: Public Normal As Vector3
+- uid: PegasusEngine.old.Runtime.Objects.Vertex.TexCoords
+  commentId: F:PegasusEngine.old.Runtime.Objects.Vertex.TexCoords
+  id: TexCoords
+  parent: PegasusEngine.old.Runtime.Objects.Vertex
+  langs:
+  - csharp
+  - vb
+  name: TexCoords
+  nameWithType: Vertex.TexCoords
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex.TexCoords
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Vertex.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: TexCoords
+    path: ../PegasusEngine/old/Runtime/Objects/Vertex.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Vector2 TexCoords
+    return:
+      type: OpenTK.Mathematics.Vector2
+    content.vb: Public TexCoords As Vector2
+- uid: PegasusEngine.old.Runtime.Objects.Vertex.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector2)
+  commentId: M:PegasusEngine.old.Runtime.Objects.Vertex.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector2)
+  id: '#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector2)'
+  parent: PegasusEngine.old.Runtime.Objects.Vertex
+  langs:
+  - csharp
+  - vb
+  name: Vertex(Vector3, Vector3, Vector2)
+  nameWithType: Vertex.Vertex(Vector3, Vector3, Vector2)
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex.Vertex(OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector2)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Vertex.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/old/Runtime/Objects/Vertex.cs
+    startLine: 14
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Vertex(Vector3 position, Vector3 normal, Vector2 texCoords)
+    parameters:
+    - id: position
+      type: OpenTK.Mathematics.Vector3
+    - id: normal
+      type: OpenTK.Mathematics.Vector3
+    - id: texCoords
+      type: OpenTK.Mathematics.Vector2
+    content.vb: Public Sub New(position As Vector3, normal As Vector3, texCoords As Vector2)
+  overload: PegasusEngine.old.Runtime.Objects.Vertex.#ctor*
+  nameWithType.vb: Vertex.New(Vector3, Vector3, Vector2)
+  fullName.vb: PegasusEngine.old.Runtime.Objects.Vertex.New(OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector2)
+  name.vb: New(Vector3, Vector3, Vector2)
+references:
+- uid: PegasusEngine.old.Runtime.Objects
+  commentId: N:PegasusEngine.old.Runtime.Objects
+  href: PegasusEngine.html
+  name: PegasusEngine.old.Runtime.Objects
+  nameWithType: PegasusEngine.old.Runtime.Objects
+  fullName: PegasusEngine.old.Runtime.Objects
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime
+    name: Runtime
+    href: PegasusEngine.old.Runtime.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime.Objects
+    name: Objects
+    href: PegasusEngine.old.Runtime.Objects.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime
+    name: Runtime
+    href: PegasusEngine.old.Runtime.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime.Objects
+    name: Objects
+    href: PegasusEngine.old.Runtime.Objects.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenTK.Mathematics.Vector3
+  commentId: T:OpenTK.Mathematics.Vector3
+  parent: OpenTK.Mathematics
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Mathematics/Vector/Vector3.cs
+  name: Vector3
+  nameWithType: Vector3
+  fullName: OpenTK.Mathematics.Vector3
+- uid: OpenTK.Mathematics
+  commentId: N:OpenTK.Mathematics
+  isExternal: true
+  name: OpenTK.Mathematics
+  nameWithType: OpenTK.Mathematics
+  fullName: OpenTK.Mathematics
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+- uid: OpenTK.Mathematics.Vector2
+  commentId: T:OpenTK.Mathematics.Vector2
+  parent: OpenTK.Mathematics
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Mathematics/Vector/Vector2.cs
+  name: Vector2
+  nameWithType: Vector2
+  fullName: OpenTK.Mathematics.Vector2
+- uid: PegasusEngine.old.Runtime.Objects.Vertex.#ctor*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Vertex.#ctor
+  href: PegasusEngine.old.Runtime.Objects.Vertex.-ctor.html#PegasusEngine_old_Runtime_Objects_Vertex__ctor_OpenTK_Mathematics_Vector3_OpenTK_Mathematics_Vector3_OpenTK_Mathematics_Vector2_
+  name: Vertex
+  nameWithType: Vertex.Vertex
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex.Vertex
+  nameWithType.vb: Vertex.New
+  fullName.vb: PegasusEngine.old.Runtime.Objects.Vertex.New
+  name.vb: New
+memberLayout: SeparatePages

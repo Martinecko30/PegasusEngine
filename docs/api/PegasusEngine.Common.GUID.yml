@@ -1,0 +1,907 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  id: GUID
+  parent: PegasusEngine.Common
+  children:
+  - PegasusEngine.Common.GUID.#ctor
+  - PegasusEngine.Common.GUID.#ctor(System.UInt64)
+  - PegasusEngine.Common.GUID.Equals(PegasusEngine.Common.GUID)
+  - PegasusEngine.Common.GUID.Equals(System.Object)
+  - PegasusEngine.Common.GUID.GetHashCode
+  - PegasusEngine.Common.GUID.INVALID
+  - PegasusEngine.Common.GUID.ToString
+  - PegasusEngine.Common.GUID.op_Equality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  - PegasusEngine.Common.GUID.op_Explicit(System.UInt64)~PegasusEngine.Common.GUID
+  - PegasusEngine.Common.GUID.op_Implicit(PegasusEngine.Common.GUID)~System.UInt64
+  - PegasusEngine.Common.GUID.op_Inequality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  langs:
+  - csharp
+  - vb
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+  type: Struct
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GUID
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 7
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  summary: >-
+    Globally Unique Identifier.
+
+    A zero-allocation wrapper for an ulong (uint64)
+  example: []
+  syntax:
+    content: 'public readonly struct GUID : IEquatable<GUID>'
+    content.vb: Public Structure GUID Implements IEquatable(Of GUID)
+  implements:
+  - System.IEquatable{PegasusEngine.Common.GUID}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: PegasusEngine.Common.GUID.INVALID
+  commentId: F:PegasusEngine.Common.GUID.INVALID
+  id: INVALID
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: INVALID
+  nameWithType: GUID.INVALID
+  fullName: PegasusEngine.Common.GUID.INVALID
+  type: Field
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: INVALID
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 9
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public static readonly GUID INVALID
+    return:
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Shared ReadOnly INVALID As GUID
+- uid: PegasusEngine.Common.GUID.#ctor
+  commentId: M:PegasusEngine.Common.GUID.#ctor
+  id: '#ctor'
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: GUID()
+  nameWithType: GUID.GUID()
+  fullName: PegasusEngine.Common.GUID.GUID()
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 13
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public GUID()
+    content.vb: Public Sub New()
+  overload: PegasusEngine.Common.GUID.#ctor*
+  nameWithType.vb: GUID.New()
+  fullName.vb: PegasusEngine.Common.GUID.New()
+  name.vb: New()
+- uid: PegasusEngine.Common.GUID.#ctor(System.UInt64)
+  commentId: M:PegasusEngine.Common.GUID.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: GUID(ulong)
+  nameWithType: GUID.GUID(ulong)
+  fullName: PegasusEngine.Common.GUID.GUID(ulong)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 18
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public GUID(ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+    content.vb: Public Sub New(value As ULong)
+  overload: PegasusEngine.Common.GUID.#ctor*
+  nameWithType.vb: GUID.New(ULong)
+  fullName.vb: PegasusEngine.Common.GUID.New(ULong)
+  name.vb: New(ULong)
+- uid: PegasusEngine.Common.GUID.Equals(PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Common.GUID.Equals(PegasusEngine.Common.GUID)
+  id: Equals(PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: Equals(GUID)
+  nameWithType: GUID.Equals(GUID)
+  fullName: PegasusEngine.Common.GUID.Equals(PegasusEngine.Common.GUID)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Equals
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 20
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(GUID other)
+    parameters:
+    - id: other
+      type: PegasusEngine.Common.GUID
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As GUID) As Boolean
+  overload: PegasusEngine.Common.GUID.Equals*
+  implements:
+  - System.IEquatable{PegasusEngine.Common.GUID}.Equals(PegasusEngine.Common.GUID)
+- uid: PegasusEngine.Common.GUID.Equals(System.Object)
+  commentId: M:PegasusEngine.Common.GUID.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: GUID.Equals(object?)
+  fullName: PegasusEngine.Common.GUID.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Equals
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 21
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: PegasusEngine.Common.GUID.Equals*
+  nameWithType.vb: GUID.Equals(Object)
+  fullName.vb: PegasusEngine.Common.GUID.Equals(Object)
+  name.vb: Equals(Object)
+- uid: PegasusEngine.Common.GUID.GetHashCode
+  commentId: M:PegasusEngine.Common.GUID.GetHashCode
+  id: GetHashCode
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: GUID.GetHashCode()
+  fullName: PegasusEngine.Common.GUID.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: GetHashCode
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 22
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: PegasusEngine.Common.GUID.GetHashCode*
+- uid: PegasusEngine.Common.GUID.op_Equality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Common.GUID.op_Equality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  id: op_Equality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: operator ==(GUID, GUID)
+  nameWithType: GUID.operator ==(GUID, GUID)
+  fullName: PegasusEngine.Common.GUID.operator ==(PegasusEngine.Common.GUID, PegasusEngine.Common.GUID)
+  type: Operator
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: op_Equality
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 24
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public static bool operator ==(GUID left, GUID right)
+    parameters:
+    - id: left
+      type: PegasusEngine.Common.GUID
+    - id: right
+      type: PegasusEngine.Common.GUID
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As GUID, right As GUID) As Boolean
+  overload: PegasusEngine.Common.GUID.op_Equality*
+  nameWithType.vb: GUID.=(GUID, GUID)
+  fullName.vb: PegasusEngine.Common.GUID.=(PegasusEngine.Common.GUID, PegasusEngine.Common.GUID)
+  name.vb: =(GUID, GUID)
+- uid: PegasusEngine.Common.GUID.op_Inequality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  commentId: M:PegasusEngine.Common.GUID.op_Inequality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  id: op_Inequality(PegasusEngine.Common.GUID,PegasusEngine.Common.GUID)
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: operator !=(GUID, GUID)
+  nameWithType: GUID.operator !=(GUID, GUID)
+  fullName: PegasusEngine.Common.GUID.operator !=(PegasusEngine.Common.GUID, PegasusEngine.Common.GUID)
+  type: Operator
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: op_Inequality
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 25
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public static bool operator !=(GUID left, GUID right)
+    parameters:
+    - id: left
+      type: PegasusEngine.Common.GUID
+    - id: right
+      type: PegasusEngine.Common.GUID
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As GUID, right As GUID) As Boolean
+  overload: PegasusEngine.Common.GUID.op_Inequality*
+  nameWithType.vb: GUID.<>(GUID, GUID)
+  fullName.vb: PegasusEngine.Common.GUID.<>(PegasusEngine.Common.GUID, PegasusEngine.Common.GUID)
+  name.vb: <>(GUID, GUID)
+- uid: PegasusEngine.Common.GUID.op_Implicit(PegasusEngine.Common.GUID)~System.UInt64
+  commentId: M:PegasusEngine.Common.GUID.op_Implicit(PegasusEngine.Common.GUID)~System.UInt64
+  id: op_Implicit(PegasusEngine.Common.GUID)~System.UInt64
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ulong(GUID)
+  nameWithType: GUID.implicit operator ulong(GUID)
+  fullName: PegasusEngine.Common.GUID.implicit operator ulong(PegasusEngine.Common.GUID)
+  type: Operator
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: op_Implicit
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 27
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public static implicit operator ulong(GUID guid)
+    parameters:
+    - id: guid
+      type: PegasusEngine.Common.GUID
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Widening Operator CType(guid As GUID) As ULong
+  overload: PegasusEngine.Common.GUID.op_Implicit*
+  nameWithType.vb: GUID.CType(GUID)
+  fullName.vb: PegasusEngine.Common.GUID.CType(PegasusEngine.Common.GUID)
+  name.vb: CType(GUID)
+- uid: PegasusEngine.Common.GUID.op_Explicit(System.UInt64)~PegasusEngine.Common.GUID
+  commentId: M:PegasusEngine.Common.GUID.op_Explicit(System.UInt64)~PegasusEngine.Common.GUID
+  id: op_Explicit(System.UInt64)~PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: explicit operator GUID(ulong)
+  nameWithType: GUID.explicit operator GUID(ulong)
+  fullName: PegasusEngine.Common.GUID.explicit operator PegasusEngine.Common.GUID(ulong)
+  type: Operator
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: op_Explicit
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 28
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  syntax:
+    content: public static explicit operator GUID(ulong guid)
+    parameters:
+    - id: guid
+      type: System.UInt64
+    return:
+      type: PegasusEngine.Common.GUID
+    content.vb: Public Shared Narrowing Operator CType(guid As ULong) As GUID
+  overload: PegasusEngine.Common.GUID.op_Explicit*
+  nameWithType.vb: GUID.CType(ULong)
+  fullName.vb: PegasusEngine.Common.GUID.CType(ULong)
+  name.vb: CType(ULong)
+- uid: PegasusEngine.Common.GUID.ToString
+  commentId: M:PegasusEngine.Common.GUID.ToString
+  id: ToString
+  parent: PegasusEngine.Common.GUID
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GUID.ToString()
+  fullName: PegasusEngine.Common.GUID.ToString()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Common/GUID.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ToString
+    path: ../PegasusEngine/src/Common/GUID.cs
+    startLine: 30
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Common
+  summary: Returns the fully qualified type name of this instance.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The fully qualified type name.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: PegasusEngine.Common.GUID.ToString*
+references:
+- uid: PegasusEngine.Common
+  commentId: N:PegasusEngine.Common
+  href: PegasusEngine.html
+  name: PegasusEngine.Common
+  nameWithType: PegasusEngine.Common
+  fullName: PegasusEngine.Common
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Common
+    name: Common
+    href: PegasusEngine.Common.html
+- uid: System.IEquatable{PegasusEngine.Common.GUID}
+  commentId: T:System.IEquatable{PegasusEngine.Common.GUID}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<GUID>
+  nameWithType: IEquatable<GUID>
+  fullName: System.IEquatable<PegasusEngine.Common.GUID>
+  nameWithType.vb: IEquatable(Of GUID)
+  fullName.vb: System.IEquatable(Of PegasusEngine.Common.GUID)
+  name.vb: IEquatable(Of GUID)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.Common.GUID
+  commentId: T:PegasusEngine.Common.GUID
+  parent: PegasusEngine.Common
+  href: PegasusEngine.Common.GUID.html
+  name: GUID
+  nameWithType: GUID
+  fullName: PegasusEngine.Common.GUID
+- uid: PegasusEngine.Common.GUID.#ctor*
+  commentId: Overload:PegasusEngine.Common.GUID.#ctor
+  href: PegasusEngine.Common.GUID.-ctor.html#PegasusEngine_Common_GUID__ctor
+  name: GUID
+  nameWithType: GUID.GUID
+  fullName: PegasusEngine.Common.GUID.GUID
+  nameWithType.vb: GUID.New
+  fullName.vb: PegasusEngine.Common.GUID.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: PegasusEngine.Common.GUID.Equals*
+  commentId: Overload:PegasusEngine.Common.GUID.Equals
+  href: PegasusEngine.Common.GUID.Equals.html#PegasusEngine_Common_GUID_Equals_PegasusEngine_Common_GUID_
+  name: Equals
+  nameWithType: GUID.Equals
+  fullName: PegasusEngine.Common.GUID.Equals
+- uid: System.IEquatable{PegasusEngine.Common.GUID}.Equals(PegasusEngine.Common.GUID)
+  commentId: M:System.IEquatable{PegasusEngine.Common.GUID}.Equals(PegasusEngine.Common.GUID)
+  parent: System.IEquatable{PegasusEngine.Common.GUID}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(GUID)
+  nameWithType: IEquatable<GUID>.Equals(GUID)
+  fullName: System.IEquatable<PegasusEngine.Common.GUID>.Equals(PegasusEngine.Common.GUID)
+  nameWithType.vb: IEquatable(Of GUID).Equals(GUID)
+  fullName.vb: System.IEquatable(Of PegasusEngine.Common.GUID).Equals(PegasusEngine.Common.GUID)
+  spec.csharp:
+  - uid: System.IEquatable{PegasusEngine.Common.GUID}.Equals(PegasusEngine.Common.GUID)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{PegasusEngine.Common.GUID}.Equals(PegasusEngine.Common.GUID)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: PegasusEngine.Common.GUID
+    name: GUID
+    href: PegasusEngine.Common.GUID.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: PegasusEngine.Common.GUID.GetHashCode*
+  commentId: Overload:PegasusEngine.Common.GUID.GetHashCode
+  href: PegasusEngine.Common.GUID.GetHashCode.html#PegasusEngine_Common_GUID_GetHashCode
+  name: GetHashCode
+  nameWithType: GUID.GetHashCode
+  fullName: PegasusEngine.Common.GUID.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: PegasusEngine.Common.GUID.op_Equality*
+  commentId: Overload:PegasusEngine.Common.GUID.op_Equality
+  href: PegasusEngine.Common.GUID.op_Equality.html#PegasusEngine_Common_GUID_op_Equality_PegasusEngine_Common_GUID_PegasusEngine_Common_GUID_
+  name: operator ==
+  nameWithType: GUID.operator ==
+  fullName: PegasusEngine.Common.GUID.operator ==
+  nameWithType.vb: GUID.=
+  fullName.vb: PegasusEngine.Common.GUID.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: PegasusEngine.Common.GUID.op_Equality*
+    name: ==
+    href: PegasusEngine.Common.GUID.op_Equality.html#PegasusEngine_Common_GUID_op_Equality_PegasusEngine_Common_GUID_PegasusEngine_Common_GUID_
+- uid: PegasusEngine.Common.GUID.op_Inequality*
+  commentId: Overload:PegasusEngine.Common.GUID.op_Inequality
+  href: PegasusEngine.Common.GUID.op_Inequality.html#PegasusEngine_Common_GUID_op_Inequality_PegasusEngine_Common_GUID_PegasusEngine_Common_GUID_
+  name: operator !=
+  nameWithType: GUID.operator !=
+  fullName: PegasusEngine.Common.GUID.operator !=
+  nameWithType.vb: GUID.<>
+  fullName.vb: PegasusEngine.Common.GUID.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: PegasusEngine.Common.GUID.op_Inequality*
+    name: '!='
+    href: PegasusEngine.Common.GUID.op_Inequality.html#PegasusEngine_Common_GUID_op_Inequality_PegasusEngine_Common_GUID_PegasusEngine_Common_GUID_
+- uid: PegasusEngine.Common.GUID.op_Implicit*
+  commentId: Overload:PegasusEngine.Common.GUID.op_Implicit
+  name: implicit operator
+  nameWithType: GUID.implicit operator
+  fullName: PegasusEngine.Common.GUID.implicit operator
+  nameWithType.vb: GUID.CType
+  fullName.vb: PegasusEngine.Common.GUID.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: PegasusEngine.Common.GUID.op_Explicit*
+  commentId: Overload:PegasusEngine.Common.GUID.op_Explicit
+  name: explicit operator
+  nameWithType: GUID.explicit operator
+  fullName: PegasusEngine.Common.GUID.explicit operator
+  nameWithType.vb: GUID.CType
+  fullName.vb: PegasusEngine.Common.GUID.CType
+  name.vb: CType
+  spec.csharp:
+  - name: explicit
+  - name: " "
+  - name: operator
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: PegasusEngine.Common.GUID.ToString*
+  commentId: Overload:PegasusEngine.Common.GUID.ToString
+  href: PegasusEngine.Common.GUID.ToString.html#PegasusEngine_Common_GUID_ToString
+  name: ToString
+  nameWithType: GUID.ToString
+  fullName: PegasusEngine.Common.GUID.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+memberLayout: SeparatePages

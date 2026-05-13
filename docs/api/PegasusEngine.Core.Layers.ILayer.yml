@@ -1,0 +1,237 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Core.Layers.ILayer
+  commentId: T:PegasusEngine.Core.Layers.ILayer
+  id: ILayer
+  parent: PegasusEngine.Core.Layers
+  children:
+  - PegasusEngine.Core.Layers.ILayer.OnAttach
+  - PegasusEngine.Core.Layers.ILayer.OnDetach
+  - PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  - PegasusEngine.Core.Layers.ILayer.OnUpdate
+  langs:
+  - csharp
+  - vb
+  name: ILayer
+  nameWithType: ILayer
+  fullName: PegasusEngine.Core.Layers.ILayer
+  type: Interface
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ILayer
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 4
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: public interface ILayer
+    content.vb: Public Interface ILayer
+  derivedClasses:
+  - PegasusEditor.EditorLayer
+  - PegasusEngine.Core.Layers.Layer
+  - PegasusEngine.Core.Layers.RenderLayer
+  - PegasusEngine.Core.Layers.ScriptLayer
+- uid: PegasusEngine.Core.Layers.ILayer.OnAttach
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnAttach
+  id: OnAttach
+  parent: PegasusEngine.Core.Layers.ILayer
+  langs:
+  - csharp
+  - vb
+  name: OnAttach()
+  nameWithType: ILayer.OnAttach()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnAttach()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnAttach
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 6
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: void OnAttach()
+    content.vb: Sub OnAttach()
+  overload: PegasusEngine.Core.Layers.ILayer.OnAttach*
+- uid: PegasusEngine.Core.Layers.ILayer.OnDetach
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnDetach
+  id: OnDetach
+  parent: PegasusEngine.Core.Layers.ILayer
+  langs:
+  - csharp
+  - vb
+  name: OnDetach()
+  nameWithType: ILayer.OnDetach()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnDetach()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnDetach
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 7
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: void OnDetach()
+    content.vb: Sub OnDetach()
+  overload: PegasusEngine.Core.Layers.ILayer.OnDetach*
+- uid: PegasusEngine.Core.Layers.ILayer.OnUpdate
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnUpdate
+  id: OnUpdate
+  parent: PegasusEngine.Core.Layers.ILayer
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: ILayer.OnUpdate()
+  fullName: PegasusEngine.Core.Layers.ILayer.OnUpdate()
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnUpdate
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 8
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: void OnUpdate()
+    content.vb: Sub OnUpdate()
+  overload: PegasusEngine.Core.Layers.ILayer.OnUpdate*
+- uid: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  id: OnEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEngine.Core.Layers.ILayer
+  langs:
+  - csharp
+  - vb
+  name: OnEvent(IEvent)
+  nameWithType: ILayer.OnEvent(IEvent)
+  fullName: PegasusEngine.Core.Layers.ILayer.OnEvent(PegasusEngine.Core.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/src/Core/Layers/Layer.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnEvent
+    path: ../PegasusEngine/src/Core/Layers/Layer.cs
+    startLine: 9
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.Core.Layers
+  syntax:
+    content: void OnEvent(IEvent e)
+    parameters:
+    - id: e
+      type: PegasusEngine.Core.Events.IEvent
+    content.vb: Sub OnEvent(e As IEvent)
+  overload: PegasusEngine.Core.Layers.ILayer.OnEvent*
+references:
+- uid: PegasusEngine.Core.Layers
+  commentId: N:PegasusEngine.Core.Layers
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Layers
+  nameWithType: PegasusEngine.Core.Layers
+  fullName: PegasusEngine.Core.Layers
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Layers
+    name: Layers
+    href: PegasusEngine.Core.Layers.html
+- uid: PegasusEngine.Core.Layers.ILayer.OnAttach*
+  commentId: Overload:PegasusEngine.Core.Layers.ILayer.OnAttach
+  href: PegasusEngine.Core.Layers.ILayer.OnAttach.html#PegasusEngine_Core_Layers_ILayer_OnAttach
+  name: OnAttach
+  nameWithType: ILayer.OnAttach
+  fullName: PegasusEngine.Core.Layers.ILayer.OnAttach
+- uid: PegasusEngine.Core.Layers.ILayer.OnDetach*
+  commentId: Overload:PegasusEngine.Core.Layers.ILayer.OnDetach
+  href: PegasusEngine.Core.Layers.ILayer.OnDetach.html#PegasusEngine_Core_Layers_ILayer_OnDetach
+  name: OnDetach
+  nameWithType: ILayer.OnDetach
+  fullName: PegasusEngine.Core.Layers.ILayer.OnDetach
+- uid: PegasusEngine.Core.Layers.ILayer.OnUpdate*
+  commentId: Overload:PegasusEngine.Core.Layers.ILayer.OnUpdate
+  href: PegasusEngine.Core.Layers.ILayer.OnUpdate.html#PegasusEngine_Core_Layers_ILayer_OnUpdate
+  name: OnUpdate
+  nameWithType: ILayer.OnUpdate
+  fullName: PegasusEngine.Core.Layers.ILayer.OnUpdate
+- uid: PegasusEngine.Core.Layers.ILayer.OnEvent*
+  commentId: Overload:PegasusEngine.Core.Layers.ILayer.OnEvent
+  href: PegasusEngine.Core.Layers.ILayer.OnEvent.html#PegasusEngine_Core_Layers_ILayer_OnEvent_PegasusEngine_Core_Events_IEvent_
+  name: OnEvent
+  nameWithType: ILayer.OnEvent
+  fullName: PegasusEngine.Core.Layers.ILayer.OnEvent
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+memberLayout: SeparatePages

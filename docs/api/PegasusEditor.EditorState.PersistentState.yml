@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.EditorState.PersistentState
+  commentId: T:PegasusEditor.EditorState.PersistentState
+  id: EditorState.PersistentState
+  parent: PegasusEditor
+  children:
+  - PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+  - PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+  - PegasusEditor.EditorState.PersistentState.ViewportMode
+  langs:
+  - csharp
+  - vb
+  name: EditorState.PersistentState
+  nameWithType: EditorState.PersistentState
+  fullName: PegasusEditor.EditorState.PersistentState
+  type: Class
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorState.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: PersistentState
+    path: ../PegasusEditor/src/Core/EditorState.cs
+    startLine: 108
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public class EditorState.PersistentState
+    content.vb: Public Class EditorState.PersistentState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+  commentId: P:PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+  id: EditorThemeFilepath
+  parent: PegasusEditor.EditorState.PersistentState
+  langs:
+  - csharp
+  - vb
+  name: EditorThemeFilepath
+  nameWithType: EditorState.PersistentState.EditorThemeFilepath
+  fullName: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+  type: Property
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorState.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: EditorThemeFilepath
+    path: ../PegasusEditor/src/Core/EditorState.cs
+    startLine: 110
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public string EditorThemeFilepath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EditorThemeFilepath As String
+  overload: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath*
+- uid: PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+  commentId: P:PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+  id: EditorRenderSettings
+  parent: PegasusEditor.EditorState.PersistentState
+  langs:
+  - csharp
+  - vb
+  name: EditorRenderSettings
+  nameWithType: EditorState.PersistentState.EditorRenderSettings
+  fullName: PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+  type: Property
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorState.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: EditorRenderSettings
+    path: ../PegasusEditor/src/Core/EditorState.cs
+    startLine: 111
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public RenderSettings EditorRenderSettings { get; set; }
+    parameters: []
+    return:
+      type: PegasusEngine.Renderer.RenderSettings
+    content.vb: Public Property EditorRenderSettings As RenderSettings
+  overload: PegasusEditor.EditorState.PersistentState.EditorRenderSettings*
+- uid: PegasusEditor.EditorState.PersistentState.ViewportMode
+  commentId: P:PegasusEditor.EditorState.PersistentState.ViewportMode
+  id: ViewportMode
+  parent: PegasusEditor.EditorState.PersistentState
+  langs:
+  - csharp
+  - vb
+  name: ViewportMode
+  nameWithType: EditorState.PersistentState.ViewportMode
+  fullName: PegasusEditor.EditorState.PersistentState.ViewportMode
+  type: Property
+  source:
+    remote:
+      path: PegasusEditor/src/Core/EditorState.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ViewportMode
+    path: ../PegasusEditor/src/Core/EditorState.cs
+    startLine: 112
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor
+  syntax:
+    content: public ScreenFitMode ViewportMode { get; set; }
+    parameters: []
+    return:
+      type: PegasusEngine.Export.ScreenFitMode
+    content.vb: Public Property ViewportMode As ScreenFitMode
+  overload: PegasusEditor.EditorState.PersistentState.ViewportMode*
+references:
+- uid: PegasusEditor
+  commentId: N:PegasusEditor
+  href: PegasusEditor.html
+  name: PegasusEditor
+  nameWithType: PegasusEditor
+  fullName: PegasusEditor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath*
+  commentId: Overload:PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+  href: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath.html#PegasusEditor_EditorState_PersistentState_EditorThemeFilepath
+  name: EditorThemeFilepath
+  nameWithType: EditorState.PersistentState.EditorThemeFilepath
+  fullName: PegasusEditor.EditorState.PersistentState.EditorThemeFilepath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: PegasusEditor.EditorState.PersistentState.EditorRenderSettings*
+  commentId: Overload:PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+  href: PegasusEditor.EditorState.PersistentState.EditorRenderSettings.html#PegasusEditor_EditorState_PersistentState_EditorRenderSettings
+  name: EditorRenderSettings
+  nameWithType: EditorState.PersistentState.EditorRenderSettings
+  fullName: PegasusEditor.EditorState.PersistentState.EditorRenderSettings
+- uid: PegasusEngine.Renderer.RenderSettings
+  commentId: T:PegasusEngine.Renderer.RenderSettings
+  parent: PegasusEngine.Renderer
+  href: PegasusEngine.Renderer.RenderSettings.html
+  name: RenderSettings
+  nameWithType: RenderSettings
+  fullName: PegasusEngine.Renderer.RenderSettings
+- uid: PegasusEngine.Renderer
+  commentId: N:PegasusEngine.Renderer
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer
+  nameWithType: PegasusEngine.Renderer
+  fullName: PegasusEngine.Renderer
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+- uid: PegasusEditor.EditorState.PersistentState.ViewportMode*
+  commentId: Overload:PegasusEditor.EditorState.PersistentState.ViewportMode
+  href: PegasusEditor.EditorState.PersistentState.ViewportMode.html#PegasusEditor_EditorState_PersistentState_ViewportMode
+  name: ViewportMode
+  nameWithType: EditorState.PersistentState.ViewportMode
+  fullName: PegasusEditor.EditorState.PersistentState.ViewportMode
+- uid: PegasusEngine.Export.ScreenFitMode
+  commentId: T:PegasusEngine.Export.ScreenFitMode
+  parent: PegasusEngine.Export
+  href: PegasusEngine.Export.ScreenFitMode.html
+  name: ScreenFitMode
+  nameWithType: ScreenFitMode
+  fullName: PegasusEngine.Export.ScreenFitMode
+- uid: PegasusEngine.Export
+  commentId: N:PegasusEngine.Export
+  href: PegasusEngine.html
+  name: PegasusEngine.Export
+  nameWithType: PegasusEngine.Export
+  fullName: PegasusEngine.Export
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Export
+    name: Export
+    href: PegasusEngine.Export.html
+memberLayout: SeparatePages

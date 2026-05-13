@@ -1,0 +1,117 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.TabPanels
+  commentId: N:PegasusEditor.TabPanels
+  id: PegasusEditor.TabPanels
+  children:
+  - PegasusEditor.TabPanels.AssetBrowser
+  - PegasusEditor.TabPanels.ConsolePanel
+  - PegasusEditor.TabPanels.DNDPayload
+  - PegasusEditor.TabPanels.DNDPayloadTypes
+  - PegasusEditor.TabPanels.Game
+  - PegasusEditor.TabPanels.Hierarchy
+  - PegasusEditor.TabPanels.ImGuiDndWidgets
+  - PegasusEditor.TabPanels.Inspector
+  - PegasusEditor.TabPanels.LogMessage
+  - PegasusEditor.TabPanels.TabPanel
+  - PegasusEditor.TabPanels.Viewport
+  langs:
+  - csharp
+  - vb
+  name: PegasusEditor.TabPanels
+  nameWithType: PegasusEditor.TabPanels
+  fullName: PegasusEditor.TabPanels
+  type: Namespace
+  assemblies:
+  - PegasusEditor
+references:
+- uid: PegasusEditor.TabPanels.AssetBrowser
+  commentId: T:PegasusEditor.TabPanels.AssetBrowser
+  href: PegasusEditor.TabPanels.AssetBrowser.html
+  name: AssetBrowser
+  nameWithType: AssetBrowser
+  fullName: PegasusEditor.TabPanels.AssetBrowser
+- uid: PegasusEditor.TabPanels.ConsolePanel
+  commentId: T:PegasusEditor.TabPanels.ConsolePanel
+  href: PegasusEditor.TabPanels.ConsolePanel.html
+  name: ConsolePanel
+  nameWithType: ConsolePanel
+  fullName: PegasusEditor.TabPanels.ConsolePanel
+- uid: PegasusEditor.TabPanels.LogMessage
+  commentId: T:PegasusEditor.TabPanels.LogMessage
+  href: PegasusEditor.TabPanels.LogMessage.html
+  name: LogMessage
+  nameWithType: LogMessage
+  fullName: PegasusEditor.TabPanels.LogMessage
+- uid: PegasusEditor.TabPanels.DNDPayloadTypes
+  commentId: T:PegasusEditor.TabPanels.DNDPayloadTypes
+  href: PegasusEditor.TabPanels.DNDPayloadTypes.html
+  name: DNDPayloadTypes
+  nameWithType: DNDPayloadTypes
+  fullName: PegasusEditor.TabPanels.DNDPayloadTypes
+- uid: PegasusEditor.TabPanels.DNDPayload
+  commentId: T:PegasusEditor.TabPanels.DNDPayload
+  href: PegasusEditor.TabPanels.DNDPayload.html
+  name: DNDPayload
+  nameWithType: DNDPayload
+  fullName: PegasusEditor.TabPanels.DNDPayload
+- uid: PegasusEditor.TabPanels.ImGuiDndWidgets
+  commentId: T:PegasusEditor.TabPanels.ImGuiDndWidgets
+  href: PegasusEditor.TabPanels.ImGuiDndWidgets.html
+  name: ImGuiDndWidgets
+  nameWithType: ImGuiDndWidgets
+  fullName: PegasusEditor.TabPanels.ImGuiDndWidgets
+- uid: PegasusEditor.TabPanels.Game
+  commentId: T:PegasusEditor.TabPanels.Game
+  href: PegasusEditor.TabPanels.Game.html
+  name: Game
+  nameWithType: Game
+  fullName: PegasusEditor.TabPanels.Game
+- uid: PegasusEditor.TabPanels.Hierarchy
+  commentId: T:PegasusEditor.TabPanels.Hierarchy
+  href: PegasusEditor.TabPanels.Hierarchy.html
+  name: Hierarchy
+  nameWithType: Hierarchy
+  fullName: PegasusEditor.TabPanels.Hierarchy
+- uid: PegasusEditor.TabPanels.Inspector
+  commentId: T:PegasusEditor.TabPanels.Inspector
+  href: PegasusEditor.TabPanels.Inspector.html
+  name: Inspector
+  nameWithType: Inspector
+  fullName: PegasusEditor.TabPanels.Inspector
+- uid: PegasusEditor.TabPanels.TabPanel
+  commentId: T:PegasusEditor.TabPanels.TabPanel
+  parent: PegasusEditor.TabPanels
+  href: PegasusEditor.TabPanels.TabPanel.html
+  name: TabPanel
+  nameWithType: TabPanel
+  fullName: PegasusEditor.TabPanels.TabPanel
+- uid: PegasusEditor.TabPanels.Viewport
+  commentId: T:PegasusEditor.TabPanels.Viewport
+  href: PegasusEditor.TabPanels.Viewport.html
+  name: Viewport
+  nameWithType: Viewport
+  fullName: PegasusEditor.TabPanels.Viewport
+- uid: PegasusEditor.TabPanels
+  commentId: N:PegasusEditor.TabPanels
+  href: PegasusEditor.html
+  name: PegasusEditor.TabPanels
+  nameWithType: PegasusEditor.TabPanels
+  fullName: PegasusEditor.TabPanels
+  spec.csharp:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+  spec.vb:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+memberLayout: SeparatePages

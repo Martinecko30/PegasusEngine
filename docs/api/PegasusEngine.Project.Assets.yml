@@ -1,0 +1,207 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.Project.Assets
+  commentId: N:PegasusEngine.Project.Assets
+  id: PegasusEngine.Project.Assets
+  children:
+  - PegasusEngine.Project.Assets.AssetManager
+  - PegasusEngine.Project.Assets.AssetMetaFile
+  - PegasusEngine.Project.Assets.AssetPool
+  - PegasusEngine.Project.Assets.AssetPool.AssetType
+  - PegasusEngine.Project.Assets.BVHAccel
+  - PegasusEngine.Project.Assets.BVHAccel.Aabb
+  - PegasusEngine.Project.Assets.BVHAccel.Node
+  - PegasusEngine.Project.Assets.MeshMetadata
+  - PegasusEngine.Project.Assets.MeshMetadataExtension
+  - PegasusEngine.Project.Assets.Metadata
+  - PegasusEngine.Project.Assets.MetadataExtension
+  - PegasusEngine.Project.Assets.MetadataPair
+  - PegasusEngine.Project.Assets.TextureMetadata
+  - PegasusEngine.Project.Assets.TextureMetadataExtension
+  - PegasusEngine.Project.Assets.Triangle
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.Project.Assets
+  nameWithType: PegasusEngine.Project.Assets
+  fullName: PegasusEngine.Project.Assets
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.Project.Assets.AssetManager
+  commentId: T:PegasusEngine.Project.Assets.AssetManager
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetManager.html
+  name: AssetManager
+  nameWithType: AssetManager
+  fullName: PegasusEngine.Project.Assets.AssetManager
+- uid: PegasusEngine.Project.Assets.AssetMetaFile
+  commentId: T:PegasusEngine.Project.Assets.AssetMetaFile
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetMetaFile.html
+  name: AssetMetaFile
+  nameWithType: AssetMetaFile
+  fullName: PegasusEngine.Project.Assets.AssetMetaFile
+- uid: PegasusEngine.Project.Assets.MetadataPair
+  commentId: T:PegasusEngine.Project.Assets.MetadataPair
+  href: PegasusEngine.Project.Assets.MetadataPair.html
+  name: MetadataPair
+  nameWithType: MetadataPair
+  fullName: PegasusEngine.Project.Assets.MetadataPair
+- uid: PegasusEngine.Project.Assets.AssetPool
+  commentId: T:PegasusEngine.Project.Assets.AssetPool
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetPool.html
+  name: AssetPool
+  nameWithType: AssetPool
+  fullName: PegasusEngine.Project.Assets.AssetPool
+- uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+  commentId: T:PegasusEngine.Project.Assets.AssetPool.AssetType
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.AssetPool.html
+  name: AssetPool.AssetType
+  nameWithType: AssetPool.AssetType
+  fullName: PegasusEngine.Project.Assets.AssetPool.AssetType
+  spec.csharp:
+  - uid: PegasusEngine.Project.Assets.AssetPool
+    name: AssetPool
+    href: PegasusEngine.Project.Assets.AssetPool.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+    name: AssetType
+    href: PegasusEngine.Project.Assets.AssetPool.AssetType.html
+  spec.vb:
+  - uid: PegasusEngine.Project.Assets.AssetPool
+    name: AssetPool
+    href: PegasusEngine.Project.Assets.AssetPool.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.AssetPool.AssetType
+    name: AssetType
+    href: PegasusEngine.Project.Assets.AssetPool.AssetType.html
+- uid: PegasusEngine.Project.Assets.Metadata
+  commentId: T:PegasusEngine.Project.Assets.Metadata
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.Metadata.html
+  name: Metadata
+  nameWithType: Metadata
+  fullName: PegasusEngine.Project.Assets.Metadata
+- uid: PegasusEngine.Project.Assets.Triangle
+  commentId: T:PegasusEngine.Project.Assets.Triangle
+  href: PegasusEngine.Project.Assets.Triangle.html
+  name: Triangle
+  nameWithType: Triangle
+  fullName: PegasusEngine.Project.Assets.Triangle
+- uid: PegasusEngine.Project.Assets.MeshMetadata
+  commentId: T:PegasusEngine.Project.Assets.MeshMetadata
+  href: PegasusEngine.Project.Assets.MeshMetadata.html
+  name: MeshMetadata
+  nameWithType: MeshMetadata
+  fullName: PegasusEngine.Project.Assets.MeshMetadata
+- uid: PegasusEngine.Project.Assets.TextureMetadata
+  commentId: T:PegasusEngine.Project.Assets.TextureMetadata
+  href: PegasusEngine.Project.Assets.TextureMetadata.html
+  name: TextureMetadata
+  nameWithType: TextureMetadata
+  fullName: PegasusEngine.Project.Assets.TextureMetadata
+- uid: PegasusEngine.Project.Assets.MetadataExtension
+  commentId: T:PegasusEngine.Project.Assets.MetadataExtension
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.MetadataExtension.html
+  name: MetadataExtension
+  nameWithType: MetadataExtension
+  fullName: PegasusEngine.Project.Assets.MetadataExtension
+- uid: PegasusEngine.Project.Assets.MeshMetadataExtension
+  commentId: T:PegasusEngine.Project.Assets.MeshMetadataExtension
+  href: PegasusEngine.Project.Assets.MeshMetadataExtension.html
+  name: MeshMetadataExtension
+  nameWithType: MeshMetadataExtension
+  fullName: PegasusEngine.Project.Assets.MeshMetadataExtension
+- uid: PegasusEngine.Project.Assets.TextureMetadataExtension
+  commentId: T:PegasusEngine.Project.Assets.TextureMetadataExtension
+  href: PegasusEngine.Project.Assets.TextureMetadataExtension.html
+  name: TextureMetadataExtension
+  nameWithType: TextureMetadataExtension
+  fullName: PegasusEngine.Project.Assets.TextureMetadataExtension
+- uid: PegasusEngine.Project.Assets.BVHAccel
+  commentId: T:PegasusEngine.Project.Assets.BVHAccel
+  href: PegasusEngine.Project.Assets.BVHAccel.html
+  name: BVHAccel
+  nameWithType: BVHAccel
+  fullName: PegasusEngine.Project.Assets.BVHAccel
+- uid: PegasusEngine.Project.Assets.BVHAccel.Node
+  commentId: T:PegasusEngine.Project.Assets.BVHAccel.Node
+  href: PegasusEngine.Project.Assets.BVHAccel.html
+  name: BVHAccel.Node
+  nameWithType: BVHAccel.Node
+  fullName: PegasusEngine.Project.Assets.BVHAccel.Node
+  spec.csharp:
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Node
+    name: Node
+    href: PegasusEngine.Project.Assets.BVHAccel.Node.html
+  spec.vb:
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Node
+    name: Node
+    href: PegasusEngine.Project.Assets.BVHAccel.Node.html
+- uid: PegasusEngine.Project.Assets.BVHAccel.Aabb
+  commentId: T:PegasusEngine.Project.Assets.BVHAccel.Aabb
+  parent: PegasusEngine.Project.Assets
+  href: PegasusEngine.Project.Assets.BVHAccel.html
+  name: BVHAccel.Aabb
+  nameWithType: BVHAccel.Aabb
+  fullName: PegasusEngine.Project.Assets.BVHAccel.Aabb
+  spec.csharp:
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Aabb
+    name: Aabb
+    href: PegasusEngine.Project.Assets.BVHAccel.Aabb.html
+  spec.vb:
+  - uid: PegasusEngine.Project.Assets.BVHAccel
+    name: BVHAccel
+    href: PegasusEngine.Project.Assets.BVHAccel.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets.BVHAccel.Aabb
+    name: Aabb
+    href: PegasusEngine.Project.Assets.BVHAccel.Aabb.html
+- uid: PegasusEngine.Project.Assets
+  commentId: N:PegasusEngine.Project.Assets
+  href: PegasusEngine.html
+  name: PegasusEngine.Project.Assets
+  nameWithType: PegasusEngine.Project.Assets
+  fullName: PegasusEngine.Project.Assets
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  - name: .
+  - uid: PegasusEngine.Project.Assets
+    name: Assets
+    href: PegasusEngine.Project.Assets.html
+memberLayout: SeparatePages

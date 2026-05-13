@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight
+  commentId: T:PegasusEngine.old.Modules.Lighting.SpotLight
+  id: SpotLight
+  parent: PegasusEngine.old.Modules.Lighting
+  children:
+  - PegasusEngine.old.Modules.Lighting.SpotLight.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3)
+  - PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+  - PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+  langs:
+  - csharp
+  - vb
+  name: SpotLight
+  nameWithType: SpotLight
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/old/Modules/Lighting/SpotLight.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: SpotLight
+    path: ../PegasusEngine/old/Modules/Lighting/SpotLight.cs
+    startLine: 8
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Modules.Lighting
+  syntax:
+    content: 'public class SpotLight : Light'
+    content.vb: Public Class SpotLight Inherits Light
+  inheritance:
+  - System.Object
+  - PegasusEngine.old.Modules.Lighting.Light
+  inheritedMembers:
+  - PegasusEngine.old.Modules.Lighting.Light.Position
+  - PegasusEngine.old.Modules.Lighting.Light.Direction
+  - PegasusEngine.old.Modules.Lighting.Light.Color
+  - PegasusEngine.old.Modules.Lighting.Light.Intensity
+  - PegasusEngine.old.Modules.Lighting.Light.Constant
+  - PegasusEngine.old.Modules.Lighting.Light.Linear
+  - PegasusEngine.old.Modules.Lighting.Light.Quadratic
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+  commentId: P:PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+  id: CutOff
+  parent: PegasusEngine.old.Modules.Lighting.SpotLight
+  langs:
+  - csharp
+  - vb
+  name: CutOff
+  nameWithType: SpotLight.CutOff
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/old/Modules/Lighting/SpotLight.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: CutOff
+    path: ../PegasusEngine/old/Modules/Lighting/SpotLight.cs
+    startLine: 11
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Modules.Lighting
+  syntax:
+    content: public float CutOff { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property CutOff As Single
+  overload: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff*
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+  commentId: P:PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+  id: OuterCutOff
+  parent: PegasusEngine.old.Modules.Lighting.SpotLight
+  langs:
+  - csharp
+  - vb
+  name: OuterCutOff
+  nameWithType: SpotLight.OuterCutOff
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/old/Modules/Lighting/SpotLight.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OuterCutOff
+    path: ../PegasusEngine/old/Modules/Lighting/SpotLight.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Modules.Lighting
+  syntax:
+    content: public float OuterCutOff { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property OuterCutOff As Single
+  overload: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff*
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3)
+  commentId: M:PegasusEngine.old.Modules.Lighting.SpotLight.#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3)
+  id: '#ctor(OpenTK.Mathematics.Vector3,OpenTK.Mathematics.Vector3)'
+  parent: PegasusEngine.old.Modules.Lighting.SpotLight
+  langs:
+  - csharp
+  - vb
+  name: SpotLight(Vector3, Vector3)
+  nameWithType: SpotLight.SpotLight(Vector3, Vector3)
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.SpotLight(OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector3)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/old/Modules/Lighting/SpotLight.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/old/Modules/Lighting/SpotLight.cs
+    startLine: 14
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Modules.Lighting
+  syntax:
+    content: public SpotLight(Vector3 position, Vector3 color)
+    parameters:
+    - id: position
+      type: OpenTK.Mathematics.Vector3
+    - id: color
+      type: OpenTK.Mathematics.Vector3
+    content.vb: Public Sub New(position As Vector3, color As Vector3)
+  overload: PegasusEngine.old.Modules.Lighting.SpotLight.#ctor*
+  nameWithType.vb: SpotLight.New(Vector3, Vector3)
+  fullName.vb: PegasusEngine.old.Modules.Lighting.SpotLight.New(OpenTK.Mathematics.Vector3, OpenTK.Mathematics.Vector3)
+  name.vb: New(Vector3, Vector3)
+references:
+- uid: PegasusEngine.old.Modules.Lighting
+  commentId: N:PegasusEngine.old.Modules.Lighting
+  href: PegasusEngine.html
+  name: PegasusEngine.old.Modules.Lighting
+  nameWithType: PegasusEngine.old.Modules.Lighting
+  fullName: PegasusEngine.old.Modules.Lighting
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Lighting
+    name: Lighting
+    href: PegasusEngine.old.Modules.Lighting.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Lighting
+    name: Lighting
+    href: PegasusEngine.old.Modules.Lighting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEngine.old.Modules.Lighting.Light
+  commentId: T:PegasusEngine.old.Modules.Lighting.Light
+  parent: PegasusEngine.old.Modules.Lighting
+  href: PegasusEngine.old.Modules.Lighting.Light.html
+  name: Light
+  nameWithType: Light
+  fullName: PegasusEngine.old.Modules.Lighting.Light
+- uid: PegasusEngine.old.Modules.Lighting.Light.Position
+  commentId: F:PegasusEngine.old.Modules.Lighting.Light.Position
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Position.html#PegasusEngine_old_Modules_Lighting_Light_Position
+  name: Position
+  nameWithType: Light.Position
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Position
+- uid: PegasusEngine.old.Modules.Lighting.Light.Direction
+  commentId: F:PegasusEngine.old.Modules.Lighting.Light.Direction
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Direction.html#PegasusEngine_old_Modules_Lighting_Light_Direction
+  name: Direction
+  nameWithType: Light.Direction
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Direction
+- uid: PegasusEngine.old.Modules.Lighting.Light.Color
+  commentId: F:PegasusEngine.old.Modules.Lighting.Light.Color
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Color.html#PegasusEngine_old_Modules_Lighting_Light_Color
+  name: Color
+  nameWithType: Light.Color
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Color
+- uid: PegasusEngine.old.Modules.Lighting.Light.Intensity
+  commentId: P:PegasusEngine.old.Modules.Lighting.Light.Intensity
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Intensity.html#PegasusEngine_old_Modules_Lighting_Light_Intensity
+  name: Intensity
+  nameWithType: Light.Intensity
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Intensity
+- uid: PegasusEngine.old.Modules.Lighting.Light.Constant
+  commentId: P:PegasusEngine.old.Modules.Lighting.Light.Constant
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Constant.html#PegasusEngine_old_Modules_Lighting_Light_Constant
+  name: Constant
+  nameWithType: Light.Constant
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Constant
+- uid: PegasusEngine.old.Modules.Lighting.Light.Linear
+  commentId: P:PegasusEngine.old.Modules.Lighting.Light.Linear
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Linear.html#PegasusEngine_old_Modules_Lighting_Light_Linear
+  name: Linear
+  nameWithType: Light.Linear
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Linear
+- uid: PegasusEngine.old.Modules.Lighting.Light.Quadratic
+  commentId: P:PegasusEngine.old.Modules.Lighting.Light.Quadratic
+  parent: PegasusEngine.old.Modules.Lighting.Light
+  href: PegasusEngine.old.Modules.Lighting.Light.Quadratic.html#PegasusEngine_old_Modules_Lighting_Light_Quadratic
+  name: Quadratic
+  nameWithType: Light.Quadratic
+  fullName: PegasusEngine.old.Modules.Lighting.Light.Quadratic
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff*
+  commentId: Overload:PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+  href: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff.html#PegasusEngine_old_Modules_Lighting_SpotLight_CutOff
+  name: CutOff
+  nameWithType: SpotLight.CutOff
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.CutOff
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff*
+  commentId: Overload:PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+  href: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff.html#PegasusEngine_old_Modules_Lighting_SpotLight_OuterCutOff
+  name: OuterCutOff
+  nameWithType: SpotLight.OuterCutOff
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.OuterCutOff
+- uid: PegasusEngine.old.Modules.Lighting.SpotLight.#ctor*
+  commentId: Overload:PegasusEngine.old.Modules.Lighting.SpotLight.#ctor
+  href: PegasusEngine.old.Modules.Lighting.SpotLight.-ctor.html#PegasusEngine_old_Modules_Lighting_SpotLight__ctor_OpenTK_Mathematics_Vector3_OpenTK_Mathematics_Vector3_
+  name: SpotLight
+  nameWithType: SpotLight.SpotLight
+  fullName: PegasusEngine.old.Modules.Lighting.SpotLight.SpotLight
+  nameWithType.vb: SpotLight.New
+  fullName.vb: PegasusEngine.old.Modules.Lighting.SpotLight.New
+  name.vb: New
+- uid: OpenTK.Mathematics.Vector3
+  commentId: T:OpenTK.Mathematics.Vector3
+  parent: OpenTK.Mathematics
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Mathematics/Vector/Vector3.cs
+  name: Vector3
+  nameWithType: Vector3
+  fullName: OpenTK.Mathematics.Vector3
+- uid: OpenTK.Mathematics
+  commentId: N:OpenTK.Mathematics
+  isExternal: true
+  name: OpenTK.Mathematics
+  nameWithType: OpenTK.Mathematics
+  fullName: OpenTK.Mathematics
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Mathematics
+    name: Mathematics
+    isExternal: true
+memberLayout: SeparatePages

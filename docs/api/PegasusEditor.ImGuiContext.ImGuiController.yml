@@ -1,0 +1,958 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.ImGuiContext.ImGuiController
+  commentId: T:PegasusEditor.ImGuiContext.ImGuiController
+  id: ImGuiController
+  parent: PegasusEditor.ImGuiContext
+  children:
+  - PegasusEditor.ImGuiContext.ImGuiController.#ctor(System.Int32,System.Int32)
+  - PegasusEditor.ImGuiContext.ImGuiController.CheckGLError(System.String)
+  - PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources
+  - PegasusEditor.ImGuiContext.ImGuiController.CreateProgram(System.String,System.String,System.String)
+  - PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects
+  - PegasusEditor.ImGuiContext.ImGuiController.Dispose
+  - PegasusEditor.ImGuiContext.ImGuiController.LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier,System.Int32,System.String)
+  - PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture
+  - PegasusEditor.ImGuiContext.ImGuiController.Render
+  - PegasusEditor.ImGuiContext.ImGuiController.TranslateKey(OpenTK.Windowing.GraphicsLibraryFramework.Keys)
+  - PegasusEditor.ImGuiContext.ImGuiController.Update(OpenTK.Windowing.Desktop.NativeWindow,System.Single)
+  - PegasusEditor.ImGuiContext.ImGuiController.WindowResized(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ImGuiController
+  nameWithType: ImGuiController
+  fullName: PegasusEditor.ImGuiContext.ImGuiController
+  type: Class
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: ImGuiController
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 13
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: 'public class ImGuiController : IDisposable'
+    content.vb: Public Class ImGuiController Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEditor.ImGuiContext.ImGuiController.#ctor(System.Int32,System.Int32)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: ImGuiController(int, int)
+  nameWithType: ImGuiController.ImGuiController(int, int)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.ImGuiController(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 44
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  summary: Constructs a new ImGuiController.
+  example: []
+  syntax:
+    content: public ImGuiController(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub New(width As Integer, height As Integer)
+  overload: PegasusEditor.ImGuiContext.ImGuiController.#ctor*
+  nameWithType.vb: ImGuiController.New(Integer, Integer)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.WindowResized(System.Int32,System.Int32)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.WindowResized(System.Int32,System.Int32)
+  id: WindowResized(System.Int32,System.Int32)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: WindowResized(int, int)
+  nameWithType: ImGuiController.WindowResized(int, int)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.WindowResized(int, int)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: WindowResized
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 127
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public void WindowResized(int width, int height)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: height
+      type: System.Int32
+    content.vb: Public Sub WindowResized(width As Integer, height As Integer)
+  overload: PegasusEditor.ImGuiContext.ImGuiController.WindowResized*
+  nameWithType.vb: ImGuiController.WindowResized(Integer, Integer)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.WindowResized(Integer, Integer)
+  name.vb: WindowResized(Integer, Integer)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects
+  id: DestroyDeviceObjects
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: DestroyDeviceObjects()
+  nameWithType: ImGuiController.DestroyDeviceObjects()
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: DestroyDeviceObjects
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 133
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public void DestroyDeviceObjects()
+    content.vb: Public Sub DestroyDeviceObjects()
+  overload: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects*
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources
+  id: CreateDeviceResources
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: CreateDeviceResources()
+  nameWithType: ImGuiController.CreateDeviceResources()
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: CreateDeviceResources
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 138
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public void CreateDeviceResources()
+    content.vb: Public Sub CreateDeviceResources()
+  overload: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources*
+- uid: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture
+  id: RecreateFontDeviceTexture
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: RecreateFontDeviceTexture()
+  nameWithType: ImGuiController.RecreateFontDeviceTexture()
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: RecreateFontDeviceTexture
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 215
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  summary: Recreates the device texture used to render text.
+  example: []
+  syntax:
+    content: public void RecreateFontDeviceTexture()
+    content.vb: Public Sub RecreateFontDeviceTexture()
+  overload: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture*
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Render
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.Render
+  id: Render
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: Render()
+  nameWithType: ImGuiController.Render()
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Render()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Render
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 255
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  summary: Renders the ImGui draw list data.
+  example: []
+  syntax:
+    content: public void Render()
+    content.vb: Public Sub Render()
+  overload: PegasusEditor.ImGuiContext.ImGuiController.Render*
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Update(OpenTK.Windowing.Desktop.NativeWindow,System.Single)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.Update(OpenTK.Windowing.Desktop.NativeWindow,System.Single)
+  id: Update(OpenTK.Windowing.Desktop.NativeWindow,System.Single)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: Update(NativeWindow, float)
+  nameWithType: ImGuiController.Update(NativeWindow, float)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Update(OpenTK.Windowing.Desktop.NativeWindow, float)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Update
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 268
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  summary: Updates ImGui input and IO configuration state.
+  example: []
+  syntax:
+    content: public void Update(NativeWindow wnd, float deltaSeconds)
+    parameters:
+    - id: wnd
+      type: OpenTK.Windowing.Desktop.NativeWindow
+    - id: deltaSeconds
+      type: System.Single
+    content.vb: Public Sub Update(wnd As NativeWindow, deltaSeconds As Single)
+  overload: PegasusEditor.ImGuiContext.ImGuiController.Update*
+  nameWithType.vb: ImGuiController.Update(NativeWindow, Single)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.Update(OpenTK.Windowing.Desktop.NativeWindow, Single)
+  name.vb: Update(NativeWindow, Single)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Dispose
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.Dispose
+  id: Dispose
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ImGuiController.Dispose()
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Dispose()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Dispose
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 533
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  summary: Frees all graphics resources used by the renderer.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: PegasusEditor.ImGuiContext.ImGuiController.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: PegasusEditor.ImGuiContext.ImGuiController.LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier,System.Int32,System.String)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier,System.Int32,System.String)
+  id: LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier,System.Int32,System.String)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: LabelObject(ObjectLabelIdentifier, int, string)
+  nameWithType: ImGuiController.LabelObject(ObjectLabelIdentifier, int, string)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier, int, string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: LabelObject
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 543
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public static void LabelObject(ObjectLabelIdentifier objLabelIdent, int glObject, string name)
+    parameters:
+    - id: objLabelIdent
+      type: OpenTK.Graphics.OpenGL.ObjectLabelIdentifier
+    - id: glObject
+      type: System.Int32
+    - id: name
+      type: System.String
+    content.vb: Public Shared Sub LabelObject(objLabelIdent As ObjectLabelIdentifier, glObject As Integer, name As String)
+  overload: PegasusEditor.ImGuiContext.ImGuiController.LabelObject*
+  nameWithType.vb: ImGuiController.LabelObject(ObjectLabelIdentifier, Integer, String)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.LabelObject(OpenTK.Graphics.OpenGL.ObjectLabelIdentifier, Integer, String)
+  name.vb: LabelObject(ObjectLabelIdentifier, Integer, String)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram(System.String,System.String,System.String)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.CreateProgram(System.String,System.String,System.String)
+  id: CreateProgram(System.String,System.String,System.String)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: CreateProgram(string, string, string)
+  nameWithType: ImGuiController.CreateProgram(string, string, string)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: CreateProgram
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 561
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public static int CreateProgram(string name, string vertexSource, string fragmentSoruce)
+    parameters:
+    - id: name
+      type: System.String
+    - id: vertexSource
+      type: System.String
+    - id: fragmentSoruce
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function CreateProgram(name As String, vertexSource As String, fragmentSoruce As String) As Integer
+  overload: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram*
+  nameWithType.vb: ImGuiController.CreateProgram(String, String, String)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram(String, String, String)
+  name.vb: CreateProgram(String, String, String)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError(System.String)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.CheckGLError(System.String)
+  id: CheckGLError(System.String)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: CheckGLError(string)
+  nameWithType: ImGuiController.CheckGLError(string)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError(string)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: CheckGLError
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 608
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public static void CheckGLError(string title)
+    parameters:
+    - id: title
+      type: System.String
+    content.vb: Public Shared Sub CheckGLError(title As String)
+  overload: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError*
+  nameWithType.vb: ImGuiController.CheckGLError(String)
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError(String)
+  name.vb: CheckGLError(String)
+- uid: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey(OpenTK.Windowing.GraphicsLibraryFramework.Keys)
+  commentId: M:PegasusEditor.ImGuiContext.ImGuiController.TranslateKey(OpenTK.Windowing.GraphicsLibraryFramework.Keys)
+  id: TranslateKey(OpenTK.Windowing.GraphicsLibraryFramework.Keys)
+  parent: PegasusEditor.ImGuiContext.ImGuiController
+  langs:
+  - csharp
+  - vb
+  name: TranslateKey(Keys)
+  nameWithType: ImGuiController.TranslateKey(Keys)
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey(OpenTK.Windowing.GraphicsLibraryFramework.Keys)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/ImGuiContext/ImGuiController.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: TranslateKey
+    path: ../PegasusEditor/src/ImGuiContext/ImGuiController.cs
+    startLine: 618
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.ImGuiContext
+  syntax:
+    content: public static ImGuiKey TranslateKey(Keys key)
+    parameters:
+    - id: key
+      type: OpenTK.Windowing.GraphicsLibraryFramework.Keys
+    return:
+      type: ImGuiNET.ImGuiKey
+    content.vb: Public Shared Function TranslateKey(key As Keys) As ImGuiKey
+  overload: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey*
+references:
+- uid: PegasusEditor.ImGuiContext
+  commentId: N:PegasusEditor.ImGuiContext
+  href: PegasusEditor.html
+  name: PegasusEditor.ImGuiContext
+  nameWithType: PegasusEditor.ImGuiContext
+  fullName: PegasusEditor.ImGuiContext
+  spec.csharp:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.ImGuiContext
+    name: ImGuiContext
+    href: PegasusEditor.ImGuiContext.html
+  spec.vb:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.ImGuiContext
+    name: ImGuiContext
+    href: PegasusEditor.ImGuiContext.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEditor.ImGuiContext.ImGuiController.#ctor*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.#ctor
+  href: PegasusEditor.ImGuiContext.ImGuiController.-ctor.html#PegasusEditor_ImGuiContext_ImGuiController__ctor_System_Int32_System_Int32_
+  name: ImGuiController
+  nameWithType: ImGuiController.ImGuiController
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.ImGuiController
+  nameWithType.vb: ImGuiController.New
+  fullName.vb: PegasusEditor.ImGuiContext.ImGuiController.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: PegasusEditor.ImGuiContext.ImGuiController.WindowResized*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.WindowResized
+  href: PegasusEditor.ImGuiContext.ImGuiController.WindowResized.html#PegasusEditor_ImGuiContext_ImGuiController_WindowResized_System_Int32_System_Int32_
+  name: WindowResized
+  nameWithType: ImGuiController.WindowResized
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.WindowResized
+- uid: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects
+  href: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects.html#PegasusEditor_ImGuiContext_ImGuiController_DestroyDeviceObjects
+  name: DestroyDeviceObjects
+  nameWithType: ImGuiController.DestroyDeviceObjects
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.DestroyDeviceObjects
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources
+  href: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources.html#PegasusEditor_ImGuiContext_ImGuiController_CreateDeviceResources
+  name: CreateDeviceResources
+  nameWithType: ImGuiController.CreateDeviceResources
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CreateDeviceResources
+- uid: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture
+  href: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture.html#PegasusEditor_ImGuiContext_ImGuiController_RecreateFontDeviceTexture
+  name: RecreateFontDeviceTexture
+  nameWithType: ImGuiController.RecreateFontDeviceTexture
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.RecreateFontDeviceTexture
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Render*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.Render
+  href: PegasusEditor.ImGuiContext.ImGuiController.Render.html#PegasusEditor_ImGuiContext_ImGuiController_Render
+  name: Render
+  nameWithType: ImGuiController.Render
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Render
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Update*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.Update
+  href: PegasusEditor.ImGuiContext.ImGuiController.Update.html#PegasusEditor_ImGuiContext_ImGuiController_Update_OpenTK_Windowing_Desktop_NativeWindow_System_Single_
+  name: Update
+  nameWithType: ImGuiController.Update
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Update
+- uid: OpenTK.Windowing.Desktop.NativeWindow
+  commentId: T:OpenTK.Windowing.Desktop.NativeWindow
+  parent: OpenTK.Windowing.Desktop
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.Desktop/NativeWindow.cs
+  name: NativeWindow
+  nameWithType: NativeWindow
+  fullName: OpenTK.Windowing.Desktop.NativeWindow
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: OpenTK.Windowing.Desktop
+  commentId: N:OpenTK.Windowing.Desktop
+  isExternal: true
+  name: OpenTK.Windowing.Desktop
+  nameWithType: OpenTK.Windowing.Desktop
+  fullName: OpenTK.Windowing.Desktop
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.Desktop
+    name: Desktop
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.Desktop
+    name: Desktop
+    isExternal: true
+- uid: PegasusEditor.ImGuiContext.ImGuiController.Dispose*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.Dispose
+  href: PegasusEditor.ImGuiContext.ImGuiController.Dispose.html#PegasusEditor_ImGuiContext_ImGuiController_Dispose
+  name: Dispose
+  nameWithType: ImGuiController.Dispose
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: PegasusEditor.ImGuiContext.ImGuiController.LabelObject*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.LabelObject
+  href: PegasusEditor.ImGuiContext.ImGuiController.LabelObject.html#PegasusEditor_ImGuiContext_ImGuiController_LabelObject_OpenTK_Graphics_OpenGL_ObjectLabelIdentifier_System_Int32_System_String_
+  name: LabelObject
+  nameWithType: ImGuiController.LabelObject
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.LabelObject
+- uid: OpenTK.Graphics.OpenGL.ObjectLabelIdentifier
+  commentId: T:OpenTK.Graphics.OpenGL.ObjectLabelIdentifier
+  parent: OpenTK.Graphics.OpenGL
+  isExternal: true
+  name: ObjectLabelIdentifier
+  nameWithType: ObjectLabelIdentifier
+  fullName: OpenTK.Graphics.OpenGL.ObjectLabelIdentifier
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenTK.Graphics.OpenGL
+  commentId: N:OpenTK.Graphics.OpenGL
+  isExternal: true
+  name: OpenTK.Graphics.OpenGL
+  nameWithType: OpenTK.Graphics.OpenGL
+  fullName: OpenTK.Graphics.OpenGL
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics
+    name: Graphics
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics.OpenGL
+    name: OpenGL
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics
+    name: Graphics
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics.OpenGL
+    name: OpenGL
+    isExternal: true
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.CreateProgram
+  href: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram.html#PegasusEditor_ImGuiContext_ImGuiController_CreateProgram_System_String_System_String_System_String_
+  name: CreateProgram
+  nameWithType: ImGuiController.CreateProgram
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CreateProgram
+- uid: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.CheckGLError
+  href: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError.html#PegasusEditor_ImGuiContext_ImGuiController_CheckGLError_System_String_
+  name: CheckGLError
+  nameWithType: ImGuiController.CheckGLError
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.CheckGLError
+- uid: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey*
+  commentId: Overload:PegasusEditor.ImGuiContext.ImGuiController.TranslateKey
+  href: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey.html#PegasusEditor_ImGuiContext_ImGuiController_TranslateKey_OpenTK_Windowing_GraphicsLibraryFramework_Keys_
+  name: TranslateKey
+  nameWithType: ImGuiController.TranslateKey
+  fullName: PegasusEditor.ImGuiContext.ImGuiController.TranslateKey
+- uid: OpenTK.Windowing.GraphicsLibraryFramework.Keys
+  commentId: T:OpenTK.Windowing.GraphicsLibraryFramework.Keys
+  parent: OpenTK.Windowing.GraphicsLibraryFramework
+  isExternal: true
+  href: https://github.com/NogginBops/opentk/blob/c74f55de8b75638ca925adb355460508f4014d25/src/OpenTK.Windowing.GraphicsLibraryFramework/Enums/Keys.cs
+  name: Keys
+  nameWithType: Keys
+  fullName: OpenTK.Windowing.GraphicsLibraryFramework.Keys
+- uid: ImGuiNET.ImGuiKey
+  commentId: T:ImGuiNET.ImGuiKey
+  parent: ImGuiNET
+  isExternal: true
+  name: ImGuiKey
+  nameWithType: ImGuiKey
+  fullName: ImGuiNET.ImGuiKey
+- uid: OpenTK.Windowing.GraphicsLibraryFramework
+  commentId: N:OpenTK.Windowing.GraphicsLibraryFramework
+  isExternal: true
+  name: OpenTK.Windowing.GraphicsLibraryFramework
+  nameWithType: OpenTK.Windowing.GraphicsLibraryFramework
+  fullName: OpenTK.Windowing.GraphicsLibraryFramework
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.GraphicsLibraryFramework
+    name: GraphicsLibraryFramework
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing
+    name: Windowing
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Windowing.GraphicsLibraryFramework
+    name: GraphicsLibraryFramework
+    isExternal: true
+- uid: ImGuiNET
+  commentId: N:ImGuiNET
+  isExternal: true
+  name: ImGuiNET
+  nameWithType: ImGuiNET
+  fullName: ImGuiNET
+memberLayout: SeparatePages

@@ -1,0 +1,71 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Modules.Rendering.RendererAPI
+  commentId: N:PegasusEngine.old.Modules.Rendering.RendererAPI
+  id: PegasusEngine.old.Modules.Rendering.RendererAPI
+  children:
+  - PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI
+  langs:
+  - csharp
+  - vb
+  name: PegasusEngine.old.Modules.Rendering.RendererAPI
+  nameWithType: PegasusEngine.old.Modules.Rendering.RendererAPI
+  fullName: PegasusEngine.old.Modules.Rendering.RendererAPI
+  type: Namespace
+  assemblies:
+  - PegasusEngine
+references:
+- uid: PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI
+  commentId: T:PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI
+  parent: PegasusEngine.old.Modules.Rendering.RendererAPI
+  href: PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI.html
+  name: IRendererAPI
+  nameWithType: IRendererAPI
+  fullName: PegasusEngine.old.Modules.Rendering.RendererAPI.IRendererAPI
+- uid: PegasusEngine.old.Modules.Rendering.RendererAPI
+  commentId: N:PegasusEngine.old.Modules.Rendering.RendererAPI
+  href: PegasusEngine.html
+  name: PegasusEngine.old.Modules.Rendering.RendererAPI
+  nameWithType: PegasusEngine.old.Modules.Rendering.RendererAPI
+  fullName: PegasusEngine.old.Modules.Rendering.RendererAPI
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Rendering
+    name: Rendering
+    href: PegasusEngine.old.Modules.Rendering.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Rendering.RendererAPI
+    name: RendererAPI
+    href: PegasusEngine.old.Modules.Rendering.RendererAPI.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Modules
+    name: Modules
+    href: PegasusEngine.old.Modules.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Rendering
+    name: Rendering
+    href: PegasusEngine.old.Modules.Rendering.html
+  - name: .
+  - uid: PegasusEngine.old.Modules.Rendering.RendererAPI
+    name: RendererAPI
+    href: PegasusEngine.old.Modules.Rendering.RendererAPI.html
+memberLayout: SeparatePages

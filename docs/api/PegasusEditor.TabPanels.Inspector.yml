@@ -1,0 +1,733 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEditor.TabPanels.Inspector
+  commentId: T:PegasusEditor.TabPanels.Inspector
+  id: Inspector
+  parent: PegasusEditor.TabPanels
+  children:
+  - PegasusEditor.TabPanels.Inspector.#ctor(PegasusEditor.EditorState,PegasusEngine.Project.ProjectManager)
+  - PegasusEditor.TabPanels.Inspector.Dispose
+  - PegasusEditor.TabPanels.Inspector.OnEvent(PegasusEngine.Core.Events.IEvent)
+  - PegasusEditor.TabPanels.Inspector.Render
+  - PegasusEditor.TabPanels.Inspector.Start
+  - PegasusEditor.TabPanels.Inspector.Update
+  langs:
+  - csharp
+  - vb
+  name: Inspector
+  nameWithType: Inspector
+  fullName: PegasusEditor.TabPanels.Inspector
+  type: Class
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Inspector
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 17
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: 'public class Inspector : TabPanel, IDisposable'
+    content.vb: Public Class Inspector Inherits TabPanel Implements IDisposable
+  inheritance:
+  - System.Object
+  - PegasusEditor.TabPanels.TabPanel
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - PegasusEditor.TabPanels.TabPanel.Title
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEditor.TabPanels.Inspector.#ctor(PegasusEditor.EditorState,PegasusEngine.Project.ProjectManager)
+  commentId: M:PegasusEditor.TabPanels.Inspector.#ctor(PegasusEditor.EditorState,PegasusEngine.Project.ProjectManager)
+  id: '#ctor(PegasusEditor.EditorState,PegasusEngine.Project.ProjectManager)'
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: Inspector(EditorState, ProjectManager)
+  nameWithType: Inspector.Inspector(EditorState, ProjectManager)
+  fullName: PegasusEditor.TabPanels.Inspector.Inspector(PegasusEditor.EditorState, PegasusEngine.Project.ProjectManager)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 26
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  syntax:
+    content: public Inspector(EditorState editorState, ProjectManager projectManager)
+    parameters:
+    - id: editorState
+      type: PegasusEditor.EditorState
+    - id: projectManager
+      type: PegasusEngine.Project.ProjectManager
+    content.vb: Public Sub New(editorState As EditorState, projectManager As ProjectManager)
+  overload: PegasusEditor.TabPanels.Inspector.#ctor*
+  nameWithType.vb: Inspector.New(EditorState, ProjectManager)
+  fullName.vb: PegasusEditor.TabPanels.Inspector.New(PegasusEditor.EditorState, PegasusEngine.Project.ProjectManager)
+  name.vb: New(EditorState, ProjectManager)
+- uid: PegasusEditor.TabPanels.Inspector.Start
+  commentId: M:PegasusEditor.TabPanels.Inspector.Start
+  id: Start
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Inspector.Start()
+  fullName: PegasusEditor.TabPanels.Inspector.Start()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Start
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 45
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  summary: Called when the panel is initialized.
+  example: []
+  syntax:
+    content: public override void Start()
+    content.vb: Public Overrides Sub Start()
+  overridden: PegasusEditor.TabPanels.TabPanel.Start
+  overload: PegasusEditor.TabPanels.Inspector.Start*
+- uid: PegasusEditor.TabPanels.Inspector.Render
+  commentId: M:PegasusEditor.TabPanels.Inspector.Render
+  id: Render
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: Render()
+  nameWithType: Inspector.Render()
+  fullName: PegasusEditor.TabPanels.Inspector.Render()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Render
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 50
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  summary: Renders the panel contents to the screen.
+  example: []
+  syntax:
+    content: public override void Render()
+    content.vb: Public Overrides Sub Render()
+  overridden: PegasusEditor.TabPanels.TabPanel.Render
+  overload: PegasusEditor.TabPanels.Inspector.Render*
+- uid: PegasusEditor.TabPanels.Inspector.Update
+  commentId: M:PegasusEditor.TabPanels.Inspector.Update
+  id: Update
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Inspector.Update()
+  fullName: PegasusEditor.TabPanels.Inspector.Update()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Update
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 184
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  summary: Updates panel logic outside of the render pass.
+  example: []
+  syntax:
+    content: public override void Update()
+    content.vb: Public Overrides Sub Update()
+  overridden: PegasusEditor.TabPanels.TabPanel.Update
+  overload: PegasusEditor.TabPanels.Inspector.Update*
+- uid: PegasusEditor.TabPanels.Inspector.OnEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEditor.TabPanels.Inspector.OnEvent(PegasusEngine.Core.Events.IEvent)
+  id: OnEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: OnEvent(IEvent)
+  nameWithType: Inspector.OnEvent(IEvent)
+  fullName: PegasusEditor.TabPanels.Inspector.OnEvent(PegasusEngine.Core.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: OnEvent
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 189
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  summary: Handles an incoming engine or editor event.
+  example: []
+  syntax:
+    content: public override void OnEvent(IEvent e)
+    parameters:
+    - id: e
+      type: PegasusEngine.Core.Events.IEvent
+      description: The event to handle.
+    content.vb: Public Overrides Sub OnEvent(e As IEvent)
+  overridden: PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+  overload: PegasusEditor.TabPanels.Inspector.OnEvent*
+- uid: PegasusEditor.TabPanels.Inspector.Dispose
+  commentId: M:PegasusEditor.TabPanels.Inspector.Dispose
+  id: Dispose
+  parent: PegasusEditor.TabPanels.Inspector
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Inspector.Dispose()
+  fullName: PegasusEditor.TabPanels.Inspector.Dispose()
+  type: Method
+  source:
+    remote:
+      path: PegasusEditor/src/TabPanels/Inspector.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Dispose
+    path: ../PegasusEditor/src/TabPanels/Inspector.cs
+    startLine: 197
+  assemblies:
+  - PegasusEditor
+  namespace: PegasusEditor.TabPanels
+  summary: Releases resources used by the panel.
+  example: []
+  syntax:
+    content: public override void Dispose()
+    content.vb: Public Overrides Sub Dispose()
+  overridden: PegasusEditor.TabPanels.TabPanel.Dispose
+  overload: PegasusEditor.TabPanels.Inspector.Dispose*
+references:
+- uid: PegasusEditor.TabPanels
+  commentId: N:PegasusEditor.TabPanels
+  href: PegasusEditor.html
+  name: PegasusEditor.TabPanels
+  nameWithType: PegasusEditor.TabPanels
+  fullName: PegasusEditor.TabPanels
+  spec.csharp:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+  spec.vb:
+  - uid: PegasusEditor
+    name: PegasusEditor
+    href: PegasusEditor.html
+  - name: .
+  - uid: PegasusEditor.TabPanels
+    name: TabPanels
+    href: PegasusEditor.TabPanels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: PegasusEditor.TabPanels.TabPanel
+  commentId: T:PegasusEditor.TabPanels.TabPanel
+  parent: PegasusEditor.TabPanels
+  href: PegasusEditor.TabPanels.TabPanel.html
+  name: TabPanel
+  nameWithType: TabPanel
+  fullName: PegasusEditor.TabPanels.TabPanel
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: PegasusEditor.TabPanels.TabPanel.Title
+  commentId: F:PegasusEditor.TabPanels.TabPanel.Title
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.Title.html#PegasusEditor_TabPanels_TabPanel_Title
+  name: Title
+  nameWithType: TabPanel.Title
+  fullName: PegasusEditor.TabPanels.TabPanel.Title
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEditor.TabPanels.Inspector.#ctor*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.#ctor
+  href: PegasusEditor.TabPanels.Inspector.-ctor.html#PegasusEditor_TabPanels_Inspector__ctor_PegasusEditor_EditorState_PegasusEngine_Project_ProjectManager_
+  name: Inspector
+  nameWithType: Inspector.Inspector
+  fullName: PegasusEditor.TabPanels.Inspector.Inspector
+  nameWithType.vb: Inspector.New
+  fullName.vb: PegasusEditor.TabPanels.Inspector.New
+  name.vb: New
+- uid: PegasusEditor.EditorState
+  commentId: T:PegasusEditor.EditorState
+  parent: PegasusEditor
+  href: PegasusEditor.EditorState.html
+  name: EditorState
+  nameWithType: EditorState
+  fullName: PegasusEditor.EditorState
+- uid: PegasusEngine.Project.ProjectManager
+  commentId: T:PegasusEngine.Project.ProjectManager
+  parent: PegasusEngine.Project
+  href: PegasusEngine.Project.ProjectManager.html
+  name: ProjectManager
+  nameWithType: ProjectManager
+  fullName: PegasusEngine.Project.ProjectManager
+- uid: PegasusEditor
+  commentId: N:PegasusEditor
+  href: PegasusEditor.html
+  name: PegasusEditor
+  nameWithType: PegasusEditor
+  fullName: PegasusEditor
+- uid: PegasusEngine.Project
+  commentId: N:PegasusEngine.Project
+  href: PegasusEngine.html
+  name: PegasusEngine.Project
+  nameWithType: PegasusEngine.Project
+  fullName: PegasusEngine.Project
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Project
+    name: Project
+    href: PegasusEngine.Project.html
+- uid: PegasusEditor.TabPanels.TabPanel.Start
+  commentId: M:PegasusEditor.TabPanels.TabPanel.Start
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.Start.html#PegasusEditor_TabPanels_TabPanel_Start
+  name: Start()
+  nameWithType: TabPanel.Start()
+  fullName: PegasusEditor.TabPanels.TabPanel.Start()
+  spec.csharp:
+  - uid: PegasusEditor.TabPanels.TabPanel.Start
+    name: Start
+    href: PegasusEditor.TabPanels.TabPanel.Start.html#PegasusEditor_TabPanels_TabPanel_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEditor.TabPanels.TabPanel.Start
+    name: Start
+    href: PegasusEditor.TabPanels.TabPanel.Start.html#PegasusEditor_TabPanels_TabPanel_Start
+  - name: (
+  - name: )
+- uid: PegasusEditor.TabPanels.Inspector.Start*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.Start
+  href: PegasusEditor.TabPanels.Inspector.Start.html#PegasusEditor_TabPanels_Inspector_Start
+  name: Start
+  nameWithType: Inspector.Start
+  fullName: PegasusEditor.TabPanels.Inspector.Start
+- uid: PegasusEditor.TabPanels.TabPanel.Render
+  commentId: M:PegasusEditor.TabPanels.TabPanel.Render
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.Render.html#PegasusEditor_TabPanels_TabPanel_Render
+  name: Render()
+  nameWithType: TabPanel.Render()
+  fullName: PegasusEditor.TabPanels.TabPanel.Render()
+  spec.csharp:
+  - uid: PegasusEditor.TabPanels.TabPanel.Render
+    name: Render
+    href: PegasusEditor.TabPanels.TabPanel.Render.html#PegasusEditor_TabPanels_TabPanel_Render
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEditor.TabPanels.TabPanel.Render
+    name: Render
+    href: PegasusEditor.TabPanels.TabPanel.Render.html#PegasusEditor_TabPanels_TabPanel_Render
+  - name: (
+  - name: )
+- uid: PegasusEditor.TabPanels.Inspector.Render*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.Render
+  href: PegasusEditor.TabPanels.Inspector.Render.html#PegasusEditor_TabPanels_Inspector_Render
+  name: Render
+  nameWithType: Inspector.Render
+  fullName: PegasusEditor.TabPanels.Inspector.Render
+- uid: PegasusEditor.TabPanels.TabPanel.Update
+  commentId: M:PegasusEditor.TabPanels.TabPanel.Update
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.Update.html#PegasusEditor_TabPanels_TabPanel_Update
+  name: Update()
+  nameWithType: TabPanel.Update()
+  fullName: PegasusEditor.TabPanels.TabPanel.Update()
+  spec.csharp:
+  - uid: PegasusEditor.TabPanels.TabPanel.Update
+    name: Update
+    href: PegasusEditor.TabPanels.TabPanel.Update.html#PegasusEditor_TabPanels_TabPanel_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEditor.TabPanels.TabPanel.Update
+    name: Update
+    href: PegasusEditor.TabPanels.TabPanel.Update.html#PegasusEditor_TabPanels_TabPanel_Update
+  - name: (
+  - name: )
+- uid: PegasusEditor.TabPanels.Inspector.Update*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.Update
+  href: PegasusEditor.TabPanels.Inspector.Update.html#PegasusEditor_TabPanels_Inspector_Update
+  name: Update
+  nameWithType: Inspector.Update
+  fullName: PegasusEditor.TabPanels.Inspector.Update
+- uid: PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+  commentId: M:PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.OnEvent.html#PegasusEditor_TabPanels_TabPanel_OnEvent_PegasusEngine_Core_Events_IEvent_
+  name: OnEvent(IEvent)
+  nameWithType: TabPanel.OnEvent(IEvent)
+  fullName: PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+  spec.csharp:
+  - uid: PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+    name: OnEvent
+    href: PegasusEditor.TabPanels.TabPanel.OnEvent.html#PegasusEditor_TabPanels_TabPanel_OnEvent_PegasusEngine_Core_Events_IEvent_
+  - name: (
+  - uid: PegasusEngine.Core.Events.IEvent
+    name: IEvent
+    href: PegasusEngine.Core.Events.IEvent.html
+  - name: )
+  spec.vb:
+  - uid: PegasusEditor.TabPanels.TabPanel.OnEvent(PegasusEngine.Core.Events.IEvent)
+    name: OnEvent
+    href: PegasusEditor.TabPanels.TabPanel.OnEvent.html#PegasusEditor_TabPanels_TabPanel_OnEvent_PegasusEngine_Core_Events_IEvent_
+  - name: (
+  - uid: PegasusEngine.Core.Events.IEvent
+    name: IEvent
+    href: PegasusEngine.Core.Events.IEvent.html
+  - name: )
+- uid: PegasusEditor.TabPanels.Inspector.OnEvent*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.OnEvent
+  href: PegasusEditor.TabPanels.Inspector.OnEvent.html#PegasusEditor_TabPanels_Inspector_OnEvent_PegasusEngine_Core_Events_IEvent_
+  name: OnEvent
+  nameWithType: Inspector.OnEvent
+  fullName: PegasusEditor.TabPanels.Inspector.OnEvent
+- uid: PegasusEngine.Core.Events.IEvent
+  commentId: T:PegasusEngine.Core.Events.IEvent
+  parent: PegasusEngine.Core.Events
+  href: PegasusEngine.Core.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: PegasusEngine.Core.Events.IEvent
+- uid: PegasusEngine.Core.Events
+  commentId: N:PegasusEngine.Core.Events
+  href: PegasusEngine.html
+  name: PegasusEngine.Core.Events
+  nameWithType: PegasusEngine.Core.Events
+  fullName: PegasusEngine.Core.Events
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Core
+    name: Core
+    href: PegasusEngine.Core.html
+  - name: .
+  - uid: PegasusEngine.Core.Events
+    name: Events
+    href: PegasusEngine.Core.Events.html
+- uid: PegasusEditor.TabPanels.TabPanel.Dispose
+  commentId: M:PegasusEditor.TabPanels.TabPanel.Dispose
+  parent: PegasusEditor.TabPanels.TabPanel
+  href: PegasusEditor.TabPanels.TabPanel.Dispose.html#PegasusEditor_TabPanels_TabPanel_Dispose
+  name: Dispose()
+  nameWithType: TabPanel.Dispose()
+  fullName: PegasusEditor.TabPanels.TabPanel.Dispose()
+  spec.csharp:
+  - uid: PegasusEditor.TabPanels.TabPanel.Dispose
+    name: Dispose
+    href: PegasusEditor.TabPanels.TabPanel.Dispose.html#PegasusEditor_TabPanels_TabPanel_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: PegasusEditor.TabPanels.TabPanel.Dispose
+    name: Dispose
+    href: PegasusEditor.TabPanels.TabPanel.Dispose.html#PegasusEditor_TabPanels_TabPanel_Dispose
+  - name: (
+  - name: )
+- uid: PegasusEditor.TabPanels.Inspector.Dispose*
+  commentId: Overload:PegasusEditor.TabPanels.Inspector.Dispose
+  href: PegasusEditor.TabPanels.Inspector.Dispose.html#PegasusEditor_TabPanels_Inspector_Dispose
+  name: Dispose
+  nameWithType: Inspector.Dispose
+  fullName: PegasusEditor.TabPanels.Inspector.Dispose
+memberLayout: SeparatePages

@@ -1,0 +1,696 @@
+### YamlMime:ManagedReference
+items:
+- uid: PegasusEngine.old.Runtime.Objects.Mesh
+  commentId: T:PegasusEngine.old.Runtime.Objects.Mesh
+  id: Mesh
+  parent: PegasusEngine.old.Runtime.Objects
+  children:
+  - PegasusEngine.old.Runtime.Objects.Mesh.#ctor(PegasusEngine.old.Runtime.Objects.Vertex[],System.Collections.Generic.List{System.UInt32},System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D})
+  - PegasusEngine.old.Runtime.Objects.Mesh.Draw(PegasusEngine.Renderer.Shaders.Shader)
+  - PegasusEngine.old.Runtime.Objects.Mesh.Indices
+  - PegasusEngine.old.Runtime.Objects.Mesh.Textures
+  - PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+  langs:
+  - csharp
+  - vb
+  name: Mesh
+  nameWithType: Mesh
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh
+  type: Class
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Mesh
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 8
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public class Mesh
+    content.vb: Public Class Mesh
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+  commentId: P:PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+  id: Vertices
+  parent: PegasusEngine.old.Runtime.Objects.Mesh
+  langs:
+  - csharp
+  - vb
+  name: Vertices
+  nameWithType: Mesh.Vertices
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Vertices
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 11
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Vertex[] Vertices { get; }
+    parameters: []
+    return:
+      type: PegasusEngine.old.Runtime.Objects.Vertex[]
+    content.vb: Public ReadOnly Property Vertices As Vertex()
+  overload: PegasusEngine.old.Runtime.Objects.Mesh.Vertices*
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Indices
+  commentId: P:PegasusEngine.old.Runtime.Objects.Mesh.Indices
+  id: Indices
+  parent: PegasusEngine.old.Runtime.Objects.Mesh
+  langs:
+  - csharp
+  - vb
+  name: Indices
+  nameWithType: Mesh.Indices
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Indices
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Indices
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 12
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public List<uint> Indices { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.UInt32}
+    content.vb: Public ReadOnly Property Indices As List(Of UInteger)
+  overload: PegasusEngine.old.Runtime.Objects.Mesh.Indices*
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Textures
+  commentId: P:PegasusEngine.old.Runtime.Objects.Mesh.Textures
+  id: Textures
+  parent: PegasusEngine.old.Runtime.Objects.Mesh
+  langs:
+  - csharp
+  - vb
+  name: Textures
+  nameWithType: Mesh.Textures
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Textures
+  type: Property
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Textures
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 13
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public List<Texture2D> Textures { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D}
+    content.vb: Public ReadOnly Property Textures As List(Of Texture2D)
+  overload: PegasusEngine.old.Runtime.Objects.Mesh.Textures*
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.#ctor(PegasusEngine.old.Runtime.Objects.Vertex[],System.Collections.Generic.List{System.UInt32},System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D})
+  commentId: M:PegasusEngine.old.Runtime.Objects.Mesh.#ctor(PegasusEngine.old.Runtime.Objects.Vertex[],System.Collections.Generic.List{System.UInt32},System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D})
+  id: '#ctor(PegasusEngine.old.Runtime.Objects.Vertex[],System.Collections.Generic.List{System.UInt32},System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D})'
+  parent: PegasusEngine.old.Runtime.Objects.Mesh
+  langs:
+  - csharp
+  - vb
+  name: Mesh(Vertex[], List<uint>, List<Texture2D>)
+  nameWithType: Mesh.Mesh(Vertex[], List<uint>, List<Texture2D>)
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Mesh(PegasusEngine.old.Runtime.Objects.Vertex[], System.Collections.Generic.List<uint>, System.Collections.Generic.List<PegasusEngine.Renderer.Textures.Texture2D>)
+  type: Constructor
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: .ctor
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 17
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public Mesh(Vertex[] vertices, List<uint> indices, List<Texture2D> textures)
+    parameters:
+    - id: vertices
+      type: PegasusEngine.old.Runtime.Objects.Vertex[]
+    - id: indices
+      type: System.Collections.Generic.List{System.UInt32}
+    - id: textures
+      type: System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D}
+    content.vb: Public Sub New(vertices As Vertex(), indices As List(Of UInteger), textures As List(Of Texture2D))
+  overload: PegasusEngine.old.Runtime.Objects.Mesh.#ctor*
+  nameWithType.vb: Mesh.New(Vertex(), List(Of UInteger), List(Of Texture2D))
+  fullName.vb: PegasusEngine.old.Runtime.Objects.Mesh.New(PegasusEngine.old.Runtime.Objects.Vertex(), System.Collections.Generic.List(Of UInteger), System.Collections.Generic.List(Of PegasusEngine.Renderer.Textures.Texture2D))
+  name.vb: New(Vertex(), List(Of UInteger), List(Of Texture2D))
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Draw(PegasusEngine.Renderer.Shaders.Shader)
+  commentId: M:PegasusEngine.old.Runtime.Objects.Mesh.Draw(PegasusEngine.Renderer.Shaders.Shader)
+  id: Draw(PegasusEngine.Renderer.Shaders.Shader)
+  parent: PegasusEngine.old.Runtime.Objects.Mesh
+  langs:
+  - csharp
+  - vb
+  name: Draw(Shader)
+  nameWithType: Mesh.Draw(Shader)
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Draw(PegasusEngine.Renderer.Shaders.Shader)
+  type: Method
+  source:
+    remote:
+      path: PegasusEngine/old/Runtime/Objects/Mesh.cs
+      branch: master
+      repo: https://github.com/Martinecko30/PegasusEngine.git
+    id: Draw
+    path: ../PegasusEngine/old/Runtime/Objects/Mesh.cs
+    startLine: 83
+  assemblies:
+  - PegasusEngine
+  namespace: PegasusEngine.old.Runtime.Objects
+  syntax:
+    content: public void Draw(Shader shader)
+    parameters:
+    - id: shader
+      type: PegasusEngine.Renderer.Shaders.Shader
+    content.vb: Public Sub Draw(shader As Shader)
+  overload: PegasusEngine.old.Runtime.Objects.Mesh.Draw*
+references:
+- uid: PegasusEngine.old.Runtime.Objects
+  commentId: N:PegasusEngine.old.Runtime.Objects
+  href: PegasusEngine.html
+  name: PegasusEngine.old.Runtime.Objects
+  nameWithType: PegasusEngine.old.Runtime.Objects
+  fullName: PegasusEngine.old.Runtime.Objects
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime
+    name: Runtime
+    href: PegasusEngine.old.Runtime.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime.Objects
+    name: Objects
+    href: PegasusEngine.old.Runtime.Objects.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.old
+    name: old
+    href: PegasusEngine.old.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime
+    name: Runtime
+    href: PegasusEngine.old.Runtime.html
+  - name: .
+  - uid: PegasusEngine.old.Runtime.Objects
+    name: Objects
+    href: PegasusEngine.old.Runtime.Objects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Vertices*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+  href: PegasusEngine.old.Runtime.Objects.Mesh.Vertices.html#PegasusEngine_old_Runtime_Objects_Mesh_Vertices
+  name: Vertices
+  nameWithType: Mesh.Vertices
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Vertices
+- uid: PegasusEngine.old.Runtime.Objects.Vertex[]
+  isExternal: true
+  href: PegasusEngine.old.Runtime.Objects.Vertex.html
+  name: Vertex[]
+  nameWithType: Vertex[]
+  fullName: PegasusEngine.old.Runtime.Objects.Vertex[]
+  nameWithType.vb: Vertex()
+  fullName.vb: PegasusEngine.old.Runtime.Objects.Vertex()
+  name.vb: Vertex()
+  spec.csharp:
+  - uid: PegasusEngine.old.Runtime.Objects.Vertex
+    name: Vertex
+    href: PegasusEngine.old.Runtime.Objects.Vertex.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: PegasusEngine.old.Runtime.Objects.Vertex
+    name: Vertex
+    href: PegasusEngine.old.Runtime.Objects.Vertex.html
+  - name: (
+  - name: )
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Indices*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Mesh.Indices
+  href: PegasusEngine.old.Runtime.Objects.Mesh.Indices.html#PegasusEngine_old_Runtime_Objects_Mesh_Indices
+  name: Indices
+  nameWithType: Mesh.Indices
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Indices
+- uid: System.Collections.Generic.List{System.UInt32}
+  commentId: T:System.Collections.Generic.List{System.UInt32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<uint>
+  nameWithType: List<uint>
+  fullName: System.Collections.Generic.List<uint>
+  nameWithType.vb: List(Of UInteger)
+  fullName.vb: System.Collections.Generic.List(Of UInteger)
+  name.vb: List(Of UInteger)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Textures*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Mesh.Textures
+  href: PegasusEngine.old.Runtime.Objects.Mesh.Textures.html#PegasusEngine_old_Runtime_Objects_Mesh_Textures
+  name: Textures
+  nameWithType: Mesh.Textures
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Textures
+- uid: System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D}
+  commentId: T:System.Collections.Generic.List{PegasusEngine.Renderer.Textures.Texture2D}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Texture2D>
+  nameWithType: List<Texture2D>
+  fullName: System.Collections.Generic.List<PegasusEngine.Renderer.Textures.Texture2D>
+  nameWithType.vb: List(Of Texture2D)
+  fullName.vb: System.Collections.Generic.List(Of PegasusEngine.Renderer.Textures.Texture2D)
+  name.vb: List(Of Texture2D)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: PegasusEngine.Renderer.Textures.Texture2D
+    name: Texture2D
+    href: PegasusEngine.Renderer.Textures.Texture2D.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: PegasusEngine.Renderer.Textures.Texture2D
+    name: Texture2D
+    href: PegasusEngine.Renderer.Textures.Texture2D.html
+  - name: )
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.#ctor*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Mesh.#ctor
+  href: PegasusEngine.old.Runtime.Objects.Mesh.-ctor.html#PegasusEngine_old_Runtime_Objects_Mesh__ctor_PegasusEngine_old_Runtime_Objects_Vertex___System_Collections_Generic_List_System_UInt32__System_Collections_Generic_List_PegasusEngine_Renderer_Textures_Texture2D__
+  name: Mesh
+  nameWithType: Mesh.Mesh
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Mesh
+  nameWithType.vb: Mesh.New
+  fullName.vb: PegasusEngine.old.Runtime.Objects.Mesh.New
+  name.vb: New
+- uid: PegasusEngine.old.Runtime.Objects.Mesh.Draw*
+  commentId: Overload:PegasusEngine.old.Runtime.Objects.Mesh.Draw
+  href: PegasusEngine.old.Runtime.Objects.Mesh.Draw.html#PegasusEngine_old_Runtime_Objects_Mesh_Draw_PegasusEngine_Renderer_Shaders_Shader_
+  name: Draw
+  nameWithType: Mesh.Draw
+  fullName: PegasusEngine.old.Runtime.Objects.Mesh.Draw
+- uid: PegasusEngine.Renderer.Shaders.Shader
+  commentId: T:PegasusEngine.Renderer.Shaders.Shader
+  parent: PegasusEngine.Renderer.Shaders
+  href: PegasusEngine.Renderer.Shaders.Shader.html
+  name: Shader
+  nameWithType: Shader
+  fullName: PegasusEngine.Renderer.Shaders.Shader
+- uid: PegasusEngine.Renderer.Shaders
+  commentId: N:PegasusEngine.Renderer.Shaders
+  href: PegasusEngine.html
+  name: PegasusEngine.Renderer.Shaders
+  nameWithType: PegasusEngine.Renderer.Shaders
+  fullName: PegasusEngine.Renderer.Shaders
+  spec.csharp:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  - name: .
+  - uid: PegasusEngine.Renderer.Shaders
+    name: Shaders
+    href: PegasusEngine.Renderer.Shaders.html
+  spec.vb:
+  - uid: PegasusEngine
+    name: PegasusEngine
+    href: PegasusEngine.html
+  - name: .
+  - uid: PegasusEngine.Renderer
+    name: Renderer
+    href: PegasusEngine.Renderer.html
+  - name: .
+  - uid: PegasusEngine.Renderer.Shaders
+    name: Shaders
+    href: PegasusEngine.Renderer.Shaders.html
+memberLayout: SeparatePages
