@@ -1,6 +1,6 @@
 using Assimp;
 using OpenTK.Mathematics;
-using PegasusEngine.old.Modules.Rendering.Shaders;
+using PegasusEngine.Renderer.Shaders;
 using PegasusEngine.Renderer.Textures;
 
 namespace PegasusEngine.old.Runtime.Objects;

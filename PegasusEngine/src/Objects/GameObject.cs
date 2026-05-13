@@ -1,40 +1,90 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using PegasusEngine.Common;
-using PegasusEngine.Core;
 using PegasusEngine.Debug;
 using PegasusEngine.Objects.Components;
 
 namespace PegasusEngine.Objects;
 
+/// <summary>
+/// Represents an entity in the scene that can contain components and participate in engine systems.
+/// </summary>
 [RequireComponent(typeof(Transform))]
 [Serializable]
 public class GameObject : EngineObject
 {
+    /// <summary>
+    /// The tag used to identify or group this game object.
+    /// </summary>
     public string Tag = string.Empty;
+    
+    /// <summary>
+    /// Gets or sets the display name of this game object.
+    /// </summary>
     public string Name { get; set; } = "Unnamed Object";
 
+    /// <summary>
+    /// Gets the transform component attached to this game object.
+    /// </summary>
     public Transform Transform => GetComponent<Transform>()!;
     
+    /// <summary>
+    /// Gets whether this game object is currently active.
+    /// </summary>
     public bool IsActive { get; private set; } = true;
+    
+    /// <summary>
+    /// Sets the active state of this game object.
+    /// </summary>
+    /// <param name="active">Whether the game object should be active.</param>
     public void SetActive(bool active) => IsActive = active;
     
     private List<Component> components = new();
+    
+    /// <summary>
+    /// Gets the components currently attached to this game object.
+    /// </summary>
     public IReadOnlyList<Component> Components => components;
     
+    /// <summary>
+    /// Creates a new game object with the specified GUID.
+    /// </summary>
+    /// <param name="guid">The unique identifier assigned to this game object.</param>
     public GameObject(GUID guid)
     {
         Guid = guid;
 
         AddComponent<Transform>();
     }
+    
+    /// <summary>
+    /// Creates a new game object with the specified GUID and name.
+    /// </summary>
+    /// <param name="guid">The unique identifier assigned to this game object.</param>
+    /// <param name="name">The display name of this game object.</param>
     public GameObject(GUID guid, string name) : this(guid) => Name = name;
+    
+    /// <summary>
+    /// Creates a new game object with the specified GUID, name, and tag.
+    /// </summary>
+    /// <param name="guid">The unique identifier assigned to this game object.</param>
+    /// <param name="name">The display name of this game object.</param>
+    /// <param name="tag">The tag assigned to this game object.</param>
     public GameObject(GUID guid, string name, string tag) : this(guid, name) => Tag = tag;
+    
+    /// <summary>
+    /// Creates a new game object by copying identifying values from another game object.
+    /// </summary>
+    /// <param name="previous">The game object to copy values from.</param>
     public GameObject(GameObject previous) : this(previous.Guid, previous.Name) {}
     
     
-    
+    /// <summary>
+    /// Adds an existing component instance to this game object.
+    /// </summary>
+    /// <param name="component">The component instance to attach.</param>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="component"/> is <see langword="null"/>.</exception>
+    /// <exception cref="Exception">
+    /// Thrown when a required dependency component cannot be automatically created.
+    /// </exception>
     public void AddComponent(Component component)
     {
         if (component == null) throw new ArgumentNullException(nameof(component));
@@ -79,12 +129,10 @@ public class GameObject : EngineObject
     }
 
     /// <summary>
-    /// Adds a component to the GameObject.
-    /// If the component is Transform, an exception is thrown.
+    /// Adds a new component of the specified type to this game object.
     /// </summary>
-    /// <typeparam name="T">Specific component type to add.</typeparam>
-    /// <returns>Reference to the new Component</returns>
-    /// <exception cref="ArgumentException">If the new component is Transform.</exception>
+    /// <typeparam name="T">The component type to create and attach.</typeparam>
+    /// <returns>The newly created component instance.</returns>
     public T AddComponent<T>() where T : Component, new()
     {
         var component = new T();
@@ -93,11 +141,11 @@ public class GameObject : EngineObject
     }
 
     /// <summary>
-    /// Gets the first component by type.
-    /// If the component is not found, default is returned.
+    /// Gets the first component of the specified type.
     /// </summary>
-    /// <typeparam name="T">Type of component to find.</typeparam>
-    /// <returns>The found component.</returns>
+    /// <typeparam name="T">The type of component to find.</typeparam>
+    /// <param name="componentType">Unused optional component parameter.</param>
+    /// <returns>The matching component if found; otherwise, <see langword="null"/>.</returns>
     public T? GetComponentByType<T>(T? componentType = null) where T : Component
     {
         TryGetComponent<T>(out var component);
@@ -105,12 +153,10 @@ public class GameObject : EngineObject
     }
     
     /// <summary>
-    /// Tries to get the first component by type.
-    /// This method is preferred over GetComponentByType because it returns false if the component is not found.
+    /// Gets the first component of the specified type.
     /// </summary>
-    /// <param name="component">The required component.</param>
-    /// <typeparam name="T">Type of component to get.</typeparam>
-    /// <returns></returns>
+    /// <typeparam name="T">The type of component to find.</typeparam>
+    /// <returns>The matching component if found; otherwise, <see langword="null"/>.</returns>
     public T? GetComponent<T>() where T : Component
     {
         foreach (var comp in components)
@@ -121,6 +167,11 @@ public class GameObject : EngineObject
         return null;
     }
     
+    /// <summary>
+    /// Gets the first component assignable to the specified runtime type.
+    /// </summary>
+    /// <param name="type">The runtime component type to find.</param>
+    /// <returns>The matching component if found; otherwise, <see langword="null"/>.</returns>
     public Component? GetComponent(Type type)
     {
         foreach (var comp in components)
@@ -130,24 +181,42 @@ public class GameObject : EngineObject
         return null;
     }
 
+    /// <summary>
+    /// Attempts to get the first component of the specified type.
+    /// </summary>
+    /// <typeparam name="T">The type of component to find.</typeparam>
+    /// <param name="component">
+    /// When this method returns, contains the matching component if found; otherwise, <see langword="null"/>.
+    /// </param>
+    /// <returns><see langword="true"/> if a component was found; otherwise, <see langword="false"/>.</returns>
     public bool TryGetComponent<T>(out T? component) where T : Component
     {
         component = GetComponent<T>();
         return component != null;
     }
     
+    /// <summary>
+    /// Gets the first component of the specified type, or adds one if none exists.
+    /// </summary>
+    /// <typeparam name="T">The component type to get or add.</typeparam>
+    /// <returns>The existing or newly created component.</returns>
     public T GetOrAddComponent<T>() where T : Component, new() 
         => GetComponent<T>() ?? AddComponent<T>();
     
+    /// <summary>
+    /// Determines whether this game object has a component of the specified type.
+    /// </summary>
+    /// <typeparam name="T">The component type to check for.</typeparam>
+    /// <returns><see langword="true"/> if the component exists; otherwise, <see langword="false"/>.</returns>
     public bool HasComponent<T>() where T : Component 
         => GetComponent<T>() != null;
     
     /// <summary>
-    /// Removes component from the GameObject.
-    /// If the component is not attached to the GameObject, an exception is thrown.
+    /// Removes a component from this game object.
     /// </summary>
-    /// <param name="component">Component to remove</param>
-    /// <exception cref="NullReferenceException">If the component is not under this object, an exception is thrown.</exception>
+    /// <param name="component">The component to remove.</param>
+    /// <exception cref="InvalidOperationException">Thrown when attempting to remove the transform component.</exception>
+    /// <exception cref="ArgumentException">Thrown when the component is not attached to this game object.</exception>
     public void RemoveComponent(Component component) 
     {
         if (component is Transform)
@@ -160,11 +229,10 @@ public class GameObject : EngineObject
     }
     
     /// <summary>
-    /// Removes the first component by type.
-    /// If the component is not found, nothing happens.
-    /// This method is preferred over RemoveComponent because it does not throw an exception.
+    /// Removes the first component of the specified type from this game object.
     /// </summary>
-    /// <typeparam name="T">Type of component to remove.</typeparam>
+    /// <typeparam name="T">The type of component to remove.</typeparam>
+    /// <exception cref="InvalidOperationException">Thrown when attempting to remove the transform component.</exception>
     public void RemoveComponentByType<T>() where T : Component
     {
         if (typeof(T) == typeof(Transform))
@@ -177,11 +245,20 @@ public class GameObject : EngineObject
         }
     }
  
+    /// <summary>
+    /// Returns the display name of this game object.
+    /// </summary>
+    /// <returns>The game object's name.</returns>
     public override string ToString()
     {
         return Name;
     }
     
+    /// <summary>
+    /// Determines whether this game object's tag matches the specified tag.
+    /// </summary>
+    /// <param name="tag">The tag to compare against this game object's tag.</param>
+    /// <returns><see langword="true"/> if the tags match; otherwise, <see langword="false"/>.</returns>
     public bool CompareTag(string tag)
     {
         return Tag.Equals(tag);

@@ -2,8 +2,8 @@
 
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
-using PegasusEngine.old.Modules.Rendering.Shaders;
 using PegasusEngine.old.Utils;
+using PegasusEngine.Renderer.Shaders;
 
 #endregion
 

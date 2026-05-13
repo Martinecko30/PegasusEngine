@@ -36,7 +36,7 @@ Inspired by [Spartan Engine](https://github.com/PanosK92/SpartanEngine) and [Lau
 
 ```text
 PegasusEngine/
-├── Pegasus/               # Core engine source (Layers, Events, Renderer)
+├── PegasusEngine/         # Core engine source (Layers, Events, Renderer)
 |   ├── res/               # Engine resources (Images, models)
 |   └── src/               # Engine main code
 |       ├── Core/          # Core components

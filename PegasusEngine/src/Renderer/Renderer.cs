@@ -4,9 +4,9 @@ using PegasusEngine.Common;
 using PegasusEngine.Debug;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Meshes;
-using PegasusEngine.old.Modules.Rendering.Shaders;
 using PegasusEngine.Project.Assets;
 using PegasusEngine.Project.Scenes;
+using PegasusEngine.Renderer.Shaders;
 using PegasusEngine.Renderer.Textures;
 
 namespace PegasusEngine.Renderer;

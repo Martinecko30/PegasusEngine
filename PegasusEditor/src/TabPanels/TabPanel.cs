@@ -2,31 +2,39 @@ using PegasusEngine.Core.Events;
 
 namespace PegasusEditor.TabPanels;
 
+/// <summary>
+/// Represents a dockable editor tab panel that can be started, rendered, updated, and disposed.
+/// </summary>
 public abstract class TabPanel : IDisposable
 {
+    /// <summary>
+    /// The display title of the tab panel.
+    /// </summary>
     public string Title;
 
     /// <summary>
-    /// Start is called on loading the engine.
+    /// Called when the panel is initialized.
     /// </summary>
     public abstract void Start();
     
     /// <summary>
-    /// Renders current panel on screen.
+    /// Renders the panel contents to the screen.
     /// </summary>
     public abstract void Render();
     
     /// <summary>
-    /// Updates any logic.
-    /// Use outside of rendering to keep consistency.
+    /// Updates panel logic outside of the render pass.
     /// </summary>
     public abstract void Update();
 
     /// <summary>
-    /// This
+    /// Handles an incoming engine or editor event.
     /// </summary>
-    /// <param name="e"></param>
+    /// <param name="e">The event to handle.</param>
     public abstract void OnEvent(IEvent e);
 
+    /// <summary>
+    /// Releases resources used by the panel.
+    /// </summary>
     public abstract void Dispose();
 }

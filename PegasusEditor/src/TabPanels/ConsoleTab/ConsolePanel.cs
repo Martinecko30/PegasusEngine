@@ -8,6 +8,9 @@ using Serilog.Events;
 
 namespace PegasusEditor.TabPanels;
 
+/// <summary>
+/// Represents an editor console panel that displays log messages emitted by the engine.
+/// </summary>
 public class ConsolePanel : TabPanel
 {
     private readonly List<LogMessage> logHistory = new();
@@ -23,6 +26,9 @@ public class ConsolePanel : TabPanel
 
     private const int MaxLogCount = 3000;
     
+    /// <summary>
+    /// Initializes the console panel and subscribes to log events.
+    /// </summary>
     public override void Start()
     {
         this.Title = FontAwesomeIcons.Terminal + " Console";
@@ -30,12 +36,19 @@ public class ConsolePanel : TabPanel
         Log.OnLogEmitted += PushMessage;
     }
 
-
+    /// <summary>
+    /// Queues a log message to be displayed by the console panel.
+    /// </summary>
+    /// <param name="level">The severity level of the log message.</param>
+    /// <param name="message">The message text to display.</param>
     private void PushMessage(LogEventLevel level, string message)
     {
         logQueue.Enqueue(new LogMessage(level, message));
     }
 
+    /// <summary>
+    /// Renders the console panel UI, including filtering controls and visible log messages.
+    /// </summary>
     public override void Render()
     {
         ImGui.Begin(Title);
@@ -102,6 +115,14 @@ public class ConsolePanel : TabPanel
         ImGui.End();
     }
 
+    /// <summary>
+    /// Determines whether a log message with the specified level should be displayed.
+    /// </summary>
+    /// <param name="level">The log level to evaluate.</param>
+    /// <returns>
+    /// <see langword="true"/> if messages with the specified level should be shown;
+    /// otherwise, <see langword="false"/>.
+    /// </returns>
     private bool ShouldShow(LogEventLevel level)
     {
         return level switch
@@ -114,6 +135,11 @@ public class ConsolePanel : TabPanel
         };
     }
     
+    /// <summary>
+    /// Gets the display color used for a specific log level.
+    /// </summary>
+    /// <param name="level">The log level to get a color for.</param>
+    /// <returns>The color used when rendering log messages of the specified level.</returns>
     private Vector4 GetColorForLevel(LogEventLevel level)
     {
         // TODO: Make this a theme setting
@@ -128,6 +154,9 @@ public class ConsolePanel : TabPanel
         };
     }
 
+    /// <summary>
+    /// Processes queued log messages and updates the console history.
+    /// </summary>
     public override void Update()
     {
         bool addedNew = false;
@@ -149,10 +178,17 @@ public class ConsolePanel : TabPanel
         }
     }
 
+    /// <summary>
+    /// Handles incoming editor or engine events.
+    /// </summary>
+    /// <param name="e">The event to handle.</param>
     public override void OnEvent(IEvent e)
     {
     }
     
+    /// <summary>
+    /// Releases resources used by the console panel and unsubscribes from log events.
+    /// </summary>
     public override void Dispose()
     {
         Log.OnLogEmitted -= PushMessage;

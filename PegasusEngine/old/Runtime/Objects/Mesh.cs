@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using OpenTK.Graphics.OpenGL;
-using PegasusEngine.old.Modules.Rendering.Shaders;
+using PegasusEngine.Renderer.Shaders;
 using PegasusEngine.Renderer.Textures;
 
 namespace PegasusEngine.old.Runtime.Objects;
