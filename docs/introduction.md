@@ -31,4 +31,4 @@ This documentation is split into two main parts:
 - **Articles**, such as this introduction and setup guides.
 - **API Reference**, generated from C# XML documentation comments.
 
-You can browse the generated API documentation from the [API Reference](api/) section.
+You can browse the generated API documentation from the [API Reference](api/index.html) section.

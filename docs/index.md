@@ -4,7 +4,7 @@ _layout: landing
 
 # Pegasus Engine
 
-![Pegasus Engine Logo](../PegasusEngine/res/PegasusLogo.svg)
+![Pegasus Engine Logo](images/PegasusLogo.svg)
 
 Pegasus Engine is a modular 3D game engine built with **C# 13** and **.NET 9.0**, using **OpenGL** through **OpenTK**.
 
@@ -116,4 +116,4 @@ There are currently no listed projects using Pegasus Engine.
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-![Pegasus Engine Screenshot](../PegasusEngineScreenshot.png)
+![Pegasus Engine Screenshot](images/PegasusEngineScreenshot.png)
