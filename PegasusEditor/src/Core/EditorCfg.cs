@@ -5,10 +5,6 @@ public class EditorCfg
     public static string ExecutableDir { get; private set; } = string.Empty;
     public static string ResourcesPath { get; private set; } = string.Empty;
 
-    // This would typically be defined in your .csproj or via build symbols
-    // Equivalent to CMAKE_EDITOR_RESOURCES_PATH
-    private const string DevelopmentResourcesPath = "../../../res";
-
     public static void Init(string? exeDir = null)
     {
         // If no path is provided, use the application's base directory
@@ -18,9 +14,21 @@ public class EditorCfg
         // In an installed build, resources are usually in a subfolder
         ResourcesPath = Path.Combine(ExecutableDir, "editor_res");
 #else
-        // In development, we use the path defined at compile time
-        // Path.GetFullPath ensures the relative dev path is resolved correctly
-        ResourcesPath = Path.GetFullPath(Path.Combine(ExecutableDir, DevelopmentResourcesPath));
+        DirectoryInfo? currentDir = new DirectoryInfo(ExecutableDir);
+
+        while (currentDir != null)
+        {
+            string potentialResPath = Path.Combine(currentDir.FullName, "res");
+            if (Directory.Exists(potentialResPath))
+            {
+                ResourcesPath = potentialResPath;
+                return;
+            }
+            
+            currentDir = currentDir.Parent;
+        }
+        
+        throw new DirectoryNotFoundException("Could not find 'res' folder in the executable directory.");
 #endif
     }
 }

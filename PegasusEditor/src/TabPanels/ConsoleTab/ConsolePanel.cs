@@ -19,6 +19,7 @@ public class ConsolePanel : TabPanel
     private bool showInfo = true;
     private bool showWarnings = true;
     private bool showErrors = true;
+    private bool showDebugs = false;
 
     private const int MaxLogCount = 3000;
     
@@ -53,11 +54,15 @@ public class ConsolePanel : TabPanel
         ImGui.Checkbox("Warn", ref showWarnings);
         ImGui.SameLine();
         ImGui.Checkbox("Error", ref showErrors);
+        ImGui.SameLine();
+        ImGui.Checkbox("Debug", ref showDebugs);
         
         ImGui.Separator();
         
         ImGui.BeginChild("ScrollingRegion", new Vector2(0, 0));
 
+        // Show messages
+        int logIndex = 0;
         foreach (var msg in logHistory)
         {
             if (!ShouldShow(msg.Level))
@@ -66,9 +71,21 @@ public class ConsolePanel : TabPanel
             Vector4 color = GetColorForLevel(msg.Level);
             ImGui.PushStyleColor(ImGuiCol.Text, color);
             
-            ImGui.TextUnformatted($"[{msg.Time}] [{msg.Level}] {msg.Message}");
+            ImGui.PushID(logIndex++);
+            string formattedMsg = $"[{msg.Time}] [{msg.Level}] {msg.Message}";
+            ImGui.PushTextWrapPos(0.0f);
+            ImGui.TextUnformatted(formattedMsg);
+
+            if (ImGui.IsItemClicked())
+                ImGui.SetClipboardText(formattedMsg);
             
             ImGui.PopStyleColor();
+
+            if (ImGui.IsItemHovered())
+                ImGui.SetTooltip("Click to copy to clipboard");
+            
+            ImGui.PopTextWrapPos();
+            ImGui.PopID();
         }
 
         if (scrollToBottom)
@@ -92,6 +109,7 @@ public class ConsolePanel : TabPanel
             LogEventLevel.Information => showInfo,
             LogEventLevel.Warning => showWarnings,
             LogEventLevel.Error => showErrors,
+            LogEventLevel.Debug => showDebugs,
             _ => true
         };
     }
@@ -105,6 +123,7 @@ public class ConsolePanel : TabPanel
             LogEventLevel.Warning => new Vector4(1.0f, 0.8f, 0.2f, 1.0f),       // Yellow
             LogEventLevel.Error => new Vector4(1.0f, 0.3f, 0.3f, 1.0f),         // Red
             LogEventLevel.Fatal => new Vector4(1.0f, 0.0f, 1.0f, 1.0f),         // Magenta
+            LogEventLevel.Debug => new Vector4(0.24f, 1.0f, 0.29f, 1.0f),       // Uranium Green
             _ => new Vector4(1.0f, 1.0f, 1.0f, 1.0f)
         };
     }

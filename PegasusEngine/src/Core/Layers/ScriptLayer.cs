@@ -27,8 +27,8 @@ public sealed class ScriptLayer : Layer
         }        
     }
 
-    public override void OnUpdate(float deltaTime)
+    public override void OnUpdate()
     {
-        ScriptManager.UpdateScripts(deltaTime);
+        ScriptManager.UpdateScripts();
     }
 }

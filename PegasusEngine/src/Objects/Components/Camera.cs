@@ -55,4 +55,9 @@ public class Camera : Component
     {
         return Matrix4.CreatePerspectiveFieldOfView(fov, AspectRatio, nearPlane, farPlane);
     }
+
+    public override string ToString()
+    {
+        return "Camera : " + GameObject.ToString();
+    }
 }

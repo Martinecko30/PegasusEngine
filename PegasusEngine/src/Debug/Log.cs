@@ -42,13 +42,15 @@ public static class Log
     public static void EngineWarn(string message, params object[] args) => EngineLogger.Warning(message, args);
     public static void EngineError(string message, params object[] args) => EngineLogger.Error(message, args);
     public static void EngineCritical(string message, params object[] args) => EngineLogger.Fatal(message, args);
-
+    public static void EngineDebug(string message, params object[] args) => EngineLogger.Debug(message, args);
+    
     // Editor Logging Helpers (Replacing Macros)
     public static void EditorTrace(string message, params object[] args) => EditorLogger.Verbose(message, args);
     public static void EditorInfo(string message, params object[] args) => EditorLogger.Information(message, args);
     public static void EditorWarn(string message, params object[] args) => EditorLogger.Warning(message, args);
     public static void EditorError(string message, params object[] args) => EditorLogger.Error(message, args);
     public static void EditorCritical(string message, params object[] args) => EditorLogger.Fatal(message, args);
+    public static void EditorDebug(string message, params object[] args) => EditorLogger.Debug(message, args);
     
     /// <summary>
     /// A custom Serilog Sink that intercepts formatted log messages and fires our C# event.

@@ -1,5 +1,6 @@
 using PegasusEngine.Core.Events;
 using PegasusEngine.Debug;
+using PegasusEngine.Objects.Components;
 using PegasusEngine.Project;
 using PegasusEngine.Renderer;
 using PegasusEngine.Renderer.Textures;
@@ -12,6 +13,8 @@ public class RenderLayer : Layer
     private readonly IEventDispatcher eventDispatcher;
     private readonly ProjectManager projectManager;
     private readonly IRenderer renderer;
+    
+    private Camera? activeCamera;
 
     public RenderLayer(IEventDispatcher eventDispatcher,
         Profiler profiler,
@@ -31,16 +34,22 @@ public class RenderLayer : Layer
         Log.EngineInfo("RenderLayer: Attached and Renderer Initialized.");
     }
     
-    public override void OnUpdate(float deltaTime)
+    public override void OnUpdate()
     {
         renderer.UpdateResources();
 
         var activeScene = projectManager.SceneManager?.GetOpenScene();
-
+        
         if (activeScene != null)
         {
+            if (activeCamera == null)
+                activeCamera = activeScene.MainCamera;
+
+            if (activeCamera == null)
+                return;
+            
             // The renderer draws everything to its internal FBO and returns the final image
-            Texture2D frame = renderer.Render(activeScene);
+            Texture2D frame = renderer.Render(activeScene, activeCamera);
             
             eventDispatcher.DispatchEvent(new NewFrameRenderedEvent(frame));
         }
@@ -57,6 +66,9 @@ public class RenderLayer : Layer
         if (e is WindowResizeEvent resizeEvent)
         {
             renderer.Resize(resizeEvent.Width, resizeEvent.Height);
+        } else if (e is RenderCameraChangedEvent cameraEvent)
+        {
+            activeCamera = cameraEvent.Camera;
         }
     }
 }

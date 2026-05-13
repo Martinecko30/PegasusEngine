@@ -113,14 +113,14 @@ public sealed class ScriptManager
         return Path.Combine(projectDir, "bin", "Release", "net9.0-windows", $"{projectName}.dll");
     }
 
-    public void UpdateScripts(float? deltaTime = null)
+    public void UpdateScripts()
     {
         foreach (var script in ActiveScripts)
         {
             Type type = script.GetType();
             var updateMethod = type.GetMethod("Update", BindingFlags.Instance);
             
-            updateMethod?.Invoke(script, new object[] { deltaTime });
+            updateMethod?.Invoke(script, new object[] { });
         }
     }
 }

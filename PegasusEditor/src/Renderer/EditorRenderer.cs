@@ -7,105 +7,119 @@ using PegasusEngine.Objects.Components.Meshes;
 using PegasusEngine.old.Modules.Rendering.Shaders;
 using PegasusEngine.Project.Assets;
 using PegasusEngine.Project.Scenes;
+using PegasusEngine.Renderer;
 using PegasusEngine.Renderer.Textures;
 
-namespace PegasusEngine.Renderer;
+namespace PegasusEditor.Renderer;
 
-public class Renderer : IRenderer
+public class EditorRenderer : IRenderer
 {
-    // Internal Engine Render Target
     private int framebufferId;
     private int colorTextureId;
     private int depthRenderbufferId;
     private int renderWidth = 1280;
     private int renderHeight = 720;
     
-    // The final composed image of the game frame
-    private Texture2D? _finalFrameTexture;
+    private Texture2D? finalFrameTexture;
 
-    // Shaders & Shadows
     private Shader defaultShader;
-    private Shader depthShader;
+    private Shader gridShader;
+    private Shader gizmoShader; // TODO: Add custom Gizmo Shader
+
+    private int sceneVao;
+    private int gridVao;
     
-    private const int SHADOW_WIDTH = 4096;
-    private const int SHADOW_HEIGHT = 4096;
-    private int shadowMapTexture;
-    private int shadowMapFbo;
-    private Matrix4 lightSpaceMatrix;
-    
-    private int dummyVao;
-    
-    private AssetManager assetManager;
-    private GraphicsResourceManager resourceManager;
+    private readonly AssetManager assetManager;
+    private readonly GraphicsResourceManager resourceManager;
     private uint lastMeshBufferVersion = 0;
 
-    public Renderer(AssetManager assetManager)
+    public EditorRenderer(AssetManager assetManager)
     {
         this.assetManager = assetManager;
+        this.resourceManager = new GraphicsResourceManager();
     }
     
     public void Init()
     {
-        this.resourceManager = new GraphicsResourceManager();
-        
-        this.defaultShader = new Shader(
-            "res/Shaders/DefaultShader.vert",
-            "res/Shaders/DefaultShader.frag"
+        defaultShader = new Shader(
+            Path.Combine(EditorCfg.ResourcesPath, "Shaders/DefaultShader.vert"),
+            Path.Combine(EditorCfg.ResourcesPath, "Shaders/DefaultShader.frag")
+            );
+        gridShader = new Shader(
+            Path.Combine(EditorCfg.ResourcesPath, "Shaders/EditorGridShader.vert"),
+            Path.Combine(EditorCfg.ResourcesPath, "Shaders/EditorGridShader.frag")
             );
         
         GL.Enable(EnableCap.Multisample);
         GL.Enable(EnableCap.DepthTest);
-        GL.Enable(EnableCap.CullFace);
         GL.DepthFunc(DepthFunction.Lequal);
-        // GL.Enable(EnableCap.FramebufferSrgb);
-        GL.ClearColor(0.01f, 0.01f, 0.01f, 1.0f);
         
-        dummyVao = GL.GenVertexArray();
+        sceneVao = GL.GenVertexArray();
+        
+        float[] gridVerts =
+        {
+            -1.0f, -1.0f,   1.0f, -1.0f,   -1.0f, 1.0f,
+            -1.0f,  1.0f,   1.0f, -1.0f,    1.0f, 1.0f
+        };
+
+        gridVao = GL.GenVertexArray();
+        GL.BindVertexArray(gridVao);
+        
+        int gridVbo = GL.GenBuffer();
+        GL.BindBuffer(BufferTarget.ArrayBuffer, gridVbo);
+        GL.BufferData(BufferTarget.ArrayBuffer, gridVerts.Length * sizeof(float), gridVerts, BufferUsageHint.StaticDraw);
+        
+        GL.VertexAttribPointer(0, 2, VertexAttribPointerType.Float, false, 2 * sizeof(float), 0);
+        GL.EnableVertexAttribArray(0);
+        GL.BindVertexArray(0);
         
         RebuildRenderTarget(renderWidth, renderHeight);
-        GenerateShadowMap();
     }
 
-    
     public Texture2D Render(Scene scene, Camera camera)
     {
-        // Shadow pass
-        RenderShadows();
+        UpdateResources();
         
-        // Setup Render Target
         GL.BindFramebuffer(FramebufferTarget.Framebuffer, framebufferId);
         GL.Viewport(0, 0, renderWidth, renderHeight);
+        
+        GL.Disable(EnableCap.ScissorTest);
+        
+        Clear(new Color4(0.15f, 0.15f, 0.15f, 1.0f));
+        
         GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
         
-        // Main render pass
-
-        if (camera != null && defaultShader != null)
-        {
-            defaultShader.Use();
-            
-            camera.AspectRatio = (float)renderWidth / renderHeight;
-            
-            defaultShader.SetMatrix4("view", camera.GetViewMatrix());
-            defaultShader.SetMatrix4("projection", camera.GetProjectionMatrix());
-            
-            GL.BindVertexArray(dummyVao);
-            
-            RenderScene(scene, camera);
-            
-            GL.BindVertexArray(0);
-        }
+        Matrix4 view = camera.GetViewMatrix();
+        Matrix4 projection = camera.GetProjectionMatrix();
         
-        // Unbind FBO
+        GL.BindVertexArray(sceneVao);
+        GL.Enable(EnableCap.CullFace);
+        RenderScene(scene, view, projection);
+        
+        GL.Disable(EnableCap.CullFace);
+        GL.Enable(EnableCap.Blend);
+        GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
+        
+        GL.BindVertexArray(gridVao);
+        RenderGrid(view, projection, camera.GameObject.Transform.Position);
+        
+        GL.Disable(EnableCap.Blend);
+        
+        GL.Clear(ClearBufferMask.DepthBufferBit);
+        RenderGizmos(scene, view, projection);
+        
+        GL.BindVertexArray(0);
         GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
-        
-        return _finalFrameTexture!;
+
+        return finalFrameTexture;
     }
 
-    public void RenderScene(Scene scene, Camera mainCamera)
+    private void RenderScene(Scene scene, Matrix4 view, Matrix4 projection)
     {
-        Matrix4 viewMatrix = mainCamera.GetViewMatrix();
-        Matrix4 projectionMatrix = mainCamera.GetProjectionMatrix();
-
+        defaultShader.Use();
+        defaultShader.SetMatrix4("view", view);
+        defaultShader.SetMatrix4("projection", projection);
+        
         var renderables = scene.Entities.Values
             .Where(e => e.HasComponent<MeshFilter>() && e.HasComponent<MeshRenderer>());
         foreach (var entity in renderables)
@@ -129,38 +143,22 @@ public class Renderer : IRenderer
 
             int vertexCount = (int)metadata.TriCount * 3;
             GL.DrawArrays(PrimitiveType.Triangles, 0, vertexCount);
-        }
-    }
-    
-    // TODO: Implement shadows
-    private void RenderShadows()
-    {
-        /*
-        GL.CullFace(CullFaceMode.Front);
-
-        // ... calculate lightSpaceMatrix ...
-
-        _depthShader.Use();
-        _depthShader.SetMatrix4("lightSpaceMatrix", _lightSpaceMatrix);
-
-        GL.Viewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
-        GL.BindFramebuffer(FramebufferTarget.Framebuffer, _shadowMapFbo);
-        GL.Clear(ClearBufferMask.DepthBufferBit);
-
-        // ... draw objects with depth shader ...
-
-        GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
-        GL.CullFace(CullFaceMode.Back);
-        */
+        }  
     }
 
-
-    
-    
-    
-    public void Clear(Color4 color)
+    private void RenderGrid(Matrix4 view, Matrix4 projection, Vector3 cameraPosition)
     {
-        GL.ClearColor(color.R, color.G, color.B, color.A);
+        gridShader.Use();
+        gridShader.SetMatrix4("view", view);
+        gridShader.SetMatrix4("projection", projection);
+        gridShader.SetVector3("cameraPos", cameraPosition);
+        
+        GL.DrawArrays(PrimitiveType.Triangles, 0, 6);
+    }
+
+    private void RenderGizmos(Scene scene, Matrix4 view, Matrix4 projection)
+    {
+        // TODO: Implement Gizmos
     }
 
     public void Resize(int width, int height)
@@ -208,32 +206,9 @@ public class Renderer : IRenderer
         GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
 
         // Wrap it in the Engine's Texture2D class
-        _finalFrameTexture = new Texture2D(colorTextureId, "RenderTarget");
+        finalFrameTexture = new Texture2D(colorTextureId, "RenderTarget");
     }
 
-    private void GenerateShadowMap()
-    {
-        shadowMapFbo = GL.GenFramebuffer();
-        shadowMapTexture = GL.GenTexture();
-        
-        GL.BindTexture(TextureTarget.Texture2D, shadowMapTexture);
-        GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.DepthComponent, SHADOW_WIDTH, SHADOW_HEIGHT, 0, PixelFormat.DepthComponent, PixelType.Float, IntPtr.Zero);
-        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Nearest);
-        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Nearest);
-        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)TextureWrapMode.ClampToBorder);
-        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)TextureWrapMode.ClampToBorder);
-        
-        float[] borderColor = { 1.0f, 1.0f, 1.0f, 1.0f };
-        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureBorderColor, borderColor);
-
-        GL.BindFramebuffer(FramebufferTarget.Framebuffer, shadowMapFbo);
-        GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.DepthAttachment, TextureTarget.Texture2D, shadowMapTexture, 0);
-        GL.DrawBuffer(DrawBufferMode.None);
-        GL.ReadBuffer(ReadBufferMode.None);
-        
-        GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
-    }
-    
     public void UpdateResources()
     {
         if (assetManager == null)
@@ -249,16 +224,20 @@ public class Renderer : IRenderer
             Log.EngineInfo("Renderer: Mega-Buffers uploaded to GPU (Version {0})", currentVersion);
         }
     }
+
+    public void Clear(Color4 color)
+    {
+        GL.ClearColor(color.R, color.G, color.B, color.A);
+    }
     
     public void Dispose()
     {
         defaultShader?.Dispose();
-        depthShader?.Dispose();
-        
-        if (dummyVao != 0) GL.DeleteVertexArray(dummyVao);
+        gridShader?.Dispose();
+        gizmoShader?.Dispose();
+        if (sceneVao != 0) GL.DeleteVertexArray(sceneVao);
+        if (gridVao != 0) GL.DeleteVertexArray(gridVao);
         if (framebufferId != 0) GL.DeleteFramebuffer(framebufferId);
-        if (shadowMapFbo != 0) GL.DeleteFramebuffer(shadowMapFbo);
-        
         resourceManager?.Dispose();
     }
 }

@@ -3,6 +3,7 @@ using ImGuiNET;
 using OpenTK.Windowing.Desktop;
 using PegasusEditor.ImGuiContext;
 using PegasusEditor.TabPanels;
+using PegasusEngine.Common;
 using PegasusEngine.Core;
 using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
@@ -47,7 +48,7 @@ public class EditorLayer : ILayer
         editorPanels.Add(new Game());
         editorPanels.Add(new Hierarchy(editorState, projectManager));
         editorPanels.Add(new Inspector(editorState, projectManager));
-        editorPanels.Add(new Viewport(editorState));
+        editorPanels.Add(new Viewport(editorState, eventDispatcher, window));
         editorPanels.Add(new ConsolePanel());
     }
     
@@ -64,9 +65,9 @@ public class EditorLayer : ILayer
         editorState.Serialize();
     }
 
-    public void OnUpdate(float deltaTime)
+    public void OnUpdate()
     {
-        imguiContext.Update(window, deltaTime);
+        imguiContext.Update(window, Time.DeltaTime);
         
         editorState.Temp.EditorTheme.ApplyAllToImgui();
 

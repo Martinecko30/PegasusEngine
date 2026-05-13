@@ -59,3 +59,5 @@ F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-window
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\PegasusLogo.svg
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\DefaultShader.frag
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\DefaultShader.vert
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\EditorGridShader.frag
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\EditorGridShader.vert

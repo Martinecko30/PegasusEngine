@@ -2,6 +2,7 @@ using System.Diagnostics;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
+using PegasusEngine.Common;
 using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
 using PegasusEngine.Debug;
@@ -46,7 +47,7 @@ public class Application
         
         LayerStack = new LayerStack();
 
-        Renderer = new Renderer.Renderer(ProjectManager.AssetManager);
+        Renderer = CreateRenderer();
 
         RenderLayer = new RenderLayer(LayerStack, Profiler, ProjectManager, Renderer);
         LayerStack.PushLayer(RenderLayer);
@@ -58,6 +59,11 @@ public class Application
         // Setup callbacks
         Window.Closing += _ => _shouldClose = true;
         Window.Resize += e => LayerStack.DispatchEvent(new WindowResizeEvent(e.Width, e.Height));
+    }
+
+    protected virtual IRenderer CreateRenderer()
+    {
+        return new Renderer.Renderer(ProjectManager.AssetManager);
     }
 
     public void Shutdown()
@@ -78,6 +84,7 @@ public class Application
             double now = stopwatch.Elapsed.TotalSeconds;
             float dt = (float)(now - lastTime);
             lastTime = now;
+            Time.DeltaTime = dt;
 
 
             using (var globalTimer = Profiler.CreateGlobalTimer("GLOBAL"))
@@ -87,7 +94,7 @@ public class Application
                 
                 using (var t = Profiler.CreateTimer("LayerStack.OnUpdate()"))
                 {
-                    LayerStack.OnUpdate(dt);
+                    LayerStack.OnUpdate();
                 }
                 
                 Window.SwapBuffers();

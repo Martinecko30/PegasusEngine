@@ -1,4 +1,5 @@
 using OpenTK.Mathematics;
+using PegasusEngine.Objects.Components;
 using PegasusEngine.Renderer.Textures;
 
 // For Vector2
@@ -54,4 +55,14 @@ public class ReloadScriptAssembliesEvent : EventBase
     }
 
     public override EventType GetEventType() => EventType.ReloadedScriptAssemblies;
+}
+
+public class RenderCameraChangedEvent : EventBase
+{
+    public readonly Camera Camera;
+    public RenderCameraChangedEvent(Camera camera)
+    {
+        Camera = camera;
+    }
+    public override EventType GetEventType() => EventType.RenderCameraChangedEvent;
 }

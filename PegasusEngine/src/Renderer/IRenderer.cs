@@ -1,4 +1,5 @@
 using OpenTK.Mathematics;
+using PegasusEngine.Objects.Components;
 using PegasusEngine.Project.Scenes;
 using PegasusEngine.Renderer.Textures;
 
@@ -14,7 +15,7 @@ public interface IRenderer : IDisposable
     /// <summary>
     /// Called by the Application for each frame.
     /// </summary>
-    public Texture2D Render(Scene scene);
+    public Texture2D Render(Scene scene, Camera camera);
     
     /// <summary>
     /// Called by the Application when the window resizes.

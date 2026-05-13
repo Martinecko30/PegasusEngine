@@ -46,6 +46,14 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <None Remove="res\DefaultCSProject.txt" />
+      <None Remove="res\Shaders\EditorGridShader.frag" />
+      <Content Include="res\Shaders\EditorGridShader.frag">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="res\Shaders\EditorGridShader.vert" />
+      <Content Include="res\Shaders\EditorGridShader.vert">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

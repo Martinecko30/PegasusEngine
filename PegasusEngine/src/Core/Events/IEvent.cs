@@ -18,6 +18,7 @@ public enum EventType
     
     WindowResize,
     ReloadedScriptAssemblies,
+    RenderCameraChangedEvent,
     
     EventCount
 }
