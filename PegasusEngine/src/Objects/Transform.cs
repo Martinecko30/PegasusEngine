@@ -21,7 +21,7 @@ public class Transform : Behaviour, IEnumerable
     public Transform? Parent => parent;
 
     public Vector3 Position = new Vector3(0, 0, 0);
-    public Quaternion Rotation = new Quaternion();
+    public Quaternion Rotation = Quaternion.Identity;
     public Vector3 Scale = new Vector3(1, 1, 1);
     
     

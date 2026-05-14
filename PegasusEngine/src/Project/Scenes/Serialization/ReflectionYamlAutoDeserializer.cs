@@ -74,7 +74,7 @@ public sealed class ReflectionYamlAutoDeserializer
             if (raw is string s && ulong.TryParse(s, out ulong ul)) return new GUID(ul);
             if (raw is ulong u) return new GUID(u);
             if (raw is int i) return new GUID((ulong)i);
-            return new GUID();
+            return GUID.INVALID;
         }
         
         // Enums stored as string (from serializer) or numeric
@@ -88,7 +88,7 @@ public sealed class ReflectionYamlAutoDeserializer
 
         // Scalars
         if (IsScalar(fieldType))
-            return Convert.ChangeType(raw, fieldType);
+            return Convert.ChangeType(raw, fieldType, System.Globalization.CultureInfo.InvariantCulture);
 
         // Array
         if (fieldType.IsArray)

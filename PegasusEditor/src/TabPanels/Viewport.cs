@@ -93,7 +93,7 @@ public class Viewport : TabPanel
             {
                 WindowSize = new(windowWidth, windowHeight);
                 
-                camera.AspectRatio = (float) windowWidth / windowHeight;
+                camera.AspectRatio = (float) windowWidth / (float) windowHeight;
                 
                 // TODO: Resize the framebuffer
             }

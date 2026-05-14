@@ -4,23 +4,47 @@ using Assimp;
 using PegasusEngine.Common;
 using PegasusEngine.Core;
 using PegasusEngine.Debug;
+using PegasusEngine.Project.Scenes.Serialization;
 using StbImageSharp;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
 namespace PegasusEngine.Project.Assets;
 
+/// <summary>
+/// Manages importing, loading, serialization, and runtime storage of project assets.
+/// </summary>
+/// <remarks>
+/// Supports mesh and texture assets, maintains metadata in an <see cref="AssetPool"/>,
+/// and reads or writes asset metadata files using the Pegasus metadata format.
+/// </remarks>
 public class AssetManager
 {
+    /// <summary>
+    /// File extensions supported for mesh asset import.
+    /// </summary>
     public static readonly string[] SupportedMeshFileFormats = [".fbx", ".obj"];
+    
+    /// <summary>
+    /// File extensions supported for texture asset import.
+    /// </summary>
     public static readonly string[] SupportedTextureFileFormats = [".png", ".jpg", ".jpeg", ".tga", ".bmp", ".hdr"];
     
+    /// <summary>
+    /// Gets the runtime asset pool containing loaded asset data and metadata.
+    /// </summary>
     private readonly AssetPool _assetPool = new();
     private readonly ISerializer _serializer;
     private readonly IDeserializer _deserializer;
     
     public AssetPool AssetPool => _assetPool;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AssetManager"/> class.
+    /// </summary>
+    /// <remarks>
+    /// Creates YAML serializers used for reading and writing asset metadata files.
+    /// </remarks>
     public AssetManager()
     {
         _serializer = new SerializerBuilder()
@@ -36,6 +60,14 @@ public class AssetManager
     // META FILE HANDLING
     // ================================================
 
+    /// <summary>
+    /// Saves an asset metadata file to disk.
+    /// </summary>
+    /// <param name="metaPath">The path where the metadata file should be written.</param>
+    /// <param name="metaFile">The metadata content to serialize.</param>
+    /// <returns>
+    /// <see langword="true"/> if the metadata file was written successfully; otherwise, <see langword="false"/>.
+    /// </returns>
     public bool SaveMetaFile(string metaPath, AssetMetaFile metaFile)
     {
         if (!(Path.HasExtension(metaPath) && Path.GetExtension(metaPath).ToLower() == AssetMetaFile.Extension))
@@ -46,7 +78,10 @@ public class AssetManager
 
         try
         {
-            string yaml = _serializer.Serialize(metaFile);
+            var autoSerializer = new ReflectionYamlAutoSerializer();
+            var serializedData = autoSerializer.SerializeObjectGraph(metaFile);
+            
+            string yaml = _serializer.Serialize(serializedData);
             File.WriteAllText(metaPath, yaml);
             Log.EngineInfo("SaveMetaFile: wrote metadata for GUID {0}.", metaFile.Guid);
         } catch (Exception e)
@@ -59,6 +94,14 @@ public class AssetManager
         return true;
     }
 
+    /// <summary>
+    /// Loads an asset metadata file from disk.
+    /// </summary>
+    /// <param name="metaPath">The path to the metadata file to load.</param>
+    /// <returns>
+    /// The loaded <see cref="AssetMetaFile"/> if the file exists and is deserialized successfully;
+    /// otherwise, <see langword="null"/>.
+    /// </returns>
     public AssetMetaFile? LoadMetaFile(string metaPath)
     {
         if (!File.Exists(metaPath) || !Path.HasExtension(metaPath) ||
@@ -69,9 +112,17 @@ public class AssetManager
         }
 
         try
-        {
+        {            
             string yaml = File.ReadAllText(metaPath);
-            var meta = _deserializer.Deserialize<AssetMetaFile>(yaml);
+            
+            var rawData = _deserializer.Deserialize<Dictionary<string, object?>>(yaml);
+            if (rawData == null) return null;
+
+            var meta = new AssetMetaFile();
+            
+            var autoDeserializer = new ReflectionYamlAutoDeserializer();
+            autoDeserializer.ApplyObjectGraph(meta, rawData);
+
             Log.EngineInfo("LoadMetaFile: loaded metadata for GUID {0}.", meta.Guid);
             return meta;
         }
@@ -84,7 +135,13 @@ public class AssetManager
     }
     
     
-    
+    /// <summary>
+    /// Imports an asset file and assigns it a new unique identifier.
+    /// </summary>
+    /// <param name="assetPath">The path to the asset file to import.</param>
+    /// <returns>
+    /// The generated asset <see cref="GUID"/> if import succeeds; otherwise, <see cref="GUID.INVALID"/>.
+    /// </returns>
     public GUID ImportAsset(string assetPath)
     {
         if (!File.Exists(assetPath))
@@ -104,6 +161,13 @@ public class AssetManager
         return guid;
     }
 
+    /// <summary>
+    /// Saves metadata files for all currently loaded assets into the specified folder.
+    /// </summary>
+    /// <param name="folderPath">The folder where metadata files should be written.</param>
+    /// <remarks>
+    /// Existing stale metadata files in the folder are removed when their GUID is no longer present in the asset pool.
+    /// </remarks>
     public void SaveAssetPoolToFolder(string folderPath)
     {
         if (Directory.Exists(folderPath))
@@ -160,6 +224,10 @@ public class AssetManager
         }
     }
 
+    /// <summary>
+    /// Loads asset metadata files from a folder and imports their referenced source assets into the asset pool.
+    /// </summary>
+    /// <param name="folderPath">The folder containing asset metadata files.</param>
     public void LoadAssetPoolFromFolder(string folderPath)
     {
         foreach (var metaPath in Directory.GetFiles(folderPath, "*" + AssetMetaFile.Extension))
@@ -188,6 +256,14 @@ public class AssetManager
         }
     }
 
+    /// <summary>
+    /// Loads an asset file into the asset pool using the specified identifier.
+    /// </summary>
+    /// <param name="assetPath">The path to the asset file to load.</param>
+    /// <param name="guid">The identifier to associate with the loaded asset.</param>
+    /// <returns>
+    /// <see langword="true"/> if the asset was loaded successfully; otherwise, <see langword="false"/>.
+    /// </returns>
     public bool LoadAssetFile(string assetPath, GUID guid)
     {
         if (!File.Exists(assetPath) || !Path.HasExtension(assetPath))
@@ -212,6 +288,14 @@ public class AssetManager
         return false;
     }
 
+    /// <summary>
+    /// Loads a mesh asset, appends its triangle data to the asset pool, and builds acceleration data for it.
+    /// </summary>
+    /// <param name="assetPath">The path to the mesh file to load.</param>
+    /// <param name="guid">The identifier to associate with the loaded mesh.</param>
+    /// <returns>
+    /// <see langword="true"/> if the mesh was loaded and registered successfully; otherwise, <see langword="false"/>.
+    /// </returns>
     public bool LoadMesh(string assetPath, GUID guid)
     {
         var timerStart = Stopwatch.GetTimestamp();
@@ -286,6 +370,15 @@ public class AssetManager
         return true;
     }
 
+    /// <summary>
+    /// Loads a texture asset and appends its pixel data to the asset pool.
+    /// </summary>
+    /// <param name="assetPath">The path to the texture file to load.</param>
+    /// <param name="guid">The identifier to associate with the loaded texture.</param>
+    /// <param name="channels">The number of color channels to request when decoding the image.</param>
+    /// <returns>
+    /// <see langword="true"/> if the texture was loaded and registered successfully; otherwise, <see langword="false"/>.
+    /// </returns>
     public bool LoadTexture(string assetPath, GUID guid, int channels)
     {
         var timerStart = Stopwatch.GetTimestamp();

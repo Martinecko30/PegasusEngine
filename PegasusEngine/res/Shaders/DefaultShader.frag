@@ -100,7 +100,7 @@ float ShadowCalculation(vec4 fragPosLightSpace, vec3 normal, vec3 fragPos, vec3 
     return shadow;
 }
 
-void main() {
+void main() {    
     vec3 color = texture(diffuseTexture, fs_in.TexCoords).rgb;
     vec3 normal = normalize(fs_in.Normal);
 

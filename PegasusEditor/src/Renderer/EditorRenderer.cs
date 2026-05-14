@@ -2,6 +2,7 @@ using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using PegasusEngine.Common;
 using PegasusEngine.Debug;
+using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Meshes;
 using PegasusEngine.Project;
@@ -94,8 +95,8 @@ public class EditorRenderer : IRenderer
         Matrix4 projection = camera.GetProjectionMatrix();
         
         GL.BindVertexArray(sceneVao);
-        GL.Enable(EnableCap.CullFace);
-        RenderScene(scene, view, projection);
+        // GL.Enable(EnableCap.CullFace);
+        RenderScene(scene, camera, view, projection);
         
         GL.Disable(EnableCap.CullFace);
         GL.Enable(EnableCap.Blend);
@@ -115,14 +116,23 @@ public class EditorRenderer : IRenderer
         return finalFrameTexture;
     }
 
-    private void RenderScene(Scene scene, Matrix4 view, Matrix4 projection)
+    private void RenderScene(Scene scene, Camera camera, Matrix4 view, Matrix4 projection)
     {
         defaultShader.Use();
         defaultShader.SetMatrix4("view", view);
         defaultShader.SetMatrix4("projection", projection);
         
+        // TODO: Add lighting
+        defaultShader.SetVector3("viewPos", camera.GameObject.Transform.Position);
+        defaultShader.SetVector3("lights[0].position", new Vector3(10.0f, 20.0f, 10.0f)); // Light high in the sky
+        defaultShader.SetVector3("lights[0].color", new Vector3(1.0f, 1.0f, 1.0f));       // Pure white light
+        defaultShader.SetInt("gamma", 0); // 0 = false
+        // ==================
+        
         var renderables = scene.Entities.Values
-            .Where(e => e.HasComponent<MeshFilter>() && e.HasComponent<MeshRenderer>());
+            .Where(e => e.HasComponent<MeshFilter>() &&
+                                  e.HasComponent<MeshRenderer>() &&
+                                  e.HasComponent<Transform>());
         foreach (var entity in renderables)
         {
             var filter = entity.GetComponent<MeshFilter>();
@@ -138,8 +148,14 @@ public class EditorRenderer : IRenderer
             Matrix4 modelMatrix = Matrix4.CreateScale(transform.Scale) *
                                   Matrix4.CreateFromQuaternion(transform.Rotation) *
                                   Matrix4.CreateTranslation(transform.Position);
-                                  
+            
             defaultShader.SetMatrix4("model", modelMatrix);
+
+            Matrix4 modelInvTrans = modelMatrix;
+            modelInvTrans.Invert();
+            modelInvTrans.Transpose();
+            defaultShader.SetMatrix4("modelInverseTransposed", modelInvTrans);
+            
             defaultShader.SetUInt("u_FirstTriIdx", metadata.FirstTriIdx);
 
             int vertexCount = (int)metadata.TriCount * 3;
