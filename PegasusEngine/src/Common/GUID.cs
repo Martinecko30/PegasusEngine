@@ -5,6 +5,7 @@ namespace PegasusEngine.Common;
 /// Globally Unique Identifier.
 /// A zero-allocation wrapper for an ulong (uint64)
 /// </summary>
+[Serializable]
 public readonly struct GUID : IEquatable<GUID>
 {
     public static readonly GUID INVALID = new(0);

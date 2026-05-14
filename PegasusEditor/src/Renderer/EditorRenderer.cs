@@ -4,6 +4,7 @@ using PegasusEngine.Common;
 using PegasusEngine.Debug;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Meshes;
+using PegasusEngine.Project;
 using PegasusEngine.Project.Assets;
 using PegasusEngine.Project.Scenes;
 using PegasusEngine.Renderer;
@@ -29,13 +30,13 @@ public class EditorRenderer : IRenderer
     private int sceneVao;
     private int gridVao;
     
-    private readonly AssetManager assetManager;
+    private readonly ProjectManager projectManager;
     private readonly GraphicsResourceManager resourceManager;
     private uint lastMeshBufferVersion = 0;
 
-    public EditorRenderer(AssetManager assetManager)
+    public EditorRenderer(ProjectManager projectManager)
     {
-        this.assetManager = assetManager;
+        this.projectManager = projectManager;
         this.resourceManager = new GraphicsResourceManager();
     }
     
@@ -128,7 +129,7 @@ public class EditorRenderer : IRenderer
             if (filter!.MeshGuid == GUID.INVALID)
                 continue;
             
-            var metadata = assetManager.AssetPool.FindMetadata<MeshMetadata>(filter.MeshGuid);
+            var metadata = projectManager.AssetManager.AssetPool.FindMetadata<MeshMetadata>(filter.MeshGuid);
 
             if (metadata == null)
                 continue;
@@ -211,15 +212,15 @@ public class EditorRenderer : IRenderer
 
     public void UpdateResources()
     {
-        if (assetManager == null)
+        if (projectManager.AssetManager == null)
             return;
         
         // Check if the AssetManager have loaded new geometry since the last frame
-        uint currentVersion = assetManager.AssetPool.GetUpdateVersion(AssetPool.AssetType.MeshBuffer);
+        uint currentVersion = projectManager.AssetManager.AssetPool.GetUpdateVersion(AssetPool.AssetType.MeshBuffer);
         
         if (currentVersion > lastMeshBufferVersion)
         {
-            resourceManager.UploadMegaBuffers(assetManager.AssetPool);
+            resourceManager.UploadMegaBuffers(projectManager.AssetManager.AssetPool);
             lastMeshBufferVersion = currentVersion;
             Log.EngineInfo("Renderer: Mega-Buffers uploaded to GPU (Version {0})", currentVersion);
         }

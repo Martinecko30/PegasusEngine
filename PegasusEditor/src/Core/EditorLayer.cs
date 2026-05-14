@@ -48,7 +48,7 @@ public class EditorLayer : ILayer
         editorPanels.Add(new Game());
         editorPanels.Add(new Hierarchy(editorState, projectManager));
         editorPanels.Add(new Inspector(editorState, projectManager));
-        editorPanels.Add(new Viewport(editorState, eventDispatcher, window));
+        editorPanels.Add(new Viewport(editorState, eventDispatcher, projectManager, window));
         editorPanels.Add(new ConsolePanel());
     }
     

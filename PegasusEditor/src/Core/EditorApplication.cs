@@ -38,7 +38,7 @@ public class EditorApplication : Application
 
     protected override IRenderer CreateRenderer()
     {
-        var renderer = new EditorRenderer(ProjectManager.AssetManager);
+        var renderer = new EditorRenderer(ProjectManager);
         
         // Setup debug callback
         GL.DebugMessageCallback(DebugMessageDelegate, IntPtr.Zero);

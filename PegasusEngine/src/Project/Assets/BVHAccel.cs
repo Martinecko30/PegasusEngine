@@ -95,7 +95,7 @@ public class BVHAccel
 
         _nodesUsed = 0;
         ref Node root = ref _nodeBuff[firstNodeIdx + _nodesUsed++];
-        root.LeftChildOrFirstTri = 0;
+        root.LeftChildOrFirstTri = _firstTriIdx;
         root.TriCount = (uint)n;
 
         UpdateAABB(ref root);

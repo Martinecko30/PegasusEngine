@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using ImGuiNET;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
@@ -8,6 +9,8 @@ using PegasusEngine.Core.Events;
 using PegasusEngine.Core.Layers;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
+using PegasusEngine.Objects.Components.Meshes;
+using PegasusEngine.Project;
 using PegasusEngine.Renderer.Textures;
 using Log = PegasusEngine.Debug.Log;
 using Vector2 = System.Numerics.Vector2;
@@ -27,6 +30,7 @@ public class Viewport : TabPanel
     
     private readonly EditorState editorState;
     private readonly IEventDispatcher eventDispatcher;
+    private readonly ProjectManager projectManager;
     private readonly GameWindow window;
 
     private GameObject cameraGO;
@@ -35,10 +39,15 @@ public class Viewport : TabPanel
     private float cameraYaw;
     
 
-    public Viewport(EditorState editorState, IEventDispatcher eventDispatcher, GameWindow window)
+    public Viewport(
+        EditorState editorState,
+        IEventDispatcher eventDispatcher,
+        ProjectManager projectManager,
+        GameWindow window)
     {
         this.eventDispatcher = eventDispatcher;
         this.editorState = editorState;
+        this.projectManager = projectManager;
         this.window = window;
     }
     
@@ -98,6 +107,29 @@ public class Viewport : TabPanel
                 new Vector2(0, 1),
                 new Vector2(1, 0)
             );
+
+            if (ImGui.BeginDragDropTarget())
+            {
+                unsafe
+                {
+                    var payload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Mesh);
+                    if (payload.NativePtr != null)
+                    {
+                        var dndPayload = Marshal.PtrToStructure<DNDPayload>(payload.Data);
+                        var meshGuid = new GUID(dndPayload.GuidValue);
+
+                        var scene = projectManager.SceneManager?.GetOpenScene();
+                        if (scene != null)
+                        {
+                            var newEntity = scene.CreateEntity(dndPayload.Title ?? "New Mesh Object");
+                            var filter = newEntity.AddComponent<MeshFilter>();
+                            filter.MeshGuid = meshGuid;
+                            editorState.Temp.SelectedEntity = newEntity;
+                        }
+                    }
+                }
+                ImGui.EndDragDropTarget();
+            }
         }
         else
         {

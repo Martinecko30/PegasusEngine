@@ -63,7 +63,7 @@ public class Application
 
     protected virtual IRenderer CreateRenderer()
     {
-        return new Renderer.Renderer(ProjectManager.AssetManager);
+        return new Renderer.Renderer(ProjectManager);
     }
 
     public void Shutdown()

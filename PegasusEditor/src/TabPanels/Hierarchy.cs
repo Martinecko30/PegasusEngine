@@ -1,10 +1,11 @@
+using System.Runtime.InteropServices;
 using ImGuiNET;
 using PegasusEditor.Dialogs;
 using PegasusEditor.ImGuiContext;
 using PegasusEngine.Common;
-using PegasusEngine.Core;
 using PegasusEngine.Core.Events;
 using PegasusEngine.Objects;
+using PegasusEngine.Objects.Components.Meshes;
 using PegasusEngine.Project;
 using PegasusEngine.Project.Scenes;
 
@@ -107,6 +108,22 @@ public class Hierarchy : TabPanel
                     }
                 }
             }
+            
+            var meshPayload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Mesh);
+            unsafe
+            {
+                if (meshPayload.NativePtr != null)
+                {
+                    var dndPayload = Marshal.PtrToStructure<DNDPayload>(meshPayload.Data);
+                    var newEntity = scene.CreateEntity(dndPayload.Title ?? "New Mesh Object");
+                    
+                    var filter = newEntity.AddComponent<MeshFilter>();
+                    filter.MeshGuid = new GUID(dndPayload.GuidValue);
+                    newEntity.AddComponent<MeshRenderer>();
+                    
+                    editorState.Temp.SelectedEntity = newEntity;
+                }
+            }
             ImGui.EndDragDropTarget();
         }
         
@@ -172,6 +189,24 @@ public class Hierarchy : TabPanel
                     draggedEntity = GUID.INVALID;
                 }
             }
+            
+            var meshPayload = ImGui.AcceptDragDropPayload(DNDPayloadTypes.Mesh);
+            unsafe
+            {
+                if (meshPayload.NativePtr != null)
+                {
+                    var dndPayload = Marshal.PtrToStructure<DNDPayload>(meshPayload.Data);
+                    var newEntity = scene.CreateEntity(dndPayload.Title ?? "New Mesh Object");
+                    
+                    newEntity.Transform.SetParent(entity.Transform);
+
+                    var filter = newEntity.AddComponent<MeshFilter>();
+                    filter.MeshGuid = dndPayload.Guid;
+                    
+                    editorState.Temp.SelectedEntity = newEntity;
+                }
+            }
+            
             ImGui.EndDragDropTarget();
         }
 

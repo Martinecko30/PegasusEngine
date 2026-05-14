@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using PegasusEngine.Common;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 
@@ -65,6 +66,11 @@ public sealed class ReflectionYamlAutoSerializer
         if (value is null) return null;
 
         var runtimeType = value.GetType();
+
+        if (value is GUID guidValue)
+        {
+            return (ulong)guidValue;
+        }
 
         if (value is EngineObject engineObject)
         {
@@ -138,7 +144,8 @@ public sealed class ReflectionYamlAutoSerializer
         // Expand this list if you want (DateTime, TimeSpan, etc.)
         return t.IsPrimitive
                || t == typeof(string)
-               || t == typeof(decimal);
+               || t == typeof(decimal)
+               || t == typeof(GUID);
     }
 
     private static bool IsGenericList(Type t, out Type itemType)
