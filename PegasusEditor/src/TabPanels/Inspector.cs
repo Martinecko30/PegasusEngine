@@ -281,9 +281,24 @@ public class Inspector : TabPanel
     private void RenderQuaternionField(object instance, FieldInfo field, string name)
     {
         var val = (Quaternion)(field.GetValue(instance) ?? Quaternion.Identity);
-        var sysQuat = new System.Numerics.Vector4(val.X, val.Y, val.Z, val.W);
-        if (ImGui.DragFloat4(name, ref sysQuat))
-            field.SetValue(instance, new Quaternion(sysQuat.X, sysQuat.Y, sysQuat.Z, sysQuat.W));
+        Vector3 eulerRadians = val.ToEulerAngles();
+        var sysEulerDegrees = new System.Numerics.Vector3(
+            MathHelper.RadiansToDegrees(eulerRadians.X),
+            MathHelper.RadiansToDegrees(eulerRadians.Y),
+            MathHelper.RadiansToDegrees(eulerRadians.Z)
+        );
+
+        if (ImGui.DragFloat3(name, ref sysEulerDegrees))
+        {
+            Vector3 newEulerRadians = new Vector3(
+                MathHelper.DegreesToRadians(sysEulerDegrees.X),
+                MathHelper.DegreesToRadians(sysEulerDegrees.Y),
+                MathHelper.DegreesToRadians(sysEulerDegrees.Z)
+            );
+
+            Quaternion newQuat = Quaternion.FromEulerAngles(newEulerRadians);
+            field.SetValue(instance, newQuat);
+        }
     }
 
     private void RenderIntField(object instance, FieldInfo field, string name)
