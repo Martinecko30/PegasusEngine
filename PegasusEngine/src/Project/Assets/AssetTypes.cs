@@ -5,12 +5,21 @@ namespace PegasusEngine.Project.Assets;
 
 public abstract class Metadata;
 
+[StructLayout(LayoutKind.Sequential, Pack = 16)]
+public struct Vertex
+{
+    public Vector4 Position; // X, Y, Z, 1.0
+    public Vector4 Normal;   // Nx, Ny, Nz, 0.0
+    public Vector4 TexCoord; // U, V, 0.0, 0.0
+    public Vector4 Color;
+}
+
 [StructLayout(LayoutKind.Sequential, Pack = 16)] // Pack=16 ensures std140/std430 alignment
 public struct Triangle
 {
-    public Vector4 V0;
-    public Vector4 V1;
-    public Vector4 V2;
+    public Vertex V0;
+    public Vertex V1;
+    public Vertex V2;
 }
 
 public class MeshMetadata : Metadata

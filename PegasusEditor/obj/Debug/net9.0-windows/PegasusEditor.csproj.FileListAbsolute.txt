@@ -61,3 +61,5 @@ F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-window
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\DefaultShader.vert
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\EditorGridShader.frag
 F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\EditorGridShader.vert
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\DepthShader.frag
+F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\bin\Debug\net9.0-windows\res\Shaders\DepthShader.vert

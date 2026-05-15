@@ -116,9 +116,11 @@ public class BVHAccel
         {
             uint triIdx = _idxBuff[node.LeftChildOrFirstTri + i];
             Triangle t = _triBuff[_firstTriIdx + triIdx];
-            aabb.Grow(t.V0.AsVector3());
-            aabb.Grow(t.V1.AsVector3());
-            aabb.Grow(t.V2.AsVector3());
+            
+            // X,Y,Z positions extracted from the Vertex structs inside the Triangle
+            aabb.Grow(new Vector3(t.V0.Position.X, t.V0.Position.Y, t.V0.Position.Z));
+            aabb.Grow(new Vector3(t.V1.Position.X, t.V1.Position.Y, t.V1.Position.Z));
+            aabb.Grow(new Vector3(t.V2.Position.X, t.V2.Position.Y, t.V2.Position.Z));
         }
         node.Min = aabb.BoxMin;
         node.Max = aabb.BoxMax;
@@ -156,9 +158,9 @@ public class BVHAccel
                 int binIdx = Math.Min(BINS - 1, (int)((GetAxis(_centroids[triIdx], axis) - aabbMin) * sacle));
                 bins[binIdx].TriCount++;
                 var tri = _triBuff[_firstTriIdx + triIdx];
-                bins[binIdx].Aabb.Grow(tri.V0.AsVector3());
-                bins[binIdx].Aabb.Grow(tri.V1.AsVector3());
-                bins[binIdx].Aabb.Grow(tri.V2.AsVector3());
+                bins[binIdx].Aabb.Grow(new Vector3(tri.V0.Position.X, tri.V0.Position.Y, tri.V0.Position.Z));
+                bins[binIdx].Aabb.Grow(new Vector3(tri.V1.Position.X, tri.V1.Position.Y, tri.V1.Position.Z));
+                bins[binIdx].Aabb.Grow(new Vector3(tri.V2.Position.X, tri.V2.Position.Y, tri.V2.Position.Z));
             }
 
             float[] leftArea = new float[BINS - 1];
@@ -207,20 +209,21 @@ public class BVHAccel
         Aabb parentAabb = new Aabb(_nodeBuff[currentNodeIdx].Min, _nodeBuff[currentNodeIdx].Max);
         float parentCost = _nodeBuff[currentNodeIdx].TriCount * parentAabb.Area();
 
-        if (bestCost >= parentCost)
+        float traversalCost = parentAabb.Area() * 0.5f; 
+        if (bestCost + traversalCost >= parentCost) 
             return;
 
-        uint leftPtr = _nodeBuff[currentNodeIdx].LeftChildOrFirstTri;
-        uint rightPtr = _nodeBuff[currentNodeIdx].LeftChildOrFirstTri + _nodeBuff[currentNodeIdx].TriCount - 1;
+        int i = (int)_nodeBuff[currentNodeIdx].LeftChildOrFirstTri;
+        int j = i + (int)_nodeBuff[currentNodeIdx].TriCount - 1;
 
-        while (leftPtr < rightPtr)
+        while (i <= j)
         {
-            if (GetAxis(_centroids[_idxBuff[leftPtr]], bestAxis) < bestPos)
-                leftPtr++;
+            if (GetAxis(_centroids[_idxBuff[i]], bestAxis) < bestPos)
+                i++;
             else
-                Swap(leftPtr, rightPtr--);
+                Swap((uint)i, (uint)j--);
         }
-        uint leftTriCount = leftPtr - _nodeBuff[currentNodeIdx].LeftChildOrFirstTri;
+        uint leftTriCount = (uint)i - _nodeBuff[currentNodeIdx].LeftChildOrFirstTri;
         if (leftTriCount == 0 || leftTriCount == _nodeBuff[currentNodeIdx].TriCount)
             return;
         
@@ -249,7 +252,12 @@ public class BVHAccel
         for (int i = 0; i < _triCount; i++)
         {
             Triangle t = _triBuff[_firstTriIdx + i];
-            centroids[i] = (t.V0.AsVector3() + t.V1.AsVector3() + t.V2.AsVector3()) * 0.33333333f;
+            
+            Vector3 v0 = new Vector3(t.V0.Position.X, t.V0.Position.Y, t.V0.Position.Z);
+            Vector3 v1 = new Vector3(t.V1.Position.X, t.V1.Position.Y, t.V1.Position.Z);
+            Vector3 v2 = new Vector3(t.V2.Position.X, t.V2.Position.Y, t.V2.Position.Z);
+            
+            centroids[i] = (v0 + v1 + v2) * 0.33333333f;
         }
         return centroids;
     }

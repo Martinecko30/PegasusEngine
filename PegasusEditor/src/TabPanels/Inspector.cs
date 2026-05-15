@@ -9,6 +9,7 @@ using PegasusEngine.Debug;
 using PegasusEngine.Objects;
 using PegasusEngine.Objects.Components;
 using PegasusEngine.Objects.Components.Colliders;
+using PegasusEngine.Objects.Components.Lights;
 using PegasusEngine.Objects.Components.Meshes;
 using PegasusEngine.Project;
 using PegasusEngine.Project.Scenes.Serialization;
@@ -148,6 +149,7 @@ public class Inspector : TabPanel
             GiveEntityComponentButton<Camera>(entity, "Camera", FontAwesomeIcons.Camera);
             GiveEntityComponentButton<MeshFilter>(entity, "Mesh Filter", FontAwesomeIcons.Filter);
             GiveEntityComponentButton<MeshRenderer>(entity, "Mesh Renderer", FontAwesomeIcons.Bucket);
+            GiveEntityComponentButton<Light>(entity, "Light", FontAwesomeIcons.Lightbulb);
             
             ImGui.BulletText($"Add Component to entity {entity.Tag}");
             ImGui.EndPopup();

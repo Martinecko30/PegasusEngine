@@ -326,7 +326,13 @@ public class AssetManager
         {
             var subMesh = scene.Meshes[i];
             var verts = subMesh.Vertices;
+            
+            var material = scene.Materials[subMesh.MaterialIndex];
 
+            Vector4 materialColor = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+            if (material.HasColorDiffuse)
+                materialColor = new Vector4(material.ColorDiffuse.R, material.ColorDiffuse.G, material.ColorDiffuse.B, material.ColorDiffuse.A);
+            
             for (int j = 0; j < subMesh.FaceCount; j++)
             {
                 var face = subMesh.Faces[j];
@@ -340,11 +346,30 @@ public class AssetManager
                 }
                 
                 var idx = face.Indices;
+
+                Vertex GetVertexData(int index)
+                {
+                    var pos = verts[index];
+
+                    var norm = subMesh.HasNormals ? subMesh.Normals[index] : new Assimp.Vector3D(0, 1, 0);
+                    var uv = subMesh.HasTextureCoords(0)
+                        ? subMesh.TextureCoordinateChannels[0][index]
+                        : new Assimp.Vector3D(0, 0, 0);
+
+                    return new Vertex
+                    {
+                        Position = new Vector4(pos.X, pos.Y, pos.Z, 1.0f),
+                        Normal = new Vector4(norm.X, norm.Y, norm.Z, 0.0f),
+                        TexCoord = new Vector4(uv.X, uv.Y, 0.0f, 0.0f),
+                        Color = materialColor
+                    };
+                }
+                
                 meshBuffer.Add(new Triangle
                 {
-                    V0 = new Vector4(verts[idx[0]].X, verts[idx[0]].Y, verts[idx[0]].Z, .0f),
-                    V1 = new Vector4(verts[idx[1]].X, verts[idx[1]].Y, verts[idx[1]].Z, .0f),
-                    V2 = new Vector4(verts[idx[2]].X, verts[idx[2]].Y, verts[idx[2]].Z, .0f)
+                    V0 = GetVertexData(idx[0]),
+                    V1 = GetVertexData(idx[1]),
+                    V2 = GetVertexData(idx[2])
                 });
             }
         }

@@ -32,6 +32,42 @@ public class Texture2D
     /// The source path used to create the texture, or a descriptive value for generated textures.
     /// </summary>
     public string path;
+
+    /// <summary>
+    /// Initializes a new Texture2D from raw pixel data in memory.
+    /// </summary>
+    public Texture2D(byte[] pixelData, int width, int height, int channels, string type)
+    {
+        this.type = type;
+        this.path = "Memory_AssetPool";
+        textureID = GL.GenTexture();
+        
+        GL.BindTexture(TextureTarget.Texture2D, textureID);
+        
+        // Determine formats based on channel count (3 = RGB, 4 = RGBA)
+        PixelInternalFormat internalFormat = channels == 4 ? PixelInternalFormat.SrgbAlpha : PixelInternalFormat.Srgb;
+        PixelFormat format = channels == 4 ? PixelFormat.Rgba : PixelFormat.Rgb;
+        
+        // Upload the raw bytes straight to the GPU
+        GL.TexImage2D(
+            TextureTarget.Texture2D, 
+            0, 
+            internalFormat, 
+            width, 
+            height, 
+            0, 
+            format,
+            PixelType.UnsignedByte,
+            pixelData
+        );
+        
+        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.LinearMipmapLinear);
+        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
+        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)TextureWrapMode.Repeat);
+        GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)TextureWrapMode.Repeat);
+        
+        GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
+    }
     
     /// <summary>
     /// Initializes a new instance of the <see cref="Texture2D"/> class from an existing OpenGL texture handle.

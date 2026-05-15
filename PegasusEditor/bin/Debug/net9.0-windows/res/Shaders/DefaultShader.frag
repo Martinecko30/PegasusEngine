@@ -7,7 +7,7 @@ in VS_OUT {
     vec3 FragPos;
     vec3 Normal;
     vec2 TexCoords;
-    vec4 FragPosLightSpace;
+    vec4 Color;
 } fs_in;
 
 struct Light {
@@ -16,11 +16,16 @@ struct Light {
 };
 
 uniform sampler2D diffuseTexture;
+uniform bool hasTexture;
+
 uniform sampler2D specularTexture;
 
-uniform sampler2D shadowMap;
+uniform Light lights[ MAX_LIGHTS ];
 
-uniform Light lights[MAX_LIGHTS];
+uniform sampler2D shadowMaps[ MAX_LIGHTS ];
+uniform mat4 lightSpaceMatrices[ MAX_LIGHTS ];
+uniform int activeLightCount;
+
 uniform vec3 viewPos;
 uniform bool gamma;
 
@@ -69,29 +74,23 @@ vec3 BlinnPhong(vec3 normal, vec3 fragPos, vec3 lightPos, vec3 lightColor, float
     return (ambient + ((1.0 - shadow) * (diffuse + specular)));
 }
 
-float ShadowCalculation(vec4 fragPosLightSpace, vec3 normal, vec3 fragPos, vec3 lightPos) {
+float ShadowCalculation(vec4 fragPosLightSpace, vec3 normal, vec3 lightDir, int lightIndex) {
     vec3 projCoords = fragPosLightSpace.xyz / fragPosLightSpace.w;
     projCoords = (projCoords * 0.5) + 0.5;
 
     if(projCoords.z > 1.0)
         return 0.0;
 
-    float closestDepth = texture(shadowMap, projCoords.xy).r;
     float currentDepth = projCoords.z;
+    float bias = max( 0.05 * ( 1.0 - dot( normal, lightDir ) ), 0.005 );
+    float shadow = 0.0;
 
-    
-    vec3 lightDir = normalize(lightPos - fragPos);
-    // Calculate shadow bias
-    float bias = max(0.05 * (1.0 - dot(normal, lightDir)), 0.005);
-    // Check whether current frag pos is in shadow
-    float shadow = currentDepth - bias > closestDepth  ? 1.0 : 0.0;
-    
-    vec2 texelSize = 1.0 / textureSize(shadowMap, 0);
+    vec2 texelSize = 1.0 / textureSize(shadowMaps[ lightIndex ], 0);
     for(int x = -1; x <= 1; ++x)
     {
         for(int y = -1; y <= 1; ++y)
         {
-            float pcfDepth = texture(shadowMap, projCoords.xy + vec2(x, y) * texelSize).r;
+            float pcfDepth = texture(shadowMaps[ lightIndex ], projCoords.xy + vec2(x, y) * texelSize).r;
             shadow += currentDepth - bias > pcfDepth ? 1.0 : 0.0;
         }
     }
@@ -100,14 +99,24 @@ float ShadowCalculation(vec4 fragPosLightSpace, vec3 normal, vec3 fragPos, vec3 
     return shadow;
 }
 
-void main() {    
-    vec3 color = texture(diffuseTexture, fs_in.TexCoords).rgb;
+void main() {
+    vec4 baseColor = fs_in.Color;
+    
+    if (hasTexture) {
+        baseColor *= texture(diffuseTexture, fs_in.TexCoords); 
+    }
+    
+    vec3 color = baseColor.rgb;
     vec3 normal = normalize(fs_in.Normal);
 
     vec3 lighting = vec3(0.0);
-    for(int i = 0; i < MAX_LIGHTS; ++i) { // Assuming the number of active lights is less than MAX_LIGHTS
+    for(int i = 0; i < activeLightCount; ++i) {
         Light light = lights[i];
-        float shadow = ShadowCalculation(fs_in.FragPosLightSpace, normal, fs_in.FragPos, light.position); // Calculate shadow for each light
+        
+        vec4 fragPosLightSpace = lightSpaceMatrices[ i ] * vec4( fs_in.FragPos, 1.0 );
+        
+        vec3 lightDir = normalize( light.position - fs_in.FragPos );
+        float shadow = ShadowCalculation(fragPosLightSpace, normal, lightDir, i); // Calculate shadow for each light
         lighting += BlinnPhong(normal, fs_in.FragPos, light.position, light.color, shadow);
     }
 
