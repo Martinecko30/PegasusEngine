@@ -1,5 +1,0 @@
-F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\obj\Debug\net9.0\PegasusEditor.GeneratedMSBuildEditorConfig.editorconfig
-F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\obj\Debug\net9.0\PegasusEditor.AssemblyInfoInputs.cache
-F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\obj\Debug\net9.0\PegasusEditor.AssemblyInfo.cs
-F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\obj\Debug\net9.0\PegasusEditor.csproj.CoreCompileInputs.cache
-F:\Programovanie\CSharp Apps\PegasusEngine\PegasusEditor\obj\Debug\net9.0\PegasusEditor.sourcelink.json
